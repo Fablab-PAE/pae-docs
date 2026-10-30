@@ -1,6 +1,6 @@
 # Menu groups always open (no accordion)
 
-Status: docs
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -19,9 +19,9 @@ titles stay as plain headings, always open, with no arrow and nothing happening 
 - `AGENTS.md`: mention `public/sidebar-open.js`.
 
 ## Acceptance checks
-- [ ] Built pages load `sidebar-open.js`; custom CSS hides the menu arrows
-- [ ] Clicking a group title does not fold the group
-- [ ] `scripts/test.sh` passes
+- [x] Built pages load `sidebar-open.js`; custom CSS hides the menu arrows
+- [x] Clicking a group title does not fold the group
+- [x] `scripts/test.sh` passes
 
 ## Implementation notes
 - Easy to undo later: remove the script line in `astro.config.mjs` and the CSS rule.
