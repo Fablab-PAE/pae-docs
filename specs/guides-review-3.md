@@ -1,6 +1,6 @@
 # Guides review 3 (vinyl images, 3D printing edits)
 
-Status: planning
+Status: approved
 Size: small
 Database change: no
 New settings (.env keys): none
