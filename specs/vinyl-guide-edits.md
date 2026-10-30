@@ -1,6 +1,6 @@
 # Vinyl guide edits
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -22,6 +22,6 @@ Apply the owner's review of the vinyl cutter guide, in French and English.
 - Changelog (fr + en): one line.
 
 ## Acceptance checks
-- [ ] Every removed sentence is gone from both languages, nothing else removed
-- [ ] Option 2 and the Graphtec Studio 2 link appear in both languages
-- [ ] `scripts/test.sh` passes
+- [x] Every removed sentence is gone from both languages, nothing else removed
+- [x] Option 2 and the Graphtec Studio 2 link appear in both languages
+- [x] `scripts/test.sh` passes
