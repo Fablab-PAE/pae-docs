@@ -21,6 +21,8 @@ export default defineConfig({
           Footer: './src/components/Footer.astro',
         },
         plugins: [starlightImageZoom()],
+        // Site styles (external-link icon in the menu)
+        customCss: ['./src/styles/custom.css'],
         logo: {
             // src: './src/assets/logo_robotic_light.svg',
             light: './src/assets/logo_robotic_light.svg',
