@@ -3,14 +3,14 @@ title: Guides d'utilisation - atelier RoboTic
 description: Les guides pas à pas pour utiliser les machines du FabLab de l'atelier RoboTic, en toute sécurité.
 template: splash
 hero:
-  tagline: Des guides pas à pas pour utiliser chaque machine du FabLab, en toute sécurité.
+  tagline: Des guides pas à pas pour utiliser chaque machine du FabLab en toute sécurité.
   image:
     light: ../../../assets/logo_robotic_light.svg
     dark: ../../../assets/logo_robotic_dark.svg
     alt: Logo de l'atelier RoboTic
   actions:
     - text: Choisir une machine
-      link: '#les-machines'
+      link: '#les-machines-disponibles-dans-notre-local'
       icon: down-arrow
     - text: Guide CNC
       link: /pae-docs/fr/guides/cnc-machine/
@@ -18,30 +18,61 @@ hero:
       variant: minimal
 ---
 
-import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+import { CardGrid } from '@astrojs/starlight/components';
+import MachineCard from '../../../components/MachineCard.astro';
+import cnc from '../../../assets/img/guide-cnc/cnc_03.png';
+import laser from '../../../assets/img/laser/laser_03_2.png';
+import imprimante3d from '../../../assets/img/impression-3d/prusa_mk4_vue_ensemble.jpg';
+import mila from '../../../assets/img/projets/mila.png';
 
-## Les machines
+## Les machines disponibles dans notre local
 
 <CardGrid>
-	<LinkCard
+	<MachineCard
 		title="Machine CNC"
 		description="Shapeoko 3 : fraiser, graver et découper le bois, ou créer des circuits imprimés sur plaque de cuivre."
 		href="/pae-docs/fr/guides/cnc-machine/"
+		image={cnc}
+		alt="La machine CNC Shapeoko 3 et sa surface de travail"
 	/>
-	<LinkCard
+	<MachineCard
 		title="Gravure laser"
 		description="Laser à diode 5 W : graver des motifs et du texte sur le bois, le carton, le cuir ou le tissu."
 		href="/pae-docs/fr/guides/gravure-laser/"
+		image={laser}
+		alt="Le graveur laser dans son caisson"
 	/>
-	<LinkCard
+	<MachineCard
 		title="Découpe vinyle"
 		description="Graphtec CE6000-60 Plus : découper des autocollants, des lettrages et du flex textile, avec Graphtec Studio."
 		href="/pae-docs/fr/guides/decoupe-vinyle/"
+		icon="pen"
 	/>
-	<LinkCard
+	<MachineCard
 		title="Impression 3D"
 		description="Prusa MK4 : fabriquer des pièces en plastique couche par couche, avec PrusaSlicer."
 		href="/pae-docs/fr/guides/impression-3d/"
+		image={imprimante3d}
+		alt="L'imprimante 3D Prusa MK4"
+	/>
+</CardGrid>
+
+## Nos projets et notre boutique
+
+<CardGrid>
+	<MachineCard
+		title="MILA, notre robot assistant"
+		description="Une tête de robot imprimée en 3D qui suit votre visage du regard, conçue à l'atelier RoboTic."
+		href="/pae-docs/fr/projets/mila/"
+		image={mila}
+		alt="Le robot MILA dans l'atelier"
+	/>
+	<MachineCard
+		title="Boutique Chouette et Cie"
+		description="Commandez les objets fabriqués par notre FabLab."
+		href="https://online.forms.app/boutique-chouette-et-cie/formulaire-de-commerce?formsRef=qrcode"
+		icon="heart"
+		external
 	/>
 </CardGrid>
 
@@ -52,7 +83,7 @@ import { CardGrid, LinkCard } from '@astrojs/starlight/components';
 - Vérifiez que la ventilation fonctionne avant de lancer une découpe ou une gravure.
 - Ne laissez jamais une machine en marche sans surveillance.
 - Nettoyez la machine et votre poste de travail après utilisation.
-- En cas de doute, demandez de l'aide à l'équipe de l'atelier avant de lancer la machine.
+- En tout temps, veuillez valider avec le formateur de l'atelier RoboTic avant de démarrer une machine.
 
 ## Comment sont faits les guides
 

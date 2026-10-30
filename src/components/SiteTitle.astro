@@ -1,40 +1,36 @@
 ---
 /**
  * The kit's SiteTitle (agent kit 3af9335), made this site's own, so `kit docs upgrade` keeps it.
- * Changed: the pill links to this site's changelog (base /pae-docs + the page's language,
- * fr or en) instead of /changelog/, and its hover text follows the page's language.
+ * Changed: the site has no changelog page, so the pill is plain text (not a link), and its
+ * hover text follows the page's language (fr or en).
  *
  * Site title in the top bar, with the docs version next to it in a small pill.
  *
  * Set in astro.config.mjs (`components: { SiteTitle: ... }`): Starlight's own title, then
- * the short id of the save the website was built from (src/version.mjs). The pill links to
- * the changelog; its hover text gives the save date. Two sites (or a mirror) showing the
- * same pill serve the same copy.
+ * the short id of the save the website was built from (src/version.mjs). Its hover text
+ * gives the save date. Two sites (or a mirror) showing the same pill serve the same copy.
  */
 import Default from '@astrojs/starlight/components/SiteTitle.astro';
 import { docsVersion } from '../version.mjs';
 
 const { id, saved } = docsVersion();
-// The site lives under /pae-docs, with French (default) and English pages
 const { locale } = Astro.locals.starlightRoute;
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const changelog = `${base}/${locale ? `${locale}/` : ''}changelog/`;
 const fr = locale !== 'en';
 const label = id || (fr ? 'inconnue' : 'unknown');
 const hint = fr
 	? id
-		? `Version ${id} de la documentation, enregistrée le ${saved}. Cliquez pour voir l'historique des modifications.`
-		: "Version inconnue (pas d'historique au moment de la construction du site). Cliquez pour voir l'historique des modifications."
+		? `Version ${id} de la documentation, enregistrée le ${saved}.`
+		: "Version inconnue (pas d'historique au moment de la construction du site)."
 	: id
-		? `Docs version ${id}, saved ${saved}. Click for the changelog.`
-		: 'Docs version unknown (no save history when the website was built). Click for the changelog.';
+		? `Docs version ${id}, saved ${saved}.`
+		: 'Docs version unknown (no save history when the website was built).';
 ---
 
 <span class="title-with-version">
 	<Default />
-	<a href={changelog} class="docs-version" title={hint} aria-label={hint} translate="no">
+	<span class="docs-version" title={hint} aria-label={hint} translate="no">
 		{label}
-	</a>
+	</span>
 </span>
 
 <style>
@@ -55,10 +51,6 @@ const hint = fr
 		font-family: var(--sl-font-system-mono);
 		font-size: var(--sl-text-xs);
 		line-height: 1.4;
-		text-decoration: none;
 		white-space: nowrap;
-	}
-	.docs-version:hover {
-		border-color: var(--sl-color-text-accent);
 	}
 </style>

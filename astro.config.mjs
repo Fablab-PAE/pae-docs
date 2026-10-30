@@ -106,12 +106,31 @@ export default defineConfig({
         //     autogenerate: { directory: 'reference' },
         //   },
           {
-            label: 'Changelog',
+            label: 'Our projects',
             translations: {
-              'fr': 'Historique des modifications',
-              'en': 'Changelog',
+              'fr': 'Nos projets',
+              'en': 'Our projects',
             },
-            link: '/changelog/',
+            items: [
+              {
+                label: 'MILA, robot assistant',
+                translations: {
+                  'fr': 'MILA, robot assistant',
+                  'en': 'MILA, robot assistant',
+                },
+                link: '/projets/mila/',
+              },
+            ],
+          },
+          {
+            // The FabLab's shop (outside site, opens in a new tab)
+            label: 'Shop',
+            translations: {
+              'fr': 'Boutique',
+              'en': 'Shop',
+            },
+            link: 'https://online.forms.app/boutique-chouette-et-cie/formulaire-de-commerce?formsRef=qrcode',
+            attrs: { target: '_blank', rel: 'noopener noreferrer' },
           },
         ],
       }),
