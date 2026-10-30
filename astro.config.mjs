@@ -48,6 +48,13 @@ export default defineConfig({
                 src: '/pae-docs/redirect.js',
               },
             },
+            {
+              // Side menu groups always open (no folding)
+              tag: 'script',
+              attrs: {
+                src: '/pae-docs/sidebar-open.js',
+              },
+            },
         ],
         sidebar: [
           {
