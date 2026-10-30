@@ -1,6 +1,6 @@
 # Homepage heading: how the guides are structured
 
-Status: planning
+Status: approved
 Size: small
 Database change: no
 New settings (.env keys): none
