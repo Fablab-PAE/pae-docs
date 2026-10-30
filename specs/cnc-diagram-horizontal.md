@@ -1,6 +1,6 @@
 # CNC guide: horizontal BitSetter diagram
 
-Status: docs
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -21,5 +21,5 @@ The owner wants the BitSetter flow diagram of the CNC guide horizontal instead o
   wide, unreadable in the page column.
 
 ## Acceptance checks
-- [ ] Diagram drawn horizontally in both languages, same steps and colours
-- [ ] `scripts/test.sh` passes
+- [x] Diagram drawn horizontally in both languages, same steps and colours
+- [x] `scripts/test.sh` passes
