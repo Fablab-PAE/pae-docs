@@ -105,31 +105,35 @@ La machine est équipée d'un **BitSetter** : un petit capteur fixé à l'avant 
 Le schéma ci-dessous montre tout le déroulement d'un usinage avec le BitSetter. Le détail de chaque étape est dans la section [4. Utilisation du logiciel Carbide Motion](#4-utilisation-du-logiciel-carbide-motion).
 
 ```mermaid
-flowchart TD
+flowchart LR
   subgraph prep ["1. Préparer et faire le zéro"]
+    direction TB
     A["Installer la 1re mèche<br/>(toupie éteinte)"] --> B["Initialize machine,<br/>puis planche et cales"]
     B --> C["JOG : placer la mèche<br/>au point de départ,<br/>puis Set Zero → Zero All"]
     C --> D["La machine mesure la mèche<br/>sur le BitSetter, puis revient"]:::risk
   end
   subgraph run ["2. Lancer l'usinage"]
+    direction TB
     E["Load New File → Done,<br/>puis START JOB → START"] --> F["La machine va<br/>à côté du BitSetter"]:::risk
     F --> G["Please insert tool :<br/>vérifier la mèche → OK"]:::queue
     G --> H["La machine mesure la mèche"]:::risk
     H --> I["Message vitesse :<br/>régler la molette,<br/>allumer la toupie → OK"]:::queue
     I --> J["Usinage avec cette mèche"]:::new
   end
-  D --> E
-  J --> K{"Le fichier demande<br/>une autre mèche ?"}
   subgraph change ["3. Changer de mèche"]
+    direction TB
     L["La machine s'arrête<br/>et va à côté du BitSetter"]:::risk --> M["Please insert tool :<br/>éteindre la toupie,<br/>changer la mèche → OK"]:::queue
     M --> N["La machine mesure<br/>la nouvelle mèche"]:::risk
   end
   subgraph fin ["4. Fin"]
+    direction TB
     O["La machine retourne seule<br/>au fond à droite"]:::risk --> P["Éteindre la toupie"]
   end
-  K -- "Oui (ex. 2e mèche)" --> L
-  N --> I
-  K -- "Non" --> O
+  prep --> run
+  run --> K{"Le fichier demande<br/>une autre mèche ?"}
+  K -- "Oui (ex. 2e mèche)" --> change
+  change -- "retour au message vitesse" --> run
+  K -- "Non" --> fin
 ```
 
 Les couleurs du schéma :

@@ -104,31 +104,35 @@ The machine is fitted with a **BitSetter**: a small sensor attached to the front
 The diagram below shows the whole machining process with the BitSetter. Each step is explained in detail in the [4. Using Carbide Motion software](#4-using-carbide-motion-software) section.
 
 ```mermaid
-flowchart TD
+flowchart LR
   subgraph prep ["1. Prepare and set the zero"]
+    direction TB
     A["Install the 1st bit<br/>(router off)"] --> B["Initialize machine,<br/>then board and fixing blocks"]
     B --> C["JOG: move the bit<br/>to the starting point,<br/>then Set Zero → Zero All"]
     C --> D["The machine measures the bit<br/>on the BitSetter,<br/>then comes back"]:::risk
   end
   subgraph run ["2. Start the job"]
+    direction TB
     E["Load New File → Done,<br/>then START JOB → START"] --> F["The machine moves<br/>next to the BitSetter"]:::risk
     F --> G["Please insert tool:<br/>check the bit → OK"]:::queue
     G --> H["The machine measures the bit"]:::risk
     H --> I["Speed message:<br/>set the dial,<br/>switch the router on → OK"]:::queue
     I --> J["Machining with this bit"]:::new
   end
-  D --> E
-  J --> K{"Does the file need<br/>another bit?"}
   subgraph change ["3. Change the bit"]
+    direction TB
     L["The machine stops<br/>and moves next to the BitSetter"]:::risk --> M["Please insert tool:<br/>switch the router off,<br/>change the bit → OK"]:::queue
     M --> N["The machine measures<br/>the new bit"]:::risk
   end
   subgraph fin ["4. End"]
+    direction TB
     O["The machine goes back<br/>to the back right corner<br/>on its own"]:::risk --> P["Switch the router off"]
   end
-  K -- "Yes (e.g. 2nd bit)" --> L
-  N --> I
-  K -- "No" --> O
+  prep --> run
+  run --> K{"Does the file need<br/>another bit?"}
+  K -- "Yes (e.g. 2nd bit)" --> change
+  change -- "back to the speed message" --> run
+  K -- "No" --> fin
 ```
 
 The colours of the diagram:
