@@ -1,6 +1,6 @@
 # Homepage pictures, projects section, shop link, no changelog
 
-Status: approved
+Status: building
 Size: normal
 Database change: no
 New settings (.env keys): none

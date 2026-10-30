@@ -10,7 +10,7 @@ hero:
     alt: RoboTic Workshop logo
   actions:
     - text: Choose a machine
-      link: '#the-machines'
+      link: '#the-machines-available-in-our-workshop'
       icon: down-arrow
     - text: CNC guide
       link: /pae-docs/en/guides/cnc-machine/
@@ -18,30 +18,61 @@ hero:
       variant: minimal
 ---
 
-import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+import { CardGrid } from '@astrojs/starlight/components';
+import MachineCard from '../../../components/MachineCard.astro';
+import cnc from '../../../assets/img/guide-cnc/cnc_03.png';
+import laser from '../../../assets/img/laser/laser_03_2.png';
+import printer3d from '../../../assets/img/impression-3d/prusa_mk4_vue_ensemble.jpg';
+import mila from '../../../assets/img/projets/mila.png';
 
-## The machines
+## The machines available in our workshop
 
 <CardGrid>
-	<LinkCard
+	<MachineCard
 		title="CNC Machine"
 		description="Shapeoko 3: mill, engrave and cut wood, or make printed circuit boards from copper plates."
 		href="/pae-docs/en/guides/cnc-machine/"
+		image={cnc}
+		alt="The Shapeoko 3 CNC machine and its work area"
 	/>
-	<LinkCard
+	<MachineCard
 		title="Laser Engraver"
 		description="5 W diode laser: engrave patterns and text on wood, cardboard, leather or fabric."
 		href="/pae-docs/en/guides/gravure-laser/"
+		image={laser}
+		alt="The laser engraver in its enclosure"
 	/>
-	<LinkCard
+	<MachineCard
 		title="Vinyl Cutter"
 		description="Graphtec CE6000-60 Plus: cut stickers, lettering and heat transfer vinyl, with Graphtec Studio."
 		href="/pae-docs/en/guides/decoupe-vinyle/"
+		icon="pen"
 	/>
-	<LinkCard
+	<MachineCard
 		title="3D Printing"
 		description="Prusa MK4: make plastic parts layer by layer, with PrusaSlicer."
 		href="/pae-docs/en/guides/impression-3d/"
+		image={printer3d}
+		alt="The Prusa MK4 3D printer"
+	/>
+</CardGrid>
+
+## Our projects and our shop
+
+<CardGrid>
+	<MachineCard
+		title="MILA, our robot assistant"
+		description="A 3D-printed robot head that follows your face with its eyes, designed at the RoboTic workshop."
+		href="/pae-docs/en/projets/mila/"
+		image={mila}
+		alt="The MILA robot in the workshop"
+	/>
+	<MachineCard
+		title="Chouette et Cie shop"
+		description="Order the items made by our FabLab."
+		href="https://online.forms.app/boutique-chouette-et-cie/formulaire-de-commerce?formsRef=qrcode"
+		icon="heart"
+		external
 	/>
 </CardGrid>
 
@@ -52,7 +83,7 @@ import { CardGrid, LinkCard } from '@astrojs/starlight/components';
 - Check that the ventilation works before starting a cut or an engraving.
 - Never leave a running machine unattended.
 - Clean the machine and your workspace after use.
-- If in doubt, ask the workshop team for help before starting the machine.
+- At all times, please check with the RoboTic workshop trainer before starting a machine.
 
 ## How the guides work
 

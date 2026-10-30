@@ -31,6 +31,8 @@ function checkPages() {
     if (a === b) continue;
     for (const p of pages[a]) if (!pages[b].has(p)) problems.push(`${a}/${p} has no ${b}/ version`);
   }
+  // The site has no changelog page any more (the owner asked to remove it)
+  for (const l of LANGS) if (pages[l].has('changelog')) problems.push(`${l}/changelog should not exist (the changelog was removed)`);
   // Every page has a description (shown in search results), and no guide is left unfinished
   for (const l of LANGS) {
     for (const f of walk(join(DOCS, l)).filter((f) => /\.mdx?$/.test(f))) {
