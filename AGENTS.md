@@ -21,6 +21,7 @@ This project IS the docs website: there is no separate `docs/` folder.
   features (version badge, diagrams, zoom). Files marked "agent-kit: managed" are updated
   by `kit docs upgrade`
 - `public/redirect.js` - sends `/pae-docs/` to `/pae-docs/fr/`
+- `public/sidebar-open.js` - keeps the side menu groups always open (no folding)
 - `scripts/test.sh`, `scripts/check-site.mjs` - the tests
 - Code map: none. Feature plans: `specs/`
 
