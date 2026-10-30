@@ -1,6 +1,6 @@
 # Shop link icon and two homepage sections
 
-Status: docs
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -22,6 +22,6 @@ two sections. French and English.
     (the card already shows an external-link icon).
 
 ## Acceptance checks
-- [ ] Menu "Lien vers notre boutique" / "Link to our shop" shows an external-link icon
-- [ ] Homepage shows the two sections with one card each, fr + en
-- [ ] `scripts/test.sh` passes
+- [x] Menu "Lien vers notre boutique" / "Link to our shop" shows an external-link icon
+- [x] Homepage shows the two sections with one card each, fr + en
+- [x] `scripts/test.sh` passes
