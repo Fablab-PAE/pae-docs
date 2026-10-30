@@ -1,6 +1,8 @@
 ---
 title: MILA, our robot assistant
 description: MILA, the 3D-printed robot head of the RoboTic workshop, which detects and follows the faces of passers-by.
+# The next item in the menu is the outside shop: no "next page" button here
+next: false
 ---
 
 **MILA** is our lab assistant: a **3D-printed robot head** that detects the face of a person walking past and **follows it with its eyes in real time**.

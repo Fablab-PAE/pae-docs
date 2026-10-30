@@ -1,6 +1,8 @@
 ---
 title: MILA, notre robot assistant
 description: MILA, la tête de robot imprimée en 3D de l'atelier RoboTic, qui détecte et suit le visage des passants.
+# The next item in the menu is the outside shop: no "next page" button here
+next: false
 ---
 
 **MILA** est l'assistante de notre laboratoire : une **tête de robot imprimée en 3D** qui détecte le visage d'une personne qui passe devant elle et le **suit du regard en temps réel**.
