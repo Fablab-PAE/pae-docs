@@ -1,6 +1,6 @@
 # Shop card: green top with a white heart
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -16,6 +16,6 @@ a white heart icon. Title and description stay like the other cards (owner's cho
 - `src/content/docs/{fr,en}/index.mdx`: shop card gets `background="#26901A" iconColor="#ffffff"`.
 
 ## Acceptance checks
-- [ ] Shop card top is #26901A with a white heart, in light and dark mode
-- [ ] Other cards unchanged
-- [ ] `scripts/test.sh` passes
+- [x] Shop card top is #26901A with a white heart, in light and dark mode
+- [x] Other cards unchanged
+- [x] `scripts/test.sh` passes
