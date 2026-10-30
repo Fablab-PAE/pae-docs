@@ -1,6 +1,6 @@
 # New homepage
 
-Status: tests passed
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -36,10 +36,10 @@ None new: `scripts/test.sh` already builds the site and checks every internal li
 image of the homepage, and that fr/en pages match. No database or outside service involved.
 
 ## Acceptance checks
-- [ ] /pae-docs/fr/ and /pae-docs/en/ show the new content, no starter text ("Starlight",
+- [x] /pae-docs/fr/ and /pae-docs/en/ show the new content, no starter text ("Starlight",
       "Next steps", "src/content/docs") left on either homepage
-- [ ] Every card links to the right guide in the same language
-- [ ] `scripts/test.sh` passes
+- [x] Every card links to the right guide in the same language
+- [x] `scripts/test.sh` passes
 
 ## Implementation notes
 Use Starlight's `LinkCard` and `CardGrid` components (already used in MDX pages).
