@@ -1,6 +1,6 @@
 # Graphtec plotter photo
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -17,5 +17,5 @@ Use the owner's photo of the Graphtec CE6000-60 instead of the example photo of 
   source = aaprintsupplyco.com, diagrams made for this guide (the Wikimedia credit goes).
 
 ## Acceptance checks
-- [ ] Both vinyl pages show the Graphtec photo; the old photo and its credit are gone
-- [ ] `scripts/test.sh` passes
+- [x] Both vinyl pages show the Graphtec photo; the old photo and its credit are gone
+- [x] `scripts/test.sh` passes
