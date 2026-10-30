@@ -1,6 +1,6 @@
 # Homepage: real machine photos and new labels
 
-Status: docs
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -26,11 +26,11 @@ on the homepage cards (no annotated views), and change some labels, in French an
   (en: "Link to our shop").
 
 ## Acceptance checks
-- [ ] Homepage cards show the 3 real product photos (no annotations), fr + en
-- [ ] Hero has a single button "Découvrez nos machines" / "Discover our machines" that jumps to the machines
-- [ ] Section title and menu label read exactly as asked
-- [ ] Photo credits shown on both homepages
-- [ ] `scripts/test.sh` passes
+- [x] Homepage cards show the 3 real product photos (no annotations), fr + en
+- [x] Hero has a single button "Découvrez nos machines" / "Discover our machines" that jumps to the machines
+- [x] Section title and menu label read exactly as asked
+- [x] Photo credits shown on both homepages
+- [x] `scripts/test.sh` passes
 
 ## Implementation notes
 - Only the Prusa photo is under a free licence. The Shapeoko and Graphtec photos belong to
