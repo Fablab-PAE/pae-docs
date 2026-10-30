@@ -100,6 +100,46 @@ La machine est équipée d'un **BitSetter** : un petit capteur fixé à l'avant 
 
   *Photo : Carbide 3D (guide d'installation du BitSetter)*
 
+### Le déroulement en un coup d'œil
+
+Le schéma ci-dessous montre tout le déroulement d'un usinage avec le BitSetter. Le détail de chaque étape est dans la section [4. Utilisation du logiciel Carbide Motion](#4-utilisation-du-logiciel-carbide-motion).
+
+```mermaid
+flowchart TD
+  subgraph prep ["1. Préparer et faire le zéro"]
+    A["Installer la 1re mèche<br/>(toupie éteinte)"] --> B["Initialize machine,<br/>puis planche et cales"]
+    B --> C["JOG : placer la mèche<br/>au point de départ,<br/>puis Set Zero → Zero All"]
+    C --> D["La machine mesure la mèche<br/>sur le BitSetter, puis revient"]:::risk
+  end
+  subgraph run ["2. Lancer l'usinage"]
+    E["Load New File → Done,<br/>puis START JOB → START"] --> F["La machine va<br/>à côté du BitSetter"]:::risk
+    F --> G["Please insert tool :<br/>vérifier la mèche → OK"]:::queue
+    G --> H["La machine mesure la mèche"]:::risk
+    H --> I["Message vitesse :<br/>régler la molette,<br/>allumer la toupie → OK"]:::queue
+    I --> J["Usinage avec cette mèche"]:::new
+  end
+  D --> E
+  J --> K{"Le fichier demande<br/>une autre mèche ?"}
+  subgraph change ["3. Changer de mèche"]
+    L["La machine s'arrête<br/>et va à côté du BitSetter"]:::risk --> M["Please insert tool :<br/>éteindre la toupie,<br/>changer la mèche → OK"]:::queue
+    M --> N["La machine mesure<br/>la nouvelle mèche"]:::risk
+  end
+  subgraph fin ["4. Fin"]
+    O["La machine retourne seule<br/>au fond à droite"]:::risk --> P["Éteindre la toupie"]
+  end
+  K -- "Oui (ex. 2e mèche)" --> L
+  N --> I
+  K -- "Non" --> O
+```
+
+Les couleurs du schéma :
+- **Bleu** : ce que vous faites
+- **Orange** : Carbide Motion affiche un message et attend votre action
+- **Rouge** : la machine bouge toute seule (mains hors de la machine !)
+- **Vert** : l'usinage est en cours (toupie allumée, capot fermé)
+
+Avec **une seule mèche**, on passe directement de l'usinage à « Non », puis à la fin. Avec **deux mèches** (par exemple une grosse mèche pour enlever la matière, puis une fine pour graver), on fait une fois la boucle « Oui » : changement de mèche, mesure de la nouvelle mèche, réglage de la vitesse, puis l'usinage reprend.
+
 ### Quand la machine bouge-t-elle toute seule ?
 
 Avec le BitSetter, la machine **se déplace toute seule vers le BitSetter** à plusieurs moments :
@@ -261,6 +301,9 @@ Grâce au BitSetter, chaque parcours d'usinage (*toolpath*) peut utiliser **une 
     ![Illustration](../../../../assets/img/guide-cnc/cnc_25.png)
 
 ## 4. Utilisation du logiciel Carbide Motion
+
+Pour une vue d'ensemble, voir le schéma [Le déroulement en un coup d'œil](#le-déroulement-en-un-coup-dœil).
+
 - Avant d'ouvrir le logiciel, vérifier tout d'abord que le **plan de travail de la machine CNC ne comporte aucun objet ou obstacle** sur la surface de travail
 
     ![Illustration](../../../../assets/img/guide-cnc/cnc_26.png)
