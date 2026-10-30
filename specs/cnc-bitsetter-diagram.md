@@ -1,6 +1,6 @@
 # CNC guide: diagram of the BitSetter machining flow
 
-Status: docs
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -24,6 +24,6 @@ shows the whole machining flow with the BitSetter, for one bit or for two bits (
 - Section 4 (Carbide Motion): one line at the top pointing to the diagram.
 
 ## Acceptance checks
-- [ ] Diagram drawn in both languages (build has no diagram error), readable in light and dark
-- [ ] The diagram matches the steps written in section 4
-- [ ] `scripts/test.sh` passes
+- [x] Diagram drawn in both languages (build has no diagram error), readable in light and dark
+- [x] The diagram matches the steps written in section 4
+- [x] `scripts/test.sh` passes
