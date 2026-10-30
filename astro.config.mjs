@@ -1,14 +1,26 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import starlightImageZoom from 'starlight-image-zoom';
+import diagrams from './src/diagrams/diagrams.mjs';
 
 // https://astro.build/config
 export default defineConfig({
     site: 'https://fablab-pae.github.io',
     base: '/pae-docs',
     integrations: [
+      diagrams(), // ```mermaid blocks drawn by pele (src/diagrams/); before starlight
       starlight({
         title: '',
+        // Kit docs features (kit docs upgrade): the docs version next to the title, and an
+        // "Enlarge" button on each diagram (zoom and move it full screen)
+        components: {
+          SiteTitle: './src/components/SiteTitle.astro',
+          MarkdownContent: './src/components/MarkdownContent.astro',
+          // Guide images open full screen when clicked (starlight-image-zoom's viewer)
+          Footer: './src/components/Footer.astro',
+        },
+        plugins: [starlightImageZoom()],
         logo: {
             // src: './src/assets/logo_robotic_light.svg',
             light: './src/assets/logo_robotic_light.svg',
@@ -93,6 +105,14 @@ export default defineConfig({
         //     },
         //     autogenerate: { directory: 'reference' },
         //   },
+          {
+            label: 'Changelog',
+            translations: {
+              'fr': 'Historique des modifications',
+              'en': 'Changelog',
+            },
+            link: '/changelog/',
+          },
         ],
       }),
     ],
