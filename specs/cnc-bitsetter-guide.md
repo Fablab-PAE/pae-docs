@@ -1,6 +1,6 @@
 # CNC guide: BitSetter module (several bits in one job)
 
-Status: planning
+Status: approved
 Size: normal
 Database change: no
 New settings (.env keys): none
