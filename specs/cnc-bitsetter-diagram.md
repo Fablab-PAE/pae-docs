@@ -1,6 +1,6 @@
 # CNC guide: diagram of the BitSetter machining flow
 
-Status: planning
+Status: approved
 Size: small
 Database change: no
 New settings (.env keys): none
