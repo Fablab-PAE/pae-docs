@@ -15,9 +15,9 @@ Ce guide vous accompagne pas à pas dans l'utilisation du plotter de découpe **
 
 ## Référence matérielle
 
-![Illustration](../../../../assets/img/decoupe-vinyle/plotter_exemple.jpg)
+![Illustration](../../../../assets/img/decoupe-vinyle/graphtec_ce6000_60.png)
 
-*Exemple d'un plotter de découpe dans un autre fablab (autre modèle que le nôtre).*
+*Le plotter Graphtec CE6000-60 Plus.*
 
 - Modèle de plotter utilisé : **Graphtec CE6000-60 Plus** (<a href="https://mygraphtec.jp/site_download/02_manual/data/CE6000_UserManual(CE6000-UM-154).pdf" target="_blank" rel="noopener noreferrer">manuel d'utilisation, en anglais</a>)
   - Page de présentation de la machine : <a href="https://web.archive.org/web/20190820094844/https://graphtec-graphtec.squarespace.com/vinyl-cutter-cut-plotter-ce6000-plus/" target="_blank" rel="noopener noreferrer">Graphtec CE6000 Plus (archive du site Graphtec, en anglais)</a>
@@ -192,4 +192,4 @@ Problèmes courants et solutions :
 ## Pour aller plus loin
 
 - Consultez le <a href="https://mygraphtec.jp/site_download/02_manual/data/CE6000_UserManual(CE6000-UM-154).pdf" target="_blank" rel="noopener noreferrer">manuel complet du CE6000</a> (en anglais) pour les fonctions avancées : découpe autour d'un motif imprimé grâce aux repères de calage (ARMS), découpe de grands panneaux, copies multiples.
-- Crédits des illustrations : photo du plotter « <a href="https://commons.wikimedia.org/wiki/File:Plotter_-_Fab_LAB_Newton.jpg" target="_blank" rel="noopener noreferrer">Plotter - Fab LAB Newton</a> » par Vivian Guerra Moreira (Wikimedia Commons, licence <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>) ; schémas réalisés pour ce guide.
+- Crédits des illustrations : photo du plotter : <a href="https://aaprintsupplyco.com" target="_blank" rel="noopener noreferrer">aaprintsupplyco.com</a> ; schémas réalisés pour ce guide.
