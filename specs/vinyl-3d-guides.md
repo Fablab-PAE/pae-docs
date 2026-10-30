@@ -1,6 +1,6 @@
 # Vinyl cutter and 3D printer guides
 
-Status: tests passed
+Status: ready to merge
 Size: normal
 Database change: no
 New settings (.env keys): none
@@ -66,10 +66,10 @@ written") and that every page has a non-empty `description`. Existing checks cov
 fr/en pairs and the build. No database or outside service involved.
 
 ## Acceptance checks
-- [ ] Both guides exist in fr and en, same sections in the same order
-- [ ] Facts match the manuals (sizes, temperatures, menu names)
-- [ ] Homepage cards updated in both languages
-- [ ] `scripts/test.sh` passes, including the new check
+- [x] Both guides exist in fr and en, same sections in the same order
+- [x] Facts match the manuals (sizes, temperatures, menu names)
+- [x] Homepage cards updated in both languages
+- [x] `scripts/test.sh` passes, including the new check
 
 ## Implementation notes
 Sources: Graphtec CE6000 User's Manual CE6000-UM-154 (chapters 2, 3, 12, 13, appendix A),
