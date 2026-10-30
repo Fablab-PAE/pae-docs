@@ -6,6 +6,12 @@ description: Changes to the FabLab documentation website, newest first.
 The small badge next to the logo shows which version of the site you are reading. This page
 lists the changes, newest first.
 
+## 2026-10-30: vinyl cutter and 3D printing guides
+
+- New full guide for the Graphtec CE6000-60 Plus cutting plotter and Graphtec Studio.
+- New full guide for the Prusa MK4 3D printer and PrusaSlicer 2.9.6.
+- The homepage presents these two machines like the others.
+
 ## 2026-10-30: new homepage
 
 - The homepage now presents the FabLab machines, the safety rules to follow and the

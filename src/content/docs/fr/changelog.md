@@ -6,6 +6,12 @@ description: Les changements apportés au site de documentation du FabLab, du pl
 Le petit badge à côté du logo indique la version du site que vous consultez. Cette page liste
 les changements, du plus récent au plus ancien.
 
+## 2026-10-30 : guides découpe vinyle et impression 3D
+
+- Nouveau guide complet pour le plotter de découpe Graphtec CE6000-60 Plus et Graphtec Studio.
+- Nouveau guide complet pour l'imprimante 3D Prusa MK4 et PrusaSlicer 2.9.6.
+- La page d'accueil présente ces deux machines comme les autres.
+
 ## 2026-10-30 : nouvelle page d'accueil
 
 - La page d'accueil présente les machines du FabLab, les règles de sécurité à respecter et
