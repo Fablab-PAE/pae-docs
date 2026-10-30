@@ -1,6 +1,6 @@
 # Vinyl cutter and 3D printer guides
 
-Status: building
+Status: tests passed
 Size: normal
 Database change: no
 New settings (.env keys): none
