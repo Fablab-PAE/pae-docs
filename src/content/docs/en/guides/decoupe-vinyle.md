@@ -15,9 +15,9 @@ This guide takes you step by step through the use of the **Graphtec CE6000-60 Pl
 
 ## Hardware reference
 
-![Illustration](../../../../assets/img/decoupe-vinyle/plotter_exemple.jpg)
+![Illustration](../../../../assets/img/decoupe-vinyle/graphtec_ce6000_60.png)
 
-*Example of a cutting plotter in another fablab (a different model from ours).*
+*The Graphtec CE6000-60 Plus plotter.*
 
 - Plotter model: **Graphtec CE6000-60 Plus** (<a href="https://mygraphtec.jp/site_download/02_manual/data/CE6000_UserManual(CE6000-UM-154).pdf" target="_blank" rel="noopener noreferrer">user's manual</a>)
   - Machine presentation page: <a href="https://web.archive.org/web/20190820094844/https://graphtec-graphtec.squarespace.com/vinyl-cutter-cut-plotter-ce6000-plus/" target="_blank" rel="noopener noreferrer">Graphtec CE6000 Plus (archived Graphtec website)</a>
@@ -192,4 +192,4 @@ Common problems and solutions:
 ## Going further
 
 - Read the <a href="https://mygraphtec.jp/site_download/02_manual/data/CE6000_UserManual(CE6000-UM-154).pdf" target="_blank" rel="noopener noreferrer">full CE6000 manual</a> for advanced functions: cutting around a printed design with registration marks (ARMS), cutting large panels, multiple copies.
-- Picture credits: plotter photo "<a href="https://commons.wikimedia.org/wiki/File:Plotter_-_Fab_LAB_Newton.jpg" target="_blank" rel="noopener noreferrer">Plotter - Fab LAB Newton</a>" by Vivian Guerra Moreira (Wikimedia Commons, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a> license); diagrams made for this guide.
+- Picture credits: plotter photo: <a href="https://aaprintsupplyco.com" target="_blank" rel="noopener noreferrer">aaprintsupplyco.com</a>; diagrams made for this guide.
