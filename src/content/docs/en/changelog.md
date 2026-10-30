@@ -6,6 +6,10 @@ description: Changes to the FabLab documentation website, newest first.
 The small badge next to the logo shows which version of the site you are reading. This page
 lists the changes, newest first.
 
+## 2026-10-30: vinyl cutter guide reviewed
+
+- The vinyl cutter guide is simplified and uses Graphtec Studio 2 (with its download link).
+
 ## 2026-10-30: vinyl cutter and 3D printing guides
 
 - New full guide for the Graphtec CE6000-60 Plus cutting plotter and Graphtec Studio.

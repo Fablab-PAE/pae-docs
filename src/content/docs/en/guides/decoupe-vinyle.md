@@ -1,6 +1,6 @@
 ---
 title: Vinyl Cutter
-description: User guide for the FabLab's Graphtec CE6000-60 Plus cutting plotter, with the Graphtec Studio software.
+description: User guide for the FabLab's Graphtec CE6000-60 Plus cutting plotter, with the Graphtec Studio 2 software.
 ---
 
 This guide takes you step by step through the use of the **Graphtec CE6000-60 Plus** cutting plotter. This machine cuts shapes out of a thin sheet, most often **adhesive vinyl**, using a **small blade that follows the lines of your design**. It is used to make stickers, lettering, stencils or designs to transfer onto fabric.
@@ -8,7 +8,6 @@ This guide takes you step by step through the use of the **Graphtec CE6000-60 Pl
 ## Personal safety
 
 - The plotter blade is very sharp. Always follow these rules:
-  - Handle the blade and the blade holder (the "plunger") with care, with the **blade retracted** whenever you are not using it.
   - **Never** touch the tool tip while the machine is on or moving.
   - While cutting, keep **hands, hair, loose clothing and jewelry** away from the tool carriage, the rollers and the media: the carriage and the media can move suddenly, including right after cutting or while changing settings.
   - Put used blades back in their storage case: never throw them loose in the bin.
@@ -25,15 +24,10 @@ This guide takes you step by step through the use of the **Graphtec CE6000-60 Pl
   - Computer connection: **USB**
 - Cutting tool: blade mounted in a **0.9 mm blade holder (plunger) with a blue cap**
   - The knob at the top of the holder sets the blade length: **one mark = about 0.1 mm**, one full turn = about 0.5 mm.
-- The plotter has two tool positions:
-  - **Tool holder 1 (back)**: for half cutting (kiss cut) and the plotting pen
-  - **Tool holder 2 (front)**: for cutting through (the whole thickness of the media)
 
 ## Glossary
 
 - **Adhesive vinyl**: colored plastic film, stuck on a protective sheet (the **backing sheet**).
-- **Half cut (kiss cut)**: the blade cuts the vinyl **without cutting the backing sheet**. This is the mode used for stickers and lettering.
-- **Cut through**: the blade goes through the whole thickness of the material.
 - **Weeding**: removing the unwanted vinyl around the design by hand, after cutting.
 - **Transfer tape**: transparent adhesive sheet used to lift the design in one piece and lay it on its final surface.
 - **Offset**: a small correction for the gap between the blade tip and the center of the holder. A well-set offset gives sharp corners.
@@ -42,7 +36,6 @@ This guide takes you step by step through the use of the **Graphtec CE6000-60 Pl
 ## Work area
 
 - Cutting happens across the width between the two push rollers, up to **603 mm**.
-- The media must **always cover the media sensor** at the front of the machine, otherwise the plotter does not detect the sheet.
 - The push rollers must sit **above the grit rollers**, shown by the position marks on the machine.
 
 ## Usable materials
@@ -51,10 +44,8 @@ This guide takes you step by step through the use of the **Graphtec CE6000-60 Pl
   - Adhesive vinyl (lettering, stickers, signs)
   - Standard fluorescent or reflective vinyl
   - Heat transfer vinyl (for fabric): the design must be **cut mirrored**
-  - Thin paper
 - Forbidden materials
   - Any media **thicker than 0.25 mm**
-  - High-intensity reflective film
   - **Strongly curled** or creased media: it can jam in the carriage. Flatten it before loading.
 
 ## Workflow
@@ -63,7 +54,7 @@ This guide takes you step by step through the use of the **Graphtec CE6000-60 Pl
 2. Load the vinyl and lock it with the push rollers
 3. Check the blade length
 4. Choose the cutting conditions and run a test cut
-5. Prepare the design in Graphtec Studio and send it to the plotter
+5. Prepare the design in Graphtec Studio 2 and send it to the plotter
 6. Watch the cut
 7. Weed and transfer the design
 8. Tidy up and switch off the machine
@@ -71,11 +62,7 @@ This guide takes you step by step through the use of the **Graphtec CE6000-60 Pl
 ## 1. Switching on
 
 - Check that nothing is in the way of the tool carriage or the media path, in front of and behind the machine.
-- Switch on the plotter with its power switch (**"|"** side). The control panel screen lights up, shows the firmware version, then asks you to load media.
-
-:::note
-After switching the plotter off, wait **at least 20 seconds** before switching it on again, otherwise the screen may not display correctly.
-:::
+- Switch on the plotter with its power switch. The control panel screen lights up, shows the firmware version, then asks you to load media.
 
 ## 2. Loading the vinyl
 
@@ -86,10 +73,7 @@ After switching the plotter off, wait **at least 20 seconds** before switching i
 3. Move the two push rollers so they sit **on both edges of the vinyl** and **above the grit rollers** (marks on the machine).
    - For a long cut (more than 2 m), place them at least **15 mm** inside the edges.
 4. Pull the vinyl taut so there are no folds, then **raise the media set lever**: the push rollers lock the media.
-5. The screen asks for the media type. Choose with keys **1**, **2** or **3**:
-   - **[1] ROLL-1 FRONT EDGE**: roll, cutting from the front edge
-   - **[2] ROLL-2 CURRENT POSITION**: roll, cutting from the current position (so no vinyl is wasted)
-   - **[3] SHEET**: sheet
+5. The screen asks for the media type: press key **[2] ROLL-2 CURRENT POSITION** (cutting from the current position, so no vinyl is wasted).
 6. The plotter measures the width (and the length for a sheet), then shows **READY**: it is ready to receive a cut.
 
 :::caution
@@ -101,7 +85,7 @@ If the push roller position message appears, a push roller is not above a grit r
 - Remove the blade holder from the tool holder by turning it counterclockwise, then look at the tip.
 - The blade should stick out **slightly less than the thickness of the vinyl plus its backing**. For common adhesive vinyl, it should barely stick out of the cap.
   - Turn the knob to extend or retract the blade: one mark = about 0.1 mm.
-- Put the blade holder back in **tool holder 1 (back)** for a half cut: push it in until its flange touches the top of the holder, then tighten the screw.
+- Put the blade holder back in its place: push it in until its flange touches the top of the holder, then tighten the screw.
 
 :::danger[Warning]
 A blade that sticks out too far cuts the backing sheet and damages the machine's cutting strip. Always set it **shorter than the thickness of the material**.
@@ -129,13 +113,9 @@ Before each new material, run a **test cut** in a corner of the vinyl: it only c
   - Look at the corners of the square: if they are rounded or not closed, the **offset** needs adjusting (in Normal mode).
   - Repeat until the cut is clean.
 
-:::note[Advice]
-To make weeding easier, choose **the lowest force** that still leaves a faint mark on the backing, and a moderate speed.
-:::
+## 5. Using the Graphtec Studio 2 software
 
-## 5. Using the Graphtec Studio software
-
-- Open **Graphtec Studio** on the computer connected to the plotter.
+- Open **Graphtec Studio 2** on the computer connected to the plotter. The software is free: <a href="https://www.graphteccorp.com/download/gs2_w/" target="_blank" rel="noopener noreferrer">Graphtec Studio 2 download page</a>.
 - Set the **page size** to match the size of your vinyl.
 - Import your design, preferably in **vector format** (SVG or DXF), or draw directly in the software (text, shapes).
 - Check the **dimensions** of the design and place it in the area that matches your vinyl.
@@ -146,13 +126,12 @@ To make weeding easier, choose **the lowest force** that still leaves a faint ma
   - Click **Send** to start cutting.
 
 :::note
-Graphtec Studio is in English or French depending on the computer's language, and button names may change slightly from one version to another. This guide does not cover creating vector designs.
+Graphtec Studio 2 is in English or French depending on the computer's language, and button names may change slightly from one version to another. This guide does not cover creating vector designs.
 :::
 
 ## 6. Cutting
 
 - The plotter starts cutting as soon as it receives the file. The starting point is the **origin**: by default, the tool position after loading.
-  - To change the origin, move the tool with the **POSITION arrows** to the spot you want, then press **[ORIGIN]** before sending the file.
 - Stay near the machine and check that the vinyl feeds straight, without folds.
 
 :::danger[Warning]
@@ -195,9 +174,8 @@ Common problems and solutions:
 - **Corners are rounded or not closed**: adjust the offset and run a new test cut.
 - **The vinyl shifts or feeds crooked**: check that the push rollers are above the grit rollers and that the vinyl is taut and not curled.
 - **The plotter does not detect the media**: the vinyl must cover the sensor at the front of the machine, and the lever must be raised.
-- **Nothing happens when sending**: check that the plotter shows **READY**, that the USB cable is plugged in and that the right plotter is selected in Graphtec Studio.
+- **Nothing happens when sending**: check that the plotter shows **READY**, that the USB cable is plugged in and that the right plotter is selected in Graphtec Studio 2.
 
 ## Going further
 
 - Read the <a href="https://mygraphtec.jp/site_download/02_manual/data/CE6000_UserManual(CE6000-UM-154).pdf" target="_blank" rel="noopener noreferrer">full CE6000 manual</a> for advanced functions: cutting around a printed design with registration marks (ARMS), cutting large panels, multiple copies.
-- The plotter can also **draw with a pen** instead of the blade (pen placed in tool holder 1).
