@@ -1,6 +1,6 @@
 # CNC guide: BitSetter module (several bits in one job)
 
-Status: docs
+Status: ready to merge
 Size: normal
 Database change: no
 New settings (.env keys): none
@@ -86,13 +86,13 @@ image and internal link points to a real file (covers the 6 new images). No data
 outside service.
 
 ## Acceptance checks
-- [ ] fr and en pages have the same sections and the same 6 new images
-- [ ] No step tells members to switch the router on before the bit is measured
-- [ ] Every automatic movement (Zero All, Start, OK after insert, end of job, Quick Action YES)
+- [x] fr and en pages have the same sections and the same 6 new images
+- [x] No step tells members to switch the router on before the bit is measured
+- [x] Every automatic movement (Zero All, Start, OK after insert, end of job, Quick Action YES)
       has a caution/danger box
-- [ ] Shop link uses the Shapeoko 3 variant (39303096860733)
-- [ ] Official images are credited to Carbide 3D
-- [ ] `scripts/test.sh` passes
+- [x] Shop link uses the Shapeoko 3 variant (39303096860733)
+- [x] Official images are credited to Carbide 3D
+- [x] `scripts/test.sh` passes
 
 ## Implementation notes
 - Keep the guide's style: short bullets, bold keywords, `![Illustration](...)` images,
