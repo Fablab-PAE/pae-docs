@@ -1,6 +1,6 @@
 # Shop link icon and two homepage sections
 
-Status: building
+Status: tests passed
 Size: small
 Database change: no
 New settings (.env keys): none
