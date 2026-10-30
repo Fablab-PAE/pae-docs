@@ -1,36 +1,67 @@
 ---
 title: Guides d'utilisation - atelier RoboTic
-description: Get started building your docs site with Starlight.
+description: Les guides pas à pas pour utiliser les machines du FabLab de l'atelier RoboTic, en toute sécurité.
 template: splash
 hero:
-  tagline: Découvrez les guides d'utilisation pour opérer les machines de l'atelier RoboTic
+  tagline: Des guides pas à pas pour utiliser chaque machine du FabLab, en toute sécurité.
   image:
-    file: ../../../assets/houston.webp
+    light: ../../../assets/logo_robotic_light.svg
+    dark: ../../../assets/logo_robotic_dark.svg
+    alt: Logo de l'atelier RoboTic
   actions:
-    - text: Voir les guides
+    - text: Choisir une machine
+      link: '#les-machines'
+      icon: down-arrow
+    - text: Guide CNC
       link: /pae-docs/fr/guides/cnc-machine/
       icon: right-arrow
-    # - text: Read the Starlight docs
-    #   link: https://starlight.astro.build
-    #   icon: external
-    #   variant: minimal
+      variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
 
-## Next steps
+## Les machines
 
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+<CardGrid>
+	<LinkCard
+		title="Machine CNC"
+		description="Shapeoko 3 : fraiser, graver et découper le bois, ou créer des circuits imprimés sur plaque de cuivre."
+		href="/pae-docs/fr/guides/cnc-machine/"
+	/>
+	<LinkCard
+		title="Gravure laser"
+		description="Laser à diode 5 W : graver des motifs et du texte sur le bois, le carton, le cuir ou le tissu."
+		href="/pae-docs/fr/guides/gravure-laser/"
+	/>
+	<LinkCard
+		title="Découpe vinyle"
+		description="Découper des autocollants et des lettrages. Guide en cours de rédaction."
+		href="/pae-docs/fr/guides/decoupe-vinyle/"
+	/>
+	<LinkCard
+		title="Impression 3D"
+		description="Fabriquer des pièces en plastique, couche par couche. Guide en cours de rédaction."
+		href="/pae-docs/fr/guides/impression-3d/"
+	/>
 </CardGrid>
+
+## Avant d'utiliser une machine
+
+- Lisez le guide de la machine en entier avant votre première utilisation.
+- Portez les protections indiquées dans le guide : lunettes, protections auditives, etc.
+- Vérifiez que la ventilation fonctionne avant de lancer une découpe ou une gravure.
+- Ne laissez jamais une machine en marche sans surveillance.
+- Nettoyez la machine et votre poste de travail après utilisation.
+- En cas de doute, demandez de l'aide à l'équipe de l'atelier avant de lancer la machine.
+
+## Comment sont faits les guides
+
+Chaque guide suit le même plan, pour retrouver facilement l'information :
+
+1. **Sécurité** : les règles à respecter avant de toucher la machine.
+2. **Référence matérielle** : le modèle de la machine, ses caractéristiques et ses manuels.
+3. **Matériaux** : ce que la machine peut travailler, et ce qui est interdit.
+4. **Étapes numérotées** : de la mise sous tension jusqu'à la fin du travail, avec des captures d'écran.
+5. **Nettoyage** : comment laisser la machine propre pour la personne suivante.
+
+Les guides existent aussi en anglais : utilisez le sélecteur de langue en haut de la page.
