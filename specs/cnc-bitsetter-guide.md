@@ -1,6 +1,6 @@
 # CNC guide: BitSetter module (several bits in one job)
 
-Status: building
+Status: tests passed
 Size: normal
 Database change: no
 New settings (.env keys): none
