@@ -1,6 +1,6 @@
 # Guides review 2 (vinyl link, 3D printing edits and images)
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -26,6 +26,6 @@ Apply the owner's second review, in French and English.
 - Changelog (fr + en): one line.
 
 ## Acceptance checks
-- [ ] Every requested replacement/removal done in both languages, nothing else removed
-- [ ] Images show on both language pages (link check covers them)
-- [ ] `scripts/test.sh` passes
+- [x] Every requested replacement/removal done in both languages, nothing else removed
+- [x] Images show on both language pages (link check covers them)
+- [x] `scripts/test.sh` passes
