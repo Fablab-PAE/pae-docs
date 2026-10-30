@@ -1,6 +1,6 @@
 # Graphtec plotter photo
 
-Status: planning
+Status: approved
 Size: small
 Database change: no
 New settings (.env keys): none
