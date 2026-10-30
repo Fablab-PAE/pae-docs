@@ -1,6 +1,6 @@
 # New homepage
 
-Status: approved
+Status: building
 Size: small
 Database change: no
 New settings (.env keys): none
