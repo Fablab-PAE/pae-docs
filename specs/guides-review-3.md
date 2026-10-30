@@ -1,6 +1,6 @@
 # Guides review 3 (vinyl images, 3D printing edits)
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -28,6 +28,6 @@ Illustrate the vinyl cutter guide and apply the owner's three 3D printing edits,
 - Changelog fr + en.
 
 ## Acceptance checks
-- [ ] Images show on both vinyl pages, each in the page's language
-- [ ] The three 3D edits in both languages
-- [ ] `scripts/test.sh` passes
+- [x] Images show on both vinyl pages, each in the page's language
+- [x] The three 3D edits in both languages
+- [x] `scripts/test.sh` passes
