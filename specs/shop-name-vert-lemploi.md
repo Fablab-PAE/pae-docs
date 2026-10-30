@@ -1,6 +1,6 @@
 # Shop name: Vert l'emploi
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -16,5 +16,5 @@ The shop is now called "Boutique Vert l'emploi" instead of "Boutique Chouette et
   address was given.
 
 ## Acceptance checks
-- [ ] No "Chouette et Cie" text left on the site (the link address excepted)
-- [ ] `scripts/test.sh` passes
+- [x] No "Chouette et Cie" text left on the site (the link address excepted)
+- [x] `scripts/test.sh` passes
