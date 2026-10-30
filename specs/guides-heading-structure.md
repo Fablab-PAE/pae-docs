@@ -1,6 +1,6 @@
 # Homepage heading: how the guides are structured
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -15,5 +15,5 @@ Rename the homepage section "Comment sont faits les guides".
 - No link points to the old heading anchors (checked).
 
 ## Acceptance checks
-- [ ] New heading on both homepages
-- [ ] `scripts/test.sh` passes
+- [x] New heading on both homepages
+- [x] `scripts/test.sh` passes
