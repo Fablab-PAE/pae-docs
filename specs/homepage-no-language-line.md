@@ -1,6 +1,6 @@
 # Homepage: remove the language line
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -16,5 +16,5 @@ Remove the last sentence of the homepage about the other language.
   French: use the language picker at the top of the page."
 
 ## Acceptance checks
-- [ ] The sentence is gone from both homepages, nothing else changed
-- [ ] `scripts/test.sh` passes
+- [x] The sentence is gone from both homepages, nothing else changed
+- [x] `scripts/test.sh` passes
