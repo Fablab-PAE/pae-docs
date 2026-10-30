@@ -1,6 +1,6 @@
 # Homepage pictures, projects section, shop link, no changelog
 
-Status: docs
+Status: ready to merge
 Size: normal
 Database change: no
 New settings (.env keys): none
@@ -44,7 +44,7 @@ French and English, as always.
     formateur de l'atelier RoboTic avant de démarrer une machine."
   - New section "## Nos projets et notre boutique" after the machines: a `MachineCard` for
     MILA (picture `design_v1.png` from the MILA repository, saved in
-    `src/assets/img/projets/mila.png`) and one for the shop (external link, shop icon).
+    `src/assets/img/projets/mila.png`) and one for the shop (external link, heart icon).
 - `src/content/docs/en/index.mdx`: the same in English ("The machines available in our
   workshop", "At all times, please check with the RoboTic workshop trainer before starting
   a machine.", "Our projects and our shop").
@@ -71,14 +71,17 @@ French and English, as always.
   check. No database or outside service: the shop and GitHub links are not visited.
 
 ## Acceptance checks
-- [ ] Both homepages show a picture (or icon for vinyl) on each machine card, in light and dark mode
-- [ ] The three sentences read exactly as the owner asked (fr), with matching English
-- [ ] "Choisir une machine" / "Choose a machine" buttons jump to the renamed section
-- [ ] No changelog page, no menu entry, no link to it (version pill is plain text)
-- [ ] Menu shows "Nos projets" > MILA under "Guides", and a "Boutique" link opening the shop in a new tab
-- [ ] `/pae-docs/fr/projets/mila/` and `/pae-docs/en/projets/mila/` exist
-- [ ] `scripts/test.sh` passes
+- [x] Both homepages show a picture (or icon for vinyl) on each machine card, in light and dark mode
+- [x] The three sentences read exactly as the owner asked (fr), with matching English
+- [x] "Choisir une machine" / "Choose a machine" buttons jump to the renamed section
+- [x] No changelog page, no menu entry, no link to it (version pill is plain text)
+- [x] Menu shows "Nos projets" > MILA under "Guides", and a "Boutique" link opening the shop in a new tab
+- [x] `/pae-docs/fr/projets/mila/` and `/pae-docs/en/projets/mila/` exist
+- [x] `scripts/test.sh` passes
 
 ## Implementation notes
 - Internal links include base and language (`/pae-docs/fr/...`).
 - `MachineCard` must keep the whole card clickable and readable on a phone.
+- MILA page has `next: false`: otherwise its "next page" button pointed to the outside shop.
+- Not checked in a real browser (none on this machine): the built HTML was checked instead
+  (pictures, links, new-tab attributes, renamed anchors, plain-text version pill).
