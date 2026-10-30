@@ -1,6 +1,6 @@
 ---
 title: 3D Printing
-description: User guide for the FabLab's Original Prusa MK4 3D printer, with the PrusaSlicer 2.9.6 software.
+description: User guide for the FabLab's Original Prusa MK4 3D printer, with the PrusaSlicer software.
 ---
 
 This guide takes you step by step through the use of the **Original Prusa MK4** 3D printer. It makes plastic objects by **laying down a strand of melted plastic (the filament), layer by layer**, from a 3D model. It is used to create prototypes, spare parts, cases, holders or decorative objects.
@@ -12,9 +12,7 @@ This guide takes you step by step through the use of the **Original Prusa MK4** 
   - Keep your fingers away from the axes and belts while the printer is powered on.
   - **Never** put anything under the heatbed: it moves back and forth while printing.
   - If melted plastic is stuck to the nozzle, do not remove it by hand: use pliers.
-  - Some filaments give off a smell while printing: **air the room** regularly.
-  - **Never leave the printer unattended** while it is running: despite its safety features, there is a fire risk if a part fails.
-  - The print sheet is held by **strong magnets**: mind your fingers when putting it back.
+  - Some filaments give off a smell while printing: **air the room** regularly and **close the protective cover** around the printer for the whole print.
 
 ## Hardware reference
 
@@ -22,23 +20,43 @@ This guide takes you step by step through the use of the **Original Prusa MK4** 
   - Build volume: **250 × 210 × 220 mm** (width × depth × height)
   - Nozzle diameter: **0.4 mm**
   - Filament diameter: **1.75 mm**
+- Latest firmware: <a href="https://help.prusa3d.com/downloads/mk4" target="_blank" rel="noopener noreferrer">Prusa MK4 download page</a>
+- Printer overview:
+
+  ![Illustration](../../../../assets/img/impression-3d/prusa_mk4_vue_ensemble.jpg)
+
+  1. Filament spool
+  2. Frame
+  3. Z axis: moves the print head up and down
+  4. Print head (Nextruder)
+  5. X-axis motor
+  6. Electronics box
+  7. Z-axis motor
+  8. Control screen
+  9. Spool holder
+  10. X axis: moves the print head left and right
+  11. Power supply unit
+  12. Print sheet
+  13. Heatbed
+  14. USB port and USB drive
+  15. Rotary knob
 - **Nextruder** print head: before each print, the nozzle taps the sheet at several points to measure its height (**Loadcell** sensor). The first layer is therefore set **automatically**.
-- Controls: a **screen** and a **rotary knob** (turn to choose, press to confirm). The **reset button** under the knob restarts the printer immediately.
-- Print sheet: removable **flexible PEI sheet**, held by magnets on the heatbed.
+- Controls: a **screen** and a **rotary knob** (turn to choose, press to confirm).
+- Print sheet: **flexible sheet**, removable, held by magnets on the heatbed.
 
 ## Glossary
 
-- **Filament**: plastic strand wound on a spool, which the printer melts.
-- **Slicer**: software that cuts the 3D model into layers and works out the nozzle's path. We use **PrusaSlicer**.
+- **Filament**: plastic strand wound on a spool, which the printer melts. Often sold in **1 kg** spools, with a strand **1.75 mm** in diameter.
+- **Slicer**: software that cuts the 3D model into layers and works out the nozzle's path. At the workshop we mainly use **PrusaSlicer**.
 - **G-code**: the instruction file made by the slicer and read by the printer (extension **.bgcode** or **.gcode**).
 - **Layer height**: the thickness of each layer. The lower it is, the finer the object, but the longer the print.
-- **Infill**: the inner structure of the object, given as a percentage. Printed objects are not solid.
+- **Infill**: the inner structure of the object, given as a percentage. Printed objects are almost never solid.
 - **Supports**: temporary structures, like scaffolding, that hold up overhanging parts. They are removed after printing.
 - **Brim**: a thin ring printed around the first layer so the object sticks better to the sheet.
 
 ## Print area
 
-- The object must fit in a volume **25 cm wide, 21 cm deep and 22 cm high**.
+- The object must fit in a volume **25 cm wide, 21 cm deep and 22 cm high** (the maximum dimensions of the Prusa MK4).
 - In PrusaSlicer, an object shown **in blue** does not fit in the print area: scale it down, rotate it or cut it into several pieces.
 
 ## Usable materials
@@ -50,13 +68,6 @@ This guide takes you step by step through the use of the **Original Prusa MK4** 
   - **PETG**: stronger and more flexible than PLA, for mechanical parts or parts that get a little warm.
     - Nozzle: 240 °C, bed: 70 to 90 °C
     - On the smooth sheet, apply a thin layer of **glue stick** before printing: PETG sticks too strongly and can tear off the sheet's surface.
-- Materials to avoid without the workshop team's approval
-  - **ASA / ABS**: they give off a strong smell (styrene) and warp without an enclosed printer.
-  - Technical filaments (PC, nylon, fiber-filled, flexible): tricky settings.
-
-:::note
-PrusaSlicer includes ready-made profiles for each filament: always choose the profile that matches the spool loaded in the printer.
-:::
 
 ## Workflow
 
@@ -70,16 +81,34 @@ PrusaSlicer includes ready-made profiles for each filament: always choose the pr
 
 ## 1. Finding or creating the 3D model
 
-- Download a ready-made model, for example on <a href="https://www.printables.com" target="_blank" rel="noopener noreferrer">Printables</a>, or create your own with 3D modeling software (for example <a href="https://www.tinkercad.com" target="_blank" rel="noopener noreferrer">Tinkercad</a>, free and usable in the browser).
+- Download a ready-made model, for example on <a href="https://www.printables.com" target="_blank" rel="noopener noreferrer">Printables</a> or <a href="https://makerworld.com" target="_blank" rel="noopener noreferrer">MakerWorld</a>, or create your own with 3D modeling software (for example <a href="https://www.autodesk.com/products/fusion-360" target="_blank" rel="noopener noreferrer">Autodesk Fusion</a>, or <a href="https://www.tinkercad.com" target="_blank" rel="noopener noreferrer">Tinkercad</a>, free and usable in the browser).
 - Formats accepted by PrusaSlicer: **STL, 3MF, OBJ, STEP**.
 
 :::note[Note]
 This guide explains how to print an existing model, but it **does not cover creating 3D models**.
 :::
 
-## 2. Using the PrusaSlicer 2.9.6 software
+## 2. Using the PrusaSlicer software
 
-- Open **PrusaSlicer** on the workshop computer.
+- Open **PrusaSlicer** on the workshop computer. To install or update the software: <a href="https://help.prusa3d.com/downloads/mk4" target="_blank" rel="noopener noreferrer">latest PrusaSlicer version</a>.
+- The areas of the window (example screenshot: the selected printer must be the **Original Prusa MK4**):
+
+  ![Illustration](../../../../assets/img/impression-3d/prusaslicer_interface.jpg)
+
+  1. Detailed print, filament and printer settings
+  2. **Add**: import a 3D model
+  3. **Delete** / **Delete all**
+  4. Simple / Advanced / Expert modes
+  5. Print settings (quality and speed)
+  6. Filament choice
+  7. Printer choice
+  8. Quick settings: supports, infill, brim
+  9. Object information (size, print time after slicing)
+  10. **Slice now** / **Export G-code**
+  11. Right-click menu on the model
+  12. 3D view of the model
+  13. Switch between the 3D editor and the layer preview
+  14. Move, Scale, Rotate, Cut, Paint-on supports, Seam painting tools
 - In the right-hand column, check the three drop-down menus:
   - **Printer**: **Original Prusa MK4** with the **0.4 mm** nozzle
   - **Filament**: the profile that matches the spool (for example *Prusament PLA* or *Generic PLA*)
@@ -95,7 +124,7 @@ This guide explains how to print an existing model, but it **does not cover crea
   - **Brim**: tick it if the object touches the bed over a small area.
 - Click **Slice now**.
 - **Check the preview**: scroll through the layers with the slider on the right. Check that the first layer touches the bed and that no part is printed in mid-air. The print time and the amount of filament are shown on the right.
-- Plug the printer's USB drive into the computer, click **Export G-code** and save the file on the drive. Use a simple name (for example `phone_stand`).
+- Plug the printer's USB drive into the computer (the drive is found to the right of the printer's control screen), click **Export G-code** and save the file on the drive. Use a simple name (for example `phone_stand`).
 - Eject the drive properly before unplugging it.
 
 :::caution
@@ -105,7 +134,7 @@ Always check the preview before exporting: it is the best way to avoid a failed 
 ## 3. Preparing the printer
 
 - Switch on the printer with the **power supply switch**, at the back.
-- Check that the **print sheet** is in place: the two cutouts at the back of the sheet must sit on the two pins of the bed.
+- Check that the **print sheet** is in place.
   - To reposition it, lift it by the **two front corners**. Never slide it on the bed: this would scratch it.
 - Check that the sheet is **clean**: wipe it with **isopropyl alcohol (90 % or more)** and a paper towel, then do not touch the surface with your fingers (grease marks stop the object from sticking).
 - Check that there are no plastic leftovers on the sheet or under the bed.
@@ -117,7 +146,13 @@ Always check the preview before exporting: it is the best way to avoid a failed 
 - To load the new filament:
   1. Put the spool on the spool holder, on top of the printer.
   2. Cut the end of the filament **at an angle** with cutting pliers. Do not let go of the end: the filament would tangle.
+
+     ![Illustration](../../../../assets/img/impression-3d/filament_coupe.jpg)
+
   3. Feed the filament through the guide, then into the opening at the top of the print head. If the filament sensor is on, loading starts by itself. Otherwise, choose **Menu - Filament - Load Filament**.
+
+     ![Illustration](../../../../assets/img/impression-3d/filament_insertion.jpg)
+
   4. Choose the **filament type** from the list and wait for the nozzle to heat up.
   5. Gently push the filament until you feel the gear pulling it in.
   6. Some plastic comes out of the nozzle. If the color is right, answer **Yes**. Otherwise, choose **Purge More** until the right color comes out.
@@ -132,7 +167,6 @@ Always check the preview before exporting: it is the best way to avoid a failed 
 - During the print, the **Tune** menu lets you adjust the **speed**, for example.
 
 :::danger[Warning]
-- **Never leave the printer unattended** while it is running.
 - If something goes wrong (strange noise, burning smell, a loose object dragged by the nozzle), stop the print from the screen. In an emergency, press the **reset button** under the rotary knob or turn off the **power supply switch**.
 :::
 
@@ -143,6 +177,9 @@ Wait for the sheet to **cool down** before removing the part: the sheet and the 
 :::
 
 - Lift the print sheet off the bed by its front corners.
+
+  ![Illustration](../../../../assets/img/impression-3d/retrait_piece.jpg)
+
 - **Bend the sheet slightly** one way then the other: the part comes off. If needed, turn the sheet a quarter turn and repeat.
 - Also remove the purge line and every small plastic leftover. Do not use your nails or a sharp metal object: use a **plastic spatula**.
 - Remove supports and brim with cutting pliers or by hand.
@@ -150,18 +187,15 @@ Wait for the sheet to **cool down** before removing the part: the sheet and the 
 
 ## 7. Tidying up after use
 
-- If the printer is no longer in use, you can leave the filament loaded, unless the workshop says otherwise.
-- Take your USB drive back, or leave the printer's drive in place.
+- If the printer is no longer in use, unload the filament (**Menu - Filament - Unload Filament**), unless the workshop says otherwise.
 - Remove plastic leftovers around the printer and under the bed.
 - Switch off the printer with the **power supply switch**, at the back.
 
 ## Maintenance
 
-- **Print sheet**: clean it with isopropyl alcohol before each print. Do not rinse it under the tap (it would rust) and never peel off the PEI film.
-  - **Textured** or **satin** sheet: **never use acetone**.
+- **Print sheet**: clean it with isopropyl alcohol before each print.
 - **Cleanliness**: regularly remove plastic strands and dust around the printer and under the bed with a brush or a vacuum cleaner.
 - **Fans**: check them every few hundred hours of printing and remove plastic strands with fine tweezers.
-- **Never** open the print head's gearbox: it is set at the factory.
 
 ## Troubleshooting
 
@@ -179,3 +213,4 @@ Common problems and solutions:
 - Read the <a href="https://help.prusa3d.com" target="_blank" rel="noopener noreferrer">Prusa knowledge base</a> for detailed explanations on the printer, materials and errors.
 - PrusaSlicer can print an object **in several colors** with a single filament: in the preview, add a **color change** at the layer you want. The printer stops at that layer and guides you through changing the filament.
 - An object that is too big can be **cut into several pieces** with PrusaSlicer's **Cut** tool (**C** key), then assembled.
+- The pictures in this guide come from the <a href="https://www.prusa3d.com/downloads/manual/prusa3d_manual_MK4_MK39_103_en.pdf" target="_blank" rel="noopener noreferrer">official Original Prusa MK4 handbook</a> (© Prusa Research).

@@ -16,6 +16,7 @@ This guide takes you step by step through the use of the **Graphtec CE6000-60 Pl
 ## Hardware reference
 
 - Plotter model: **Graphtec CE6000-60 Plus** (<a href="https://mygraphtec.jp/site_download/02_manual/data/CE6000_UserManual(CE6000-UM-154).pdf" target="_blank" rel="noopener noreferrer">user's manual</a>)
+  - Machine presentation page: <a href="https://web.archive.org/web/20190820094844/https://graphtec-graphtec.squarespace.com/vinyl-cutter-cut-plotter-ce6000-plus/" target="_blank" rel="noopener noreferrer">Graphtec CE6000 Plus (archived Graphtec website)</a>
   - Maximum cutting width: **603 mm** (guaranteed precision over 584 mm × 2 m)
   - Accepted media width: **from 50 mm to 712 mm**, minimum length **125 mm**
   - Media thickness: **0.25 mm maximum**

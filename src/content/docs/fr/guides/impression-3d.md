@@ -1,6 +1,6 @@
 ---
 title: Impression 3D
-description: Guide d'utilisation de l'imprimante 3D Original Prusa MK4 du FabLab, avec le logiciel PrusaSlicer 2.9.6.
+description: Guide d'utilisation de l'imprimante 3D Original Prusa MK4 du FabLab, avec le logiciel PrusaSlicer.
 ---
 
 Ce guide vous accompagne pas à pas dans l'utilisation de l'imprimante 3D **Original Prusa MK4**. Elle fabrique des objets en plastique en **déposant un fil de plastique fondu (le filament), couche par couche**, à partir d'un modèle 3D. Elle sert à créer des prototypes, des pièces de rechange, des boîtiers, des supports ou des objets décoratifs.
@@ -12,9 +12,7 @@ Ce guide vous accompagne pas à pas dans l'utilisation de l'imprimante 3D **Orig
   - Ne mettez pas les doigts près des axes et des courroies quand l'imprimante est sous tension.
   - Ne placez **jamais** d'objet sous le plateau chauffant : il se déplace d'avant en arrière pendant l'impression.
   - Si du plastique fondu reste collé à la buse, ne le retirez pas à la main : utilisez une pince.
-  - Certains filaments dégagent une odeur pendant l'impression : **aérez la pièce** régulièrement.
-  - **Ne laissez jamais l'imprimante sans surveillance** pendant son fonctionnement : malgré ses sécurités, un risque d'incendie existe en cas de panne.
-  - La plaque d'impression est tenue par des **aimants puissants** : attention aux doigts en la reposant.
+  - Certains filaments dégagent une odeur pendant l'impression : **aérez la pièce** régulièrement et **fermez la housse de protection** contenant l'imprimante pendant toute la durée de l'impression.
 
 ## Référence matérielle
 
@@ -22,23 +20,43 @@ Ce guide vous accompagne pas à pas dans l'utilisation de l'imprimante 3D **Orig
   - Volume d'impression : **250 × 210 × 220 mm** (largeur × profondeur × hauteur)
   - Diamètre de la buse : **0,4 mm**
   - Diamètre du filament : **1,75 mm**
+- Logiciel interne (firmware) le plus récent : <a href="https://help.prusa3d.com/downloads/mk4" target="_blank" rel="noopener noreferrer">page de téléchargement Prusa MK4</a>
+- Vue d'ensemble de l'imprimante :
+
+  ![Illustration](../../../../assets/img/impression-3d/prusa_mk4_vue_ensemble.jpg)
+
+  1. Bobine de filament
+  2. Cadre
+  3. Axe Z : déplace la tête d'impression de haut en bas
+  4. Tête d'impression (Nextruder)
+  5. Moteur de l'axe X
+  6. Boîtier de l'électronique
+  7. Moteur de l'axe Z
+  8. Écran de contrôle
+  9. Porte-bobine
+  10. Axe X : déplace la tête d'impression de gauche à droite
+  11. Bloc d'alimentation
+  12. Plaque d'impression
+  13. Plateau chauffant
+  14. Port USB et clé USB
+  15. Bouton rotatif
 - Tête d'impression **Nextruder** : avant chaque impression, la buse touche la plaque en plusieurs points pour mesurer sa hauteur (capteur **Loadcell**). Le réglage de la première couche est donc **automatique**.
-- Commandes : un **écran** et un **bouton rotatif** (tourner pour choisir, appuyer pour valider). Le **bouton de réinitialisation** sous le bouton rotatif redémarre immédiatement l'imprimante.
-- Plaque d'impression : **plaque flexible en PEI**, amovible, tenue par des aimants sur le plateau chauffant.
+- Commandes : un **écran** et un **bouton rotatif** (tourner pour choisir, appuyer pour valider).
+- Plaque d'impression : **plaque flexible**, amovible, tenue par des aimants sur le plateau chauffant.
 
 ## Glossaire
 
-- **Filament** : fil de plastique enroulé sur une bobine, que l'imprimante fait fondre.
-- **Trancheur (slicer)** : logiciel qui découpe le modèle 3D en couches et calcule le trajet de la buse. Nous utilisons **PrusaSlicer**.
+- **Filament** : fil de plastique enroulé sur une bobine, que l'imprimante fait fondre. Souvent vendu en bobines de **1 kg**, avec un fil de **1,75 mm** de diamètre.
+- **Trancheur (slicer)** : logiciel qui découpe le modèle 3D en couches et calcule le trajet de la buse. Nous utilisons au local principalement **PrusaSlicer**.
 - **G-code** : le fichier d'instructions produit par le trancheur et lu par l'imprimante (extension **.bgcode** ou **.gcode**).
 - **Hauteur de couche** : épaisseur de chaque couche. Plus elle est faible, plus l'objet est fin, mais plus l'impression est longue.
-- **Remplissage** : structure intérieure de l'objet, exprimée en pourcentage. Les objets imprimés ne sont pas pleins.
+- **Remplissage** : structure intérieure de l'objet, exprimée en pourcentage. Les objets imprimés ne sont presque jamais pleins.
 - **Supports** : structures temporaires, comme un échafaudage, qui soutiennent les parties en surplomb. On les retire après l'impression.
 - **Bordure (brim)** : fine collerette imprimée autour de la première couche pour que l'objet tienne mieux sur la plaque.
 
 ## Zone d'impression
 
-- L'objet doit tenir dans un volume de **25 cm de large, 21 cm de profondeur et 22 cm de haut**.
+- L'objet doit tenir dans un volume de **25 cm de large, 21 cm de profondeur et 22 cm de haut** (ce sont les dimensions maximales de la Prusa MK4).
 - Dans PrusaSlicer, un objet qui apparaît **en bleu** ne rentre pas dans la zone d'impression : réduisez-le, tournez-le ou coupez-le en plusieurs morceaux.
 
 ## Matériaux utilisables
@@ -50,13 +68,6 @@ Ce guide vous accompagne pas à pas dans l'utilisation de l'imprimante 3D **Orig
   - **PETG** : plus résistant et plus souple que le PLA, pour les pièces mécaniques ou qui chauffent un peu.
     - Buse : 240 °C, plateau : 70 à 90 °C
     - Sur la plaque lisse, appliquez une fine couche de **colle en bâton** avant d'imprimer : le PETG adhère trop fort et peut arracher la surface de la plaque.
-- Matériaux à éviter sans l'accord de l'équipe de l'atelier
-  - **ASA / ABS** : ils dégagent une forte odeur (styrène) et se déforment sans imprimante fermée.
-  - Filaments techniques (PC, nylon, chargés en fibres, flexibles) : réglages délicats.
-
-:::note
-PrusaSlicer contient des profils déjà réglés pour chaque filament : choisissez toujours le profil qui correspond à la bobine chargée dans l'imprimante.
-:::
 
 ## Processus de travail
 
@@ -70,16 +81,34 @@ PrusaSlicer contient des profils déjà réglés pour chaque filament : choisiss
 
 ## 1. Trouver ou créer le modèle 3D
 
-- Téléchargez un modèle déjà prêt, par exemple sur <a href="https://www.printables.com" target="_blank" rel="noopener noreferrer">Printables</a>, ou créez le vôtre avec un logiciel de modélisation 3D (par exemple <a href="https://www.tinkercad.com" target="_blank" rel="noopener noreferrer">Tinkercad</a>, gratuit et utilisable dans le navigateur).
+- Téléchargez un modèle déjà prêt, par exemple sur <a href="https://www.printables.com" target="_blank" rel="noopener noreferrer">Printables</a> ou <a href="https://makerworld.com" target="_blank" rel="noopener noreferrer">MakerWorld</a>, ou créez le vôtre avec un logiciel de modélisation 3D (par exemple <a href="https://www.autodesk.com/products/fusion-360" target="_blank" rel="noopener noreferrer">Autodesk Fusion</a>, ou <a href="https://www.tinkercad.com" target="_blank" rel="noopener noreferrer">Tinkercad</a>, gratuit et utilisable dans le navigateur).
 - Formats acceptés par PrusaSlicer : **STL, 3MF, OBJ, STEP**.
 
 :::note[Note]
 Ce guide explique comment imprimer un modèle existant, mais il **ne couvre pas la création de modèles 3D**.
 :::
 
-## 2. Utilisation du logiciel PrusaSlicer 2.9.6
+## 2. Utilisation du logiciel PrusaSlicer
 
-- Ouvrez **PrusaSlicer** sur l'ordinateur de l'atelier.
+- Ouvrez **PrusaSlicer** sur l'ordinateur de l'atelier. Pour installer ou mettre à jour le logiciel : <a href="https://help.prusa3d.com/downloads/mk4" target="_blank" rel="noopener noreferrer">dernière version de PrusaSlicer</a>.
+- Les différentes zones de la fenêtre (capture d'exemple : l'imprimante choisie doit être l'**Original Prusa MK4**) :
+
+  ![Illustration](../../../../assets/img/impression-3d/prusaslicer_interface.jpg)
+
+  1. Réglages détaillés d'impression, du filament et de l'imprimante
+  2. **Ajouter** : importer un modèle 3D
+  3. **Supprimer** / **Tout supprimer**
+  4. Modes Simple / Avancé / Expert
+  5. Réglages d'impression (qualité et vitesse)
+  6. Choix du filament
+  7. Choix de l'imprimante
+  8. Réglages rapides : supports, remplissage, bordure
+  9. Informations sur l'objet (taille, temps d'impression après le découpage)
+  10. **Découper maintenant** / **Exporter le G-code**
+  11. Menu du clic droit sur le modèle
+  12. Aperçu 3D du modèle
+  13. Bascule entre l'éditeur 3D et l'aperçu des couches
+  14. Outils Déplacer, Redimensionner, Pivoter, Couper, Supports peints, Peinture de jointure
 - Dans la colonne de droite, vérifiez les trois menus déroulants :
   - **Imprimante** : **Original Prusa MK4** avec la buse **0,4 mm**
   - **Filament** : le profil qui correspond à la bobine (par exemple *Prusament PLA* ou *Generic PLA*)
@@ -95,7 +124,7 @@ Ce guide explique comment imprimer un modèle existant, mais il **ne couvre pas 
   - **Bordure** : cochez-la si l'objet touche le plateau sur une petite surface.
 - Cliquez sur **Découper maintenant** (*Slice now*).
 - **Vérifiez l'aperçu** : faites défiler les couches avec le curseur à droite. Regardez si la première couche touche bien le plateau et si aucune partie n'est imprimée dans le vide. Le temps d'impression et la quantité de filament s'affichent à droite.
-- Insérez la clé USB de l'imprimante dans l'ordinateur, cliquez sur **Exporter le G-code** et enregistrez le fichier sur la clé. Utilisez un nom simple (par exemple `support_telephone`).
+- Insérez la clé USB de l'imprimante dans l'ordinateur (elle est située à droite de l'écran de contrôle), cliquez sur **Exporter le G-code** et enregistrez le fichier sur la clé. Utilisez un nom simple (par exemple `support_telephone`).
 - Éjectez la clé proprement avant de la retirer.
 
 :::caution
@@ -105,7 +134,7 @@ Vérifiez toujours l'aperçu avant d'exporter : c'est le meilleur moyen d'évite
 ## 3. Préparation de l'imprimante
 
 - Allumez l'imprimante avec l'**interrupteur de l'alimentation**, à l'arrière.
-- Vérifiez que la **plaque d'impression** est bien en place : les deux encoches à l'arrière de la plaque doivent être sur les deux ergots du plateau.
+- Vérifiez que la **plaque d'impression** est bien en place.
   - Pour la repositionner, soulevez-la par les **deux coins avant**. Ne la faites jamais glisser sur le plateau : cela le rayerait.
 - Vérifiez que la plaque est **propre** : nettoyez-la avec de l'**alcool isopropylique (90 % ou plus)** et un essuie-tout, puis ne touchez plus la surface avec les doigts (les traces de gras empêchent l'objet de coller).
 - Vérifiez qu'il n'y a aucun reste de plastique sur la plaque ni sous le plateau.
@@ -117,7 +146,13 @@ Vérifiez toujours l'aperçu avant d'exporter : c'est le meilleur moyen d'évite
 - Pour charger le nouveau filament :
   1. Placez la bobine sur le porte-bobine, en haut de l'imprimante.
   2. Coupez l'extrémité du filament **en biseau** avec une pince coupante. Ne lâchez pas l'extrémité : le filament s'emmêlerait.
+
+     ![Illustration](../../../../assets/img/impression-3d/filament_coupe.jpg)
+
   3. Passez le filament dans le guide, puis insérez-le dans l'ouverture en haut de la tête d'impression. Si le capteur de filament est activé, le chargement démarre tout seul. Sinon, choisissez **Menu - Filament - Charger le filament**.
+
+     ![Illustration](../../../../assets/img/impression-3d/filament_insertion.jpg)
+
   4. Choisissez le **type de filament** dans la liste et attendez que la buse chauffe.
   5. Poussez doucement le filament jusqu'à sentir que l'engrenage l'entraîne.
   6. Un peu de plastique sort de la buse. Si la couleur est bonne, répondez **Oui**. Sinon, choisissez **Purger plus** jusqu'à ce que la bonne couleur sorte.
@@ -132,7 +167,6 @@ Vérifiez toujours l'aperçu avant d'exporter : c'est le meilleur moyen d'évite
 - Pendant l'impression, le menu **Régler** permet par exemple d'ajuster la **vitesse**.
 
 :::danger[Attention]
-- **Ne laissez jamais l'imprimante sans surveillance** pendant son fonctionnement.
 - En cas d'anomalie (bruit anormal, odeur de brûlé, objet décollé qui se fait traîner par la buse), arrêtez l'impression depuis l'écran. En cas d'urgence, appuyez sur le **bouton de réinitialisation** sous le bouton rotatif ou coupez l'**interrupteur de l'alimentation**.
 :::
 
@@ -143,6 +177,9 @@ Attendez que la plaque **refroidisse** avant de retirer la pièce : la plaque et
 :::
 
 - Retirez la plaque d'impression du plateau en la soulevant par les coins avant.
+
+  ![Illustration](../../../../assets/img/impression-3d/retrait_piece.jpg)
+
 - **Pliez légèrement** la plaque d'un côté puis de l'autre : la pièce se décolle. Si besoin, tournez la plaque d'un quart de tour et recommencez.
 - Retirez aussi la ligne de purge et tous les petits restes de plastique. N'utilisez pas vos ongles ni d'objet métallique pointu : prenez une **spatule en plastique**.
 - Retirez les supports et la bordure avec une pince coupante ou à la main.
@@ -150,18 +187,15 @@ Attendez que la plaque **refroidisse** avant de retirer la pièce : la plaque et
 
 ## 7. Rangement après utilisation
 
-- Si l'imprimante n'est plus utilisée, vous pouvez laisser le filament chargé, sauf indication contraire de l'atelier.
-- Récupérez votre clé USB ou laissez celle de l'imprimante en place.
+- Si l'imprimante n'est plus utilisée, enlevez le filament chargé (**Menu - Filament - Décharger le filament**), sauf indication contraire de l'atelier.
 - Retirez les restes de plastique autour de l'imprimante et sous le plateau.
 - Éteignez l'imprimante avec l'**interrupteur de l'alimentation**, à l'arrière.
 
 ## Entretien
 
-- **Plaque d'impression** : nettoyez-la à l'alcool isopropylique avant chaque impression. Ne la passez pas sous l'eau du robinet (elle rouillerait) et ne retirez jamais le film PEI.
-  - Plaque **texturée** ou **satinée** : n'utilisez **jamais d'acétone**.
+- **Plaque d'impression** : nettoyez-la à l'alcool isopropylique avant chaque impression.
 - **Propreté** : retirez régulièrement les fils de plastique et la poussière autour de l'imprimante et sous le plateau avec une brosse ou un aspirateur.
 - **Ventilateurs** : vérifiez-les toutes les quelques centaines d'heures d'impression et retirez les fils de plastique avec une pince fine.
-- N'ouvrez **jamais** le boîtier d'engrenages de la tête d'impression : il est réglé en usine.
 
 ## Dépannage
 
@@ -179,3 +213,4 @@ Problèmes courants et solutions :
 - Consultez la <a href="https://help.prusa3d.com" target="_blank" rel="noopener noreferrer">base de connaissances Prusa</a> pour des explications détaillées sur l'imprimante, les matériaux et les erreurs.
 - PrusaSlicer permet d'imprimer un objet **en plusieurs couleurs** avec un seul filament : dans l'aperçu, ajoutez un **changement de couleur** à la couche voulue. L'imprimante s'arrête à cette couche et vous guide pour changer de filament.
 - Un objet trop grand peut être **coupé en plusieurs morceaux** avec l'outil **Couper** (touche **C**) de PrusaSlicer, puis assemblé.
+- Les illustrations de ce guide proviennent du <a href="https://www.prusa3d.com/downloads/manual/prusa3d_manual_MK4_MK39_103_fr.pdf" target="_blank" rel="noopener noreferrer">manuel officiel de l'Original Prusa MK4</a> (© Prusa Research).

@@ -6,6 +6,11 @@ description: Changes to the FabLab documentation website, newest first.
 The small badge next to the logo shows which version of the site you are reading. This page
 lists the changes, newest first.
 
+## 2026-10-30: 3D printing guide reviewed
+
+- The 3D printing guide is simplified, illustrated with pictures from the Prusa handbook, and links to the latest PrusaSlicer and firmware.
+- The vinyl cutter guide links to the machine's presentation page.
+
 ## 2026-10-30: vinyl cutter guide reviewed
 
 - The vinyl cutter guide is simplified and uses Graphtec Studio 2 (with its download link).
