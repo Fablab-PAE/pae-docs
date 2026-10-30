@@ -1,6 +1,6 @@
 # Homepage pictures, projects section, shop link, no changelog
 
-Status: tests passed
+Status: docs
 Size: normal
 Database change: no
 New settings (.env keys): none
