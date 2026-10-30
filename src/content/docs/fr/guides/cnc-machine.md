@@ -15,6 +15,7 @@ Ce guide vous accompagne pas à pas dans l'utilisation de la machine CNC Shapeok
   - Porter des protections auditives au besoin
   - S'assurer que le système de ventilation est fonctionnel
   - Ne jamais laisser la machine sans surveillance pendant son fonctionnement
+  - Toujours **éteindre la toupie** (interrupteur **Toupie**) et attendre l'arrêt complet de la mèche avant de toucher à la mèche
 
 ## Référence matérielle
 
@@ -32,6 +33,8 @@ Ce guide vous accompagne pas à pas dans l'utilisation de la machine CNC Shapeok
     - Voir ci dessous le **processus d'installation d'une mèche dans le collet**
 
     ![Illustration](../../../../assets/img/guide-cnc/cnc_02.png)
+
+- Module **BitSetter** : capteur qui mesure automatiquement la longueur de la mèche, pour pouvoir **utiliser plusieurs mèches dans un même usinage** (voir la section [Module BitSetter](#module-bitsetter-changement-de-mèches))
 
 - **Utilisateurs avancés**: Mettre à jour le firmware de la machine CNC périodiquement en connectant la machine CNC à votre ordinateur en utilisant un câble USB et en  utilisant l'IDE Arduino pour téléverser le programme
     - Mise à jour Firmware : GRBL 1.1h (mise à jour depuis la version 1.1f) <a href="https://github.com/gnea/grbl/releases/tag/v1.1h.20190825" target="_blank" rel="noopener noreferrer">Lien Firmware</a>
@@ -69,6 +72,104 @@ Carbide 3D fournit une **suite de 2 logiciels** conçu pour ses machines CNC (lo
 :::note[Note]
 Ce guide explique comment opérer la machine CNC pour réaliser une découpe à partir d'un dessin existant, mais il **ne couvre pas ici la création de dessins vectoriels**.
 :::
+
+## Module BitSetter (changement de mèches)
+
+La machine est équipée d'un **BitSetter** : un petit capteur fixé à l'avant droit de la machine qui **mesure automatiquement la longueur de la mèche** installée dans la toupie.
+
+![Illustration](../../../../assets/img/guide-cnc/bitsetter_01.jpg)
+
+*Photo : Carbide 3D*
+
+### À quoi sert le BitSetter ?
+
+- Il permet d'**utiliser plusieurs mèches dans un même fichier d'usinage** (par exemple une mèche fine pour graver un texte, puis une mèche plus grosse pour découper le contour).
+- À chaque changement de mèche, Carbide Motion mesure la nouvelle mèche, la compare à la précédente et **recalcule automatiquement le zéro de l'axe Z**. Vous ne faites donc le zéro **qu'une seule fois**, au début.
+- Avant le BitSetter, il fallait exporter un fichier séparé pour chaque mèche et refaire le zéro Z à chaque changement.
+
+### Où se trouve-t-il ?
+
+- Il est fixé sur la **plaque avant de la machine, à environ 114 mm (4,5 pouces) du bord droit**.
+
+  ![Illustration](../../../../assets/img/guide-cnc/bitsetter_02.jpg)
+
+  *Photo : Carbide 3D (guide d'installation du BitSetter)*
+
+- Pour mesurer une mèche, la machine place la toupie juste au-dessus du bouton du BitSetter, puis **descend doucement jusqu'à ce que la mèche touche le bouton**.
+
+  ![Illustration](../../../../assets/img/guide-cnc/bitsetter_04.jpg)
+
+  *Photo : Carbide 3D (guide d'installation du BitSetter)*
+
+### Quand la machine bouge-t-elle toute seule ?
+
+Avec le BitSetter, la machine **se déplace toute seule vers le BitSetter** à plusieurs moments :
+- quand vous faites le **zéro de l'axe Z** (boutons **"Zero All"** ou **"Zero Z"**) ;
+- quand vous lancez l'usinage (bouton **"START"**) ;
+- à chaque **changement de mèche** demandé par le fichier ;
+- parfois aussi quand vous ramenez la toupie au point zéro (**"Rapid Position"** ou **"Quick Actions"**).
+
+:::danger[Attention : la machine démarre sans prévenir]
+Carbide 3D le résume ainsi : **dès que vous touchez au zéro Z, considérez que la machine va se mettre en mouvement**. Avant chacune de ces actions :
+- retirez vos mains de la machine ;
+- vérifiez que **rien** (cales, outils, câbles, tuyau d'aspirateur) ne se trouve sur le chemin de la toupie ni autour du BitSetter ;
+- vérifiez que la **toupie est éteinte**.
+:::
+
+### Les règles d'or du BitSetter
+
+:::caution[À respecter à chaque usinage]
+1. **Toupie éteinte pendant chaque mesure** : la mèche ne doit jamais tourner quand elle touche le BitSetter (cela abîmerait le capteur et la mèche).
+2. **Changer de mèche uniquement quand Carbide Motion le demande** (message **"Please insert tool"**). Si vous changez la mèche à un autre moment, la machine ne connaît pas sa longueur : elle risque de **s'enfoncer dans la planche** ou d'usiner dans le vide. Si cela arrive, refaites le zéro de l'axe Z (**"Set Zero"** puis **"Zero Z"**) : la nouvelle mèche sera mesurée.
+3. **Mèche assez longue** : elle doit dépasser du collet d'**au moins 12,7 mm (0,5 pouce)** pour atteindre le bouton du BitSetter.
+4. **Bouton propre** : un copeau sur le bouton fausse la mesure, et donc la profondeur de coupe. Aspirez les copeaux autour du BitSetter avant de commencer.
+5. **Ne pas déplacer le BitSetter** : sa position est enregistrée dans Carbide Motion. S'il a bougé, il faut refaire le réglage (voir « Installation et réglage » ci-dessous).
+:::
+
+### Versions installées à l'atelier
+
+| Élément | Version utilisée |
+|---|---|
+| Machine | Shapeoko 3 XXL, axe Z à courroie (*belt-drive*) |
+| Carte de contrôle | Carbide Motion **v2.4e** |
+| Firmware | GRBL **1.1** |
+| Carbide Motion | **V6**, build **653** |
+| Carbide Create | **V7**, build **778** |
+
+:::note[Note]
+Carbide 3D a changé la façon d'utiliser le BitSetter **à partir du build 623 de Carbide Motion** (2024) : la mèche est maintenant mesurée au moment où l'on fait le zéro Z et au lancement de l'usinage. Ce guide décrit ce fonctionnement (build 653). Après une mise à jour de Carbide Motion, vérifiez que les étapes sont toujours les mêmes.
+:::
+
+### Documentation et achat
+
+- <a href="https://my.carbide3d.com/pdf/bitsetter-v2.pdf" target="_blank" rel="noopener noreferrer">Guide officiel d'installation et de réglage du BitSetter</a> (PDF Carbide 3D, en anglais)
+- <a href="https://carbide3d.com/blog/bitsetter-changes-carbide-motion" target="_blank" rel="noopener noreferrer">Article Carbide 3D sur le nouveau fonctionnement du BitSetter</a> (en anglais)
+- <a href="https://my.carbide3d.com/gettingstarted/shapeoko3/" target="_blank" rel="noopener noreferrer">Bien démarrer avec la Shapeoko</a> et cours <a href="https://carbide3d.com/hub/courses/getting-started-cnc/" target="_blank" rel="noopener noreferrer">Getting Started with CNC</a> (Carbide 3D, en anglais)
+- <a href="https://carbide3d.com/downloads/" target="_blank" rel="noopener noreferrer">Téléchargement de Carbide Motion et Carbide Create</a>
+- <a href="https://shop.carbide3d.com/products/bitsetter?variant=39303096860733" target="_blank" rel="noopener noreferrer">Acheter un BitSetter</a> : choisir le modèle **Shapeoko 3** (le modèle carré), pas le modèle Shapeoko 4 (en forme de barre)
+
+### Installation et réglage (utilisateurs avancés)
+
+:::note[Note]
+Le BitSetter est **déjà installé et réglé** à l'atelier. Ces étapes ne servent que s'il a été déplacé ou remplacé, ou si Carbide Motion a été réinstallé. Le détail complet (avec photos) est dans le guide officiel ci-dessus.
+:::
+
+1. Éteindre et débrancher la machine, puis débrancher le câble USB.
+2. Glisser le BitSetter sur le rebord de la **plaque avant**, à environ **114 mm (4,5 pouces) du bord droit (Y2)** (valeur pour un axe Z à courroie comme le nôtre), puis serrer les 2 vis sans tête M4 × 4 mm du haut avec une clé hexagonale de 2 mm, sans forcer.
+
+   ![Illustration](../../../../assets/img/guide-cnc/bitsetter_03.jpg)
+
+   *Photo : Carbide 3D (guide d'installation du BitSetter)*
+
+3. Brancher le câble du BitSetter sur le port **"Reserved"** de la carte de contrôle (v2.4e). Si une sonde BitZero est aussi utilisée, passer par la petite carte adaptatrice fournie (*Probe Adapter*).
+4. Dans Carbide Motion : cliquer sur **"Connect to cutter"** puis sur **"Initialize machine"**.
+5. Dans l'onglet **"JOG"** : cliquer sur **"Set Zero"**, puis **"Clear All Offsets"**, puis **"Done"**.
+6. Cliquer sur **"Rapid Position"**, puis **"SE"** (coin avant droit), puis **"Done"**. Avec les boutons X et Y, placer la toupie **exactement au-dessus du bouton** du BitSetter.
+7. Dans **"Settings"**, section **BitSetter** : cocher **"Enabled"**, cliquer sur **"Use Current Location"** puis sur **"Ok"**. La position du BitSetter est enregistrée.
+
+   ![Illustration](../../../../assets/img/guide-cnc/bitsetter_05.jpg)
+
+   *Capture du guide officiel Carbide 3D (ancienne version de Carbide Motion) : l'écran peut être un peu différent chez nous. Ne changez pas les autres réglages de cette fenêtre.*
 
 ## 1. Mise sous tension de la machine
 
@@ -166,12 +267,21 @@ Les interrupteurs et boutons pour démarrer la machine sont disponibles sur le c
 Dans le cas d'un dessin complexe, il faut définir l'ordre de la découpe à effectuer pour chaque groupe de dessins. Par exemple, il est préférable de commencer par découper les éléments intérieurs d'un dessin avant de terminer par les contours extérieurs : Cela permet de maintenir la stabilité de la pièce pendant la découpe.
 :::
 
+:::tip[Plusieurs mèches dans un même fichier]
+Grâce au BitSetter, chaque parcours d'usinage (*toolpath*) peut utiliser **une mèche différente** :
+- Choisissez la mèche de chaque parcours comme expliqué ci-dessus. Carbide Create numérote les mèches automatiquement.
+- Carbide Motion vous demandera de changer de mèche chaque fois que deux parcours qui se suivent utilisent des mèches différentes. **Regroupez les parcours qui utilisent la même mèche** pour limiter les changements : l'ordre de la liste des parcours est l'ordre d'usinage.
+- Vérifiez que chaque mèche existe à l'atelier et qu'elle est assez longue.
+- **Notez la liste des mèches dans l'ordre** (et leur vitesse de rotation) avant d'aller à la machine.
+:::
+
 - Vérifier le parcours de la machine en le prévisualisant en appuyant sur **« Show simulation »**
     - Vous pouvez alors voir la simulation de la découpe
 
     ![Illustration](../../../../assets/img/guide-cnc/cnc_24.png)
 
-- Une fois les paramètres de découpes du dessin configurés, **enregistrer votre travail** et **exporter le dessin au format G-code** en lui donnant un nom (e.g ma_decoupe_cnc.gcode)
+- Une fois les paramètres de découpe du dessin configurés, **enregistrer votre travail** au format Carbide Create **.c2d** (e.g. ma_decoupe_cnc.c2d) : Carbide Motion V6 ouvre directement ce fichier
+    - Vous pouvez aussi **exporter le dessin au format G-code** en lui donnant un nom (e.g. ma_decoupe_cnc.nc) : Carbide Motion accepte aussi ce fichier
 
     ![Illustration](../../../../assets/img/guide-cnc/cnc_25.png)
 
@@ -180,9 +290,12 @@ Dans le cas d'un dessin complexe, il faut définir l'ordre de la découpe à eff
 
     ![Illustration](../../../../assets/img/guide-cnc/cnc_26.png)
 
-- Installation de la mèche sur la toupie
-    - Sélectionner la mèche appropriée pour votre projet
+- Vérifier aussi que le **BitSetter (à l'avant droit de la machine) est dégagé** et que son **bouton est propre** (sans copeaux)
+
+- Installation de la mèche sur la toupie (**toupie éteinte**)
+    - Sélectionner la mèche appropriée pour votre projet. Si votre fichier utilise plusieurs mèches, installez **la première mèche** du fichier
         - Assurez vous que le diamètre de la queue de la mèche correspond au collet installé sur la toupie (le diamètre de la queue de la mèche doit être de **0,25″** inch soit 6.35 mm)
+        - La mèche doit dépasser du collet d'**au moins 12,7 mm (0,5 pouce)** pour pouvoir être mesurée par le BitSetter
     - Insérer délicatement la queue de la mèche dans le collet correspondant de la toupie
 
         ![Illustration](../../../../assets/img/guide-cnc/cnc_29.png)
@@ -201,6 +314,7 @@ Après avoir relâché le bouton de verrouillage jaune, faire tourner doucement 
 :::
 
 - Sur la toupie compacte, sélectionner la vitesse de rotation à laquelle la mèche devra tourner en fonction de votre projet (**vitesse de rotation entre 1 et 6**)
+    - Carbide Motion vous rappellera la vitesse à utiliser au lancement de l'usinage et à chaque changement de mèche
 
   ![Illustration](../../../../assets/img/guide-cnc/cnc_27.png)
 
@@ -229,6 +343,7 @@ Une fois que la machine s'est placée en position initiale et est à l'arrêt, *
 :::
 
 - les cales de fixation maintiendront la planche pour qu’elle ne bouge pas pendant l’usinage
+    - Ne placez **aucune cale ni aucun objet devant ou à côté du BitSetter** (avant droit de la machine) : la toupie doit pouvoir y aller librement
 
 ![Illustration](../../../../assets/img/guide-cnc/cnc_32.png)
 
@@ -269,9 +384,16 @@ Une fois que la machine s'est placée en position initiale et est à l'arrêt, *
     Assurez-vous que les cales de fixation ne se retrouvent pas sur le trajet de la mèche lors de la découpe. 
     :::
 
-- Une fois le positionnement de la machine vérifié :
-  1. Cliquer sur **"Set Zero"**
-  2. Cliquer sur **"Done"** pour confirmer le positionnement de la machine CNC dans sa position de départ
+- Une fois le positionnement de la machine vérifié, cliquer sur **"Set Zero"**
+- Cliquer ensuite sur **"Zero All"** pour enregistrer le point zéro sur les 3 axes (X, Y et Z)
+
+    :::danger[Attention : la machine bouge dès que vous cliquez sur « Zero All »]
+    Dès que vous cliquez sur **"Zero All"**, la machine **part toute seule vers le BitSetter** pour mesurer la mèche, puis revient au-dessus de votre point de départ, **toupie relevée**. Gardez les mains hors de la machine et la toupie éteinte.
+
+    Après la mesure, le **Z affiché n'est plus 0** (par exemple **+30**) : c'est normal, la toupie est simplement relevée. **Ne refaites pas le zéro.**
+    :::
+
+- Cliquer sur **"Done"** pour confirmer le positionnement de la machine CNC dans sa position de départ
 
 :::note[Astuce]
 Vous pouvez **noter (ou prendre une photo) la position finale de la toupie sur les axes X, Y et Z**. Cela pourra vous être utile pour référence future ou en cas de réinitialisation de la machine.
@@ -280,9 +402,8 @@ Vous pouvez **noter (ou prendre une photo) la position finale de la toupie sur l
 ![Illustration](../../../../assets/img/guide-cnc/cnc_37.png)
 
 - Cliquer ensuite sur **"RUN"**
-  - Sélectionner **"Set current location as zero"**
   - Cliquer sur **"LOAD NEW FILE"**
-  - Ouvrir le fichier G-code généré (e.g ma_decoupe_cnc.gcode) dans l'étape précédente avec Carbide Create
+  - Ouvrir le fichier créé à l'étape précédente avec Carbide Create (fichier **.c2d**, e.g. ma_decoupe_cnc.c2d, ou fichier G-code **.nc**)
   - Cliquer sur **"Done"**
 
 - Mettre l'aspirateur en place sur la toupie
@@ -305,16 +426,43 @@ Vous pouvez **noter (ou prendre une photo) la position finale de la toupie sur l
 Ne jamais démarrer la machine CNC avec le capot de protection ouvert
 :::
 
-- Activer maintenant l'interrupteur **Toupie** sur le côté gauche de la Machine CNC
-    - La toupie va alors se **mettre à tourner en fonction de la vitesse de rotation que vous avez définie précédemment sur la toupie** (rappel: vitesse de rotation entre 1 et 6)
-
-![Illustration](../../../../assets/img/guide-cnc/cnc_42.png)
+:::danger[Ne pas allumer la toupie maintenant !]
+Avec le BitSetter, la toupie doit rester **éteinte** au lancement de l'usinage : la machine va d'abord mesurer la mèche. Vous allumerez la toupie **seulement quand Carbide Motion vous le demandera** (étapes ci-dessous).
+:::
 
 - Démarrer maintenant la machine
     - Cliquer sur **"START JOB"**
     - Cliquer sur **"START"**
-    - Confirmer en cliquant à nouveau sur **"START"**
-    - Cliquer sur **"Resume"**
+
+    :::caution
+    Dès que vous cliquez sur **"START"**, la machine se place **à côté du BitSetter** pour le chargement de la mèche (même si la mèche est déjà en place).
+    :::
+
+- Un message **"Please insert tool"** (*Tool Change Required*) s'affiche
+
+    ![Illustration](../../../../assets/img/guide-cnc/bitsetter_06.jpg)
+
+    *Capture du guide officiel Carbide 3D (ancienne version de Carbide Motion)*
+
+    - Vérifier que la mèche installée est **bien celle demandée** (la première mèche de votre fichier). Si besoin, la changer (toupie éteinte), puis refermer le capot
+    - Cliquer sur **"OK"** (ou **"Resume"**)
+
+    :::danger[Attention]
+    Dès que vous cliquez sur **"OK"**, la machine **descend mesurer la mèche sur le BitSetter**. Mains hors de la machine, toupie éteinte !
+    :::
+
+- Un message s'affiche ensuite avec la **vitesse de rotation** à utiliser pour cette mèche
+    - Régler la molette de la toupie (1 à 6) selon la vitesse demandée (voir le tableau de correspondance plus haut)
+    - Vérifier que le capot de protection est fermé
+    - **Allumer la toupie** : activer l'interrupteur **Toupie** sur le côté gauche de la machine CNC
+
+    ![Illustration](../../../../assets/img/guide-cnc/cnc_42.png)
+
+    - Cliquer sur **"OK"**
+
+    :::danger[Attention]
+    Dès que vous cliquez sur **"OK"**, **l'usinage commence** !
+    :::
 
 :::note
 La machine CNC va maintenant **effectuer l'usinage de votre pièce en suivant les instructions du fichier G-code**. Pendant l'usinage, la progression de la découpe et le temps restant estimé sont **affichés en temps réel** dans le logiciel.
@@ -325,6 +473,47 @@ La machine CNC va maintenant **effectuer l'usinage de votre pièce en suivant le
 :::danger[Attention]
 - **Ne jamais laisser la machine sans surveillance** pendant la durée de son fonctionnement
 - En cas d'anomalie ou de danger, utilisez immédiatement le **bouton d'arrêt d'urgence "Interrupteur Principal"** sur la gauche de la machine ou via l'interface en cliquant sur le bouton **"STOP"** dans le logiciel Carbide Motion.
+:::
+
+### Changement de mèche pendant l'usinage
+
+Si votre fichier utilise plusieurs mèches, la machine s'arrête à chaque changement de mèche :
+
+1. La machine arrête d'usiner, **relève la toupie et se place à côté du BitSetter**. Le message **"Please insert tool"** s'affiche avec la mèche demandée.
+2. **Éteindre la toupie** (interrupteur **Toupie**) et **attendre l'arrêt complet** de la mèche.
+
+    :::danger[Attention]
+    Carbide Motion **n'éteint pas la toupie** : c'est à vous de le faire **avant d'ouvrir le capot**. Ne touchez jamais une mèche qui tourne encore. La mèche peut aussi être **très chaude** après l'usinage.
+    :::
+
+3. Ouvrir le capot et **remplacer la mèche** par celle demandée (même méthode qu'au début : bouton de verrouillage jaune et clé). La nouvelle mèche doit dépasser du collet d'au moins 12,7 mm.
+4. Refermer le capot, puis cliquer sur **"OK"** : la machine **descend mesurer la nouvelle mèche** sur le BitSetter (toupie toujours éteinte, mains hors de la machine).
+5. Au message de vitesse : régler la molette de la toupie pour la nouvelle mèche, **allumer la toupie**, puis cliquer sur **"OK"**. L'usinage reprend avec la nouvelle mèche.
+
+### Fin de l'usinage
+
+:::danger[Attention : la machine se déplace toute seule à la fin]
+Dès que l'usinage est terminé, la machine **se replace automatiquement au fond à droite**, et la toupie peut encore tourner : **rien (cales, objets, mains) ne doit se trouver sur le chemin de la toupie** !
+:::
+
+- Une fois la machine arrêtée, **éteindre la toupie** (interrupteur **Toupie**) et attendre l'arrêt complet de la mèche.
+
+### Refaire le même usinage
+
+Pour relancer le même fichier (par exemple sur une nouvelle planche placée au même endroit) :
+
+1. Cliquer sur **"Quick Actions"**
+2. Cliquer sur **"Move cutter above current XY zero"**
+3. Un message de confirmation s'affiche : cliquer sur **"YES"**
+
+    :::caution
+    La machine se déplace dès que vous cliquez sur **"YES"** : vérifiez que le chemin est libre.
+    :::
+
+4. Relancer l'usinage avec **"START JOB"** puis **"START"**, et suivre les mêmes étapes que ci-dessus (message "Please insert tool", mesure de la mèche, vitesse de rotation).
+
+:::note[Note]
+Le point zéro est conservé tant que la planche n'a pas bougé. Si vous changez de planche (ou d'épaisseur de planche) ou de position, **refaites le zéro** (**"Set Zero"** puis **"Zero All"**).
 :::
 
 ## 5. Nettoyage après utilisation
@@ -342,8 +531,8 @@ Assurez-vous que la machine a terminé son travail et qu'elle est **arrêtée et
    - Utiliser l'aspirateur pour éliminer les copeaux de bois et la poussière
    - Nettoyer les rails de guidage avec un chiffon propre
    - Nettoyer la tête de la toupie
+   - Aspirer les copeaux autour du BitSetter, sans taper sur son bouton
    - Une fois le nettoyage complet, éteindre le système de ventilation
-   - Eteindre le système de ventilation
 4. Eteindre l'ordinateur :
   - Désactiver l'interrupteur **"PC et CNC"**
 
