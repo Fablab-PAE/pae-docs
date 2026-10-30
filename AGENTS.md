@@ -16,6 +16,7 @@ This project IS the docs website: there is no separate `docs/` folder.
 - `src/assets/` - logos and guide images (`img/<guide>/`); `public/pdf/` - machine manuals
 - `astro.config.mjs` - site settings, languages, sidebar (menu labels in fr + en)
 - `src/components/MachineCard.astro` - homepage card with a picture (machines, projects, shop)
+- `src/styles/custom.css` - site styles added to Starlight (external-link icon in the menu)
 - `src/components/`, `src/diagrams/`, `src/version.mjs`, `src/scripts/` - agent kit docs
   features (version badge, diagrams, zoom). Files marked "agent-kit: managed" are updated
   by `kit docs upgrade`

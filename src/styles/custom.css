@@ -1,0 +1,18 @@
+/*
+ * Site styles added to Starlight (customCss in astro.config.mjs).
+ */
+
+/* Menu links to outside websites (opened in a new tab, e.g. the shop) get an external-link
+   icon after their label: Starlight's "external" icon, drawn with the text colour */
+.sidebar-content a[target='_blank'] > span::after {
+	content: '';
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	margin-inline-start: 0.35em;
+	vertical-align: -0.125em;
+	background-color: currentColor;
+	-webkit-mask: var(--external-icon) no-repeat center / contain;
+	mask: var(--external-icon) no-repeat center / contain;
+	--external-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M19.33 10.18a1 1 0 0 1-.77 0 1 1 0 0 1-.62-.93l.01-1.83-8.2 8.2a1 1 0 0 1-1.41-1.42l8.2-8.2H14.7a1 1 0 0 1 0-2h4.25a1 1 0 0 1 1 1v4.25a1 1 0 0 1-.62.93Z'/%3E%3Cpath d='M11 4a1 1 0 1 1 0 2H7a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-4a1 1 0 1 1 2 0v4a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h4Z'/%3E%3C/svg%3E");
+}
