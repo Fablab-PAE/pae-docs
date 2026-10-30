@@ -27,7 +27,7 @@ interface Props {
 const { title, description, href, image, alt = '', icon = 'puzzle', external = false, background, iconColor } =
 	Astro.props;
 const target = external ? { target: '_blank', rel: 'noopener noreferrer' } : {};
-const pictureStyle = { background, color: iconColor };
+const pictureStyle = background || iconColor ? { background, color: iconColor } : undefined;
 ---
 
 <div class="machine-card not-content">
