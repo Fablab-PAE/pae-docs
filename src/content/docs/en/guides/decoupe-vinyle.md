@@ -15,6 +15,10 @@ This guide takes you step by step through the use of the **Graphtec CE6000-60 Pl
 
 ## Hardware reference
 
+![Illustration](../../../../assets/img/decoupe-vinyle/plotter_exemple.jpg)
+
+*Example of a cutting plotter in another fablab (a different model from ours).*
+
 - Plotter model: **Graphtec CE6000-60 Plus** (<a href="https://mygraphtec.jp/site_download/02_manual/data/CE6000_UserManual(CE6000-UM-154).pdf" target="_blank" rel="noopener noreferrer">user's manual</a>)
   - Machine presentation page: <a href="https://web.archive.org/web/20190820094844/https://graphtec-graphtec.squarespace.com/vinyl-cutter-cut-plotter-ce6000-plus/" target="_blank" rel="noopener noreferrer">Graphtec CE6000 Plus (archived Graphtec website)</a>
   - Maximum cutting width: **603 mm** (guaranteed precision over 584 mm × 2 m)
@@ -77,6 +81,8 @@ This guide takes you step by step through the use of the **Graphtec CE6000-60 Pl
 5. The screen asks for the media type: press key **[2] ROLL-2 CURRENT POSITION** (cutting from the current position, so no vinyl is wasted).
 6. The plotter measures the width (and the length for a sheet), then shows **READY**: it is ready to receive a cut.
 
+![Illustration](../../../../assets/img/decoupe-vinyle/rouleaux_en.svg)
+
 :::caution
 If the push roller position message appears, a push roller is not above a grit roller. Lower the lever, fix the position and try again.
 :::
@@ -87,6 +93,8 @@ If the push roller position message appears, a push roller is not above a grit r
 - The blade should stick out **slightly less than the thickness of the vinyl plus its backing**. For common adhesive vinyl, it should barely stick out of the cap.
   - Turn the knob to extend or retract the blade: one mark = about 0.1 mm.
 - Put the blade holder back in its place: push it in until its flange touches the top of the holder, then tighten the screw.
+
+![Illustration](../../../../assets/img/decoupe-vinyle/lame_en.svg)
 
 :::danger[Warning]
 A blade that sticks out too far cuts the backing sheet and damages the machine's cutting strip. Always set it **shorter than the thickness of the material**.
@@ -113,6 +121,8 @@ Before each new material, run a **test cut** in a corner of the vinyl: it only c
     - The vinyl is not cut everywhere: the force is too low or the blade does not stick out enough.
   - Look at the corners of the square: if they are rounded or not closed, the **offset** needs adjusting (in Normal mode).
   - Repeat until the cut is clean.
+
+![Illustration](../../../../assets/img/decoupe-vinyle/test_coupe_en.svg)
 
 ## 5. Using the Graphtec Studio 2 software
 
@@ -152,6 +162,8 @@ Graphtec Studio 2 is in English or French depending on the computer's language, 
   - Lay the design on a clean, dry surface, rub again, then remove the transfer tape.
 - For heat transfer vinyl: place the design on the fabric and heat-press it following the vinyl maker's instructions.
 
+![Illustration](../../../../assets/img/decoupe-vinyle/echenillage_en.svg)
+
 ## 8. Tidying up after use
 
 - Take out the remaining vinyl and store reusable rolls and offcuts.
@@ -180,3 +192,4 @@ Common problems and solutions:
 ## Going further
 
 - Read the <a href="https://mygraphtec.jp/site_download/02_manual/data/CE6000_UserManual(CE6000-UM-154).pdf" target="_blank" rel="noopener noreferrer">full CE6000 manual</a> for advanced functions: cutting around a printed design with registration marks (ARMS), cutting large panels, multiple copies.
+- Picture credits: plotter photo "<a href="https://commons.wikimedia.org/wiki/File:Plotter_-_Fab_LAB_Newton.jpg" target="_blank" rel="noopener noreferrer">Plotter - Fab LAB Newton</a>" by Vivian Guerra Moreira (Wikimedia Commons, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a> license); diagrams made for this guide.

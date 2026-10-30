@@ -20,7 +20,7 @@ Ce guide vous accompagne pas à pas dans l'utilisation de l'imprimante 3D **Orig
   - Volume d'impression : **250 × 210 × 220 mm** (largeur × profondeur × hauteur)
   - Diamètre de la buse : **0,4 mm**
   - Diamètre du filament : **1,75 mm**
-- Logiciel interne (firmware) le plus récent : <a href="https://help.prusa3d.com/downloads/mk4" target="_blank" rel="noopener noreferrer">page de téléchargement Prusa MK4</a>
+- Logiciel interne (firmware) le plus récent, à vérifier et mettre à jour périodiquement : <a href="https://help.prusa3d.com/downloads/mk4" target="_blank" rel="noopener noreferrer">page de téléchargement Prusa MK4</a>
 - Vue d'ensemble de l'imprimante :
 
   ![Illustration](../../../../assets/img/impression-3d/prusa_mk4_vue_ensemble.jpg)
@@ -47,7 +47,7 @@ Ce guide vous accompagne pas à pas dans l'utilisation de l'imprimante 3D **Orig
 ## Glossaire
 
 - **Filament** : fil de plastique enroulé sur une bobine, que l'imprimante fait fondre. Souvent vendu en bobines de **1 kg**, avec un fil de **1,75 mm** de diamètre.
-- **Trancheur (slicer)** : logiciel qui découpe le modèle 3D en couches et calcule le trajet de la buse. Nous utilisons au local principalement **PrusaSlicer**.
+- **Trancheur (slicer)** : logiciel qui découpe le modèle 3D en couches et calcule le trajet de la buse. Nous utilisons au local principalement **PrusaSlicer**, mais des trancheurs d'autres fabricants (**OrcaSlicer**, **Bambu Studio**) peuvent aussi être utilisés.
 - **G-code** : le fichier d'instructions produit par le trancheur et lu par l'imprimante (extension **.bgcode** ou **.gcode**).
 - **Hauteur de couche** : épaisseur de chaque couche. Plus elle est faible, plus l'objet est fin, mais plus l'impression est longue.
 - **Remplissage** : structure intérieure de l'objet, exprimée en pourcentage. Les objets imprimés ne sont presque jamais pleins.
@@ -183,6 +183,11 @@ Attendez que la plaque **refroidisse** avant de retirer la pièce : la plaque et
 - **Pliez légèrement** la plaque d'un côté puis de l'autre : la pièce se décolle. Si besoin, tournez la plaque d'un quart de tour et recommencez.
 - Retirez aussi la ligne de purge et tous les petits restes de plastique. N'utilisez pas vos ongles ni d'objet métallique pointu : prenez une **spatule en plastique**.
 - Retirez les supports et la bordure avec une pince coupante ou à la main.
+
+:::danger[Attention]
+Portez des **lunettes de protection** pour retirer les supports, la bordure et les restes de plastique : des éclats peuvent être projetés.
+:::
+
 - Remettez la plaque propre sur le plateau.
 
 ## 7. Rangement après utilisation
