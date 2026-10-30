@@ -4,7 +4,8 @@
  *
  * Used in src/content/docs/{fr,en}/index.mdx, inside Starlight's CardGrid. The whole card is
  * clickable. Without `image`, the top shows a Starlight icon (`icon`) instead, e.g. for a
- * machine that has no photo yet. `external` opens the link in a new tab.
+ * machine that has no photo yet. `external` opens the link in a new tab. `background` and
+ * `iconColor` (CSS colors) change the top area's color and the icon's color, e.g. for the shop.
  */
 import type { ImageMetadata } from 'astro';
 import { Image } from 'astro:assets';
@@ -19,14 +20,18 @@ interface Props {
 	alt?: string;
 	icon?: StarlightIcon;
 	external?: boolean;
+	background?: string;
+	iconColor?: string;
 }
 
-const { title, description, href, image, alt = '', icon = 'puzzle', external = false } = Astro.props;
+const { title, description, href, image, alt = '', icon = 'puzzle', external = false, background, iconColor } =
+	Astro.props;
 const target = external ? { target: '_blank', rel: 'noopener noreferrer' } : {};
+const pictureStyle = { background, color: iconColor };
 ---
 
 <div class="machine-card not-content">
-	<div class="picture">
+	<div class="picture" style={pictureStyle}>
 		{
 			image ? (
 				<Image src={image} alt={alt} widths={[400, 800]} sizes="(min-width: 50rem) 22rem, 100vw" />
