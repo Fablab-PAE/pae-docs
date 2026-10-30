@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" width="800" height="280" role="img">
+<title>2. Échenillage</title>
+<rect width="800" height="280" rx="12" fill="#ffffff"/>
+<rect x="15" y="30" width="184" height="170" rx="8" fill="#f4f1ea" stroke="#c9c2b2" stroke-width="2"/>
+<rect x="27" y="42" width="160" height="146" fill="#2f80c9"/>
+<text x="107" y="140" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="bold" fill="#2f80c9" stroke="#ffffff" stroke-width="2" stroke-dasharray="5 3" text-anchor="middle">PAE</text>
+<text x="107" y="232" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="#1f2933" text-anchor="middle">1. Découpe</text>
+<text x="107" y="256" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#4a5560" text-anchor="middle">le motif est découpé</text>
+<rect x="212" y="30" width="184" height="170" rx="8" fill="#f4f1ea" stroke="#c9c2b2" stroke-width="2"/>
+<text x="304" y="140" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="bold" fill="#2f80c9" text-anchor="middle">PAE</text>
+<text x="304" y="232" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="#1f2933" text-anchor="middle">2. Échenillage</text>
+<text x="304" y="256" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#4a5560" text-anchor="middle">retirer le vinyle inutile</text>
+<rect x="409" y="30" width="184" height="170" rx="8" fill="#f4f1ea" stroke="#c9c2b2" stroke-width="2"/>
+<text x="501" y="140" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="bold" fill="#2f80c9" text-anchor="middle">PAE</text>
+<rect x="417" y="70" width="168" height="90" fill="#bfe3ff" fill-opacity="0.55" stroke="#7fb8e6" stroke-width="2"/>
+<text x="501" y="232" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="#1f2933" text-anchor="middle">3. Papier transfert</text>
+<text x="501" y="256" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#4a5560" text-anchor="middle">coller, frotter, décoller</text>
+<rect x="606" y="30" width="184" height="170" rx="8" fill="#e8d9c3" stroke="#c9c2b2" stroke-width="2"/>
+<text x="698" y="140" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="bold" fill="#2f80c9" text-anchor="middle">PAE</text>
+<text x="698" y="232" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="#1f2933" text-anchor="middle">4. Pose</text>
+<text x="698" y="256" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#4a5560" text-anchor="middle">poser, frotter, retirer</text>
+</svg>

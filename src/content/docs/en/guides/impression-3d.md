@@ -20,7 +20,7 @@ This guide takes you step by step through the use of the **Original Prusa MK4** 
   - Build volume: **250 × 210 × 220 mm** (width × depth × height)
   - Nozzle diameter: **0.4 mm**
   - Filament diameter: **1.75 mm**
-- Latest firmware: <a href="https://help.prusa3d.com/downloads/mk4" target="_blank" rel="noopener noreferrer">Prusa MK4 download page</a>
+- Latest firmware, to check and update regularly: <a href="https://help.prusa3d.com/downloads/mk4" target="_blank" rel="noopener noreferrer">Prusa MK4 download page</a>
 - Printer overview:
 
   ![Illustration](../../../../assets/img/impression-3d/prusa_mk4_vue_ensemble.jpg)
@@ -47,7 +47,7 @@ This guide takes you step by step through the use of the **Original Prusa MK4** 
 ## Glossary
 
 - **Filament**: plastic strand wound on a spool, which the printer melts. Often sold in **1 kg** spools, with a strand **1.75 mm** in diameter.
-- **Slicer**: software that cuts the 3D model into layers and works out the nozzle's path. At the workshop we mainly use **PrusaSlicer**.
+- **Slicer**: software that cuts the 3D model into layers and works out the nozzle's path. At the workshop we mainly use **PrusaSlicer**, but slicers from other makers (**OrcaSlicer**, **Bambu Studio**) can also be used.
 - **G-code**: the instruction file made by the slicer and read by the printer (extension **.bgcode** or **.gcode**).
 - **Layer height**: the thickness of each layer. The lower it is, the finer the object, but the longer the print.
 - **Infill**: the inner structure of the object, given as a percentage. Printed objects are almost never solid.
@@ -183,6 +183,11 @@ Wait for the sheet to **cool down** before removing the part: the sheet and the 
 - **Bend the sheet slightly** one way then the other: the part comes off. If needed, turn the sheet a quarter turn and repeat.
 - Also remove the purge line and every small plastic leftover. Do not use your nails or a sharp metal object: use a **plastic spatula**.
 - Remove supports and brim with cutting pliers or by hand.
+
+:::danger[Warning]
+Wear **safety glasses** when removing supports, brim and plastic leftovers: chips can fly off.
+:::
+
 - Put the clean sheet back on the bed.
 
 ## 7. Tidying up after use

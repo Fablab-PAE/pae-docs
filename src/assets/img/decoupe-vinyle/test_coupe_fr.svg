@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" role="img">
+<title>Correct</title>
+<rect width="800" height="420" rx="12" fill="#ffffff"/>
+<rect x="20" y="20" width="240" height="380" rx="10" fill="#ffffff" stroke="#1e8e3e" stroke-width="3"/>
+<rect x="35" y="250" width="210" height="22" fill="#2f80c9"/>
+<rect x="35" y="272" width="210" height="8" fill="#f2c94c"/>
+<rect x="35" y="280" width="210" height="40" fill="#f4f1ea" stroke="#c9c2b2"/>
+<rect x="138" y="250" width="4" height="40" fill="#ffffff"/>
+<path d="M126 120 L154 120 L154 230 L142 290 L138 290 L126 230 Z" fill="#cfd6dd" stroke="#1f2933" stroke-width="2"/>
+<rect x="114" y="50" width="52" height="70" rx="6" fill="#9aa3ad" stroke="#1f2933" stroke-width="2"/>
+<text x="140" y="350" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#1e8e3e" text-anchor="middle">Correct</text>
+<text x="140" y="372" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" fill="#1f2933" text-anchor="middle">légère trace sur le support</text>
+<text x="140" y="392" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#4a5560" text-anchor="middle">garder ce réglage</text>
+<rect x="280" y="20" width="240" height="380" rx="10" fill="#ffffff" stroke="#d93025" stroke-width="3"/>
+<rect x="295" y="250" width="210" height="22" fill="#2f80c9"/>
+<rect x="295" y="272" width="210" height="8" fill="#f2c94c"/>
+<rect x="295" y="280" width="210" height="40" fill="#f4f1ea" stroke="#c9c2b2"/>
+<rect x="398" y="250" width="4" height="80" fill="#ffffff"/>
+<path d="M386 120 L414 120 L414 270 L402 330 L398 330 L386 270 Z" fill="#cfd6dd" stroke="#1f2933" stroke-width="2"/>
+<rect x="374" y="50" width="52" height="70" rx="6" fill="#9aa3ad" stroke="#1f2933" stroke-width="2"/>
+<text x="400" y="350" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#d93025" text-anchor="middle">Trop profond</text>
+<text x="400" y="372" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" fill="#1f2933" text-anchor="middle">le support est coupé</text>
+<text x="400" y="392" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#4a5560" text-anchor="middle">baisser la force / rentrer la lame</text>
+<rect x="540" y="20" width="240" height="380" rx="10" fill="#ffffff" stroke="#e37400" stroke-width="3"/>
+<rect x="555" y="250" width="210" height="22" fill="#2f80c9"/>
+<rect x="555" y="272" width="210" height="8" fill="#f2c94c"/>
+<rect x="555" y="280" width="210" height="40" fill="#f4f1ea" stroke="#c9c2b2"/>
+<rect x="658" y="250" width="4" height="12" fill="#ffffff"/>
+<path d="M646 120 L674 120 L674 202 L662 262 L658 262 L646 202 Z" fill="#cfd6dd" stroke="#1f2933" stroke-width="2"/>
+<rect x="634" y="50" width="52" height="70" rx="6" fill="#9aa3ad" stroke="#1f2933" stroke-width="2"/>
+<text x="660" y="350" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e37400" text-anchor="middle">Pas assez</text>
+<text x="660" y="372" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" fill="#1f2933" text-anchor="middle">le vinyle n’est pas coupé</text>
+<text x="660" y="392" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#4a5560" text-anchor="middle">augmenter la force / sortir la lame</text>
+</svg>
