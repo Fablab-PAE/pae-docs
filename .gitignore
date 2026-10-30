@@ -19,3 +19,17 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# --- homelab agent kit ---
+# secrets (the safe .env.workcopy IS saved in git)
+.env.*
+!.env.workcopy
+!.env.example
+*.pem
+*.key
+# work copies, run logs, local Claude settings
+.claude/worktrees/
+.claude/settings.local.json
+.kit/
+# previous build kept during `kit docs build` (this project is its own docs website)
+.dist-previous/

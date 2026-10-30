@@ -1,0 +1,5 @@
+# Agent kit settings for this project
+# This project IS the docs website (no separate docs/ folder)
+DOCS_DIR=.
+# Port of the existing pae-docs-preview service
+DOCS_PORT=4322
