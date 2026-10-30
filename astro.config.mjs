@@ -126,8 +126,8 @@ export default defineConfig({
             // The FabLab's shop (outside site, opens in a new tab)
             label: 'Shop',
             translations: {
-              'fr': 'Boutique',
-              'en': 'Shop',
+              'fr': 'Lien vers notre boutique',
+              'en': 'Link to our shop',
             },
             link: 'https://online.forms.app/boutique-chouette-et-cie/formulaire-de-commerce?formsRef=qrcode',
             attrs: { target: '_blank', rel: 'noopener noreferrer' },
