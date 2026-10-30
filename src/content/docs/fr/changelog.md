@@ -6,6 +6,10 @@ description: Les changements apportés au site de documentation du FabLab, du pl
 Le petit badge à côté du logo indique la version du site que vous consultez. Cette page liste
 les changements, du plus récent au plus ancien.
 
+## 2026-10-30 : guide découpe vinyle revu
+
+- Le guide de découpe vinyle est simplifié et utilise Graphtec Studio 2 (avec son lien de téléchargement).
+
 ## 2026-10-30 : guides découpe vinyle et impression 3D
 
 - Nouveau guide complet pour le plotter de découpe Graphtec CE6000-60 Plus et Graphtec Studio.
