@@ -99,6 +99,46 @@ The machine is fitted with a **BitSetter**: a small sensor attached to the front
 
   *Photo: Carbide 3D (BitSetter installation guide)*
 
+### The process at a glance
+
+The diagram below shows the whole machining process with the BitSetter. Each step is explained in detail in the [4. Using Carbide Motion software](#4-using-carbide-motion-software) section.
+
+```mermaid
+flowchart TD
+  subgraph prep ["1. Prepare and set the zero"]
+    A["Install the 1st bit<br/>(router off)"] --> B["Initialize machine,<br/>then board and fixing blocks"]
+    B --> C["JOG: move the bit<br/>to the starting point,<br/>then Set Zero → Zero All"]
+    C --> D["The machine measures the bit<br/>on the BitSetter,<br/>then comes back"]:::risk
+  end
+  subgraph run ["2. Start the job"]
+    E["Load New File → Done,<br/>then START JOB → START"] --> F["The machine moves<br/>next to the BitSetter"]:::risk
+    F --> G["Please insert tool:<br/>check the bit → OK"]:::queue
+    G --> H["The machine measures the bit"]:::risk
+    H --> I["Speed message:<br/>set the dial,<br/>switch the router on → OK"]:::queue
+    I --> J["Machining with this bit"]:::new
+  end
+  D --> E
+  J --> K{"Does the file need<br/>another bit?"}
+  subgraph change ["3. Change the bit"]
+    L["The machine stops<br/>and moves next to the BitSetter"]:::risk --> M["Please insert tool:<br/>switch the router off,<br/>change the bit → OK"]:::queue
+    M --> N["The machine measures<br/>the new bit"]:::risk
+  end
+  subgraph fin ["4. End"]
+    O["The machine goes back<br/>to the back right corner<br/>on its own"]:::risk --> P["Switch the router off"]
+  end
+  K -- "Yes (e.g. 2nd bit)" --> L
+  N --> I
+  K -- "No" --> O
+```
+
+The colours of the diagram:
+- **Blue**: what you do
+- **Orange**: Carbide Motion shows a message and waits for you
+- **Red**: the machine moves on its own (hands out of the machine!)
+- **Green**: machining is in progress (router on, cover closed)
+
+With **a single bit**, you go straight from machining to "No", then to the end. With **two bits** (for example a big bit to remove material, then a thin one to engrave), you go once through the "Yes" loop: bit change, measurement of the new bit, speed setting, then machining resumes.
+
 ### When does the machine move on its own?
 
 With the BitSetter, the machine **moves on its own to the BitSetter** at several moments:
@@ -262,6 +302,9 @@ Thanks to the BitSetter, each toolpath can use **a different bit**:
     ![Illustration](../../../../assets/img/guide-cnc/cnc_25.png)
 
 ## 4. Using Carbide Motion software
+
+For an overview, see the [The process at a glance](#the-process-at-a-glance) diagram.
+
 - Before opening the software, first check that the **work surface of the CNC machine does not contain any objects or obstacles** on the work surface
 
     ![Illustration](../../../../assets/img/guide-cnc/cnc_26.png)
