@@ -6,6 +6,11 @@ description: Les changements apportés au site de documentation du FabLab, du pl
 Le petit badge à côté du logo indique la version du site que vous consultez. Cette page liste
 les changements, du plus récent au plus ancien.
 
+## 2026-10-30 : guide impression 3D revu
+
+- Le guide d'impression 3D est simplifié, illustré avec les images du manuel Prusa et donne les liens vers la dernière version de PrusaSlicer et du firmware.
+- Le guide de découpe vinyle donne le lien vers la page de présentation de la machine.
+
 ## 2026-10-30 : guide découpe vinyle revu
 
 - Le guide de découpe vinyle est simplifié et utilise Graphtec Studio 2 (avec son lien de téléchargement).

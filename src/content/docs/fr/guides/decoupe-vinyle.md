@@ -16,6 +16,7 @@ Ce guide vous accompagne pas à pas dans l'utilisation du plotter de découpe **
 ## Référence matérielle
 
 - Modèle de plotter utilisé : **Graphtec CE6000-60 Plus** (<a href="https://mygraphtec.jp/site_download/02_manual/data/CE6000_UserManual(CE6000-UM-154).pdf" target="_blank" rel="noopener noreferrer">manuel d'utilisation, en anglais</a>)
+  - Page de présentation de la machine : <a href="https://web.archive.org/web/20190820094844/https://graphtec-graphtec.squarespace.com/vinyl-cutter-cut-plotter-ce6000-plus/" target="_blank" rel="noopener noreferrer">Graphtec CE6000 Plus (archive du site Graphtec, en anglais)</a>
   - Largeur de coupe maximale : **603 mm** (précision garantie sur 584 mm × 2 m)
   - Largeur de support acceptée : **de 50 mm à 712 mm**, longueur minimale de **125 mm**
   - Épaisseur de support : **0,25 mm maximum**
