@@ -41,8 +41,7 @@ Ce guide vous accompagne pas à pas dans l'utilisation de la machine CNC Shapeok
 
 ## Zone de travail
 
-- La zone de découpe maximum de la machine est indiquée par des papiers collants aux 4 coins de la machine
-- La surface de travail est de **30" (largeur) x 27" (longueur) (soit 76,20 cm x 68,58 cm)**
+- La surface de travail est d'**environ 30" (largeur) x 27" (longueur) (soit 76,20 cm x 68,58 cm)**
 
     ![Illustration](../../../../assets/img/guide-cnc/cnc_03.png)
 
@@ -83,8 +82,8 @@ La machine est équipée d'un **BitSetter** : un petit capteur fixé à l'avant 
 
 ### À quoi sert le BitSetter ?
 
-- Il permet d'**utiliser plusieurs mèches dans un même fichier d'usinage** (par exemple une mèche fine pour graver un texte, puis une mèche plus grosse pour découper le contour).
-- À chaque changement de mèche, Carbide Motion mesure la nouvelle mèche, la compare à la précédente et **recalcule automatiquement le zéro de l'axe Z**. Vous ne faites donc le zéro **qu'une seule fois**, au début.
+- Il permet d'**utiliser plusieurs mèches dans un même fichier d'usinage** (par exemple une mèche plus grosse pour enlever rapidement de la matière, puis une mèche fine pour graver un dessin plus petit).
+- À chaque changement de mèche, Carbide Motion mesure la nouvelle mèche, la compare à la précédente et **recalcule automatiquement le zéro de l'axe Z**.
 - Avant le BitSetter, il fallait exporter un fichier séparé pour chaque mèche et refaire le zéro Z à chaque changement.
 
 ### Où se trouve-t-il ?
@@ -109,8 +108,8 @@ Avec le BitSetter, la machine **se déplace toute seule vers le BitSetter** à p
 - à chaque **changement de mèche** demandé par le fichier ;
 - parfois aussi quand vous ramenez la toupie au point zéro (**"Rapid Position"** ou **"Quick Actions"**).
 
-:::danger[Attention : la machine démarre sans prévenir]
-Carbide 3D le résume ainsi : **dès que vous touchez au zéro Z, considérez que la machine va se mettre en mouvement**. Avant chacune de ces actions :
+:::danger[Attention : soyez vigilant aux déplacements de la machine]
+Carbide 3D le résume ainsi : **lorsque vous touchez au zéro Z, considérez que la machine pourrait se mettre en mouvement**. Avant chacune de ces actions :
 - retirez vos mains de la machine ;
 - vérifiez que **rien** (cales, outils, câbles, tuyau d'aspirateur) ne se trouve sur le chemin de la toupie ni autour du BitSetter ;
 - vérifiez que la **toupie est éteinte**.
@@ -122,8 +121,8 @@ Carbide 3D le résume ainsi : **dès que vous touchez au zéro Z, considérez qu
 1. **Toupie éteinte pendant chaque mesure** : la mèche ne doit jamais tourner quand elle touche le BitSetter (cela abîmerait le capteur et la mèche).
 2. **Changer de mèche uniquement quand Carbide Motion le demande** (message **"Please insert tool"**). Si vous changez la mèche à un autre moment, la machine ne connaît pas sa longueur : elle risque de **s'enfoncer dans la planche** ou d'usiner dans le vide. Si cela arrive, refaites le zéro de l'axe Z (**"Set Zero"** puis **"Zero Z"**) : la nouvelle mèche sera mesurée.
 3. **Mèche assez longue** : elle doit dépasser du collet d'**au moins 12,7 mm (0,5 pouce)** pour atteindre le bouton du BitSetter.
-4. **Bouton propre** : un copeau sur le bouton fausse la mesure, et donc la profondeur de coupe. Aspirez les copeaux autour du BitSetter avant de commencer.
-5. **Ne pas déplacer le BitSetter** : sa position est enregistrée dans Carbide Motion. S'il a bougé, il faut refaire le réglage (voir « Installation et réglage » ci-dessous).
+4. **Bouton propre** : un copeau sur le bouton fausse la mesure, et donc la profondeur de coupe. Rien ne doit se trouver sur le bouton du BitSetter avant de commencer.
+5. **Ne pas déplacer le BitSetter** : sa position est enregistrée dans Carbide Motion.
 :::
 
 ### Versions installées à l'atelier
@@ -140,36 +139,12 @@ Carbide 3D le résume ainsi : **dès que vous touchez au zéro Z, considérez qu
 Carbide 3D a changé la façon d'utiliser le BitSetter **à partir du build 623 de Carbide Motion** (2024) : la mèche est maintenant mesurée au moment où l'on fait le zéro Z et au lancement de l'usinage. Ce guide décrit ce fonctionnement (build 653). Après une mise à jour de Carbide Motion, vérifiez que les étapes sont toujours les mêmes.
 :::
 
-### Documentation et achat
+### Documentation
 
 - <a href="https://my.carbide3d.com/pdf/bitsetter-v2.pdf" target="_blank" rel="noopener noreferrer">Guide officiel d'installation et de réglage du BitSetter</a> (PDF Carbide 3D, en anglais)
 - <a href="https://carbide3d.com/blog/bitsetter-changes-carbide-motion" target="_blank" rel="noopener noreferrer">Article Carbide 3D sur le nouveau fonctionnement du BitSetter</a> (en anglais)
 - <a href="https://my.carbide3d.com/gettingstarted/shapeoko3/" target="_blank" rel="noopener noreferrer">Bien démarrer avec la Shapeoko</a> et cours <a href="https://carbide3d.com/hub/courses/getting-started-cnc/" target="_blank" rel="noopener noreferrer">Getting Started with CNC</a> (Carbide 3D, en anglais)
-- <a href="https://carbide3d.com/downloads/" target="_blank" rel="noopener noreferrer">Téléchargement de Carbide Motion et Carbide Create</a>
-- <a href="https://shop.carbide3d.com/products/bitsetter?variant=39303096860733" target="_blank" rel="noopener noreferrer">Acheter un BitSetter</a> : choisir le modèle **Shapeoko 3** (le modèle carré), pas le modèle Shapeoko 4 (en forme de barre)
-
-### Installation et réglage (utilisateurs avancés)
-
-:::note[Note]
-Le BitSetter est **déjà installé et réglé** à l'atelier. Ces étapes ne servent que s'il a été déplacé ou remplacé, ou si Carbide Motion a été réinstallé. Le détail complet (avec photos) est dans le guide officiel ci-dessus.
-:::
-
-1. Éteindre et débrancher la machine, puis débrancher le câble USB.
-2. Glisser le BitSetter sur le rebord de la **plaque avant**, à environ **114 mm (4,5 pouces) du bord droit (Y2)** (valeur pour un axe Z à courroie comme le nôtre), puis serrer les 2 vis sans tête M4 × 4 mm du haut avec une clé hexagonale de 2 mm, sans forcer.
-
-   ![Illustration](../../../../assets/img/guide-cnc/bitsetter_03.jpg)
-
-   *Photo : Carbide 3D (guide d'installation du BitSetter)*
-
-3. Brancher le câble du BitSetter sur le port **"Reserved"** de la carte de contrôle (v2.4e). Si une sonde BitZero est aussi utilisée, passer par la petite carte adaptatrice fournie (*Probe Adapter*).
-4. Dans Carbide Motion : cliquer sur **"Connect to cutter"** puis sur **"Initialize machine"**.
-5. Dans l'onglet **"JOG"** : cliquer sur **"Set Zero"**, puis **"Clear All Offsets"**, puis **"Done"**.
-6. Cliquer sur **"Rapid Position"**, puis **"SE"** (coin avant droit), puis **"Done"**. Avec les boutons X et Y, placer la toupie **exactement au-dessus du bouton** du BitSetter.
-7. Dans **"Settings"**, section **BitSetter** : cocher **"Enabled"**, cliquer sur **"Use Current Location"** puis sur **"Ok"**. La position du BitSetter est enregistrée.
-
-   ![Illustration](../../../../assets/img/guide-cnc/bitsetter_05.jpg)
-
-   *Capture du guide officiel Carbide 3D (ancienne version de Carbide Motion) : l'écran peut être un peu différent chez nous. Ne changez pas les autres réglages de cette fenêtre.*
+- <a href="https://carbide3d.com/downloads/" target="_blank" rel="noopener noreferrer">Télécharger ou mettre à jour Carbide Create et Carbide Motion</a>
 
 ## 1. Mise sous tension de la machine
 
@@ -381,7 +356,7 @@ Une fois que la machine s'est placée en position initiale et est à l'arrêt, *
 - Vérification finale: confirmez visuellement que la position de départ de la mèche est correcte sur tous les axes.
 
     :::caution
-    Assurez-vous que les cales de fixation ne se retrouvent pas sur le trajet de la mèche lors de la découpe. 
+    Assurez-vous que les cales de fixation ne se retrouvent pas sur le trajet de la mèche lors de la découpe et lors du calibrage de l'axe Z avec le BitSetter. 
     :::
 
 - Une fois le positionnement de la machine vérifié, cliquer sur **"Set Zero"**
@@ -394,12 +369,6 @@ Une fois que la machine s'est placée en position initiale et est à l'arrêt, *
     :::
 
 - Cliquer sur **"Done"** pour confirmer le positionnement de la machine CNC dans sa position de départ
-
-:::note[Astuce]
-Vous pouvez **noter (ou prendre une photo) la position finale de la toupie sur les axes X, Y et Z**. Cela pourra vous être utile pour référence future ou en cas de réinitialisation de la machine.
-:::
-
-![Illustration](../../../../assets/img/guide-cnc/cnc_37.png)
 
 - Cliquer ensuite sur **"RUN"**
   - Cliquer sur **"LOAD NEW FILE"**
@@ -452,7 +421,7 @@ Avec le BitSetter, la toupie doit rester **éteinte** au lancement de l'usinage 
     :::
 
 - Un message s'affiche ensuite avec la **vitesse de rotation** à utiliser pour cette mèche
-    - Régler la molette de la toupie (1 à 6) selon la vitesse demandée (voir le tableau de correspondance plus haut)
+    - Régler **manuellement** la molette de la toupie (1 à 6) selon la vitesse demandée (voir le tableau de correspondance plus haut)
     - Vérifier que le capot de protection est fermé
     - **Allumer la toupie** : activer l'interrupteur **Toupie** sur le côté gauche de la machine CNC
 
@@ -488,7 +457,7 @@ Si votre fichier utilise plusieurs mèches, la machine s'arrête à chaque chang
 
 3. Ouvrir le capot et **remplacer la mèche** par celle demandée (même méthode qu'au début : bouton de verrouillage jaune et clé). La nouvelle mèche doit dépasser du collet d'au moins 12,7 mm.
 4. Refermer le capot, puis cliquer sur **"OK"** : la machine **descend mesurer la nouvelle mèche** sur le BitSetter (toupie toujours éteinte, mains hors de la machine).
-5. Au message de vitesse : régler la molette de la toupie pour la nouvelle mèche, **allumer la toupie**, puis cliquer sur **"OK"**. L'usinage reprend avec la nouvelle mèche.
+5. Au message de vitesse : régler la molette de la toupie pour choisir la vitesse de la nouvelle mèche, **allumer la toupie**, puis cliquer sur **"OK"**. L'usinage reprend avec la nouvelle mèche.
 
 ### Fin de l'usinage
 
@@ -540,4 +509,4 @@ Assurez-vous que la machine a terminé son travail et qu'elle est **arrêtée et
 
 - Consultez la <a href="https://docs.carbide3d.com/" target="_blank" rel="noopener noreferrer">documentation officielle de Carbide 3D</a> pour des informations détaillées sur le logiciel et le matériel.
 
-- Un adaptateur imprimé en 3D est installé sur l'arbre de la toupie pour utiliser des feutres (type Sharpie) à la place des mèches. Cet adaptateur vous permettra de **dessiner sur des supports comme du papier ou du bois, au lieu de réaliser une opération de fraisage**.
+- **Bon à savoir** : un adaptateur imprimé en 3D peut être installé sur l'arbre de la toupie pour utiliser des feutres (type Sharpie) à la place des mèches. Cet adaptateur vous permettra de **dessiner sur des supports comme du papier ou du bois, au lieu de réaliser une opération d'usinage**.

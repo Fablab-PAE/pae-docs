@@ -41,8 +41,7 @@ This guide takes you step by step through the use of the Shapeoko 3 CNC machine.
 
 ## Work area
 
-- The maximum cutting area of ​​the machine is indicated by sticky papers at the 4 corners of the machine
-- The work surface is **30" (width) x 27" (length) (i.e. 76.20 cm x 68.58 cm)**
+- The work surface is **about 30" (width) x 27" (length) (i.e. 76.20 cm x 68.58 cm)**
 
     ![Illustration](../../../../assets/img/guide-cnc/cnc_03.png)
 
@@ -82,8 +81,8 @@ The machine is fitted with a **BitSetter**: a small sensor attached to the front
 
 ### What is the BitSetter for?
 
-- It lets you **use several bits in a single machining file** (for example a thin bit to engrave a text, then a bigger bit to cut the outline).
-- At each bit change, Carbide Motion measures the new bit, compares it with the previous one and **automatically recalculates the Z-axis zero**. So you only set the zero **once**, at the start.
+- It lets you **use several bits in a single machining file** (for example a bigger bit to quickly remove material, then a thin bit to engrave a smaller drawing).
+- At each bit change, Carbide Motion measures the new bit, compares it with the previous one and **automatically recalculates the Z-axis zero**.
 - Before the BitSetter, you had to export a separate file for each bit and set the Z zero again at each change.
 
 ### Where is it?
@@ -108,8 +107,8 @@ With the BitSetter, the machine **moves on its own to the BitSetter** at several
 - at each **bit change** requested by the file;
 - sometimes also when you bring the router back to the zero point (**"Rapid Position"** or **"Quick Actions"**).
 
-:::danger[Warning: the machine starts without notice]
-Carbide 3D puts it this way: **any time you do anything to affect the Z zero, assume the machine will start moving**. Before each of these actions:
+:::danger[Warning: watch out for the machine's movements]
+Carbide 3D puts it this way: **when you touch the Z zero, assume the machine could start moving**. Before each of these actions:
 - take your hands out of the machine;
 - check that **nothing** (clamps, tools, cables, vacuum hose) is in the router's path or around the BitSetter;
 - check that the **router is switched off**.
@@ -121,8 +120,8 @@ Carbide 3D puts it this way: **any time you do anything to affect the Z zero, as
 1. **Router off during every measurement**: the bit must never spin when it touches the BitSetter (it would damage the sensor and the bit).
 2. **Only change bits when Carbide Motion asks you to** (**"Please insert tool"** message). If you change the bit at any other time, the machine does not know its length: it may **plunge into the board** or cut in the air. If this happens, set the Z-axis zero again (**"Set Zero"** then **"Zero Z"**): the new bit will be measured.
 3. **Bit long enough**: it must stick out of the collet by **at least 12.7 mm (0.5 inch)** to reach the BitSetter button.
-4. **Clean button**: a chip on the button distorts the measurement, and so the cutting depth. Vacuum the chips around the BitSetter before you start.
-5. **Do not move the BitSetter**: its position is saved in Carbide Motion. If it has moved, the setup must be done again (see "Installation and setup" below).
+4. **Clean button**: a chip on the button distorts the measurement, and so the cutting depth. Nothing must be on the BitSetter button before you start.
+5. **Do not move the BitSetter**: its position is saved in Carbide Motion.
 :::
 
 ### Versions installed at the FabLab
@@ -139,36 +138,12 @@ Carbide 3D puts it this way: **any time you do anything to affect the Z zero, as
 Carbide 3D changed the way the BitSetter is used **starting with Carbide Motion build 623** (2024): the bit is now measured when you set the Z zero and when you start the job. This guide describes that workflow (build 653). After a Carbide Motion update, check that the steps are still the same.
 :::
 
-### Documentation and purchase
+### Documentation
 
 - <a href="https://my.carbide3d.com/pdf/bitsetter-v2.pdf" target="_blank" rel="noopener noreferrer">Official BitSetter installation and setup guide</a> (Carbide 3D PDF)
 - <a href="https://carbide3d.com/blog/bitsetter-changes-carbide-motion" target="_blank" rel="noopener noreferrer">Carbide 3D article on the new BitSetter workflow</a>
 - <a href="https://my.carbide3d.com/gettingstarted/shapeoko3/" target="_blank" rel="noopener noreferrer">Getting started with the Shapeoko</a> and the <a href="https://carbide3d.com/hub/courses/getting-started-cnc/" target="_blank" rel="noopener noreferrer">Getting Started with CNC</a> course (Carbide 3D)
-- <a href="https://carbide3d.com/downloads/" target="_blank" rel="noopener noreferrer">Download Carbide Motion and Carbide Create</a>
-- <a href="https://shop.carbide3d.com/products/bitsetter?variant=39303096860733" target="_blank" rel="noopener noreferrer">Buy a BitSetter</a>: choose the **Shapeoko 3** model (the square one), not the Shapeoko 4 model (bar-shaped)
-
-### Installation and setup (advanced users)
-
-:::note[Note]
-The BitSetter is **already installed and set up** at the FabLab. These steps are only needed if it was moved or replaced, or if Carbide Motion was reinstalled. The full details (with photos) are in the official guide above.
-:::
-
-1. Switch off and unplug the machine, then unplug the USB cable.
-2. Slide the BitSetter over the lip of the **front plate**, about **114 mm (4.5 inches) from the right (Y2) edge** (value for a belt-drive Z axis like ours), then tighten the 2 top M4 × 4 mm grub screws with a 2 mm hex key, without forcing.
-
-   ![Illustration](../../../../assets/img/guide-cnc/bitsetter_03.jpg)
-
-   *Photo: Carbide 3D (BitSetter installation guide)*
-
-3. Plug the BitSetter cable into the **"Reserved"** port of the controller board (v2.4e). If a BitZero probe is also used, go through the small adapter board supplied (*Probe Adapter*).
-4. In Carbide Motion: click **"Connect to cutter"** then **"Initialize machine"**.
-5. In the **"JOG"** tab: click **"Set Zero"**, then **"Clear All Offsets"**, then **"Done"**.
-6. Click **"Rapid Position"**, then **"SE"** (front right corner), then **"Done"**. With the X and Y buttons, place the router **exactly above the button** of the BitSetter.
-7. In **"Settings"**, **BitSetter** section: tick **"Enabled"**, click **"Use Current Location"** then **"Ok"**. The BitSetter position is saved.
-
-   ![Illustration](../../../../assets/img/guide-cnc/bitsetter_05.jpg)
-
-   *Screenshot from the official Carbide 3D guide (older Carbide Motion version): the screen may look a little different on our computer. Do not change the other settings in this window.*
+- <a href="https://carbide3d.com/downloads/" target="_blank" rel="noopener noreferrer">Download or update Carbide Create and Carbide Motion</a>
 
 ## 1. Powering on the machine
 
@@ -382,7 +357,7 @@ Once the machine is in its initial position and is stopped, **position your cutt
 - Final check: Visually confirm that the starting position of the bit is correct on all axes.
 
     :::caution
-    Make sure that the mounting blocks do not end up in the path of the bit when cutting.
+    Make sure that the mounting blocks do not end up in the path of the bit when cutting and when calibrating the Z axis with the BitSetter.
     :::
 
 - Once the positioning of the machine has been verified, click on **"Set Zero"**
@@ -395,12 +370,6 @@ Once the machine is in its initial position and is stopped, **position your cutt
     :::
 
 - Click on **"Done"** to confirm the positioning of the CNC machine in its starting position
-
-:::note[Trick]
-You can **write down (or take a photo) the final position of the router on the X, Y and Z axes**. This may be useful for future reference or in case you need to reset the machine.
-:::
-
-![Illustration](../../../../assets/img/guide-cnc/cnc_37.png)
 
 - Then click on **"RUN"**
   - Click on **"LOAD NEW FILE"**
@@ -453,7 +422,7 @@ With the BitSetter, the router must stay **off** when the job starts: the machin
     :::
 
 - A message then shows the **rotation speed** to use for this bit
-    - Set the router dial (1 to 6) to the requested speed (see the correspondence table above)
+    - Set the router dial (1 to 6) **manually** to the requested speed (see the correspondence table above)
     - Check that the protective cover is closed
     - **Switch the router on**: activate the **Toupie** switch on the left-hand side of the CNC machine
 
@@ -489,7 +458,7 @@ If your file uses several bits, the machine stops at each bit change:
 
 3. Open the cover and **replace the bit** with the requested one (same method as at the start: yellow lock button and wrench). The new bit must stick out of the collet by at least 12.7 mm.
 4. Close the cover, then click on **"OK"**: the machine **goes down to measure the new bit** on the BitSetter (router still off, hands out of the machine).
-5. At the speed message: set the router dial for the new bit, **switch the router on**, then click on **"OK"**. Machining resumes with the new bit.
+5. At the speed message: set the router dial to choose the speed of the new bit, **switch the router on**, then click on **"OK"**. Machining resumes with the new bit.
 
 ### End of the job
 
@@ -541,4 +510,4 @@ Make sure the machine has finished its work and is **stopped and turned off** be
 
 - Consult the <a href="https://docs.carbide3d.com/" target="_blank" rel="noopener noreferrer">official Carbide 3D documentation</a> for detailed software and hardware information.
 
-- A 3D printed adapter is installed on the router shaft to use markers (Sharpie type) instead of bits. This adapter will allow you to **draw on supports such as paper or wood, instead of performing a milling operation**.
+- **Good to know**: a 3D printed adapter can be installed on the router shaft to use markers (Sharpie type) instead of bits. This adapter will allow you to **draw on supports such as paper or wood, instead of performing a machining operation**.
