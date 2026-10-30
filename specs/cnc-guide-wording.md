@@ -1,6 +1,6 @@
 # CNC guide: owner's wording edits
 
-Status: docs
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -34,6 +34,6 @@ no install section, no purchase link.
 - Accents fixed in the owner's text (matière, à jour, à savoir, être, déplacements).
 
 ## Acceptance checks
-- [ ] Every item of the owner's list applied in fr and en
-- [ ] No link or image left pointing to the removed section or images
-- [ ] `scripts/test.sh` passes
+- [x] Every item of the owner's list applied in fr and en
+- [x] No link or image left pointing to the removed section or images
+- [x] `scripts/test.sh` passes
