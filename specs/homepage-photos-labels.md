@@ -1,6 +1,6 @@
 # Homepage: real machine photos and new labels
 
-Status: tests passed
+Status: docs
 Size: small
 Database change: no
 New settings (.env keys): none
