@@ -1,6 +1,6 @@
 # CNC guide: horizontal BitSetter diagram
 
-Status: building
+Status: docs
 Size: small
 Database change: no
 New settings (.env keys): none
