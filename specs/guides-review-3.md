@@ -25,7 +25,7 @@ Illustrate the vinyl cutter guide and apply the owner's three 3D printing edits,
   - slicer glossary: other slicers (OrcaSlicer, Bambu Studio) can also be used
   - after "Retirez les supports et la bordure...": red `:::danger` box: wear safety glasses when
     removing plastic.
-- Changelog fr + en.
+- Changelog: none (the owner removed the changelog pages in homepage-projects-store).
 
 ## Acceptance checks
 - [x] Images show on both vinyl pages, each in the page's language

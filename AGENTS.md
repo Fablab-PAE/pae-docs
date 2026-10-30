@@ -12,9 +12,10 @@ This project IS the docs website: there is no separate `docs/` folder.
 - `src/content/docs/fr/` - French pages (the reference version); `index.mdx` is the homepage
 - `src/content/docs/en/` - English translation: same file names as `fr/`
 - `src/content/docs/*/guides/` - one guide per machine
-- `src/content/docs/*/changelog.md` - public "what changed" page (fr + en)
+- `src/content/docs/*/projets/` - one page per FabLab project (e.g. MILA)
 - `src/assets/` - logos and guide images (`img/<guide>/`); `public/pdf/` - machine manuals
 - `astro.config.mjs` - site settings, languages, sidebar (menu labels in fr + en)
+- `src/components/MachineCard.astro` - homepage card with a picture (machines, projects, shop)
 - `src/components/`, `src/diagrams/`, `src/version.mjs`, `src/scripts/` - agent kit docs
   features (version badge, diagrams, zoom). Files marked "agent-kit: managed" are updated
   by `kit docs upgrade`
@@ -36,7 +37,7 @@ Each /feature adds checks for what it builds when it makes sense.
 - New guide: add the page in both folders AND a sidebar entry (fr + en labels) in
   `astro.config.mjs`.
 - Internal links include the base and language: `/pae-docs/fr/guides/...`.
-- Visible changes get a line in both changelog pages (newest first, dated).
+- There is no changelog page (the owner removed it): don't add one back.
 - Plain, friendly language for FabLab members, not developers.
 
 ## Safety rules (never break these)
