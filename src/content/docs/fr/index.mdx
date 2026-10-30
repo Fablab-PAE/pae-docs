@@ -9,20 +9,17 @@ hero:
     dark: ../../../assets/logo_robotic_dark.svg
     alt: Logo de l'atelier RoboTic
   actions:
-    - text: Choisir une machine
+    - text: Découvrez nos machines
       link: '#les-machines-disponibles-dans-notre-local'
       icon: down-arrow
-    - text: Guide CNC
-      link: /pae-docs/fr/guides/cnc-machine/
-      icon: right-arrow
-      variant: minimal
 ---
 
 import { CardGrid } from '@astrojs/starlight/components';
 import MachineCard from '../../../components/MachineCard.astro';
-import cnc from '../../../assets/img/guide-cnc/cnc_03.png';
+import cnc from '../../../assets/img/accueil/shapeoko-3.jpg';
 import laser from '../../../assets/img/laser/laser_03_2.png';
-import imprimante3d from '../../../assets/img/impression-3d/prusa_mk4_vue_ensemble.jpg';
+import vinyle from '../../../assets/img/accueil/graphtec-ce6000.jpg';
+import imprimante3d from '../../../assets/img/accueil/prusa-mk4.jpg';
 import mila from '../../../assets/img/projets/mila.png';
 
 ## Les machines disponibles dans notre local
@@ -33,7 +30,7 @@ import mila from '../../../assets/img/projets/mila.png';
 		description="Shapeoko 3 : fraiser, graver et découper le bois, ou créer des circuits imprimés sur plaque de cuivre."
 		href="/pae-docs/fr/guides/cnc-machine/"
 		image={cnc}
-		alt="La machine CNC Shapeoko 3 et sa surface de travail"
+		alt="La machine CNC Shapeoko 3"
 	/>
 	<MachineCard
 		title="Gravure laser"
@@ -46,7 +43,8 @@ import mila from '../../../assets/img/projets/mila.png';
 		title="Découpe vinyle"
 		description="Graphtec CE6000-60 Plus : découper des autocollants, des lettrages et du flex textile, avec Graphtec Studio."
 		href="/pae-docs/fr/guides/decoupe-vinyle/"
-		icon="pen"
+		image={vinyle}
+		alt="Le plotter de découpe Graphtec CE6000-60"
 	/>
 	<MachineCard
 		title="Impression 3D"
@@ -57,7 +55,7 @@ import mila from '../../../assets/img/projets/mila.png';
 	/>
 </CardGrid>
 
-## Nos projets et notre boutique
+## Découvrez les projets du local et notre boutique en ligne
 
 <CardGrid>
 	<MachineCard
@@ -94,3 +92,7 @@ Chaque guide suit le même plan, pour retrouver facilement l'information :
 3. **Matériaux** : ce que la machine peut travailler, et ce qui est interdit.
 4. **Étapes numérotées** : de la mise sous tension jusqu'à la fin du travail, avec des captures d'écran.
 5. **Nettoyage** : comment laisser la machine propre pour la personne suivante.
+
+---
+
+<small>Crédits photos : Shapeoko 3 © Carbide 3D (photo publiée par <a href="https://all3dp.com/1/shapeoko-3-xxl-review-specs-carbide-3d/" target="_blank" rel="noopener noreferrer">All3DP</a>) · Graphtec CE6000-60 © <a href="https://wiki.acemakerspace.org/amt445/" target="_blank" rel="noopener noreferrer">Ace Makerspace</a> · Prusa MK4 : <a href="https://commons.wikimedia.org/wiki/File:Prusa_MK4.jpg" target="_blank" rel="noopener noreferrer">Majkluss, Wikimedia Commons</a>, licence <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a> (recadrée).</small>
