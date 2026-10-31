@@ -1,6 +1,6 @@
 # Guide pictures open in the kit viewer (no more starlight-image-zoom)
 
-Status: tests passed
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -27,6 +27,6 @@ one viewer and one package less.
   (`data-zoom="off"`); pictures in links (homepage cards) never open.
 
 ## Acceptance checks
-- [ ] Built guide pages have no `starlight-image-zoom` element left; the kit viewer script is there
-- [ ] Homepage cards (pictures in links) are not made zoomable
-- [ ] `scripts/test.sh` passes (astro check, build, links and images)
+- [x] Built guide pages have no `starlight-image-zoom` element left; the kit viewer script is there
+- [x] Homepage cards (pictures in links) are not made zoomable
+- [x] `scripts/test.sh` passes (astro check, build, links and images)
