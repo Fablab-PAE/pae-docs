@@ -1,6 +1,6 @@
 # Guide pictures open in the kit viewer (no more starlight-image-zoom)
 
-Status: approved
+Status: tests passed
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -20,6 +20,9 @@ one viewer and one package less.
 - `src/components/Footer.astro`: deleted (it only added the add-on viewer to Starlight footer).
 - `package.json` + `package-lock.json`: `starlight-image-zoom` removed (`npm uninstall
   --package-lock-only`; kit merge installs the packages again in the real project).
+- `src/components/MachineCard.astro`: the picture box gets `data-zoom="off"`. The whole card is a link
+  (an invisible layer on top), so a click already goes to the link, but without the mark the kit
+  would make the picture a keyboard stop that opens the viewer.
 - `AGENTS.md`: the kit features line names picture zoom, and how to keep a picture from opening
   (`data-zoom="off"`); pictures in links (homepage cards) never open.
 

@@ -31,7 +31,8 @@ const pictureStyle = background || iconColor ? { background, color: iconColor } 
 ---
 
 <div class="machine-card not-content">
-	<div class="picture" style={pictureStyle}>
+	<!-- data-zoom="off": the whole card is a link, so its picture does not open the picture viewer -->
+	<div class="picture" style={pictureStyle} data-zoom="off">
 		{
 			image ? (
 				<Image src={image} alt={alt} widths={[400, 800]} sizes="(min-width: 50rem) 22rem, 100vw" />
