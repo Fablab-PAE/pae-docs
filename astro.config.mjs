@@ -1,7 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import starlightImageZoom from 'starlight-image-zoom';
 import diagrams from './src/diagrams/diagrams.mjs';
 
 // https://astro.build/config
@@ -13,14 +12,12 @@ export default defineConfig({
       starlight({
         title: '',
         // Kit docs features (kit docs upgrade): the docs version next to the title, and an
-        // "Enlarge" button on each diagram (zoom and move it full screen)
+        // "Enlarge" button on each diagram (zoom and move it full screen); guide pictures open
+        // in the same viewer when clicked
         components: {
           SiteTitle: './src/components/SiteTitle.astro',
           MarkdownContent: './src/components/MarkdownContent.astro',
-          // Guide images open full screen when clicked (starlight-image-zoom's viewer)
-          Footer: './src/components/Footer.astro',
         },
-        plugins: [starlightImageZoom()],
         // Site styles (external-link icon in the menu)
         customCss: ['./src/styles/custom.css'],
         logo: {

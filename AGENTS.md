@@ -18,8 +18,9 @@ This project IS the docs website: there is no separate `docs/` folder.
 - `src/components/MachineCard.astro` - homepage card with a picture (machines, projects, shop)
 - `src/styles/custom.css` - site styles added to Starlight (external-link icon in the menu)
 - `src/components/`, `src/diagrams/`, `src/version.mjs`, `src/scripts/` - agent kit docs
-  features (version badge, diagrams, zoom). Files marked "agent-kit: managed" are updated
-  by `kit docs upgrade`
+  features (version badge, diagrams, zoom for diagrams and guide pictures: a picture opens
+  full screen when clicked, except in links; add `data-zoom="off"` to keep one from opening).
+  Files marked "agent-kit: managed" are updated by `kit docs upgrade`
 - `public/redirect.js` - sends `/pae-docs/` to `/pae-docs/fr/`
 - `public/sidebar-open.js` - keeps the side menu groups always open (no folding)
 - `scripts/test.sh`, `scripts/check-site.mjs` - the tests
