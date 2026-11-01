@@ -1,11 +1,12 @@
 ---
 /**
- * Page footer: Starlight's own footer (prev/next links...), then a small line with the
- * "Photo credits" link and the docs version.
- * - The credits page (src/content/docs/{fr,en}/credits-photos.md) is not in the side menu:
- *   this link, on every page, is the way to it.
- * - The version is the short id of the save the website was built from (src/version.mjs);
- *   its hover text gives the save date. Same blue pill as when it sat next to the site title.
+ * Page footer: Starlight's own footer (prev/next links...), then two small centred lines:
+ * - "© <year> Place à l'emploi. Tous droits réservés." (year = the year the site is built);
+ * - the docs version | the "Photo credits" link.
+ * The version is the short id of the save the website was built from (src/version.mjs); its
+ * hover text gives the save date. Same blue pill as when it sat next to the site title.
+ * The credits page (src/content/docs/{fr,en}/credits-photos.md) is not in the side menu:
+ * this link, on every page, is the way to it.
  *
  * Set in astro.config.mjs (`components: { Footer: ... }`).
  */
@@ -16,6 +17,8 @@ const { locale } = Astro.locals.starlightRoute;
 const lang = locale === 'en' ? 'en' : 'fr';
 const fr = lang === 'fr';
 const label = fr ? 'Crédits photos' : 'Photo credits';
+const rights = fr ? 'Tous droits réservés.' : 'All rights reserved.';
+const year = new Date().getFullYear();
 const { id, saved } = docsVersion();
 const version = id || (fr ? 'inconnue' : 'unknown');
 const hint = fr
@@ -28,22 +31,32 @@ const hint = fr
 ---
 
 <Default />
-<p class="photo-credits-link">
-	<a href={`/pae-docs/${lang}/credits-photos/`}>{label}</a>
-	<span aria-hidden="true">·</span>
-	<span class="docs-version" title={hint} aria-label={hint} translate="no">{version}</span>
-</p>
+<div class="photo-credits-link">
+	<p class="copyright">© {year} Place à l'emploi. {rights}</p>
+	<p class="footer-links">
+		<span class="docs-version" title={hint} aria-label={hint} translate="no">{version}</span>
+		<span aria-hidden="true">|</span>
+		<a href={`/pae-docs/${lang}/credits-photos/`}>{label}</a>
+	</p>
+</div>
 
 <style>
 	.photo-credits-link {
+		margin: 2rem 0 0;
+		font-size: var(--sl-text-xs);
+		color: var(--sl-color-gray-3);
+		text-align: center;
+	}
+	.photo-credits-link p {
+		margin: 0;
+	}
+	.photo-credits-link .footer-links {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
 		gap: 0.25rem 0.5rem;
-		margin: 2rem 0 0;
-		font-size: var(--sl-text-xs);
-		color: var(--sl-color-gray-3);
+		margin-top: 0.5rem;
 	}
 	.photo-credits-link a {
 		color: var(--sl-color-gray-3);

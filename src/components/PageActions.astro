@@ -2,7 +2,7 @@
 /**
  * Page actions on the right of a guide's title (src/components/PageTitle.astro), in the
  * style of fal.ai's docs: a split button. The main part copies the page as Markdown; the
- * arrow opens a menu: copy, print, open in ChatGPT / Claude. The main button holds all its
+ * arrow opens a menu: copy, print, open in Claude / ChatGPT. The main button holds all its
  * labels (copy / copied / failed), only one visible, so its width never changes.
  *
  * - The Markdown is the guide's .md file, made at build time by src/pages/[...slug].md.ts.
@@ -45,8 +45,8 @@ const t = en
 		};
 
 const ai = [
-	{ name: 'ChatGPT', href: `https://chatgpt.com/?q=${q}`, icon: 'openai' },
 	{ name: 'Claude', href: `https://claude.ai/new?q=${q}`, icon: 'claude' },
+	{ name: 'ChatGPT', href: `https://chatgpt.com/?q=${q}`, icon: 'openai' },
 ];
 const menuId = `page-actions-menu`;
 ---

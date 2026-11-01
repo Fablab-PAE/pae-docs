@@ -108,6 +108,10 @@ function checkLinks(dist) {
     if (LANGS.includes(lang) && !html.includes(`href="${BASE}/${lang}/credits-photos/"`)) {
       problems.push(`${relative(dist, file)}: no "photo credits" link in the footer`);
     }
+    // Every page's footer has the copyright line
+    if (LANGS.includes(lang) && !/© \d{4} Place à l’emploi\.|© \d{4} Place à l'emploi\./.test(html)) {
+      problems.push(`${relative(dist, file)}: no copyright line in the footer`);
+    }
     // The docs version is in the footer (not next to the site title any more)
     if (LANGS.includes(lang) && (!html.includes('class="docs-version') || html.includes('title-with-version'))) {
       problems.push(`${relative(dist, file)}: the docs version should be in the footer only`);
