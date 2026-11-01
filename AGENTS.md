@@ -21,6 +21,11 @@ This project IS the docs website: there is no separate `docs/` folder.
 - `src/content/docs/*/credits-photos.md` - photo credits, one table per page; not in the menu,
   linked from every page's footer (`src/components/Footer.astro`). New picture: add its credit there
 - `src/styles/custom.css` - site styles added to Starlight (external-link icon in the menu)
+- TEST "Style : Astro / Tailwind" switch (floating button, local preview only, never on the
+  public site): `public/skin.js` + `src/styles/skin-tailwind.css` (hand-written Tailwind /
+  Flowbite look, every rule under `:root[data-skin='tailwind']`; Tailwind is not installed).
+  To remove it: delete both files and their 2 entries in `astro.config.mjs`, and the skin
+  check in `scripts/check-site.mjs`
 - `src/components/`, `src/diagrams/`, `src/version.mjs`, `src/scripts/` - agent kit docs
   features (version badge, shown in the footer here, not in the top bar; diagrams, zoom for diagrams and guide pictures: a picture opens
   full screen when clicked, except in links; add `data-zoom="off"` to keep one from opening).

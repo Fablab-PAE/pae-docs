@@ -1,0 +1,216 @@
+/*
+ * TEST: a Tailwind / Flowbite look for the whole site, to compare with Starlight's own look.
+ * Switched on by the "Style" button of public/skin.js (local preview only), which sets
+ * data-skin="tailwind" on <html>. Every rule here starts with :root[data-skin='tailwind'],
+ * so without the switch nothing changes. Plain CSS with Tailwind's colour values and
+ * Flowbite's component shapes (https://flowbite.com/docs/): Tailwind is not installed.
+ * To remove the test: delete this file and public/skin.js, and their lines in astro.config.mjs.
+ */
+
+/* ---- Colours: Tailwind gray scale, blue accent ---- */
+:root[data-skin='tailwind'] {
+	--sl-font: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+	--tw-ring: #93c5fd; /* blue-300 */
+	--tw-btn: #1d4ed8; /* blue-700 */
+	--tw-btn-hover: #1e40af; /* blue-800 */
+	--tw-border: #e5e7eb; /* gray-200 */
+	--tw-hover: #f3f4f6; /* gray-100 */
+	--tw-head: #f9fafb; /* gray-50 */
+	--tw-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+	--tw-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+:root[data-skin='tailwind'][data-theme='light'] {
+	--sl-color-white: #111827; /* gray-900: main text */
+	--sl-color-gray-1: #1f2937;
+	--sl-color-gray-2: #374151;
+	--sl-color-gray-3: #4b5563;
+	--sl-color-gray-4: #9ca3af;
+	--sl-color-gray-5: #d1d5db;
+	--sl-color-gray-6: #f3f4f6;
+	--sl-color-gray-7: #f9fafb;
+	--sl-color-black: #ffffff; /* page background */
+	--sl-color-accent-high: #1e3a8a; /* blue-900 */
+	--sl-color-accent: #1d4ed8; /* blue-700 */
+	--sl-color-accent-low: #dbeafe; /* blue-100 */
+	--sl-color-text-accent: #1d4ed8;
+	--sl-color-bg-nav: #ffffff;
+	--sl-color-hairline: #e5e7eb;
+	--sl-color-hairline-light: #e5e7eb;
+	--sl-color-hairline-shade: #e5e7eb;
+}
+:root[data-skin='tailwind'][data-theme='dark'] {
+	--sl-color-white: #ffffff;
+	--sl-color-gray-1: #f3f4f6;
+	--sl-color-gray-2: #e5e7eb;
+	--sl-color-gray-3: #9ca3af;
+	--sl-color-gray-4: #6b7280;
+	--sl-color-gray-5: #4b5563;
+	--sl-color-gray-6: #1f2937; /* gray-800 */
+	--sl-color-black: #111827; /* gray-900: page background */
+	--sl-color-accent-high: #bfdbfe; /* blue-200 */
+	--sl-color-accent: #3b82f6; /* blue-500 */
+	--sl-color-accent-low: #1e3a8a; /* blue-900 */
+	--sl-color-text-accent: #60a5fa; /* blue-400 */
+	--sl-color-bg-nav: #1f2937;
+	--sl-color-bg-sidebar: #111827;
+	--sl-color-hairline: #374151;
+	--sl-color-hairline-light: #374151;
+	--sl-color-hairline-shade: #374151;
+	--tw-btn: #2563eb; /* blue-600 */
+	--tw-btn-hover: #1d4ed8; /* blue-700 */
+	--tw-ring: #1e40af; /* blue-800 */
+	--tw-border: #374151; /* gray-700 */
+	--tw-hover: #374151; /* gray-700 */
+	--tw-head: #1f2937; /* gray-800 */
+}
+
+/* ---- Text ---- */
+:root[data-skin='tailwind'] .sl-markdown-content :is(h1, h2, h3, h4),
+:root[data-skin='tailwind'] h1#_top {
+	font-weight: 700;
+	letter-spacing: -0.025em;
+}
+:root[data-skin='tailwind'] .sl-markdown-content a:not(:where(.not-content *)) {
+	font-weight: 500;
+	text-underline-offset: 2px;
+}
+:root[data-skin='tailwind'] .sl-markdown-content code:not(:where(.not-content *, pre *)) {
+	padding: 0.125rem 0.375rem;
+	border-radius: 0.375rem;
+	background: var(--sl-color-gray-6);
+}
+
+/* ---- Top bar and search box ---- */
+:root[data-skin='tailwind'] header.header {
+	border-bottom: 1px solid var(--tw-border);
+	box-shadow: var(--tw-shadow-sm);
+}
+:root[data-skin='tailwind'] site-search button[data-open-modal] {
+	border: 1px solid var(--tw-border);
+	border-radius: 0.5rem;
+	background: var(--tw-head);
+}
+
+/* ---- Side menu: Flowbite sidebar ---- */
+:root[data-skin='tailwind'] .sidebar-content a {
+	border-radius: 0.5rem;
+}
+:root[data-skin='tailwind'] .sidebar-content a:hover {
+	background: var(--tw-hover);
+}
+:root[data-skin='tailwind'] .sidebar-content a[aria-current='page'],
+:root[data-skin='tailwind'] .sidebar-content a[aria-current='page']:hover,
+:root[data-skin='tailwind'] .sidebar-content a[aria-current='page']:focus {
+	background: var(--tw-hover);
+	color: var(--sl-color-white);
+	font-weight: 600;
+}
+
+/* ---- Buttons: Flowbite default button ---- */
+:root[data-skin='tailwind'] :is(.sl-link-button.primary, .guide-print, .safety-print) {
+	border: 0;
+	border-radius: 0.5rem;
+	background: var(--tw-btn);
+	color: #fff;
+	font-weight: 500;
+	padding: 0.625rem 1.25rem;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+}
+:root[data-skin='tailwind'] :is(.sl-link-button.primary, .guide-print, .safety-print):hover {
+	background: var(--tw-btn-hover);
+	color: #fff;
+}
+:root[data-skin='tailwind'] :is(.sl-link-button, .guide-print, .safety-print):focus-visible {
+	outline: 4px solid var(--tw-ring);
+	outline-offset: 0;
+}
+
+/* ---- Cards and the safety sheet: Flowbite card ---- */
+:root[data-skin='tailwind'] .machine-card.machine-card,
+:root[data-skin='tailwind'] .sl-markdown-content .safety-sheet {
+	border: 1px solid var(--tw-border);
+	border-radius: 0.5rem;
+	box-shadow: var(--tw-shadow-sm);
+}
+:root[data-skin='tailwind'] .machine-card.machine-card:hover {
+	background: var(--sl-color-black);
+	border-color: var(--tw-border);
+	box-shadow: var(--tw-shadow-md);
+}
+:root[data-skin='tailwind'] .machine-card .title {
+	font-weight: 700;
+	letter-spacing: -0.025em;
+}
+
+/* ---- Info / warning boxes: Flowbite alerts ---- */
+:root[data-skin='tailwind'] .starlight-aside {
+	border: 0;
+	border-radius: 0.5rem;
+	padding: 1rem;
+}
+:root[data-skin='tailwind'][data-theme='light'] .starlight-aside--note { background: #eff6ff; color: #1e40af; --sl-color-asides-text-accent: #1e40af; }
+:root[data-skin='tailwind'][data-theme='light'] .starlight-aside--tip { background: #faf5ff; color: #6b21a8; --sl-color-asides-text-accent: #6b21a8; }
+:root[data-skin='tailwind'][data-theme='light'] .starlight-aside--caution { background: #fefce8; color: #854d0e; --sl-color-asides-text-accent: #854d0e; }
+:root[data-skin='tailwind'][data-theme='light'] .starlight-aside--danger { background: #fef2f2; color: #991b1b; --sl-color-asides-text-accent: #991b1b; }
+:root[data-skin='tailwind'][data-theme='dark'] .starlight-aside { background: #1f2937; }
+:root[data-skin='tailwind'][data-theme='dark'] .starlight-aside--note { color: #60a5fa; --sl-color-asides-text-accent: #60a5fa; }
+:root[data-skin='tailwind'][data-theme='dark'] .starlight-aside--tip { color: #c084fc; --sl-color-asides-text-accent: #c084fc; }
+:root[data-skin='tailwind'][data-theme='dark'] .starlight-aside--caution { color: #facc15; --sl-color-asides-text-accent: #facc15; }
+:root[data-skin='tailwind'][data-theme='dark'] .starlight-aside--danger { color: #f87171; --sl-color-asides-text-accent: #f87171; }
+:root[data-skin='tailwind'] .starlight-aside .starlight-aside__content {
+	color: inherit;
+}
+
+/* ---- Tables: Flowbite table ---- */
+:root[data-skin='tailwind'] .sl-markdown-content table:not(:where(.not-content *)) {
+	font-size: 0.875rem;
+	border: 1px solid var(--tw-border);
+	border-radius: 0.5rem;
+}
+:root[data-skin='tailwind'] .sl-markdown-content :is(th, td):not(:where(.not-content *)) {
+	padding: 0.75rem 1.5rem;
+	border-bottom: 1px solid var(--tw-border);
+}
+:root[data-skin='tailwind'] .sl-markdown-content th:not(:where(.not-content *)) {
+	background: var(--tw-head);
+	color: var(--sl-color-gray-2);
+	font-size: 0.75rem;
+	text-transform: uppercase;
+}
+
+/* ---- Footer version pill: Flowbite blue badge ---- */
+:root[data-skin='tailwind'] .photo-credits-link .docs-version {
+	border: 0;
+	padding: 0.125rem 0.625rem;
+	background: var(--sl-color-accent-low);
+	color: var(--sl-color-accent-high);
+	font-family: var(--sl-font);
+	font-weight: 500;
+}
+
+/* ---- The switch button itself (public/skin.js), in both looks ---- */
+.skin-switch {
+	position: fixed;
+	inset-inline-end: 1rem;
+	bottom: 1rem;
+	z-index: 100;
+	padding: 0.5rem 0.875rem;
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 999rem;
+	background: var(--sl-color-bg);
+	color: var(--sl-color-white);
+	font: inherit;
+	font-size: var(--sl-text-xs);
+	font-weight: 600;
+	box-shadow: var(--sl-shadow-md);
+	cursor: pointer;
+}
+.skin-switch:hover {
+	border-color: var(--sl-color-gray-3);
+}
+@media print {
+	.skin-switch {
+		display: none;
+	}
+}
