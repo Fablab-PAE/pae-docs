@@ -43,9 +43,10 @@ This project IS the docs website: there is no separate `docs/` folder.
 
 ## How to run the tests
 Run `scripts/test.sh` from the project root. It must pass before anything is merged.
-It checks that every French page has an English twin (and the reverse), runs `astro check`,
-builds the site into `.kit/test-build/` (never into `dist/`, which the live preview serves),
-and checks that every internal link and image in the built site points to a real file.
+It checks that every French page has an English twin (and the reverse), checks the pictures
+(`scripts/check-images.mjs`, see "Adding a picture"), runs `astro check`, builds the site
+into `.kit/test-build/` (never into `dist/`, which the live preview serves), and checks that
+every internal link and image in the built site points to a real file.
 How tests stay safe: the site has no database, no settings and no outside services; the
 build only writes inside `.kit/`.
 Each /feature adds checks for what it builds when it makes sense.
@@ -57,6 +58,14 @@ Each /feature adds checks for what it builds when it makes sense.
 - Internal links include the base and language: `/pae-docs/fr/guides/...`.
 - There is no changelog page (the owner removed it): don't add one back.
 - Plain, friendly language for FabLab members, not developers.
+
+## Adding a picture
+- Put it in `src/assets/img/<guide>/` (never in `public/`: Astro only optimises `src/`), use
+  it in the page (`![...](../../../../assets/img/...)`), and credit it in `credits-photos.md`.
+- Originals: at most 2000 px on the longest side and 500 KB (SVG: 200 KB), no duplicates, no
+  unused files (rules in `scripts/images.mjs`). Run `npm run images`: it resizes, converts
+  heavy pictures to WebP and updates the pages' references. The tests check the rules.
+- At build time Astro makes WebP files in several widths (`image` in `astro.config.mjs`).
 
 ## Safety rules (never break these)
 - No database. Nothing to connect to.
