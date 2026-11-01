@@ -1,6 +1,6 @@
 # Optimised images: responsive sizes, light originals, automatic checks
 
-Status: building
+Status: ready to merge
 Size: normal
 Database change: no
 New settings (.env keys): none
@@ -58,9 +58,9 @@ Every picture of the documentation follows the 2026 good practices, and stays th
 - `srcset` check in `scripts/check-site.mjs links`.
 
 ## Acceptance checks
-- [ ] All originals ≤ 2000 px and ≤ 500 KB; no duplicates, no unused files; `src/assets` much
+- [x] All originals ≤ 2000 px and ≤ 500 KB; no duplicates, no unused files; `src/assets` much
       smaller than 71 MB
-- [ ] Guide pictures have a `srcset` in the built pages; pictures look the same
-- [ ] Adding a 3 MB photo makes `scripts/test.sh` fail with the command to run; after
+- [x] Guide pictures have a `srcset` in the built pages; pictures look the same
+- [x] Adding a 3 MB photo makes `scripts/test.sh` fail with the command to run; after
       `npm run images` it passes
-- [ ] `scripts/test.sh` passes
+- [x] `scripts/test.sh` passes
