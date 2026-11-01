@@ -33,9 +33,11 @@ This project IS the docs website: there is no separate `docs/` folder.
 - `public/redirect.js` - sends `/pae-docs/` to `/pae-docs/fr/`
 - `public/sidebar-open.js` - keeps the side menu groups always open (no folding)
 - Each guide ends with a printable "Fiche de sécurité" (`<div class="safety-sheet">`, styles in
-  `custom.css`); its button prints only the sheet on one A4 page. An "Imprimer" button
-  on the right of each guide's title (`src/components/PageTitle.astro`) prints the whole guide.
-  Both buttons: `public/print.js`
+  `custom.css`); its button prints only the sheet on one A4 page (`public/print.js`).
+- Guide page actions, right of each guide's title (`src/components/PageActions.astro`, via
+  `PageTitle.astro`): "Copier la page" (Markdown) + menu: view as Markdown, print (whole
+  guide, `public/print.js`), open in ChatGPT / Claude / Perplexity (public .md address).
+  The .md files are made at build time by `src/pages/[...slug].md.ts` (guides only)
 - `scripts/test.sh`, `scripts/check-site.mjs` - the tests
 - Code map: none. Feature plans: `specs/`
 

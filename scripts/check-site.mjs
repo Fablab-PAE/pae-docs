@@ -7,10 +7,11 @@
 //                                                 test Tailwind look stays behind its local switch
 //   node scripts/check-site.mjs links <dist>   -> every internal link/image in the built site exists;
 //                                                 every page has the footer's photo credits link;
-//                                                 guide pages (only) have the print button; the docs
+//                                                 guide pages (only) have the page actions menu and
+//                                                 a .md version; the docs
 //                                                 version is in the footer; homepage level badges
 import { readdirSync, readFileSync, statSync } from 'node:fs';
-import { join, relative, extname, sep } from 'node:path';
+import { join, relative, extname, sep, dirname } from 'node:path';
 
 const BASE = '/pae-docs'; // `base` in astro.config.mjs
 const DOCS = 'src/content/docs';
@@ -119,10 +120,14 @@ function checkLinks(dist) {
         problems.push(`${relative(dist, file)}: expected 3 "beginner" and 1 "advanced" badges, found ${beginner} and ${advanced}`);
       }
     }
-    // Guide pages, and only them, have the "print the guide" button (src/components/PageTitle.astro)
+    // Guide pages, and only them, have the page actions menu (src/components/PageActions.astro)
+    // with its print item, and a Markdown version next to them (src/pages/[...slug].md.ts)
     const isGuide = LANGS.some((l) => relative(dist, file).startsWith(join(l, 'guides') + sep));
-    if (isGuide !== html.includes('data-print-guide')) {
-      problems.push(`${relative(dist, file)}: ${isGuide ? 'no' : 'unexpected'} "print the guide" button`);
+    if (isGuide !== html.includes('data-page-actions') || isGuide !== html.includes('data-print-guide')) {
+      problems.push(`${relative(dist, file)}: ${isGuide ? 'no' : 'unexpected'} page actions menu`);
+    }
+    if (isGuide && !exists(join(dirname(file)) + '.md')) {
+      problems.push(`${relative(dist, file)}: no Markdown version (${relative(dist, dirname(file))}.md)`);
     }
     // Homepages: the links to a section of the page (hero button) point to a real heading
     if (LANGS.some((l) => relative(dist, file) === join(l, 'index.html'))) {

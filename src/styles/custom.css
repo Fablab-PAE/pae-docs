@@ -83,8 +83,9 @@
 	line-height: 1.2;
 	color: var(--sl-color-white);
 }
-/* Print buttons (public/print.js): the sheet's, and the guide's on the right of the page
-   title (src/components/PageTitle.astro; on a narrow screen it goes under the title) */
+/* The safety sheet's print button (public/print.js), and the row holding a guide's title
+   and its page actions (src/components/PageTitle.astro; on a narrow screen the actions go
+   under the title) */
 .safety-print {
 	float: inline-end;
 	margin: 0 0 0.5rem 1rem;
@@ -96,12 +97,7 @@
 	justify-content: space-between;
 	gap: 0.5rem 1rem;
 }
-.guide-print {
-	flex: none;
-	margin-top: 1rem; /* same as the title's, so both sit on one line */
-	white-space: nowrap;
-}
-:is(.safety-print, .guide-print) {
+.safety-print {
 	padding: 0.4rem 0.9rem;
 	border: 1px solid var(--sl-color-accent);
 	border-radius: 999rem;
@@ -112,11 +108,11 @@
 	font-weight: 600;
 	cursor: pointer;
 }
-:is(.safety-print, .guide-print):hover {
+.safety-print:hover {
 	background: var(--sl-color-accent-high);
 	border-color: var(--sl-color-accent-high);
 }
-:is(.safety-print, .guide-print)::before {
+.safety-print::before {
 	content: '';
 	display: inline-block;
 	width: 1.1em;
@@ -169,7 +165,8 @@
    out the side menu, the table of contents and the prev/next links, in light colours. Here:
    no buttons or link icons, pictures kept whole, the safety sheet on a page of its own. */
 @media print {
-	:is(.safety-print, .guide-print),
+	.safety-print,
+	.page-actions,
 	mobile-starlight-toc,
 	.sl-anchor-link,
 	.photo-credits-link {
