@@ -6,7 +6,8 @@
 //                                                 credits page exists (not on the homepage)
 //   node scripts/check-site.mjs links <dist>   -> every internal link/image in the built site exists;
 //                                                 every page has the footer's photo credits link;
-//                                                 guide pages (only) have the print button
+//                                                 guide pages (only) have the print button; the docs
+//                                                 version is in the footer; homepage level badges
 import { readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, relative, extname, sep } from 'node:path';
 
@@ -79,6 +80,18 @@ function checkLinks(dist) {
     const lang = relative(dist, file).split(/[\\/]/)[0];
     if (LANGS.includes(lang) && !html.includes(`href="${BASE}/${lang}/credits-photos/"`)) {
       problems.push(`${relative(dist, file)}: no "photo credits" link in the footer`);
+    }
+    // The docs version is in the footer (not next to the site title any more)
+    if (LANGS.includes(lang) && (!html.includes('class="docs-version') || html.includes('title-with-version'))) {
+      problems.push(`${relative(dist, file)}: the docs version should be in the footer only`);
+    }
+    // Homepages: level badges on the machine cards: 3 beginner (3D, laser, vinyl), 1 advanced (CNC)
+    if (LANGS.some((l) => relative(dist, file) === join(l, 'index.html'))) {
+      const beginner = html.match(/data-level="beginner"/g)?.length ?? 0;
+      const advanced = html.match(/data-level="advanced"/g)?.length ?? 0;
+      if (beginner !== 3 || advanced !== 1) {
+        problems.push(`${relative(dist, file)}: expected 3 "beginner" and 1 "advanced" badges, found ${beginner} and ${advanced}`);
+      }
     }
     // Guide pages, and only them, have the "print the guide" button (src/components/PageTitle.astro)
     const isGuide = LANGS.some((l) => relative(dist, file).startsWith(join(l, 'guides') + sep));
