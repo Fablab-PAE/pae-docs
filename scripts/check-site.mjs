@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 // Site checks used by scripts/test.sh (no dependencies).
 //   node scripts/check-site.mjs pages          -> every fr/ page has an en/ twin, and the reverse;
-//                                                 every page has a description; no unfinished guide
+//                                                 every page has a description; no unfinished guide;
+//                                                 every guide has its safety sheet
 //   node scripts/check-site.mjs links <dist>   -> every internal link/image in the built site exists
 import { readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, relative, extname } from 'node:path';
@@ -41,6 +42,10 @@ function checkPages() {
       if (!/^description:\s*\S/m.test(front)) problems.push(`${relative(DOCS, f)} has no description`);
       if (f.includes(`${l}/guides/`) && UNFINISHED.some((u) => text.includes(u))) {
         problems.push(`${relative(DOCS, f)} still says the guide is being written`);
+      }
+      // Every guide ends with its printable safety sheet (public/print-sheet.js)
+      if (f.includes(`${l}/guides/`) && !(text.includes('class="safety-sheet"') && text.includes('data-print-sheet'))) {
+        problems.push(`${relative(DOCS, f)} has no safety sheet with a print button`);
       }
     }
   }

@@ -257,3 +257,67 @@ Common issues and solutions:
 ## To go further
 
 - Consider experimenting with other software options for operating the laser machine to explore additional features offered by laser engraving programs (e.g., LightBurn, LaserGRBL, etc.).
+
+## Safety sheet
+
+This sheet sums up the machine's safety rules. Print it to post it next to the machine: the button prints only the sheet, on one A4 page.
+
+<div class="safety-sheet">
+
+<button type="button" class="safety-print" data-print-sheet>Print the sheet</button>
+
+<div class="safety-sheet-header">
+  <p class="safety-sheet-kicker">Machine safety sheet</p>
+  <p class="safety-sheet-machine">Laser Engraver (NEJE 5 W diode)</p>
+</div>
+
+#### Description
+
+This machine uses a high-power blue laser beam (450 nm diode, 5 W) to engrave many materials (wood, cardboard, metal, paper, untreated leather, some treated metals, etc.) or to make fine cuts in 3 mm wood panels.
+
+#### Danger level (compared with the other machines in the room)
+
+<div class="risk-assessment level-5">
+  <div class="risk-meter">
+    <div class="risk-meter-fill"></div>
+  </div>
+  <div class="risk-description">
+    <p class="risk-label"><strong>High danger (5/5)</strong></p>
+    <p class="risk-details">Main risks: eye injuries (laser), fire, fumes</p>
+  </div>
+</div>
+
+#### Main risks
+
+- **LASER RADIATION: DANGER FOR THE EYES.** The direct or reflected beam can burn the retina. Protective goggles are mandatory when using the machine.
+- **FIRE: HIGH risk.** The laser can set materials on fire. It is essential to keep the machine under control at all times.
+- **TOXIC FUMES:** burning materials gives off dangerous fumes (fine particles, CO, VOCs). Engraving PVC/VINYL is forbidden.
+
+#### Personal protective equipment (PPE)
+
+- **Laser safety goggles (provided) rated for 455 nm AND 1064 nm: MUST BE WORN** as soon as the machine is ready to run.
+- **Fume extraction/filtering system: MUST BE ON** for the whole engraving or cutting job.
+- **Machine protective cover: KEEP IT CLOSED whenever possible** (protects against the radiation).
+
+#### Mandatory safety rules
+
+- **NEVER LEAVE THE MACHINE UNATTENDED** while it is running. Stay right next to it.
+- **Check that the fume extractor/filter works** before EVERY use.
+- **Only use COMPATIBLE AND APPROVED materials** (approved by the person in charge). If in doubt, ASK!
+- **Run an engraving/cutting test on a scrap piece** with low settings to adjust them before starting the final job.
+- **Clear the work area** of flammable debris before and after use.
+- **Locate the CO₂ fire extinguisher** (inside the laser machine's enclosure) and the **fire blanket**.
+
+#### In an emergency / if something goes wrong
+
+- Press the machine's **emergency stop button** or switch off the power.
+- If there is a **strange smell or too much smoke**: stop immediately, air the room, tell the person in charge.
+- If a **FIRE GETS OUT OF CONTROL**: **EVACUATE IMMEDIATELY**, set off the fire alarm and call emergency services (911).
+- If you think **the laser may have hit your eyes**: rinse the eye if possible, tell the person in charge, see a doctor/ophthalmologist URGENTLY and say it was a laser exposure.
+
+#### Emergency contacts
+
+- Person in charge of the RoboTic room: Victor Bruzeau
+- Emergency: 911 (emergencies), 1-800-463-5060 (Québec poison control centre)
+
+</div>

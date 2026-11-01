@@ -557,3 +557,74 @@ Assurez-vous que la machine a terminé son travail et qu'elle est **arrêtée et
 - Consultez la <a href="https://docs.carbide3d.com/" target="_blank" rel="noopener noreferrer">documentation officielle de Carbide 3D</a> pour des informations détaillées sur le logiciel et le matériel.
 
 - **Bon à savoir** : un adaptateur imprimé en 3D peut être installé sur l'arbre de la toupie pour utiliser des feutres (type Sharpie) à la place des mèches. Cet adaptateur vous permettra de **dessiner sur des supports comme du papier ou du bois, au lieu de réaliser une opération d'usinage**.
+
+## Fiche de sécurité
+
+Cette fiche résume les règles de sécurité de la machine. Imprimez-la pour l'afficher à côté de la machine : le bouton n'imprime que la fiche, sur une page A4.
+
+<div class="safety-sheet">
+
+<button type="button" class="safety-print" data-print-sheet>Imprimer la fiche</button>
+
+<div class="safety-sheet-header">
+  <p class="safety-sheet-kicker">Fiche sécurité machine</p>
+  <p class="safety-sheet-machine">Fraiseuse CNC (Shapeoko 3)</p>
+</div>
+
+#### Description
+
+Cette machine à commande numérique utilise une fraise (mèche) rotative à très haute vitesse pour enlever de la matière (bois, cire) afin de réaliser des découpes, gravures ou usinages 3D précis.
+
+#### Niveau de danger (comparé aux autres machines du local)
+
+<div class="risk-assessment level-5">
+  <div class="risk-meter">
+    <div class="risk-meter-fill"></div>
+  </div>
+  <div class="risk-description">
+    <p class="risk-label"><strong>Danger élevé (5/5)</strong></p>
+    <p class="risk-details">Risques principaux : pièce rotative à haute vitesse (coupure/projection/happement), projections (copeaux, bris d'outil), poussières, bruit</p>
+  </div>
+</div>
+
+#### Risques principaux
+
+- **Blessures par l'outil rotatif :** le contact direct avec la fraise en rotation peut causer des blessures sévères.
+- **Projections violentes :** copeaux de matière, éclats de bois ou fragments d'outil brisé peuvent être projetés à haute vitesse et causer des blessures (yeux, peau).
+- **Poussières fines :** l'usinage génère des poussières (surtout bois de type MDF) nocives pour les voies respiratoires si elles sont inhalées.
+- **Bruit intense :** le moteur et l'usinage génèrent un niveau sonore élevé pouvant endommager l'audition.
+- **Mouvement du matériau :** une pièce mal fixée peut bouger ou être éjectée pendant l'usinage.
+
+#### Équipements de protection individuelle (EPI)
+
+- **Système d'aspiration des copeaux/poussières : ACTIVATION OBLIGATOIRE** avant et pendant toute la durée de l'usinage.
+- **Capot de protection (si équipé) : UTILISATION FERMÉE OBLIGATOIRE**.
+- **Lunettes de sécurité : PORT OBLIGATOIRE** en tout temps à proximité de la machine en fonctionnement.
+- **Protecteurs auditifs (bouchons ou casque) : PORT OBLIGATOIRE** pendant le fonctionnement de la machine.
+- **Masque antipoussière (type N95) : RECOMMANDÉ**, surtout pour les usinages longs ou de matériaux générant beaucoup de poussière (MDF).
+
+#### Règles de sécurité impératives
+
+- **Vérifier la fixation SOLIDE ET SÉCURITAIRE du matériau** sur le plateau avant CHAQUE usinage. Utiliser les cales de fixation appropriées.
+- **S'assurer que la fraise est correctement installée et serrée** dans la pince (collet) du routeur. Utiliser des fraises adaptées et non endommagées.
+- **NE JAMAIS LAISSER LA MACHINE SANS SURVEILLANCE** pendant son fonctionnement.
+- **Garder les mains et le corps ÉLOIGNÉS** de la zone de travail et des pièces mobiles pendant le fonctionnement. Ne jamais essayer d'enlever des copeaux à la main pendant que la machine tourne.
+- **Connaître l'emplacement et le fonctionnement du BOUTON D'ARRÊT D'URGENCE** et pouvoir l'atteindre facilement.
+- **Utiliser des paramètres de coupe (vitesse de rotation, avance) adaptés** au matériau et à la fraise utilisés. En cas de doute, DEMANDER au responsable.
+- **Nettoyer la zone de travail** des copeaux et débris UNIQUEMENT lorsque la machine est **complètement arrêtée**.
+
+#### En cas d'urgence / problème
+
+- En cas de **mouvement/éjection du matériau** : arrêt d'urgence immédiat. Ne pas tenter de retenir la pièce.
+- En cas de **bris d'outil** : arrêt d'urgence. Attendre l'arrêt complet de la rotation avant d'intervenir. Inspecter les dégâts potentiels. Prévenir le responsable.
+- Appuyer immédiatement sur le **BOUTON D'ARRÊT D'URGENCE** pour couper l'alimentation générale si nécessaire.
+- En cas de **blessure (coupure, happement)** : arrêt d'urgence immédiat. Appliquer une pression directe sur la plaie. Prévenir le responsable et appeler les secours (911) SANS DÉLAI.
+- En cas d'**INCENDIE NON MAÎTRISABLE** : **ÉVACUER IMMÉDIATEMENT**, déclencher l'alarme incendie et appeler les secours (911).
+- Signaler immédiatement au responsable tout dommage ou dysfonctionnement.
+
+#### Contacts d'urgence
+
+- Responsable du local RoboTic : Victor Bruzeau
+- Secours : 911 (Urgences), 1-800-463-5060 (Centre antipoison du Québec)
+
+</div>

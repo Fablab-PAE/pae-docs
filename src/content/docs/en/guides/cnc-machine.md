@@ -558,3 +558,74 @@ Make sure the machine has finished its work and is **stopped and turned off** be
 - Consult the <a href="https://docs.carbide3d.com/" target="_blank" rel="noopener noreferrer">official Carbide 3D documentation</a> for detailed software and hardware information.
 
 - **Good to know**: a 3D printed adapter can be installed on the router shaft to use markers (Sharpie type) instead of bits. This adapter will allow you to **draw on supports such as paper or wood, instead of performing a machining operation**.
+
+## Safety sheet
+
+This sheet sums up the machine's safety rules. Print it to post it next to the machine: the button prints only the sheet, on one A4 page.
+
+<div class="safety-sheet">
+
+<button type="button" class="safety-print" data-print-sheet>Print the sheet</button>
+
+<div class="safety-sheet-header">
+  <p class="safety-sheet-kicker">Machine safety sheet</p>
+  <p class="safety-sheet-machine">CNC Router (Shapeoko 3)</p>
+</div>
+
+#### Description
+
+This computer-controlled machine spins a cutting bit at very high speed to remove material (wood, wax) and make precise cuts, engravings or 3D carvings.
+
+#### Danger level (compared with the other machines in the room)
+
+<div class="risk-assessment level-5">
+  <div class="risk-meter">
+    <div class="risk-meter-fill"></div>
+  </div>
+  <div class="risk-description">
+    <p class="risk-label"><strong>High danger (5/5)</strong></p>
+    <p class="risk-details">Main risks: part spinning at high speed (cuts, flying pieces, getting caught), flying chips and broken bits, dust, noise</p>
+  </div>
+</div>
+
+#### Main risks
+
+- **Injuries from the spinning bit:** touching the spinning bit can cause severe injuries.
+- **Violent projections:** chips, wood splinters or pieces of a broken bit can fly out at high speed and cause injuries (eyes, skin).
+- **Fine dust:** cutting makes dust (especially MDF-type wood) that is harmful to the lungs if breathed in.
+- **Loud noise:** the motor and the cutting are loud enough to damage hearing.
+- **Moving material:** a badly clamped piece can move or be thrown out during cutting.
+
+#### Personal protective equipment (PPE)
+
+- **Chip/dust extraction system: MUST BE ON** before and during the whole job.
+- **Protective cover (if fitted): MUST BE KEPT CLOSED**.
+- **Safety glasses: MUST BE WORN** at all times near the machine while it runs.
+- **Hearing protection (earplugs or earmuffs): MUST BE WORN** while the machine runs.
+- **Dust mask (N95 type): RECOMMENDED**, especially for long jobs or very dusty materials (MDF).
+
+#### Mandatory safety rules
+
+- **Check that the material is clamped FIRMLY AND SAFELY** to the bed before EVERY job. Use the right clamps.
+- **Make sure the bit is fitted correctly and tightened** in the router's collet. Use suitable, undamaged bits.
+- **NEVER LEAVE THE MACHINE UNATTENDED** while it is running.
+- **Keep hands and body AWAY** from the work area and moving parts while it runs. Never try to remove chips by hand while the machine is turning.
+- **Know where the EMERGENCY STOP BUTTON is and how it works**, and be able to reach it easily.
+- **Use cutting settings (spindle speed, feed rate) suited** to the material and the bit. If in doubt, ASK the person in charge.
+- **Clean chips and debris from the work area ONLY when the machine is completely stopped**.
+
+#### In an emergency / if something goes wrong
+
+- If the **material moves or is thrown out**: emergency stop right away. Do not try to hold the piece back.
+- If a **bit breaks**: emergency stop. Wait until the spinning has completely stopped before doing anything. Check for damage. Tell the person in charge.
+- Press the **EMERGENCY STOP BUTTON** right away to cut the main power if needed.
+- If someone is **injured (cut, caught)**: emergency stop right away. Press directly on the wound. Tell the person in charge and call emergency services (911) WITHOUT DELAY.
+- If a **FIRE GETS OUT OF CONTROL**: **EVACUATE IMMEDIATELY**, set off the fire alarm and call emergency services (911).
+- Report any damage or malfunction to the person in charge right away.
+
+#### Emergency contacts
+
+- Person in charge of the RoboTic room: Victor Bruzeau
+- Emergency: 911 (emergencies), 1-800-463-5060 (Québec poison control centre)
+
+</div>

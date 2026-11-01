@@ -24,3 +24,166 @@
 .sidebar-content details > summary .caret {
 	display: none;
 }
+
+/* Safety sheets at the end of the guides ("Fiche de sécurité"): a framed sheet with a
+   danger meter, and a button that prints only the sheet (public/print-sheet.js) */
+:root {
+	--safety-level-1: #2e9e4f;
+	--safety-level-2: #7cb342;
+	--safety-level-3: #f2a900;
+	--safety-level-4: #ef6c00;
+	--safety-level-5: #d32f2f;
+	--safety-meter-track: #e3e3e3;
+}
+:root[data-theme='dark'] {
+	--safety-meter-track: #3a3f4b;
+}
+.safety-sheet {
+	border: 2px solid var(--sl-color-gray-4);
+	border-radius: 0.5rem;
+	padding: 1rem 1.25rem 1.25rem;
+}
+.safety-sheet-header {
+	border-bottom: 3px solid var(--safety-level-5);
+	padding-bottom: 0.5rem;
+}
+.sl-markdown-content .safety-sheet-header p {
+	margin: 0;
+}
+.sl-markdown-content .safety-sheet-kicker {
+	font-size: var(--sl-text-sm);
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--safety-level-5);
+}
+.sl-markdown-content .safety-sheet-machine {
+	margin-top: 0.15rem;
+	font-size: var(--sl-text-2xl);
+	font-weight: 700;
+	line-height: 1.2;
+	color: var(--sl-color-white);
+}
+.safety-print {
+	float: inline-end;
+	margin: 0 0 0.5rem 1rem;
+	padding: 0.4rem 0.9rem;
+	border: 1px solid var(--sl-color-accent);
+	border-radius: 999rem;
+	background: var(--sl-color-accent);
+	color: var(--sl-color-black);
+	font: inherit;
+	font-size: var(--sl-text-sm);
+	font-weight: 600;
+	cursor: pointer;
+}
+.safety-print:hover {
+	background: var(--sl-color-accent-high);
+	border-color: var(--sl-color-accent-high);
+}
+.safety-print::before {
+	content: '';
+	display: inline-block;
+	width: 1.1em;
+	height: 1.1em;
+	margin-inline-end: 0.4em;
+	vertical-align: -0.2em;
+	background-color: currentColor;
+	-webkit-mask: var(--print-icon) no-repeat center / contain;
+	mask: var(--print-icon) no-repeat center / contain;
+	--print-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linejoin='round'%3E%3Cpath d='M7 9V3h10v6M7 17H4v-7h16v7h-3M7 14h10v7H7z'/%3E%3C/svg%3E");
+}
+
+/* Danger meter: level-N fills N fifths of the bar, green (1) to red (5) */
+.risk-assessment {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem 1rem;
+	flex-wrap: wrap;
+}
+.risk-meter {
+	flex: 0 0 12rem;
+	height: 0.9rem;
+	border-radius: 999rem;
+	background: var(--safety-meter-track);
+	overflow: hidden;
+}
+.risk-meter-fill {
+	height: 100%;
+	border-radius: inherit;
+	background: var(--risk-color);
+	width: var(--risk-width);
+}
+.risk-assessment.level-1 { --risk-color: var(--safety-level-1); --risk-width: 20%; }
+.risk-assessment.level-2 { --risk-color: var(--safety-level-2); --risk-width: 40%; }
+.risk-assessment.level-3 { --risk-color: var(--safety-level-3); --risk-width: 60%; }
+.risk-assessment.level-4 { --risk-color: var(--safety-level-4); --risk-width: 80%; }
+.risk-assessment.level-5 { --risk-color: var(--safety-level-5); --risk-width: 100%; }
+.risk-description {
+	flex: 1 1 14rem;
+}
+.sl-markdown-content .risk-description p {
+	margin: 0;
+}
+.sl-markdown-content .risk-details {
+	font-size: var(--sl-text-sm);
+	color: var(--sl-color-gray-2);
+}
+
+/* Printing with the button: only the chosen sheet, black on white, on one A4 page.
+   Everything that does not hold the sheet is hidden; what holds it loses its layout. */
+@media print {
+	.safety-print {
+		display: none;
+	}
+	html.printing-sheet body *:not(:has(.is-printing), .is-printing, .is-printing *) {
+		display: none !important;
+	}
+	html.printing-sheet body,
+	html.printing-sheet body *:has(.is-printing) {
+		display: block !important;
+		position: static !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		border: 0 !important;
+		width: auto !important;
+		max-width: none !important;
+		min-height: 0 !important;
+		background: #fff !important;
+	}
+	html.printing-sheet .safety-sheet.is-printing {
+		--sl-color-white: #000;
+		--sl-color-gray-2: #333;
+		--safety-meter-track: #e3e3e3;
+		color: #000;
+		background: #fff;
+		border: 2px solid #000;
+		border-radius: 0;
+		padding: 5mm 7mm;
+		font-size: 9.5pt;
+		line-height: 1.35;
+		print-color-adjust: exact;
+		-webkit-print-color-adjust: exact;
+	}
+	html.printing-sheet .is-printing h4 {
+		font-size: 11pt;
+		color: #000;
+	}
+	html.printing-sheet .is-printing .sl-heading-wrapper {
+		margin-top: 0.8em !important;
+		break-after: avoid;
+	}
+	html.printing-sheet .is-printing .sl-anchor-link {
+		display: none !important;
+	}
+	html.printing-sheet .is-printing :is(p, ul, li, .risk-assessment) {
+		margin-top: 0.25em;
+	}
+	html.printing-sheet .is-printing .safety-sheet-machine {
+		font-size: 17pt;
+	}
+}
+@page {
+	size: A4;
+	margin: 10mm;
+}
