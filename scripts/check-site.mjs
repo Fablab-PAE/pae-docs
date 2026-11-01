@@ -2,8 +2,10 @@
 // Site checks used by scripts/test.sh (no dependencies).
 //   node scripts/check-site.mjs pages          -> every fr/ page has an en/ twin, and the reverse;
 //                                                 every page has a description; no unfinished guide;
-//                                                 every guide has its safety sheet
-//   node scripts/check-site.mjs links <dist>   -> every internal link/image in the built site exists
+//                                                 every guide has its safety sheet; the photo
+//                                                 credits page exists (not on the homepage)
+//   node scripts/check-site.mjs links <dist>   -> every internal link/image in the built site exists;
+//                                                 every page has the footer's photo credits link
 import { readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, relative, extname } from 'node:path';
 
@@ -34,6 +36,13 @@ function checkPages() {
   }
   // The site has no changelog page any more (the owner asked to remove it)
   for (const l of LANGS) if (pages[l].has('changelog')) problems.push(`${l}/changelog should not exist (the changelog was removed)`);
+  // Photo credits live on their own page (linked from every page's footer), not on the homepage
+  for (const l of LANGS) {
+    if (!pages[l].has('credits-photos')) problems.push(`${l}/credits-photos (photo credits page) is missing`);
+    if (/<small>(Crédits photos|Photo credits)/.test(readFileSync(join(DOCS, l, 'index.mdx'), 'utf8'))) {
+      problems.push(`${l}/index.mdx still has the photo credits line (they are on credits-photos now)`);
+    }
+  }
   // Every page has a description (shown in search results), and no guide is left unfinished
   for (const l of LANGS) {
     for (const f of walk(join(DOCS, l)).filter((f) => /\.mdx?$/.test(f))) {
@@ -61,6 +70,11 @@ function checkLinks(dist) {
   const attr = /\s(?:href|src)=["']([^"']+)["']/g;
   for (const file of walk(dist).filter((f) => extname(f) === '.html')) {
     const html = readFileSync(file, 'utf8');
+    // Every page has the footer link to its language's photo credits page (src/components/Footer.astro)
+    const lang = relative(dist, file).split(/[\\/]/)[0];
+    if (LANGS.includes(lang) && !html.includes(`href="${BASE}/${lang}/credits-photos/"`)) {
+      problems.push(`${relative(dist, file)}: no "photo credits" link in the footer`);
+    }
     for (const [, raw] of html.matchAll(attr)) {
       if (!raw.startsWith(BASE + '/') && raw !== BASE) continue; // outside links are not checked
       let path;

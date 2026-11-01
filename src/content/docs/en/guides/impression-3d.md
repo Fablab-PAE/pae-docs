@@ -218,7 +218,7 @@ Common problems and solutions:
 - Read the <a href="https://help.prusa3d.com" target="_blank" rel="noopener noreferrer">Prusa knowledge base</a> for detailed explanations on the printer, materials and errors.
 - PrusaSlicer can print an object **in several colors** with a single filament: in the preview, add a **color change** at the layer you want. The printer stops at that layer and guides you through changing the filament.
 - An object that is too big can be **cut into several pieces** with PrusaSlicer's **Cut** tool (**C** key), then assembled.
-- The pictures in this guide come from the <a href="https://www.prusa3d.com/downloads/manual/prusa3d_manual_MK4_MK39_103_en.pdf" target="_blank" rel="noopener noreferrer">official Original Prusa MK4 handbook</a> (© Prusa Research).
+- The sources of the photos and pictures in this guide are listed on the [Photo credits](/pae-docs/en/credits-photos/) page.
 
 ## Safety sheet
 

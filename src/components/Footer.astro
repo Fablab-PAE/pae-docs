@@ -1,0 +1,33 @@
+---
+/**
+ * Page footer: Starlight's own footer (prev/next links...), then a small "Photo credits" link
+ * to the credits page (src/content/docs/{fr,en}/credits-photos.md). That page is not in the
+ * side menu: this link, on every page, is the way to it.
+ *
+ * Set in astro.config.mjs (`components: { Footer: ... }`).
+ */
+import Default from '@astrojs/starlight/components/Footer.astro';
+
+const { locale } = Astro.locals.starlightRoute;
+const lang = locale === 'en' ? 'en' : 'fr';
+const label = lang === 'en' ? 'Photo credits' : 'Crédits photos';
+---
+
+<Default />
+<p class="photo-credits-link">
+	<a href={`/pae-docs/${lang}/credits-photos/`}>{label}</a>
+</p>
+
+<style>
+	.photo-credits-link {
+		margin: 2rem 0 0;
+		text-align: center;
+		font-size: var(--sl-text-xs);
+	}
+	.photo-credits-link a {
+		color: var(--sl-color-gray-3);
+	}
+	.photo-credits-link a:hover {
+		color: var(--sl-color-white);
+	}
+</style>

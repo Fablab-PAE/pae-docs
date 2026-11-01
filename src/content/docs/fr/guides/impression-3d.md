@@ -218,7 +218,7 @@ Problèmes courants et solutions :
 - Consultez la <a href="https://help.prusa3d.com" target="_blank" rel="noopener noreferrer">base de connaissances Prusa</a> pour des explications détaillées sur l'imprimante, les matériaux et les erreurs.
 - PrusaSlicer permet d'imprimer un objet **en plusieurs couleurs** avec un seul filament : dans l'aperçu, ajoutez un **changement de couleur** à la couche voulue. L'imprimante s'arrête à cette couche et vous guide pour changer de filament.
 - Un objet trop grand peut être **coupé en plusieurs morceaux** avec l'outil **Couper** (touche **C**) de PrusaSlicer, puis assemblé.
-- Les illustrations de ce guide proviennent du <a href="https://www.prusa3d.com/downloads/manual/prusa3d_manual_MK4_MK39_103_fr.pdf" target="_blank" rel="noopener noreferrer">manuel officiel de l'Original Prusa MK4</a> (© Prusa Research).
+- Les sources des photos et illustrations de ce guide sont indiquées sur la page [Crédits photos](/pae-docs/fr/credits-photos/).
 
 ## Fiche de sécurité
 

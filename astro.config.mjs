@@ -16,6 +16,8 @@ export default defineConfig({
         components: {
           SiteTitle: './src/components/SiteTitle.astro',
           MarkdownContent: './src/components/MarkdownContent.astro',
+          // Footer of every page: adds the "Crédits photos" link (the page is not in the menu)
+          Footer: './src/components/Footer.astro',
         },
         // Site styles (external-link icon in the menu)
         customCss: ['./src/styles/custom.css'],
@@ -68,12 +70,12 @@ export default defineConfig({
             },
             items: [
               {
-                label: 'CNC Machine Guide',
+                label: '3D Printing Guide',
                 translations: {
-                  'fr': 'Machine CNC',
-                  'en': 'CNC Machine',
+                  'fr': 'Impression 3D',
+                  'en': '3D Printing',
                 },
-                link: '/guides/cnc-machine/',
+                link: '/guides/impression-3d/',
               },
               {
                 label: 'Laser Engraving Guide',
@@ -92,12 +94,12 @@ export default defineConfig({
                 link: '/guides/decoupe-vinyle/',
               },
               {
-                label: '3D Printing Guide',
+                label: 'CNC Machine Guide',
                 translations: {
-                  'fr': 'Impression 3D',
-                  'en': '3D Printing',
+                  'fr': 'Machine CNC',
+                  'en': 'CNC Machine',
                 },
-                link: '/guides/impression-3d/',
+                link: '/guides/cnc-machine/',
               },
             //   {
             //     label: 'Example Guide',
