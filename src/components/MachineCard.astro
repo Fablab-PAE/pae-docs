@@ -6,7 +6,7 @@
  * clickable. Without `image`, the top shows a Starlight icon (`icon`) instead, e.g. for a
  * machine that has no photo yet. `external` opens the link in a new tab. `background` and
  * `iconColor` (CSS colors) change the top area's color and the icon's color, e.g. for the shop.
- * `level` ('beginner' or 'advanced') shows a level badge in the picture's top-left corner
+ * `level` ('beginner' or 'advanced') shows a rounded level badge above the title
  * (green "Débutant" / orange "Avancé", in the page's language).
  */
 import type { ImageMetadata } from 'astro';
@@ -59,9 +59,9 @@ const badge = level ? LEVELS[level] : undefined;
 				<Icon name={icon} size="3.5rem" />
 			)
 		}
-		{badge && <Badge text={badge.text} variant={badge.variant} size="medium" class="level" data-level={level} />}
 	</div>
 	<div class="text">
+		{badge && <Badge text={badge.text} variant={badge.variant} size="small" class="level" data-level={level} />}
 		<a href={href} {...target}>
 			<span class="title" set:html={title} />
 		</a>
@@ -90,15 +90,12 @@ const badge = level ? LEVELS[level] : undefined;
 		background: var(--sl-color-gray-6);
 		color: var(--sl-color-text-accent);
 	}
-	.picture {
-		position: relative;
-	}
-	/* Level badge on the picture (Starlight's badges have a solid colour: readable on photos) */
-	.picture :global(.level) {
-		position: absolute;
-		top: 0.75rem;
-		inset-inline-start: 0.75rem;
-		box-shadow: var(--sl-shadow-sm);
+	/* Level badge above the title: Starlight's badge (colours), as a rounded pill */
+	.text :global(.level) {
+		align-self: flex-start;
+		padding: 0.125rem 0.6rem;
+		border-radius: 999px;
+		line-height: 1.4;
 	}
 	.picture img {
 		width: 100%;

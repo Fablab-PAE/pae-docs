@@ -1,6 +1,6 @@
 # Rounded level badges in the card text, version pill back to its old look
 
-Status: planning
+Status: building
 Size: small
 Database change: no
 New settings (.env keys): none
