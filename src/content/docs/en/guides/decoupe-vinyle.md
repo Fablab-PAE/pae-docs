@@ -192,7 +192,7 @@ Common problems and solutions:
 ## Going further
 
 - Read the <a href="https://mygraphtec.jp/site_download/02_manual/data/CE6000_UserManual(CE6000-UM-154).pdf" target="_blank" rel="noopener noreferrer">full CE6000 manual</a> for advanced functions: cutting around a printed design with registration marks (ARMS), cutting large panels, multiple copies.
-- Picture credits: plotter photo: <a href="https://aaprintsupplyco.com" target="_blank" rel="noopener noreferrer">aaprintsupplyco.com</a>; diagrams made for this guide.
+- The sources of the photos and pictures in this guide are listed on the [Photo credits](/pae-docs/en/credits-photos/) page.
 
 ## Safety sheet
 

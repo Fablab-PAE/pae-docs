@@ -192,7 +192,7 @@ Problèmes courants et solutions :
 ## Pour aller plus loin
 
 - Consultez le <a href="https://mygraphtec.jp/site_download/02_manual/data/CE6000_UserManual(CE6000-UM-154).pdf" target="_blank" rel="noopener noreferrer">manuel complet du CE6000</a> (en anglais) pour les fonctions avancées : découpe autour d'un motif imprimé grâce aux repères de calage (ARMS), découpe de grands panneaux, copies multiples.
-- Crédits des illustrations : photo du plotter : <a href="https://aaprintsupplyco.com" target="_blank" rel="noopener noreferrer">aaprintsupplyco.com</a> ; schémas réalisés pour ce guide.
+- Les sources des photos et illustrations de ce guide sont indiquées sur la page [Crédits photos](/pae-docs/fr/credits-photos/).
 
 ## Fiche de sécurité
 
