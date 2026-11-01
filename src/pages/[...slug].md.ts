@@ -1,8 +1,9 @@
 /**
  * A Markdown version of each guide, next to its page: /pae-docs/fr/guides/cnc-machine.md.
  * Used by the guides' page actions menu (src/components/PageActions.astro): "Copier la page"
- * copies it, and ChatGPT / Claude are given its public address. Made for AI tools: the title and description on top, then the guide's
- * text, without pictures (their relative paths mean nothing outside the site) and comments.
+ * copies it, and ChatGPT / Claude are given its public address. Made for AI tools: the
+ * title and description on top, then the guide's text, without pictures (their relative
+ * paths mean nothing outside the site) and comments.
  */
 import type { APIRoute, GetStaticPaths } from 'astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
