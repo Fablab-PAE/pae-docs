@@ -1,6 +1,6 @@
 # Fiches de sécurité imprimables à la fin des guides
 
-Status: approved
+Status: tests passed - waiting for the owner to try the print on port 4399
 Size: normal
 Database change: no
 New settings (.env keys): none
@@ -29,6 +29,7 @@ from `head` in `astro.config.mjs` (like `sidebar-open.js`). Site styles are in
   (the guide's laser) instead of "455 nm + 1064 nm infrared"; vinyl "Graphtec CE6000-60 Plus"
   instead of "CE7000"; CNC "Fraiseuse CNC (Shapeoko 3)"; 3D printer "Original Prusa MK4".
   The goggles rule (455 nm and 1064 nm goggles) is kept: those goggles also protect at 450 nm.
+  The laser's "even invisible (infrared)" remark is dropped (the guide's laser is visible blue).
 - `src/content/docs/{fr,en}/guides/{cnc-machine,gravure-laser,decoupe-vinyle,impression-3d}.md`:
   new last section `## Fiche de sécurité` / `## Safety sheet`: one short sentence, a print
   button `<button type="button" class="safety-print" data-print-sheet>`, then
