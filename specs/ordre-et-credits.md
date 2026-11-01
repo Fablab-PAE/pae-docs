@@ -1,6 +1,6 @@
 # New machine order, and a photo credits page
 
-Status: planning
+Status: approved
 Size: normal
 Database change: no
 New settings (.env keys): none
