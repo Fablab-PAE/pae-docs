@@ -127,7 +127,7 @@ function checkLinks(dist) {
       problems.push(`${relative(dist, file)}: ${isGuide ? 'no' : 'unexpected'} page actions menu`);
     }
     // Its menu: copy, print, ChatGPT, Claude
-    const menuItems = html.match(/role="menuitem"/g)?.length ?? 0;
+    const menuItems = html.match(/<[a-z]+\s[^>]*\brole="menuitem"/g)?.length ?? 0;
     if (isGuide && menuItems !== 4) {
       problems.push(`${relative(dist, file)}: page actions menu has ${menuItems} items, expected 4`);
     }
