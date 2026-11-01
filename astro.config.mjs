@@ -11,9 +11,8 @@ export default defineConfig({
       diagrams(), // ```mermaid blocks drawn by pele (src/diagrams/); before starlight
       starlight({
         title: '',
-        // Kit docs features (kit docs upgrade): the docs version next to the title, and an
-        // "Enlarge" button on each diagram (zoom and move it full screen); guide pictures open
-        // in the same viewer when clicked
+        // Kit docs features (kit docs upgrade): the docs version next to the title, and a
+        // full-screen viewer: click a diagram or a picture to zoom and move it
         components: {
           SiteTitle: './src/components/SiteTitle.astro',
           MarkdownContent: './src/components/MarkdownContent.astro',
