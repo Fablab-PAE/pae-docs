@@ -1,6 +1,6 @@
 # Footer copyright line; Claude before ChatGPT in the page actions menu
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -22,6 +22,6 @@ Restart needed after merge: no
 - `scripts/check-site.mjs links`: every page has the copyright line.
 
 ## Acceptance checks
-- [ ] Menu order: copy, print, Claude, ChatGPT
-- [ ] Every page: centred "© 2026 Place à l'emploi. Tous droits réservés." then "version | Crédits photos"
-- [ ] `scripts/test.sh` passes
+- [x] Menu order: copy, print, Claude, ChatGPT
+- [x] Every page: centred "© 2026 Place à l'emploi. Tous droits réservés." then "version | Crédits photos"
+- [x] `scripts/test.sh` passes
