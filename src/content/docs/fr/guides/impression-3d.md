@@ -219,3 +219,68 @@ Problèmes courants et solutions :
 - PrusaSlicer permet d'imprimer un objet **en plusieurs couleurs** avec un seul filament : dans l'aperçu, ajoutez un **changement de couleur** à la couche voulue. L'imprimante s'arrête à cette couche et vous guide pour changer de filament.
 - Un objet trop grand peut être **coupé en plusieurs morceaux** avec l'outil **Couper** (touche **C**) de PrusaSlicer, puis assemblé.
 - Les illustrations de ce guide proviennent du <a href="https://www.prusa3d.com/downloads/manual/prusa3d_manual_MK4_MK39_103_fr.pdf" target="_blank" rel="noopener noreferrer">manuel officiel de l'Original Prusa MK4</a> (© Prusa Research).
+
+## Fiche de sécurité
+
+Cette fiche résume les règles de sécurité de la machine. Imprimez-la pour l'afficher à côté de la machine : le bouton n'imprime que la fiche, sur une page A4.
+
+<div class="safety-sheet">
+
+<button type="button" class="safety-print" data-print-sheet>Imprimer la fiche</button>
+
+<div class="safety-sheet-header">
+  <p class="safety-sheet-kicker">Fiche sécurité machine</p>
+  <p class="safety-sheet-machine">Imprimante 3D (Original Prusa MK4)</p>
+</div>
+
+#### Description
+
+Cette imprimante 3D fabrique des objets en déposant du plastique fondu couche par couche. Elle utilise des filaments de divers matériaux plastiques (PLA, PETG, TPU, etc.).
+
+#### Niveau de danger (comparé aux autres machines du local)
+
+<div class="risk-assessment level-3">
+  <div class="risk-meter">
+    <div class="risk-meter-fill"></div>
+  </div>
+  <div class="risk-description">
+    <p class="risk-label"><strong>Danger modéré (3/5)</strong></p>
+    <p class="risk-details">Risques principaux : brûlures (pièces chaudes), pincement (mécanisme)</p>
+  </div>
+</div>
+
+#### Risques principaux
+
+- **Brûlures :** la buse d'extrusion (environ 200-300 °C) et le plateau chauffant (environ 60-110 °C) sont très chauds pendant et après l'impression.
+- **Pièces mobiles :** les axes (X, Y, Z) et la tête d'impression se déplacent rapidement, pouvant pincer ou écraser les doigts.
+- **Fumées (selon matériau) :** certains plastiques peuvent dégager des fumées/particules lors de l'extrusion (ABS). Nous n'utilisons pas ce type de plastique dans le local.
+
+#### Équipements de protection individuelle (EPI)
+
+- Lunettes de protection lors du retrait des pièces (risque d'éclats).
+- Port optionnel de gants résistants à la chaleur pour la manipulation post-impression.
+
+#### Règles de sécurité impératives
+
+- **NE JAMAIS toucher la buse d'extrusion ou le plateau chauffant** pendant le fonctionnement ou juste après la fin de l'impression. Attendre au moins 5 minutes de refroidissement.
+- **Garder les mains et vêtements amples ÉLOIGNÉS** des pièces mobiles pendant l'impression.
+- **Utiliser la spatule blanche fournie avec PRÉCAUTION** pour décoller les pièces du plateau une fois refroidi, en dirigeant la force LOIN de votre corps et de vos mains.
+- **Ne pas laisser une impression SANS SURVEILLANCE.** Toute impression dépassant votre temps de présence doit être approuvée par le responsable.
+- **Surveiller le début de l'impression** (première couche) pour s'assurer de la bonne adhérence.
+- **Savoir utiliser les fonctions PAUSE et ARRÊT** de l'imprimante via l'écran tactile en cas de problème.
+- **Utiliser uniquement les filaments compatibles** et approuvés par le responsable du local.
+
+#### En cas d'urgence / problème
+
+- Utiliser la fonction ARRÊT sur l'écran ou couper l'alimentation via l'interrupteur arrière.
+- En cas d'odeur suspecte ou de fumée : arrêter immédiatement l'impression et débrancher l'appareil.
+- En cas de brûlure : prévenir immédiatement le responsable. Refroidir abondamment à l'eau froide pendant 15-20 minutes minimum.
+- En cas d'incendie : utiliser l'extincteur à CO₂ situé dans l'habitacle de la machine de gravure laser, évacuer et appeler les secours.
+- Signaler tout dysfonctionnement ou dommage au responsable du local.
+
+#### Contacts d'urgence
+
+- Responsable du local RoboTic : Victor Bruzeau
+- Secours : 911 (Urgences), 1-800-463-5060 (Centre antipoison du Québec)
+
+</div>

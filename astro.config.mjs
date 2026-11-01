@@ -51,6 +51,13 @@ export default defineConfig({
                 src: '/pae-docs/sidebar-open.js',
               },
             },
+            {
+              // "Print the sheet" buttons of the guides' safety sheets
+              tag: 'script',
+              attrs: {
+                src: '/pae-docs/print-sheet.js',
+              },
+            },
         ],
         sidebar: [
           {

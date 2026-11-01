@@ -257,3 +257,67 @@ Problèmes courants et solutions :
 ## Pour aller plus loin
 
 - Envisagez d'expérimenter d'autres options logicielles pour faire fonctionner la machine laser afin d'explorer les fonctions supplémentaires offertes par les programmes de gravure laser (par exemple, LightBurn, LaserGRBL, etc.).
+
+## Fiche de sécurité
+
+Cette fiche résume les règles de sécurité de la machine. Imprimez-la pour l'afficher à côté de la machine : le bouton n'imprime que la fiche, sur une page A4.
+
+<div class="safety-sheet">
+
+<button type="button" class="safety-print" data-print-sheet>Imprimer la fiche</button>
+
+<div class="safety-sheet-header">
+  <p class="safety-sheet-kicker">Fiche sécurité machine</p>
+  <p class="safety-sheet-machine">Graveuse Laser (diode NEJE 5 W)</p>
+</div>
+
+#### Description
+
+Cette machine utilise un faisceau laser bleu de haute puissance (diode 450 nm, 5 W) pour graver divers matériaux (bois, carton, métal, papier, cuir non traité, certains métaux traités, etc.) ou découper finement des panneaux de bois de 3 mm.
+
+#### Niveau de danger (comparé aux autres machines du local)
+
+<div class="risk-assessment level-5">
+  <div class="risk-meter">
+    <div class="risk-meter-fill"></div>
+  </div>
+  <div class="risk-description">
+    <p class="risk-label"><strong>Danger élevé (5/5)</strong></p>
+    <p class="risk-details">Risques principaux : lésions oculaires (laser), incendie, fumées</p>
+  </div>
+</div>
+
+#### Risques principaux
+
+- **RAYONNEMENT LASER : DANGER POUR LES YEUX.** Le faisceau direct ou réfléchi peut causer des brûlures à la rétine. Des lunettes de protection sont obligatoires lors de l'utilisation de la machine.
+- **INCENDIE : risque ÉLEVÉ.** Le laser peut enflammer les matériaux. Il est donc primordial de contrôler l'utilisation de la machine en tout temps.
+- **FUMÉES TOXIQUES :** la combustion des matériaux génère des fumées dangereuses (particules fines, CO, COV). Il est interdit de graver du PVC/VINYLE.
+
+#### Équipements de protection individuelle (EPI)
+
+- **Lunettes de protection spécifiques laser (fournies) adaptées aux longueurs d'onde 455 nm ET 1064 nm : PORT OBLIGATOIRE** dès que la machine est prête à fonctionner.
+- **Système d'extraction/filtration des fumées : ACTIVATION OBLIGATOIRE** pendant toute la durée de gravure ou découpe.
+- **Capot de protection de la machine : UTILISATION FERMÉE PRÉFÉRÉE** (protection contre le rayonnement).
+
+#### Règles de sécurité impératives
+
+- **NE JAMAIS LAISSER LA MACHINE SANS SURVEILLANCE** pendant son fonctionnement. Rester à proximité immédiate.
+- **Vérifier le bon fonctionnement de l'extracteur/filtre à fumée** avant CHAQUE utilisation.
+- **Utiliser uniquement des matériaux COMPATIBLES ET APPROUVÉS** par le responsable. En cas de doute, DEMANDER !
+- **Effectuer un test de gravure/découpe sur une chute** avec de faibles paramètres pour ajuster avant de lancer le travail final.
+- **Nettoyer la zone de travail** des débris inflammables avant et après utilisation.
+- **Repérer l'emplacement de l'extincteur CO₂** (situé dans l'habitacle de la machine laser) et de la **couverture anti-feu**.
+
+#### En cas d'urgence / problème
+
+- Appuyer sur le **bouton d'arrêt d'urgence** de la machine ou couper l'alimentation électrique.
+- En cas d'**odeur suspecte ou de fumée excessive** : arrêter immédiatement, aérer, prévenir le responsable.
+- En cas d'**INCENDIE NON MAÎTRISABLE** : **ÉVACUER IMMÉDIATEMENT**, déclencher l'alarme incendie et appeler les secours (911).
+- En cas de **suspicion d'exposition oculaire au laser** : rincer l'œil si possible, prévenir le responsable, consulter un médecin/ophtalmologue en URGENCE en précisant l'exposition laser.
+
+#### Contacts d'urgence
+
+- Responsable du local RoboTic : Victor Bruzeau
+- Secours : 911 (Urgences), 1-800-463-5060 (Centre antipoison du Québec)
+
+</div>

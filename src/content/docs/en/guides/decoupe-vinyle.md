@@ -193,3 +193,65 @@ Common problems and solutions:
 
 - Read the <a href="https://mygraphtec.jp/site_download/02_manual/data/CE6000_UserManual(CE6000-UM-154).pdf" target="_blank" rel="noopener noreferrer">full CE6000 manual</a> for advanced functions: cutting around a printed design with registration marks (ARMS), cutting large panels, multiple copies.
 - Picture credits: plotter photo: <a href="https://aaprintsupplyco.com" target="_blank" rel="noopener noreferrer">aaprintsupplyco.com</a>; diagrams made for this guide.
+
+## Safety sheet
+
+This sheet sums up the machine's safety rules. Print it to post it next to the machine: the button prints only the sheet, on one A4 page.
+
+<div class="safety-sheet">
+
+<button type="button" class="safety-print" data-print-sheet>Print the sheet</button>
+
+<div class="safety-sheet-header">
+  <p class="safety-sheet-kicker">Machine safety sheet</p>
+  <p class="safety-sheet-machine">Vinyl Cutter (Graphtec CE6000-60 Plus)</p>
+</div>
+
+#### Description
+
+This cutting machine uses a small, extremely sharp blade to cut precisely through rolls (or sheets) of thin materials such as adhesive vinyl or heat-transfer vinyl.
+
+#### Danger level (compared with the other machines in the room)
+
+<div class="risk-assessment level-2">
+  <div class="risk-meter">
+    <div class="risk-meter-fill"></div>
+  </div>
+  <div class="risk-description">
+    <p class="risk-label"><strong>Low danger (2/5)</strong></p>
+    <p class="risk-details">Main risks: cuts (blade), pinching (mechanism)</p>
+  </div>
+</div>
+
+#### Main risks
+
+- **Cuts:** the blade is **extremely sharp**. You can cut yourself when handling it, when adjusting how far the blade sticks out, or by touching the blade holder by accident.
+- **Pinching:** the drive rollers and the moving cutting carriage can pinch fingers, hair or loose clothing while the machine is running.
+
+#### Personal protective equipment (PPE)
+
+- Handle the blade with **extreme care** (avoid touching the tip).
+- Safety glasses (when changing/adjusting the blade).
+
+#### Mandatory safety rules
+
+- **HANDLE THE BLADE AND THE BLADE HOLDER WITH THE GREATEST CARE**, only when the machine is **stopped**. Never touch the tip of the blade.
+- **Put new or used blades back in their protective box right away** after handling them. Never leave a bare blade unattended.
+- **Keep hands, fingers, long hair (tied back) and loose clothing AWAY** from the cutting carriage and the drive rollers while the machine is running.
+- **Make sure the material is loaded correctly**, lined up and held by the rollers before starting the cut, so it does not jam or shift.
+- **Do not force** the material or try to straighten it while the machine is moving. Use the PAUSE or CANCEL functions on the control panel.
+- **Use force and speed settings suited** to the material being cut.
+- **Switch the machine off** with its switch before any maintenance, blade change or cleaning.
+
+#### In an emergency / if something goes wrong
+
+- Use the PAUSE or CANCEL function on the control panel, or switch off the power with the switch.
+- If someone is **cut**: tell the person in charge of the room immediately and clean the wound (disinfect if needed and apply a pressure bandage). See a doctor if the cut is deep.
+- Report any dull or damaged blade, or any machine malfunction, to the person in charge right away.
+
+#### Emergency contacts
+
+- Person in charge of the RoboTic room: Victor Bruzeau
+- Emergency: 911 (emergencies)
+
+</div>

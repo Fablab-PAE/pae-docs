@@ -219,3 +219,68 @@ Common problems and solutions:
 - PrusaSlicer can print an object **in several colors** with a single filament: in the preview, add a **color change** at the layer you want. The printer stops at that layer and guides you through changing the filament.
 - An object that is too big can be **cut into several pieces** with PrusaSlicer's **Cut** tool (**C** key), then assembled.
 - The pictures in this guide come from the <a href="https://www.prusa3d.com/downloads/manual/prusa3d_manual_MK4_MK39_103_en.pdf" target="_blank" rel="noopener noreferrer">official Original Prusa MK4 handbook</a> (© Prusa Research).
+
+## Safety sheet
+
+This sheet sums up the machine's safety rules. Print it to post it next to the machine: the button prints only the sheet, on one A4 page.
+
+<div class="safety-sheet">
+
+<button type="button" class="safety-print" data-print-sheet>Print the sheet</button>
+
+<div class="safety-sheet-header">
+  <p class="safety-sheet-kicker">Machine safety sheet</p>
+  <p class="safety-sheet-machine">3D Printer (Original Prusa MK4)</p>
+</div>
+
+#### Description
+
+This 3D printer builds objects by laying down melted plastic, layer by layer. It uses filaments made of various plastics (PLA, PETG, TPU, etc.).
+
+#### Danger level (compared with the other machines in the room)
+
+<div class="risk-assessment level-3">
+  <div class="risk-meter">
+    <div class="risk-meter-fill"></div>
+  </div>
+  <div class="risk-description">
+    <p class="risk-label"><strong>Moderate danger (3/5)</strong></p>
+    <p class="risk-details">Main risks: burns (hot parts), pinching (mechanism)</p>
+  </div>
+</div>
+
+#### Main risks
+
+- **Burns:** the nozzle (about 200-300 °C) and the heated bed (about 60-110 °C) are very hot during and after printing.
+- **Moving parts:** the axes (X, Y, Z) and the print head move fast and can pinch or crush fingers.
+- **Fumes (depending on the material):** some plastics can give off fumes/particles when extruded (ABS). We do not use this kind of plastic in the room.
+
+#### Personal protective equipment (PPE)
+
+- Safety glasses when removing parts (risk of flying chips).
+- Heat-resistant gloves are optional for handling parts after printing.
+
+#### Mandatory safety rules
+
+- **NEVER touch the nozzle or the heated bed** while printing or right after the print ends. Wait at least 5 minutes for them to cool down.
+- **Keep hands and loose clothing AWAY** from moving parts while printing.
+- **Use the white spatula provided CAREFULLY** to remove parts from the bed once it has cooled, pushing AWAY from your body and hands.
+- **Do not leave a print UNATTENDED.** Any print that lasts longer than your time in the room must be approved by the person in charge.
+- **Watch the start of the print** (first layer) to make sure it sticks well.
+- **Know how to use the printer's PAUSE and STOP functions** on the touch screen in case of a problem.
+- **Only use compatible filaments** approved by the person in charge of the room.
+
+#### In an emergency / if something goes wrong
+
+- Use the STOP function on the screen or switch off the power with the switch at the back.
+- If there is a strange smell or smoke: stop the print immediately and unplug the printer.
+- If someone is burned: tell the person in charge immediately. Cool the burn with plenty of cold water for at least 15-20 minutes.
+- If there is a fire: use the CO₂ fire extinguisher inside the laser engraver's enclosure, evacuate and call emergency services.
+- Report any malfunction or damage to the person in charge of the room.
+
+#### Emergency contacts
+
+- Person in charge of the RoboTic room: Victor Bruzeau
+- Emergency: 911 (emergencies), 1-800-463-5060 (Québec poison control centre)
+
+</div>

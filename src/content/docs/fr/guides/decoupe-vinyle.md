@@ -193,3 +193,65 @@ Problèmes courants et solutions :
 
 - Consultez le <a href="https://mygraphtec.jp/site_download/02_manual/data/CE6000_UserManual(CE6000-UM-154).pdf" target="_blank" rel="noopener noreferrer">manuel complet du CE6000</a> (en anglais) pour les fonctions avancées : découpe autour d'un motif imprimé grâce aux repères de calage (ARMS), découpe de grands panneaux, copies multiples.
 - Crédits des illustrations : photo du plotter : <a href="https://aaprintsupplyco.com" target="_blank" rel="noopener noreferrer">aaprintsupplyco.com</a> ; schémas réalisés pour ce guide.
+
+## Fiche de sécurité
+
+Cette fiche résume les règles de sécurité de la machine. Imprimez-la pour l'afficher à côté de la machine : le bouton n'imprime que la fiche, sur une page A4.
+
+<div class="safety-sheet">
+
+<button type="button" class="safety-print" data-print-sheet>Imprimer la fiche</button>
+
+<div class="safety-sheet-header">
+  <p class="safety-sheet-kicker">Fiche sécurité machine</p>
+  <p class="safety-sheet-machine">Découpeuse Vinyle (Graphtec CE6000-60 Plus)</p>
+</div>
+
+#### Description
+
+Cette machine de découpe utilise une petite lame extrêmement affûtée pour découper avec précision des rouleaux (ou feuilles) de matériaux fins comme le vinyle adhésif ou le vinyle thermocollant.
+
+#### Niveau de danger (comparé aux autres machines du local)
+
+<div class="risk-assessment level-2">
+  <div class="risk-meter">
+    <div class="risk-meter-fill"></div>
+  </div>
+  <div class="risk-description">
+    <p class="risk-label"><strong>Danger faible (2/5)</strong></p>
+    <p class="risk-details">Risques principaux : coupures (lame), pincement (mécanisme)</p>
+  </div>
+</div>
+
+#### Risques principaux
+
+- **Coupures :** la lame est **extrêmement tranchante**. Risque de coupure lors de la manipulation, du réglage de la sortie de lame, ou par contact accidentel avec le porte-lame.
+- **Pincement :** les rouleaux d'entraînement et le chariot de découpe mobile peuvent pincer les doigts, les cheveux ou les vêtements amples lors du fonctionnement de la machine.
+
+#### Équipements de protection individuelle (EPI)
+
+- Manipulation de la lame avec **extrême précaution** (éviter le contact direct avec la pointe).
+- Lunettes de protection (lors du changement/réglage de la lame).
+
+#### Règles de sécurité impératives
+
+- **MANIPULER LA LAME ET LE PORTE-LAME AVEC LA PLUS GRANDE PRUDENCE**, uniquement lorsque la machine est **à l'arrêt**. Ne jamais toucher la pointe de la lame.
+- **Ranger immédiatement** les lames neuves ou usagées dans leur boîte de protection après manipulation. Ne jamais laisser une lame sortie sans surveillance.
+- **Garder les mains, doigts, cheveux longs (attachés) et vêtements amples ÉLOIGNÉS** du chariot de découpe et des rouleaux d'entraînement pendant le fonctionnement.
+- **S'assurer que le matériau est correctement chargé**, aligné et maintenu par les rouleaux avant de lancer la découpe pour éviter les blocages ou déplacements.
+- **Ne pas forcer** le matériau ni tenter de le réajuster pendant que la machine est en mouvement. Utiliser les fonctions PAUSE ou ANNULER du panneau de contrôle.
+- **Utiliser les réglages de force et de vitesse appropriés** au matériau découpé.
+- **Éteindre la machine** via son interrupteur avant toute intervention de maintenance, changement de lame ou nettoyage.
+
+#### En cas d'urgence / problème
+
+- Utiliser la fonction PAUSE ou ANNULER sur le panneau de contrôle, ou couper l'alimentation via l'interrupteur.
+- En cas de **coupure** : prévenir immédiatement le responsable du local et nettoyer la plaie (désinfecter si nécessaire et appliquer un pansement compressif). Consulter un médecin si la coupure est profonde.
+- Signaler immédiatement toute lame émoussée, endommagée, ou tout dysfonctionnement de la machine au responsable.
+
+#### Contacts d'urgence
+
+- Responsable du local RoboTic : Victor Bruzeau
+- Secours : 911 (Urgences)
+
+</div>
