@@ -1,6 +1,6 @@
 # "Sur cette page" list: rail, highlight bar, bold current section, hover
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -25,5 +25,5 @@ text and shows a light grey bar. Sub-sections stay indented.
 
 ## Acceptance checks
 - [ ] Guides: rail, accent bar + bold on the current section, hover effect (fr + en)
-- [ ] Mobile drop-down unchanged
-- [ ] `scripts/test.sh` passes
+- [x] Mobile drop-down unchanged
+- [x] `scripts/test.sh` passes
