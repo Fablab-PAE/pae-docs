@@ -25,6 +25,25 @@
 	display: none;
 }
 
+/* Homepage top (Starlight's hero: logo, tagline, button) on a grey band across the whole
+   width, with a thin line under it. The band is a wide box-shadow, clipped at the hero's
+   bottom edge: it reaches the screen edges without making the page scroll sideways. */
+.hero {
+	position: relative;
+	margin-bottom: 2rem;
+	background: var(--sl-color-gray-6);
+	box-shadow: 0 0 0 100vmax var(--sl-color-gray-6);
+	clip-path: inset(-100vmax -100vmax 0 -100vmax);
+}
+.hero::after {
+	content: '';
+	position: absolute;
+	inset-inline: -100vmax;
+	bottom: 0;
+	height: 1px;
+	background: var(--sl-color-gray-5);
+}
+
 /* Safety sheets at the end of the guides ("Fiche de sécurité"): a framed sheet with a
    danger meter, and a button that prints only the sheet (public/print.js) */
 :root {
