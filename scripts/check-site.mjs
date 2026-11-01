@@ -43,6 +43,10 @@ function checkPages() {
     if (/<small>(Crédits photos|Photo credits)/.test(readFileSync(join(DOCS, l, 'index.mdx'), 'utf8'))) {
       problems.push(`${l}/index.mdx still has the photo credits line (they are on credits-photos now)`);
     }
+    // The homepage's "before using a machine" rules sit in an info box
+    if (!readFileSync(join(DOCS, l, 'index.mdx'), 'utf8').includes(':::note[')) {
+      problems.push(`${l}/index.mdx: the "before using a machine" rules are not in an info box (:::note)`);
+    }
   }
   // Every page has a description (shown in search results), and no guide is left unfinished
   for (const l of LANGS) {
