@@ -1,6 +1,6 @@
 # "Print the guide" button at the top of each guide
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -32,7 +32,7 @@ end starts on its own page. Future guides get the button automatically.
   no other page has it.
 
 ## Acceptance checks
-- [ ] The 8 guide pages show the button under the title; other pages don't
+- [x] The 8 guide pages show the button under the title; other pages don't
 - [ ] The button opens the browser's print window for the whole guide
 - [ ] The safety sheet button still prints only the sheet
-- [ ] `scripts/test.sh` passes
+- [x] `scripts/test.sh` passes
