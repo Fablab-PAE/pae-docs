@@ -1,6 +1,6 @@
 # Page actions menu on the guides (like fal.ai's "Copy page")
 
-Status: building
+Status: ready to merge
 Size: normal
 Database change: no
 New settings (.env keys): none
@@ -51,8 +51,8 @@ English: Copy page, View as Markdown, Print page, Open in ChatGPT / Claude / Per
   (the "Voir en Markdown" link is checked by the link check).
 
 ## Acceptance checks
-- [ ] 8 guide pages: split button right of the title; menu with the 6 items, fr / en labels
+- [x] 8 guide pages: split button right of the title; menu with the 6 items, fr / en labels
 - [ ] Copy works on the local preview (HTTP) and the public site (HTTPS)
-- [ ] .md file per guide, without pictures
+- [x] .md file per guide, without pictures
 - [ ] Print still prints the whole guide; the widget is not printed
-- [ ] `scripts/test.sh` passes
+- [x] `scripts/test.sh` passes
