@@ -1,6 +1,6 @@
 # Guide print button: right of the title, label "Imprimer"
 
-Status: planning
+Status: building
 Size: small
 Database change: no
 New settings (.env keys): none
