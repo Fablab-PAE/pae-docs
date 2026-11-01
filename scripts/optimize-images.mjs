@@ -11,24 +11,24 @@ import sharp from 'sharp';
 import { readFileSync, statSync, unlinkSync, writeFileSync, existsSync } from 'node:fs';
 import { ASSETS, MAX_BYTES, MAX_SIDE, RASTER, refOf, userFiles, walk } from './images.mjs';
 
-const kb = (n) => `${Math.round(n / 1024)} KB`;
+const kb = (n) => `${Math.round(n / 1000)} KB`;
 const users = userFiles();
 let changed = 0;
 let failed = 0;
 
-async function encode(file, format, quality) {
+async function encode(file, format, quality, maxSide = MAX_SIDE) {
 	const meta = await sharp(file).metadata();
 	let img = sharp(file, { animated: meta.format === 'gif' || meta.format === 'webp' }).rotate();
 	const w = meta.autoOrient?.width ?? meta.width;
 	const h = meta.autoOrient?.height ?? meta.height;
-	if (Math.max(w, h) > MAX_SIDE) {
-		img = img.resize(w >= h ? { width: MAX_SIDE } : { height: MAX_SIDE });
+	if (Math.max(w, h) > maxSide) {
+		img = img.resize(w >= h ? { width: maxSide } : { height: maxSide });
 	}
 	if (format === 'jpeg') img = img.jpeg({ quality: quality ?? 85, mozjpeg: true });
 	else if (format === 'png') img = img.png({ compressionLevel: 9, adaptiveFiltering: true, effort: 10 });
 	else if (format === 'gif') img = img.gif({ effort: 10 });
 	else img = img.webp({ quality: quality ?? 88, effort: 6 });
-	return { data: await img.toBuffer(), resized: Math.max(w, h) > MAX_SIDE };
+	return { data: await img.toBuffer() };
 }
 
 for (const file of walk(ASSETS).filter((f) => RASTER.test(f))) {
@@ -51,13 +51,16 @@ for (const file of walk(ASSETS).filter((f) => RASTER.test(f))) {
 	}
 	if (data.length <= MAX_BYTES || (before <= MAX_BYTES && !tooLong)) continue; // already fine
 
-	// 2. Too heavy: WebP, lowering the quality step by step
-	for (const quality of [88, 80, 72, 64]) {
-		({ data } = await encode(file, 'webp', quality));
-		if (data.length <= MAX_BYTES) break;
+	// 2. Too heavy: WebP, lowering the quality step by step, then the size if really needed
+	let side = MAX_SIDE;
+	search: for (side of [MAX_SIDE, 1600, 1200]) {
+		for (const quality of [88, 80, 72]) {
+			({ data } = await encode(file, 'webp', quality, side));
+			if (data.length <= MAX_BYTES) break search;
+		}
 	}
 	if (data.length > MAX_BYTES) {
-		console.error(`  ${file}: still ${kb(data.length)} as WebP: crop or shrink it by hand`);
+		console.error(`  ${file}: still ${kb(data.length)} as a 1200 px WebP: crop it or pick a simpler photo`);
 		failed++;
 		continue;
 	}
@@ -79,9 +82,14 @@ for (const file of walk(ASSETS).filter((f) => RASTER.test(f))) {
 			console.log(`    reference updated in ${user.path}`);
 		}
 	}
-	console.log(`  ${file}: ${kb(before)} -> ${target.slice(file.lastIndexOf('/') + 1)} ${kb(data.length)}`);
+	const smaller = side < MAX_SIDE ? ` (reduced to ${side} px to fit)` : tooLong ? ' (resized)' : '';
+	console.log(`  ${file}: ${kb(before)} -> ${target.slice(file.lastIndexOf('/') + 1)} ${kb(data.length)}${smaller}`);
 	changed++;
 }
 
-console.log(changed ? `${changed} picture(s) optimised.` : 'All pictures already follow the rules.');
-if (failed) process.exit(1);
+if (changed) console.log(`${changed} picture(s) optimised.`);
+if (failed) {
+	console.error(`${failed} picture(s) could not be fixed automatically (see above).`);
+	process.exit(1);
+}
+if (!changed) console.log('All pictures already follow the rules.');

@@ -11,7 +11,7 @@ import { readFileSync, statSync } from 'node:fs';
 import { ASSETS, MAX_BYTES, MAX_SIDE, MAX_SVG_BYTES, PICTURE, RASTER, refOf, userFiles, walk, withoutComments } from './images.mjs';
 
 const problems = [];
-const kb = (n) => `${Math.round(n / 1024)} KB`;
+const kb = (n) => `${Math.round(n / 1000)} KB`;
 const pictures = walk(ASSETS).filter((f) => PICTURE.test(f));
 const used = userFiles().map((u) => withoutComments(u.text)).join('\n');
 const seen = new Map();
