@@ -5,9 +5,10 @@
 //                                                 every guide has its safety sheet; the photo
 //                                                 credits page exists (not on the homepage)
 //   node scripts/check-site.mjs links <dist>   -> every internal link/image in the built site exists;
-//                                                 every page has the footer's photo credits link
+//                                                 every page has the footer's photo credits link;
+//                                                 guide pages (only) have the print button
 import { readdirSync, readFileSync, statSync } from 'node:fs';
-import { join, relative, extname } from 'node:path';
+import { join, relative, extname, sep } from 'node:path';
 
 const BASE = '/pae-docs'; // `base` in astro.config.mjs
 const DOCS = 'src/content/docs';
@@ -52,7 +53,7 @@ function checkPages() {
       if (f.includes(`${l}/guides/`) && UNFINISHED.some((u) => text.includes(u))) {
         problems.push(`${relative(DOCS, f)} still says the guide is being written`);
       }
-      // Every guide ends with its printable safety sheet (public/print-sheet.js)
+      // Every guide ends with its printable safety sheet (public/print.js)
       if (f.includes(`${l}/guides/`) && !(text.includes('class="safety-sheet"') && text.includes('data-print-sheet'))) {
         problems.push(`${relative(DOCS, f)} has no safety sheet with a print button`);
       }
@@ -74,6 +75,11 @@ function checkLinks(dist) {
     const lang = relative(dist, file).split(/[\\/]/)[0];
     if (LANGS.includes(lang) && !html.includes(`href="${BASE}/${lang}/credits-photos/"`)) {
       problems.push(`${relative(dist, file)}: no "photo credits" link in the footer`);
+    }
+    // Guide pages, and only them, have the "print the guide" button (src/components/PageTitle.astro)
+    const isGuide = LANGS.some((l) => relative(dist, file).startsWith(join(l, 'guides') + sep));
+    if (isGuide !== html.includes('data-print-guide')) {
+      problems.push(`${relative(dist, file)}: ${isGuide ? 'no' : 'unexpected'} "print the guide" button`);
     }
     // Homepages: the links to a section of the page (hero button) point to a real heading
     if (LANGS.some((l) => relative(dist, file) === join(l, 'index.html'))) {

@@ -27,7 +27,9 @@ This project IS the docs website: there is no separate `docs/` folder.
 - `public/redirect.js` - sends `/pae-docs/` to `/pae-docs/fr/`
 - `public/sidebar-open.js` - keeps the side menu groups always open (no folding)
 - Each guide ends with a printable "Fiche de sécurité" (`<div class="safety-sheet">`, styles in
-  `custom.css`); its button (`public/print-sheet.js`) prints only the sheet on one A4 page
+  `custom.css`); its button prints only the sheet on one A4 page. A "Imprimer le guide" button
+  under each guide's title (`src/components/PageTitle.astro`) prints the whole guide.
+  Both buttons: `public/print.js`
 - `scripts/test.sh`, `scripts/check-site.mjs` - the tests
 - Code map: none. Feature plans: `specs/`
 

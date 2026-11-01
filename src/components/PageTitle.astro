@@ -1,0 +1,22 @@
+---
+/**
+ * Page title: Starlight's own title, plus a "Print the guide" button under it on the guide
+ * pages (src/content/docs/{fr,en}/guides/). The click is handled by public/print.js.
+ *
+ * Set in astro.config.mjs (`components: { PageTitle: ... }`).
+ */
+import Default from '@astrojs/starlight/components/PageTitle.astro';
+
+const { id, locale } = Astro.locals.starlightRoute;
+const isGuide = /^(fr|en)\/guides\//.test(id);
+const label = locale === 'en' ? 'Print the guide' : 'Imprimer le guide';
+---
+
+<Default />
+{
+	isGuide && (
+		<button type="button" class="guide-print" data-print-guide>
+			{label}
+		</button>
+	)
+}

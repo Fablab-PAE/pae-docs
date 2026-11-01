@@ -26,7 +26,7 @@
 }
 
 /* Safety sheets at the end of the guides ("Fiche de sécurité"): a framed sheet with a
-   danger meter, and a button that prints only the sheet (public/print-sheet.js) */
+   danger meter, and a button that prints only the sheet (public/print.js) */
 :root {
 	--safety-level-1: #2e9e4f;
 	--safety-level-2: #7cb342;
@@ -64,9 +64,16 @@
 	line-height: 1.2;
 	color: var(--sl-color-white);
 }
+/* Print buttons (public/print.js): the sheet's, and the guide's under the page title
+   (src/components/PageTitle.astro) */
 .safety-print {
 	float: inline-end;
 	margin: 0 0 0.5rem 1rem;
+}
+.guide-print {
+	margin-top: 0.75rem;
+}
+:is(.safety-print, .guide-print) {
 	padding: 0.4rem 0.9rem;
 	border: 1px solid var(--sl-color-accent);
 	border-radius: 999rem;
@@ -77,11 +84,11 @@
 	font-weight: 600;
 	cursor: pointer;
 }
-.safety-print:hover {
+:is(.safety-print, .guide-print):hover {
 	background: var(--sl-color-accent-high);
 	border-color: var(--sl-color-accent-high);
 }
-.safety-print::before {
+:is(.safety-print, .guide-print)::before {
 	content: '';
 	display: inline-block;
 	width: 1.1em;
@@ -130,12 +137,33 @@
 	color: var(--sl-color-gray-2);
 }
 
-/* Printing with the button: only the chosen sheet, black on white, on one A4 page.
+/* Printing the whole guide (guide button or Ctrl+P): Starlight's print styles already leave
+   out the side menu, the table of contents and the prev/next links, in light colours. Here:
+   no buttons or link icons, pictures kept whole, the safety sheet on a page of its own. */
+@media print {
+	:is(.safety-print, .guide-print),
+	mobile-starlight-toc,
+	.sl-anchor-link,
+	.photo-credits-link {
+		display: none !important;
+	}
+	.sl-markdown-content img {
+		break-inside: avoid;
+	}
+	/* The "Fiche de sécurité" heading (then its intro sentence, then the sheet) */
+	html:not(.printing-sheet) .sl-markdown-content > :has(+ p + .safety-sheet) {
+		break-before: page;
+	}
+	html:not(.printing-sheet) .safety-sheet {
+		break-inside: avoid;
+		print-color-adjust: exact;
+		-webkit-print-color-adjust: exact;
+	}
+}
+
+/* Printing with the sheet button: only the chosen sheet, black on white, on one A4 page.
    Everything that does not hold the sheet is hidden; what holds it loses its layout. */
 @media print {
-	.safety-print {
-		display: none;
-	}
 	html.printing-sheet body *:not(:has(.is-printing), .is-printing, .is-printing *) {
 		display: none !important;
 	}
