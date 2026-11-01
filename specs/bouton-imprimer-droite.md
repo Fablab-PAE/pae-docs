@@ -1,6 +1,6 @@
 # Guide print button: right of the title, label "Imprimer"
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -18,6 +18,6 @@ label is "Imprimer" (en: "Print").
   matches the title's so they line up; the button never shrinks or breaks its label.
 
 ## Acceptance checks
-- [ ] Guide pages: button on the title's line, at the right, label "Imprimer" / "Print"
-- [ ] Other pages unchanged
-- [ ] `scripts/test.sh` passes
+- [x] Guide pages: button on the title's line, at the right, label "Imprimer" / "Print"
+- [x] Other pages unchanged
+- [x] `scripts/test.sh` passes

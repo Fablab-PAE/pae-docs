@@ -18,7 +18,7 @@ export default defineConfig({
           MarkdownContent: './src/components/MarkdownContent.astro',
           // Footer of every page: adds the "Crédits photos" link (the page is not in the menu)
           Footer: './src/components/Footer.astro',
-          // Title of every page: adds the "Imprimer le guide" button on the guides
+          // Title of every page: adds the "Imprimer" button on the right of the guides' titles
           PageTitle: './src/components/PageTitle.astro',
         },
         // Site styles (external-link icon in the menu)
