@@ -1,6 +1,6 @@
 # Safety sheet: shorter intro, button "Imprimer"
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -21,5 +21,5 @@ button, and the sheet's button says "Imprimer" (en: "Print"), like the guide's b
 - The button still prints only the sheet (no code change).
 
 ## Acceptance checks
-- [ ] 8 guide pages: new intro and "Imprimer" / "Print" on the sheet button
-- [ ] `scripts/test.sh` passes
+- [x] 8 guide pages: new intro and "Imprimer" / "Print" on the sheet button
+- [x] `scripts/test.sh` passes
