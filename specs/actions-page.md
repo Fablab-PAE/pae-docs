@@ -1,6 +1,6 @@
 # Page actions menu on the guides (like fal.ai's "Copy page")
 
-Status: planning
+Status: building
 Size: normal
 Database change: no
 New settings (.env keys): none
