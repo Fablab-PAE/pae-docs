@@ -1,6 +1,6 @@
 # Homepage sections: new order, fewer sections
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -25,6 +25,6 @@ changes.
     workshops."
 
 ## Acceptance checks
-- [ ] fr + en homepages show the 4 sections in the new order, nothing else
-- [ ] The "Découvrez nos machines" button still jumps to the machines section
-- [ ] `scripts/test.sh` passes
+- [x] fr + en homepages show the 4 sections in the new order, nothing else
+- [x] The "Découvrez nos machines" button still jumps to the machines section
+- [x] `scripts/test.sh` passes
