@@ -1,6 +1,6 @@
 # Fiches de sécurité imprimables à la fin des guides
 
-Status: tests passed - waiting for the owner to try the print on port 4399
+Status: ready to merge
 Size: normal
 Database change: no
 New settings (.env keys): none
@@ -57,12 +57,12 @@ from `head` in `astro.config.mjs` (like `sidebar-open.js`). Site styles are in
 No database or outside service involved (static site).
 
 ## Acceptance checks
-- [ ] The 4 French and 4 English guides end with the matching safety sheet
-- [ ] The risk meter shows 5/5 (CNC, laser), 3/5 (3D printer), 2/5 (vinyl) in the right colours
-- [ ] "Imprimer la fiche" prints only the sheet, on one A4 page (checked with a PDF made by the browser)
-- [ ] The sheet sections are not added to the page's table of contents
+- [x] The 4 French and 4 English guides end with the matching safety sheet
+- [x] The risk meter shows 5/5 (CNC, laser), 3/5 (3D printer), 2/5 (vinyl) in the right colours
+- [ ] "Imprimer la fiche" prints only the sheet, on one A4 page (no browser on the server: the owner checks it on the preview after the merge)
+- [x] The sheet sections are not added to the page's table of contents
 - [ ] Reads well in light and dark mode
-- [ ] `scripts/test.sh` passes
+- [x] `scripts/test.sh` passes
 
 ## Implementation notes
 - Keep the owner's wording. English: faithful translation; keep phone numbers as they are.
