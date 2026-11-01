@@ -18,6 +18,8 @@ export default defineConfig({
           MarkdownContent: './src/components/MarkdownContent.astro',
           // Footer of every page: adds the "Crédits photos" link (the page is not in the menu)
           Footer: './src/components/Footer.astro',
+          // Title of every page: adds the "Imprimer le guide" button on the guides
+          PageTitle: './src/components/PageTitle.astro',
         },
         // Site styles (external-link icon in the menu)
         customCss: ['./src/styles/custom.css'],
@@ -54,10 +56,10 @@ export default defineConfig({
               },
             },
             {
-              // "Print the sheet" buttons of the guides' safety sheets
+              // Print buttons of the guides (whole guide, or only its safety sheet)
               tag: 'script',
               attrs: {
-                src: '/pae-docs/print-sheet.js',
+                src: '/pae-docs/print.js',
               },
             },
         ],

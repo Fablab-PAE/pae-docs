@@ -14,7 +14,7 @@ end starts on its own page. Future guides get the button automatically.
 ## Changes
 - `src/components/PageTitle.astro` (new, registered in `astro.config.mjs` `components`):
   Starlight's own title, then on guide pages only (route id `fr/guides/...` or
-  `en/guides/...`) a button `<button type="button" class="print-button guide-print"
+  `en/guides/...`) a button `<button type="button" class="guide-print"
   data-print-guide>` with the label in the page's language.
 - `public/print-sheet.js` renamed `public/print.js` (head script in `astro.config.mjs`):
   also handles `[data-print-guide]`: `window.print()` of the whole page (the safety sheet
