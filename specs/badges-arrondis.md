@@ -1,6 +1,6 @@
 # Rounded level badges in the card text, version pill back to its old look
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -21,6 +21,6 @@ Restart needed after merge: no
   text, monospace, `--sl-text-xs`, `border-radius: 999px`); the credits link stays grey text.
 
 ## Acceptance checks
-- [ ] Level badges: rounded, in the text part above the title, on the 4 machine cards (fr + en)
-- [ ] Footer version: blue pill like the old one in the top bar
-- [ ] `scripts/test.sh` passes
+- [x] Level badges: rounded, in the text part above the title, on the 4 machine cards (fr + en)
+- [x] Footer version: blue pill like the old one in the top bar
+- [x] `scripts/test.sh` passes
