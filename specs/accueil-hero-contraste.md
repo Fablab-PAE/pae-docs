@@ -1,6 +1,6 @@
 # Homepage: hero on a tinted band, cleaning rule reworded
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -22,5 +22,5 @@ utilisation." (en: "Clean the machine and your workspace after each use.").
 
 ## Acceptance checks
 - [ ] Both homepages: band behind the hero, full width, in light and dark mode; no sideways scroll
-- [ ] New cleaning rule wording, fr + en
-- [ ] `scripts/test.sh` passes
+- [x] New cleaning rule wording, fr + en
+- [x] `scripts/test.sh` passes
