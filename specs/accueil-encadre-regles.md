@@ -1,6 +1,6 @@
 # Homepage: "Before using a machine" in an info box
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -17,6 +17,6 @@ kind of box the guides already use for warnings), so they stand out from the res
   (en: `:::note[Before using a machine]`). Section order unchanged.
 
 ## Acceptance checks
-- [ ] Both homepages: the rules are inside an info box titled with the section name
-- [ ] The other sections and the hero button are unchanged
-- [ ] `scripts/test.sh` passes
+- [x] Both homepages: the rules are inside an info box titled with the section name
+- [x] The other sections and the hero button are unchanged
+- [x] `scripts/test.sh` passes
