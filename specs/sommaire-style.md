@@ -1,6 +1,6 @@
 # "Sur cette page" list: rail, highlight bar, bold current section, hover
 
-Status: planning
+Status: building
 Size: small
 Database change: no
 New settings (.env keys): none
