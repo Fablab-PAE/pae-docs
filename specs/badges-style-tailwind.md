@@ -1,6 +1,6 @@
 # Level badges in the Flowbite / Tailwind "pill" style
 
-Status: planning
+Status: approved
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -10,8 +10,8 @@ Restart needed after merge: no
 The homepage level badges look like Flowbite's pill badges
 (https://flowbite.com/docs/components/badge/): pale background, dark text of the same colour,
 fully rounded, small medium-weight text, no border. Débutant = green, Avancé = orange. In dark
-mode: dark background, light text (Flowbite's dark variant). Same place as now (above the
-machine name). Written as plain CSS with Tailwind's colour values: no Tailwind install.
+mode: dark background, light text (Flowbite's dark variant). The badge moves to the end of the
+card text, after the description (owner's request). Written as plain CSS with Tailwind's colour values: no Tailwind install.
 
 ## Changes
 - `src/components/MachineCard.astro`: the level badge becomes a plain
@@ -24,5 +24,5 @@ machine name). Written as plain CSS with Tailwind's colour values: no Tailwind i
 - Docs version pill in the footer: unchanged (the owner asked for its old look).
 
 ## Acceptance checks
-- [ ] 4 machine cards (fr + en): pill badges, green Débutant / orange Avancé, light and dark mode
+- [ ] 4 machine cards (fr + en): pill badges after the description, green Débutant / orange Avancé, light and dark mode
 - [ ] `scripts/test.sh` passes (it checks 3 beginner and 1 advanced badges)
