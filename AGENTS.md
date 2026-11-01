@@ -16,6 +16,9 @@ This project IS the docs website: there is no separate `docs/` folder.
 - `src/assets/` - logos and guide images (`img/<guide>/`); `public/pdf/` - machine manuals
 - `astro.config.mjs` - site settings, languages, sidebar (menu labels in fr + en)
 - `src/components/MachineCard.astro` - homepage card with a picture (machines, projects, shop)
+- Machine order everywhere (menu, homepage cards): 3D printing, laser, vinyl, CNC
+- `src/content/docs/*/credits-photos.md` - photo credits, one table per page; not in the menu,
+  linked from every page's footer (`src/components/Footer.astro`). New picture: add its credit there
 - `src/styles/custom.css` - site styles added to Starlight (external-link icon in the menu)
 - `src/components/`, `src/diagrams/`, `src/version.mjs`, `src/scripts/` - agent kit docs
   features (version badge, diagrams, zoom for diagrams and guide pictures: a picture opens

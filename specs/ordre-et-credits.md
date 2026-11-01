@@ -1,6 +1,6 @@
 # New machine order, and a photo credits page
 
-Status: approved
+Status: ready to merge
 Size: normal
 Database change: no
 New settings (.env keys): none
@@ -57,10 +57,10 @@ Restart needed after merge: no
 Static site: no database, no outside service.
 
 ## Acceptance checks
-- [ ] Side menu and homepage cards: 3D printing, laser, vinyl, CNC (fr + en)
-- [ ] Every page shows the "Crédits photos" / "Photo credits" link at the bottom
-- [ ] The credits page lists each page's pictures in a table, fr + en, and is not in the menu
-- [ ] `scripts/test.sh` passes
+- [x] Side menu and homepage cards: 3D printing, laser, vinyl, CNC (fr + en)
+- [x] Every page shows the "Crédits photos" / "Photo credits" link at the bottom
+- [x] The credits page lists each page's pictures in a table, fr + en, and is not in the menu
+- [x] `scripts/test.sh` passes
 
 ## Implementation notes
 - Laser, CNC, MILA and logo pictures: assumed to be the atelier's own (no source recorded);
