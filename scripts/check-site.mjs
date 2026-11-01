@@ -36,6 +36,18 @@ function checkPages() {
     if (a === b) continue;
     for (const p of pages[a]) if (!pages[b].has(p)) problems.push(`${a}/${p} has no ${b}/ version`);
   }
+  // TEST Tailwind look: never on the public site, and only applied when the switch is on
+  if (!readFileSync('public/skin.js', 'utf8').includes("PUBLIC_HOST = 'fablab-pae.github.io'")) {
+    problems.push('public/skin.js lost its public-site guard (the Style switch must stay local)');
+  }
+  const skinCss = readFileSync('src/styles/skin-tailwind.css', 'utf8').replace(/\/\*[\s\S]*?\*\//g, '');
+  for (const [, selectors] of skinCss.matchAll(/([^{}]+)\{/g)) {
+    for (const s of selectors.split(',').map((x) => x.trim()).filter((x) => x && !x.startsWith('@'))) {
+      if (!s.startsWith(":root[data-skin='tailwind']") && !s.startsWith('.skin-switch')) {
+        problems.push(`src/styles/skin-tailwind.css: "${s}" applies without the Style switch`);
+      }
+    }
+  }
   // The site has no changelog page any more (the owner asked to remove it)
   for (const l of LANGS) if (pages[l].has('changelog')) problems.push(`${l}/changelog should not exist (the changelog was removed)`);
   // Photo credits live on their own page (linked from every page's footer), not on the homepage
