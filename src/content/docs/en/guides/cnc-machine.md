@@ -3,9 +3,6 @@ title: CNC Machine
 description: FabLab Shapeoko 3 CNC machine user guide.
 ---
 
-<!-- ![This is a description](../../../../assets/img/guide-cnc/giphy.gif)
-<img src="../../../../src/assets/img/guide-cnc/giphy.gif" alt="Description" style="width: 720px;" /> -->
-
 This guide takes you step by step through the use of the Shapeoko 3 CNC machine. It is mainly used for milling, a manufacturing process where the machine **removes material from a block (such as wood, metal or plastic) by rotating a cutting bit very quickly**. This makes it possible to create precise engravings and cuts in the material.
 
 ## Personal security
@@ -244,7 +241,6 @@ Switches and buttons to start the machine are available on the left side:
 - Now, configure the machining to be done on the chosen drawing
   - Select the different element(s) of the drawing. The drawing is displayed in orange when selected
 
-    <!-- ![Illustration](../../../../assets/img/guide-cnc/cnc_14.png) -->
 
     ![Illustration](../../../../assets/img/guide-cnc/cnc_15.png)
 

@@ -3,9 +3,6 @@ title: Machine CNC
 description: Guide d'utilisation de la machine CNC Shapeoko 3 du FabLab.
 ---
 
-<!-- ![This is a description](../../../../assets/img/guide-cnc/giphy.gif)
-<img src="../../../../src/assets/img/guide-cnc/giphy.gif" alt="Description" style="width: 720px;" /> -->
-
 Ce guide vous accompagne pas à pas dans l'utilisation de la machine CNC Shapeoko 3. Celle-ci est principalement utilisée pour le fraisage, un procédé de fabrication où la machine **enlève de la matière d'un bloc (comme du bois, du métal ou du plastique) en faisant tourner très rapidement une mèche coupante**. Cela permet de créer dans le matériau des gravures et des découpes précises.
 
 ## Sécurité personnelle
@@ -244,7 +241,6 @@ Les interrupteurs et boutons pour démarrer la machine sont disponibles sur le c
 - Paramétrez maintenant l'usinage à faire sur le dessin choisi
   - Sélectionner le ou les différents éléments du dessin. Le dessin s'affiche en orange lorsque sélectionné
   
-    <!-- ![Illustration](../../../../assets/img/guide-cnc/cnc_14.png) -->
 
     ![Illustration](../../../../assets/img/guide-cnc/cnc_15.png)
 

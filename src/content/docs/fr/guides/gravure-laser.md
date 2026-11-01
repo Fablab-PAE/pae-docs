@@ -161,7 +161,7 @@ Le graveur laser est équipé de **multiples interrupteurs de commande situés s
     - Cliquez sur l'icône **home all** pour déplacer le laser vers l'origine de la machine (en bas à gauche) et **attendez que le mouvement soit terminé** avant d'activer l'interrupteur du laser.
     ![Illustration](../../../../assets/img/laser/laser_18.png)
     - **Activer l'interrupteur laser** à l'intérieur de l'habitacle
-        ![Illustration](../../../../assets/img/laser/laser_19.png)
+        ![Illustration](../../../../assets/img/laser/laser_06.png)
         :::danger
         Portez toujours des lunettes de sécurité avant d'activer le laser.
         :::
@@ -191,7 +191,7 @@ Le graveur laser est équipé de **multiples interrupteurs de commande situés s
 
 - Activez le compresseur d'assistance à l'air situé en haut à droite de la machine.
 
-![Illustration](../../../../assets/img/laser/laser_26.png)
+![Illustration](../../../../assets/img/laser/laser_05.png)
 
 - Vérifiez que la trappe d'aération située à l'arrière de la machine laser est **complètement ouverte**.
 

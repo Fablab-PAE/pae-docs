@@ -161,7 +161,7 @@ The laser engraver has **multiple control switches located on different parts of
     - Click on the **home all** icon to move the laser to the machine origin (bottom left) and **wait for the movement to complete** before activating the laser switch.
     ![Illustration](../../../../assets/img/laser/laser_18.png)
     - **Activate the laser switch** inside the enclosure
-        ![Illustration](../../../../assets/img/laser/laser_19.png)
+        ![Illustration](../../../../assets/img/laser/laser_06.png)
         :::danger
         Always wear safety glasses before activating the laser.
         :::
@@ -191,7 +191,7 @@ The laser engraver has **multiple control switches located on different parts of
 
 - Activate the air assist compressor located on the top right of the machine
 
-![Illustration](../../../../assets/img/laser/laser_26.png)
+![Illustration](../../../../assets/img/laser/laser_05.png)
 
 - Check that the ventilation hatch on the back of the Laser machine is **completely open**
 
