@@ -23,6 +23,19 @@ function walk(dir) {
   );
 }
 
+// "a, b:is(c, d)" -> ["a", " b:is(c, d)"]: split a selector list at commas outside brackets
+function topLevelParts(selectors) {
+  const parts = [''];
+  let depth = 0;
+  for (const ch of selectors) {
+    if (ch === '(' || ch === '[') depth++;
+    if (ch === ')' || ch === ']') depth--;
+    if (ch === ',' && depth === 0) parts.push('');
+    else parts[parts.length - 1] += ch;
+  }
+  return parts;
+}
+
 function checkPages() {
   // Page name without extension, so fr/index.mdx matches en/index.mdx
   const pages = Object.fromEntries(
@@ -42,7 +55,7 @@ function checkPages() {
   }
   const skinCss = readFileSync('src/styles/skin-tailwind.css', 'utf8').replace(/\/\*[\s\S]*?\*\//g, '');
   for (const [, selectors] of skinCss.matchAll(/([^{}]+)\{/g)) {
-    for (const s of selectors.split(',').map((x) => x.trim()).filter((x) => x && !x.startsWith('@'))) {
+    for (const s of topLevelParts(selectors).map((x) => x.trim()).filter((x) => x && !x.startsWith('@'))) {
       if (!s.startsWith(":root[data-skin='tailwind']") && !s.startsWith('.skin-switch')) {
         problems.push(`src/styles/skin-tailwind.css: "${s}" applies without the Style switch`);
       }
