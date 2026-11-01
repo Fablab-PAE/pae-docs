@@ -1,6 +1,6 @@
 # Fiches de sécurité imprimables à la fin des guides
 
-Status: planning
+Status: approved
 Size: normal
 Database change: no
 New settings (.env keys): none
@@ -13,10 +13,7 @@ only the sheet, laid out to fit one A4 page, so it can be posted next to the mac
 
 ## Not doing
 - Not changing or removing the existing "Sécurité personnelle" sections at the top of the guides.
-- Not changing the sheet texts (machine names included), apart from translating them into English.
-  Two differences with the guides are flagged to the owner instead: the laser sheet says
-  "XTool F1" (the guide describes a 5 W NEJE diode laser), and the vinyl sheet says "CE7000"
-  (the guide says CE6000).
+- Not changing the sheet texts, apart from the machine names and translating them into English.
 - No separate page per sheet, no PDF files.
 
 ## Current situation
@@ -27,6 +24,11 @@ from `head` in `astro.config.mjs` (like `sidebar-open.js`). Site styles are in
 (`<div class="risk-assessment level-N">`) that has no styles yet.
 
 ## Changes
+- Machine names on the sheets match the guides (owner's request): laser "Graveuse Laser
+  (diode NEJE 5 W)" instead of "XTool F1", and its description says a 450 nm blue diode
+  (the guide's laser) instead of "455 nm + 1064 nm infrared"; vinyl "Graphtec CE6000-60 Plus"
+  instead of "CE7000"; CNC "Fraiseuse CNC (Shapeoko 3)"; 3D printer "Original Prusa MK4".
+  The goggles rule (455 nm and 1064 nm goggles) is kept: those goggles also protect at 450 nm.
 - `src/content/docs/{fr,en}/guides/{cnc-machine,gravure-laser,decoupe-vinyle,impression-3d}.md`:
   new last section `## Fiche de sécurité` / `## Safety sheet`: one short sentence, a print
   button `<button type="button" class="safety-print" data-print-sheet>`, then
