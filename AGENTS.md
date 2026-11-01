@@ -16,7 +16,7 @@ This project IS the docs website: there is no separate `docs/` folder.
 - `src/assets/` - logos and guide images (`img/<guide>/`); `public/pdf/` - machine manuals
 - `astro.config.mjs` - site settings, languages, sidebar (menu labels in fr + en)
 - `src/components/MachineCard.astro` - homepage card with a picture (machines, projects, shop);
-  `level="beginner"` / `"advanced"` adds a Débutant / Avancé badge (3D, laser, vinyl: beginner; CNC: advanced)
+  `level="beginner"` / `"advanced"` adds a Débutant / Avancé badge after the description, Flowbite pill style (3D, laser, vinyl: beginner; CNC: advanced)
 - Machine order everywhere (menu, homepage cards): 3D printing, laser, vinyl, CNC
 - `src/content/docs/*/credits-photos.md` - photo credits, one table per page; not in the menu,
   linked from every page's footer (`src/components/Footer.astro`). New picture: add its credit there

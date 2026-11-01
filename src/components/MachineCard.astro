@@ -6,12 +6,12 @@
  * clickable. Without `image`, the top shows a Starlight icon (`icon`) instead, e.g. for a
  * machine that has no photo yet. `external` opens the link in a new tab. `background` and
  * `iconColor` (CSS colors) change the top area's color and the icon's color, e.g. for the shop.
- * `level` ('beginner' or 'advanced') shows a rounded level badge above the title
- * (green "Débutant" / orange "Avancé", in the page's language).
+ * `level` ('beginner' or 'advanced') shows a level badge after the description, in the style
+ * of Flowbite's pill badges (green "Débutant" / orange "Avancé", in the page's language).
  */
 import type { ImageMetadata } from 'astro';
 import { Image } from 'astro:assets';
-import { Badge, Icon } from '@astrojs/starlight/components';
+import { Icon } from '@astrojs/starlight/components';
 import type { StarlightIcon } from '@astrojs/starlight/types';
 
 interface Props {
@@ -42,11 +42,7 @@ const {
 const target = external ? { target: '_blank', rel: 'noopener noreferrer' } : {};
 const pictureStyle = background || iconColor ? { background, color: iconColor } : undefined;
 const en = Astro.locals.starlightRoute.locale === 'en';
-const LEVELS = {
-	beginner: { text: en ? 'Beginner' : 'Débutant', variant: 'success' },
-	advanced: { text: en ? 'Advanced' : 'Avancé', variant: 'caution' },
-} as const;
-const badge = level ? LEVELS[level] : undefined;
+const LEVELS = { beginner: en ? 'Beginner' : 'Débutant', advanced: en ? 'Advanced' : 'Avancé' };
 ---
 
 <div class="machine-card not-content">
@@ -61,11 +57,11 @@ const badge = level ? LEVELS[level] : undefined;
 		}
 	</div>
 	<div class="text">
-		{badge && <Badge text={badge.text} variant={badge.variant} size="small" class="level" data-level={level} />}
 		<a href={href} {...target}>
 			<span class="title" set:html={title} />
 		</a>
 		<span class="description" set:html={description} />
+		{level && <span class={`level level-${level}`} data-level={level}>{LEVELS[level]}</span>}
 	</div>
 	<Icon name={external ? 'external' : 'right-arrow'} size="1.333em" class="arrow rtl:flip" />
 </div>
@@ -90,12 +86,35 @@ const badge = level ? LEVELS[level] : undefined;
 		background: var(--sl-color-gray-6);
 		color: var(--sl-color-text-accent);
 	}
-	/* Level badge above the title: Starlight's badge (colours), as a rounded pill */
-	.text :global(.level) {
+	/* Level badge after the description: Flowbite's pill badge (Tailwind classes
+	   text-xs font-medium px-2.5 py-0.5 rounded-full, -100 background / -800 text; dark mode
+	   -900 background / -300 text), written with Tailwind's colour values */
+	.level {
 		align-self: flex-start;
-		padding: 0.125rem 0.6rem;
-		border-radius: 999px;
-		line-height: 1.4;
+		padding: 0.125rem 0.625rem;
+		border-radius: 9999px;
+		font-family: var(--sl-font-system);
+		font-size: 0.75rem;
+		font-weight: 500;
+		line-height: 1rem;
+		background: var(--level-bg);
+		color: var(--level-text);
+	}
+	.level-beginner {
+		--level-bg: #dcfce7;
+		--level-text: #166534;
+	}
+	.level-advanced {
+		--level-bg: #ffedd5;
+		--level-text: #9a3412;
+	}
+	:global([data-theme='dark']) .level-beginner {
+		--level-bg: #14532d;
+		--level-text: #86efac;
+	}
+	:global([data-theme='dark']) .level-advanced {
+		--level-bg: #7c2d12;
+		--level-text: #fdba74;
 	}
 	.picture img {
 		width: 100%;
