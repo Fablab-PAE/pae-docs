@@ -1,6 +1,6 @@
 # Level badges in the Flowbite / Tailwind "pill" style
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -24,5 +24,5 @@ card text, after the description (owner's request). Written as plain CSS with Ta
 - Docs version pill in the footer: unchanged (the owner asked for its old look).
 
 ## Acceptance checks
-- [ ] 4 machine cards (fr + en): pill badges after the description, green Débutant / orange Avancé, light and dark mode
-- [ ] `scripts/test.sh` passes (it checks 3 beginner and 1 advanced badges)
+- [x] 4 machine cards (fr + en): pill badges after the description, green Débutant / orange Avancé, light and dark mode
+- [x] `scripts/test.sh` passes (it checks 3 beginner and 1 advanced badges)
