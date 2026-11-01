@@ -1,6 +1,6 @@
 # Homepage: "Before using a machine" in an info box
 
-Status: planning
+Status: building
 Size: small
 Database change: no
 New settings (.env keys): none
