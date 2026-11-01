@@ -1,56 +1,13 @@
 ---
 /**
  * The kit's SiteTitle (agent kit 3af9335), made this site's own, so `kit docs upgrade` keeps it.
- * Changed: the site has no changelog page, so the pill is plain text (not a link), and its
- * hover text follows the page's language (fr or en).
+ * Changed: the docs version pill is no longer in the top bar (the owner wanted it less
+ * visible): it is in the footer of every page (src/components/Footer.astro). Keep this file,
+ * or `kit docs upgrade` would put the pill back next to the title.
  *
- * Site title in the top bar, with the docs version next to it in a small pill.
- *
- * Set in astro.config.mjs (`components: { SiteTitle: ... }`): Starlight's own title, then
- * the short id of the save the website was built from (src/version.mjs). Its hover text
- * gives the save date. Two sites (or a mirror) showing the same pill serve the same copy.
+ * Set in astro.config.mjs (`components: { SiteTitle: ... }`): Starlight's own title only.
  */
 import Default from '@astrojs/starlight/components/SiteTitle.astro';
-import { docsVersion } from '../version.mjs';
-
-const { id, saved } = docsVersion();
-const { locale } = Astro.locals.starlightRoute;
-const fr = locale !== 'en';
-const label = id || (fr ? 'inconnue' : 'unknown');
-const hint = fr
-	? id
-		? `Version ${id} de la documentation, enregistrée le ${saved}.`
-		: "Version inconnue (pas d'historique au moment de la construction du site)."
-	: id
-		? `Docs version ${id}, saved ${saved}.`
-		: 'Docs version unknown (no save history when the website was built).';
 ---
 
-<span class="title-with-version">
-	<Default />
-	<span class="docs-version" title={hint} aria-label={hint} translate="no">
-		{label}
-	</span>
-</span>
-
-<style>
-	.title-with-version {
-		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-		min-width: 0;
-	}
-	.docs-version {
-		/* Always fully visible: on a narrow screen the title is cut first */
-		flex-shrink: 0;
-		padding: 0.125rem 0.5rem;
-		border: 1px solid var(--sl-color-accent);
-		border-radius: 999px;
-		background: var(--sl-color-accent-low);
-		color: var(--sl-color-text-accent);
-		font-family: var(--sl-font-system-mono);
-		font-size: var(--sl-text-xs);
-		line-height: 1.4;
-		white-space: nowrap;
-	}
-</style>
+<Default />

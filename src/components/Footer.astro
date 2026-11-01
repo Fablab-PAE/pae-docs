@@ -1,33 +1,56 @@
 ---
 /**
- * Page footer: Starlight's own footer (prev/next links...), then a small "Photo credits" link
- * to the credits page (src/content/docs/{fr,en}/credits-photos.md). That page is not in the
- * side menu: this link, on every page, is the way to it.
+ * Page footer: Starlight's own footer (prev/next links...), then a small grey line with the
+ * "Photo credits" link and the docs version.
+ * - The credits page (src/content/docs/{fr,en}/credits-photos.md) is not in the side menu:
+ *   this link, on every page, is the way to it.
+ * - The version is the short id of the save the website was built from (src/version.mjs);
+ *   its hover text gives the save date. It used to sit next to the site title.
  *
  * Set in astro.config.mjs (`components: { Footer: ... }`).
  */
 import Default from '@astrojs/starlight/components/Footer.astro';
+import { docsVersion } from '../version.mjs';
 
 const { locale } = Astro.locals.starlightRoute;
 const lang = locale === 'en' ? 'en' : 'fr';
-const label = lang === 'en' ? 'Photo credits' : 'Crédits photos';
+const fr = lang === 'fr';
+const label = fr ? 'Crédits photos' : 'Photo credits';
+const { id, saved } = docsVersion();
+const version = id || (fr ? 'inconnue' : 'unknown');
+const hint = fr
+	? id
+		? `Version ${id} de la documentation, enregistrée le ${saved}.`
+		: "Version inconnue (pas d'historique au moment de la construction du site)."
+	: id
+		? `Docs version ${id}, saved ${saved}.`
+		: 'Docs version unknown (no save history when the website was built).';
 ---
 
 <Default />
 <p class="photo-credits-link">
 	<a href={`/pae-docs/${lang}/credits-photos/`}>{label}</a>
+	<span aria-hidden="true">·</span>
+	<span class="docs-version" title={hint} translate="no">Version {version}</span>
 </p>
 
 <style>
 	.photo-credits-link {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0.25rem 0.5rem;
 		margin: 2rem 0 0;
-		text-align: center;
 		font-size: var(--sl-text-xs);
+		color: var(--sl-color-gray-3);
 	}
 	.photo-credits-link a {
 		color: var(--sl-color-gray-3);
 	}
 	.photo-credits-link a:hover {
 		color: var(--sl-color-white);
+	}
+	.docs-version {
+		font-family: var(--sl-font-system-mono);
 	}
 </style>
