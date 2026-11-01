@@ -561,11 +561,11 @@ Make sure the machine has finished its work and is **stopped and turned off** be
 
 ## Safety sheet
 
-This sheet sums up the machine's safety rules. Print it to post it next to the machine: the button prints only the sheet, on one A4 page.
+This sheet sums up the machine's safety rules. Print it to post it next to the machine.
 
 <div class="safety-sheet">
 
-<button type="button" class="safety-print" data-print-sheet>Print the sheet</button>
+<button type="button" class="safety-print" data-print-sheet>Print</button>
 
 <div class="safety-sheet-header">
   <p class="safety-sheet-kicker">Machine safety sheet</p>

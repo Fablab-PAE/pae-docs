@@ -1,7 +1,7 @@
 // Print buttons of the guides:
-// - "Print the guide" (top of each guide, src/components/PageTitle.astro): the whole page;
+// - the guide's "Print" button (right of each guide's title, src/components/PageTitle.astro): the whole page;
 //   Starlight's print styles and src/styles/custom.css leave out the menus.
-// - "Print the sheet" (safety sheets at the end of the guides): only that sheet (the print
+// - the safety sheet's "Print" button (end of the guides): only that sheet (the print
 //   styles in custom.css hide the rest of the page while html.printing-sheet is set).
 // Ctrl+P prints the whole page, like the guide button.
 (function () {

@@ -260,11 +260,11 @@ Problèmes courants et solutions :
 
 ## Fiche de sécurité
 
-Cette fiche résume les règles de sécurité de la machine. Imprimez-la pour l'afficher à côté de la machine : le bouton n'imprime que la fiche, sur une page A4.
+Cette fiche résume les règles de sécurité de la machine. Imprimez-la pour l'afficher à côté de la machine.
 
 <div class="safety-sheet">
 
-<button type="button" class="safety-print" data-print-sheet>Imprimer la fiche</button>
+<button type="button" class="safety-print" data-print-sheet>Imprimer</button>
 
 <div class="safety-sheet-header">
   <p class="safety-sheet-kicker">Fiche sécurité machine</p>
