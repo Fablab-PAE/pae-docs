@@ -1,6 +1,6 @@
 # Homepage: hero on a tinted band, cleaning rule reworded
 
-Status: planning
+Status: building
 Size: small
 Database change: no
 New settings (.env keys): none
