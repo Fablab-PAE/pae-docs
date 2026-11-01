@@ -64,14 +64,23 @@
 	line-height: 1.2;
 	color: var(--sl-color-white);
 }
-/* Print buttons (public/print.js): the sheet's, and the guide's under the page title
-   (src/components/PageTitle.astro) */
+/* Print buttons (public/print.js): the sheet's, and the guide's on the right of the page
+   title (src/components/PageTitle.astro; on a narrow screen it goes under the title) */
 .safety-print {
 	float: inline-end;
 	margin: 0 0 0.5rem 1rem;
 }
+.guide-title-row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.5rem 1rem;
+}
 .guide-print {
-	margin-top: 0.75rem;
+	flex: none;
+	margin-top: 1rem; /* same as the title's, so both sit on one line */
+	white-space: nowrap;
 }
 :is(.safety-print, .guide-print) {
 	padding: 0.4rem 0.9rem;
