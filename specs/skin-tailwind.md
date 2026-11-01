@@ -1,6 +1,6 @@
 # Test switch: Tailwind / Flowbite look vs Starlight's own look
 
-Status: planning
+Status: building
 Size: normal
 Database change: no
 New settings (.env keys): none
