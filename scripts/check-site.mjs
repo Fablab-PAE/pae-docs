@@ -126,6 +126,11 @@ function checkLinks(dist) {
     if (isGuide !== html.includes('data-page-actions') || isGuide !== html.includes('data-print-guide')) {
       problems.push(`${relative(dist, file)}: ${isGuide ? 'no' : 'unexpected'} page actions menu`);
     }
+    // Its menu: copy, print, ChatGPT, Claude
+    const menuItems = html.match(/<[a-z]+\s[^>]*\brole="menuitem"/g)?.length ?? 0;
+    if (isGuide && menuItems !== 4) {
+      problems.push(`${relative(dist, file)}: page actions menu has ${menuItems} items, expected 4`);
+    }
     if (isGuide && !exists(join(dirname(file)) + '.md')) {
       problems.push(`${relative(dist, file)}: no Markdown version (${relative(dist, dirname(file))}.md)`);
     }

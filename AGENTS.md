@@ -35,8 +35,8 @@ This project IS the docs website: there is no separate `docs/` folder.
 - Each guide ends with a printable "Fiche de sécurité" (`<div class="safety-sheet">`, styles in
   `custom.css`); its button prints only the sheet on one A4 page (`public/print.js`).
 - Guide page actions, right of each guide's title (`src/components/PageActions.astro`, via
-  `PageTitle.astro`): "Copier la page" (Markdown) + menu: view as Markdown, print (whole
-  guide, `public/print.js`), open in ChatGPT / Claude / Perplexity (public .md address).
+  `PageTitle.astro`): "Copier la page" (Markdown) + menu: copy, print (whole guide,
+  `public/print.js`), open in ChatGPT / Claude (public .md address).
   The .md files are made at build time by `src/pages/[...slug].md.ts` (guides only)
 - `scripts/test.sh`, `scripts/check-site.mjs` - the tests
 - Code map: none. Feature plans: `specs/`
