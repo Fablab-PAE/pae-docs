@@ -1,6 +1,6 @@
 # Footer copyright line; Claude before ChatGPT in the page actions menu
 
-Status: planning
+Status: building
 Size: small
 Database change: no
 New settings (.env keys): none
