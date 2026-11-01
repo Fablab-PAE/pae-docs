@@ -3,7 +3,8 @@
 //   node scripts/check-site.mjs pages          -> every fr/ page has an en/ twin, and the reverse;
 //                                                 every page has a description; no unfinished guide;
 //                                                 every guide has its safety sheet; the photo
-//                                                 credits page exists (not on the homepage)
+//                                                 credits page exists (not on the homepage); the
+//                                                 test Tailwind look stays behind its local switch
 //   node scripts/check-site.mjs links <dist>   -> every internal link/image in the built site exists;
 //                                                 every page has the footer's photo credits link;
 //                                                 guide pages (only) have the print button; the docs

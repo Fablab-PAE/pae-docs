@@ -1,6 +1,6 @@
 # Test switch: Tailwind / Flowbite look vs Starlight's own look
 
-Status: building
+Status: ready to merge
 Size: normal
 Database change: no
 New settings (.env keys): none
@@ -54,6 +54,6 @@ Site styles: `src/styles/custom.css` (`customCss` in `astro.config.mjs`). Head s
 
 ## Acceptance checks
 - [ ] Local preview: button bottom right; click switches the look, remembered after reload
-- [ ] Public host: no button, normal look (guard in the script)
-- [ ] Without the switch, the site looks exactly as before
-- [ ] `scripts/test.sh` passes
+- [x] Public host: no button, normal look (guard in the script)
+- [x] Without the switch, the site looks exactly as before
+- [x] `scripts/test.sh` passes
