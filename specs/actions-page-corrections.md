@@ -1,6 +1,6 @@
 # Page actions: fewer menu items, copy label fix, fixed button width
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -29,6 +29,6 @@ Restart needed after merge: no
 - `AGENTS.md`, `src/pages/[...slug].md.ts` comments: menu items updated.
 
 ## Acceptance checks
-- [ ] Menu: 4 items (copy, print, ChatGPT, Claude), fr + en
+- [x] Menu: 4 items (copy, print, ChatGPT, Claude), fr + en
 - [ ] Main button shows "Copié !" after every copy (1st, 2nd...), width unchanged
-- [ ] `scripts/test.sh` passes (the .md files are still checked)
+- [x] `scripts/test.sh` passes (the .md files are still checked)
