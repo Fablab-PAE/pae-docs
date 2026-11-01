@@ -25,11 +25,11 @@ Ce guide vous accompagne pas à pas dans l'utilisation de la machine CNC Shapeok
 
     - Voir ci dessous un exemple des différentes mèches disponibles à insérer dans le collet
 
-    ![Illustration](../../../../assets/img/guide-cnc/cnc_01.png)
+    ![Illustration](../../../../assets/img/guide-cnc/cnc_01.webp)
 
     - Voir ci dessous le **processus d'installation d'une mèche dans le collet**
 
-    ![Illustration](../../../../assets/img/guide-cnc/cnc_02.png)
+    ![Illustration](../../../../assets/img/guide-cnc/cnc_02.webp)
 
 - Module **BitSetter** : capteur qui mesure automatiquement la longueur de la mèche, pour pouvoir **utiliser plusieurs mèches dans un même usinage** (voir la section [Module BitSetter](#module-bitsetter-changement-de-mèches))
 
@@ -40,7 +40,7 @@ Ce guide vous accompagne pas à pas dans l'utilisation de la machine CNC Shapeok
 
 - La surface de travail est d'**environ 30" (largeur) x 27" (longueur) (soit 76,20 cm x 68,58 cm)**
 
-    ![Illustration](../../../../assets/img/guide-cnc/cnc_03.png)
+    ![Illustration](../../../../assets/img/guide-cnc/cnc_03.webp)
 
 
 ## Matériaux usinables
@@ -191,7 +191,7 @@ Carbide 3D a changé la façon d'utiliser le BitSetter **à partir du build 623 
 
 Les interrupteurs et boutons pour démarrer la machine sont disponibles sur le côté gauche : 
 
-![Illustration](../../../../assets/img/guide-cnc/cnc_05.png)
+![Illustration](../../../../assets/img/guide-cnc/cnc_05.webp)
 
 1. Activer l'interrupteur **Interrupteur Principal**
 2. Activer l'interrupteur **PC et CNC**
@@ -199,7 +199,7 @@ Les interrupteurs et boutons pour démarrer la machine sont disponibles sur le c
 4. Activer l'interrupteur **Lumières**
 5. **Ne pas toucher** à l'interrupteur **Toupie** pour le moment
 
-![Illustration](../../../../assets/img/guide-cnc/cnc_06.png)
+![Illustration](../../../../assets/img/guide-cnc/cnc_06.webp)
 
 ## 2. Préparation de la planche à découper
 - Mesurer la planche à découper (largeur, longueur et épaisseur) à l'aide d'un mètre à ruban **SANS la placer pour le moment sur la zone de travail**. Cette étape interviendra ultérieurement.
@@ -267,7 +267,7 @@ Les interrupteurs et boutons pour démarrer la machine sont disponibles sur le c
 
         - Voir ci-dessous le **tableau de correspondance** entre les mèches du module de sélection du logiciel Carbide Create et les mèches disponibles dans l'atelier (représenté en pointillé ci-dessous)
 
-        ![Illustration](../../../../assets/img/guide-cnc/cnc_20.png)
+        ![Illustration](../../../../assets/img/guide-cnc/cnc_20.webp)
 
     - Définissez ensuite la profondeur de la découpe à effectuer dans la section **« Cutting Depth »**. Assurez-vous que la **mèche que vous aller installer dans la toupie est suffisamment longue** pour réaliser la découpe à la profondeur saisie.
 
@@ -306,7 +306,7 @@ Pour une vue d'ensemble, voir le schéma [Le déroulement en un coup d'œil](#le
 
 - Avant d'ouvrir le logiciel, vérifier tout d'abord que le **plan de travail de la machine CNC ne comporte aucun objet ou obstacle** sur la surface de travail
 
-    ![Illustration](../../../../assets/img/guide-cnc/cnc_26.png)
+    ![Illustration](../../../../assets/img/guide-cnc/cnc_26.webp)
 
 - Vérifier aussi que le **BitSetter (à l'avant droit de la machine) est dégagé** et que son **bouton est propre** (sans copeaux)
 
@@ -316,7 +316,7 @@ Pour une vue d'ensemble, voir le schéma [Le déroulement en un coup d'œil](#le
         - La mèche doit dépasser du collet d'**au moins 12,7 mm (0,5 pouce)** pour pouvoir être mesurée par le BitSetter
     - Insérer délicatement la queue de la mèche dans le collet correspondant de la toupie
 
-        ![Illustration](../../../../assets/img/guide-cnc/cnc_29.png)
+        ![Illustration](../../../../assets/img/guide-cnc/cnc_29.webp)
 
     - Serrage de la mèche
         - **Visser le collet avec la mèche** dans l'arbre de la toupie
@@ -325,7 +325,7 @@ Pour une vue d'ensemble, voir le schéma [Le déroulement en un coup d'œil](#le
         - Utiliser une clé pour serrer fermement l'écrou du collet dans le **sens antihoraire** (ne pas serrer excessivement, pour ne pas endommager le collet ou la mèche)
         - **Relâcher** le bouton de verrouillage jaune
 
-![Illustration](../../../../assets/img/guide-cnc/cnc_30.png)
+![Illustration](../../../../assets/img/guide-cnc/cnc_30.webp)
 
 :::note[Note]
 Après avoir relâché le bouton de verrouillage jaune, faire tourner doucement la mèche à la main pour vous assurer qu'elle est **correctement centrée et ne vacille pas** dans le collet. La mèche est maintenant correctement installée dans la toupie !
@@ -334,7 +334,7 @@ Après avoir relâché le bouton de verrouillage jaune, faire tourner doucement 
 - Sur la toupie compacte, sélectionner la vitesse de rotation à laquelle la mèche devra tourner en fonction de votre projet (**vitesse de rotation entre 1 et 6**)
     - Carbide Motion vous rappellera la vitesse à utiliser au lancement de l'usinage et à chaque changement de mèche
 
-  ![Illustration](../../../../assets/img/guide-cnc/cnc_27.png)
+  ![Illustration](../../../../assets/img/guide-cnc/cnc_27.webp)
 
 - Consultez ci-dessous le **tableau de correspondance** entre le réglage de la molette de sélection et la vitesse de rotation de la toupie
 
@@ -363,7 +363,7 @@ Une fois que la machine s'est placée en position initiale et est à l'arrêt, *
 - les cales de fixation maintiendront la planche pour qu’elle ne bouge pas pendant l’usinage
     - Ne placez **aucune cale ni aucun objet devant ou à côté du BitSetter** (avant droit de la machine) : la toupie doit pouvoir y aller librement
 
-![Illustration](../../../../assets/img/guide-cnc/cnc_32.png)
+![Illustration](../../../../assets/img/guide-cnc/cnc_32.webp)
 
 - Cliquer ensuite sur l'onglet **"JOG"**
     - Cet onglet vous permet de contrôler manuellement les mouvements de la toupie sur tous les axes (X, Y et Z) et sert à **définir le point de démarrage (point zéro) de la machine CNC**
@@ -382,7 +382,7 @@ Une fois que la machine s'est placée en position initiale et est à l'arrêt, *
 
   - La toupie est maintenance placée dans sa position de départ :
 
-    ![Illustration](../../../../assets/img/guide-cnc/cnc_35.png)
+    ![Illustration](../../../../assets/img/guide-cnc/cnc_35.webp)
 
   - Ajustement sur l'axe Z : Utilisez les commandes de l'axe Z pour **abaisser délicatement la toupie jusqu'à ce que la mèche effleure la surface de la planche**.
 
@@ -394,7 +394,7 @@ Une fois que la machine s'est placée en position initiale et est à l'arrêt, *
     Utilisez une feuille de papier standard comme jauge d'épaisseur. La mèche doit tout juste pincer le papier sans le déchirer.
     :::
 
-    ![Illustration](../../../../assets/img/guide-cnc/cnc_36.png)
+    ![Illustration](../../../../assets/img/guide-cnc/cnc_36.webp)
 
 - Vérification finale: confirmez visuellement que la position de départ de la mèche est correcte sur tous les axes.
 
@@ -420,7 +420,7 @@ Une fois que la machine s'est placée en position initiale et est à l'arrêt, *
 
 - Mettre l'aspirateur en place sur la toupie
 
-![Illustration](../../../../assets/img/guide-cnc/cnc_38.png)
+![Illustration](../../../../assets/img/guide-cnc/cnc_38.webp)
 
 - Vérifier que la trappe de ventilation à l'arrière de la machine CNC est **complètement ouverte**
 
@@ -428,11 +428,11 @@ Une fois que la machine s'est placée en position initiale et est à l'arrêt, *
 
 - Allumer le système de ventilation à l'intérieur de la cabine métallique
 
-![Illustration](../../../../assets/img/guide-cnc/cnc_39.png)
+![Illustration](../../../../assets/img/guide-cnc/cnc_39.webp)
 
 - Fermer le capot de protection de la machine CNC
 
-![Illustration](../../../../assets/img/guide-cnc/cnc_41.png)
+![Illustration](../../../../assets/img/guide-cnc/cnc_41.webp)
 
 :::danger[Attention]
 Ne jamais démarrer la machine CNC avec le capot de protection ouvert
@@ -468,7 +468,7 @@ Avec le BitSetter, la toupie doit rester **éteinte** au lancement de l'usinage 
     - Vérifier que le capot de protection est fermé
     - **Allumer la toupie** : activer l'interrupteur **Toupie** sur le côté gauche de la machine CNC
 
-    ![Illustration](../../../../assets/img/guide-cnc/cnc_42.png)
+    ![Illustration](../../../../assets/img/guide-cnc/cnc_42.webp)
 
     - Cliquer sur **"OK"**
 

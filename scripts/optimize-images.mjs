@@ -4,7 +4,8 @@
 // - too long: resized to 2000 px (EXIF orientation applied first);
 // - still too heavy: converted to WebP (quality 88, then lower if needed; transparency kept),
 //   the old file removed and every reference in the pages and components updated;
-// - otherwise: re-saved only if that makes the file smaller.
+// - otherwise: a PNG is re-compressed (lossless) if that makes it smaller; JPEG and WebP
+//   files are left alone (each re-encoding loses a little quality).
 // SVG files are not changed (the tests only check their weight). Safe to run again.
 import sharp from 'sharp';
 import { readFileSync, statSync, unlinkSync, writeFileSync, existsSync } from 'node:fs';
@@ -35,6 +36,10 @@ for (const file of walk(ASSETS).filter((f) => RASTER.test(f))) {
 	const meta = await sharp(file).metadata();
 	const tooLong = Math.max(meta.width, meta.height) > MAX_SIDE;
 	const format = meta.format === 'jpeg' || meta.format === 'png' || meta.format === 'gif' ? meta.format : 'webp';
+
+	// A picture that follows the rules is only touched if it is a PNG (lossless re-compression):
+	// re-encoding a JPEG or WebP again would lose a little quality each time this runs.
+	if (!tooLong && before <= MAX_BYTES && format !== 'png') continue;
 
 	// 1. Same format, resized if needed
 	let { data } = await encode(file, format);
