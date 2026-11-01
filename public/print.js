@@ -1,9 +1,9 @@
 // Print buttons of the guides:
-// - the guide's "Print" button (right of each guide's title, src/components/PageTitle.astro): the whole page;
-//   Starlight's print styles and src/styles/custom.css leave out the menus.
+// - "Imprimer la page" in a guide's page actions menu (src/components/PageActions.astro):
+//   the whole page; Starlight's print styles and src/styles/custom.css leave out the menus.
 // - the safety sheet's "Print" button (end of the guides): only that sheet (the print
 //   styles in custom.css hide the rest of the page while html.printing-sheet is set).
-// Ctrl+P prints the whole page, like the guide button.
+// Ctrl+P prints the whole page, like the menu item.
 (function () {
   function clear() {
     document.documentElement.classList.remove('printing-sheet');

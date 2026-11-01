@@ -107,7 +107,7 @@
 }
 
 /* ---- Buttons: Flowbite default button ---- */
-:root[data-skin='tailwind'] :is(.sl-link-button.primary, .guide-print, .safety-print) {
+:root[data-skin='tailwind'] :is(.sl-link-button.primary, .safety-print) {
 	border: 0;
 	border-radius: 0.5rem;
 	background: var(--tw-btn);
@@ -117,11 +117,11 @@
 	font-size: 0.875rem;
 	line-height: 1.25rem;
 }
-:root[data-skin='tailwind'] :is(.sl-link-button.primary, .guide-print, .safety-print):hover {
+:root[data-skin='tailwind'] :is(.sl-link-button.primary, .safety-print):hover {
 	background: var(--tw-btn-hover);
 	color: #fff;
 }
-:root[data-skin='tailwind'] :is(.sl-link-button, .guide-print, .safety-print):focus-visible {
+:root[data-skin='tailwind'] :is(.sl-link-button, .safety-print):focus-visible {
 	outline: 4px solid var(--tw-ring);
 	outline-offset: 0;
 }
@@ -177,6 +177,30 @@
 	color: var(--sl-color-gray-2);
 	font-size: 0.75rem;
 	text-transform: uppercase;
+}
+
+/* ---- Guide page actions (copy / menu): Flowbite button group and dropdown ---- */
+:root[data-skin='tailwind'] .page-actions.page-actions {
+	border-color: var(--tw-border);
+	border-radius: 0.5rem;
+	box-shadow: var(--tw-shadow-sm);
+}
+:root[data-skin='tailwind'] .page-actions :is(.pa-main, .pa-toggle):hover {
+	background: var(--tw-hover);
+}
+:root[data-skin='tailwind'] .page-actions .pa-main {
+	border-radius: 0.5rem 0 0 0.5rem;
+}
+:root[data-skin='tailwind'] .page-actions .pa-toggle {
+	border-radius: 0 0.5rem 0.5rem 0;
+}
+:root[data-skin='tailwind'] .page-actions .pa-menu {
+	border-color: var(--tw-border);
+	border-radius: 0.5rem;
+	box-shadow: var(--tw-shadow-md);
+}
+:root[data-skin='tailwind'] .page-actions .pa-item {
+	border-radius: 0.375rem;
 }
 
 /* ---- Footer version pill: Flowbite blue badge ---- */
