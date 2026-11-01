@@ -1,6 +1,6 @@
 # Level badges on the machine cards, docs version moved to the footer
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -30,6 +30,6 @@ Restart needed after merge: no
   homepages have 4 level badges (3 beginner, 1 advanced).
 
 ## Acceptance checks
-- [ ] Homepage cards: Débutant on 3D, laser, vinyl; Avancé on CNC (fr + en)
-- [ ] No version pill in the top bar; version shown in the footer of every page
-- [ ] `scripts/test.sh` passes
+- [x] Homepage cards: Débutant on 3D, laser, vinyl; Avancé on CNC (fr + en)
+- [x] No version pill in the top bar; version shown in the footer of every page
+- [x] `scripts/test.sh` passes
