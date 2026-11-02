@@ -27,6 +27,10 @@ This project IS the docs website: there is no separate `docs/` folder.
   features (version badge, shown in the footer here, not in the top bar; diagrams, zoom for diagrams and guide pictures: a picture opens
   full screen when clicked, except in links; add `data-zoom="off"` to keep one from opening).
   Files marked "agent-kit: managed" are updated by `kit docs upgrade`
+- Also from the kit: `src/components/TableOfContents.astro` ("Sur cette page" style: grey line, accent bar
+  on the current section, hover bar) and `src/image-tools/` (`images()` in astro.config.mjs: the build also
+  checks the pictures; this site keeps its own `image:` settings, `npm run images` and scripts/check-images.mjs).
+  The kit files `src/scripts/page-markdown.mjs` and `print-pictures.mjs` are unused here (own PageActions)
 - `public/redirect.js` - sends `/pae-docs/` to `/pae-docs/fr/`
 - `public/sidebar-open.js` - keeps the side menu groups always open (no folding)
 - Each guide ends with a printable "Fiche de sécurité" (`<div class="safety-sheet">`, styles in
