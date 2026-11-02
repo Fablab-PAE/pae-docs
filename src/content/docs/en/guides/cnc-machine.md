@@ -96,49 +96,7 @@ The machine is fitted with a **BitSetter**: a small sensor attached to the front
 
   *Photo: Carbide 3D (BitSetter installation guide)*
 
-### The process at a glance
-
-The diagram below shows the whole machining process with the BitSetter. Each step is explained in detail in the [4. Using Carbide Motion software](#4-using-carbide-motion-software) section.
-
-```mermaid
-flowchart LR
-  subgraph prep ["1. Prepare and set the zero"]
-    direction TB
-    A["Install the 1st bit<br/>(router off)"] --> B["Initialize machine,<br/>then board and fixing blocks"]
-    B --> C["JOG: move the bit<br/>to the starting point,<br/>then Set Zero → Zero All"]
-    C --> D["The machine measures the bit<br/>on the BitSetter,<br/>then comes back"]:::risk
-  end
-  subgraph run ["2. Start the job"]
-    direction TB
-    E["Load New File → Done,<br/>then START JOB → START"] --> F["The machine moves<br/>next to the BitSetter"]:::risk
-    F --> G["Please insert tool:<br/>check the bit → OK"]:::queue
-    G --> H["The machine measures the bit"]:::risk
-    H --> I["Speed message:<br/>set the dial,<br/>switch the router on → OK"]:::queue
-    I --> J["Machining with this bit"]:::new
-  end
-  subgraph change ["3. Change the bit"]
-    direction TB
-    L["The machine stops<br/>and moves next to the BitSetter"]:::risk --> M["Please insert tool:<br/>switch the router off,<br/>change the bit → OK"]:::queue
-    M --> N["The machine measures<br/>the new bit"]:::risk
-  end
-  subgraph fin ["4. End"]
-    direction TB
-    O["Please turn spindle off:<br/>switch the router off → OK"]:::queue --> P["The machine goes back<br/>to the back right corner<br/>on its own"]:::risk
-  end
-  prep --> run
-  run --> K{"Does the file need<br/>another bit?"}
-  K -- "Yes (e.g. 2nd bit)" --> change
-  change -- "back to the speed message" --> run
-  K -- "No" --> fin
-```
-
-The colours of the diagram:
-- **Blue**: what you do
-- **Orange**: Carbide Motion shows a message and waits for you
-- **Red**: the machine moves on its own (hands out of the machine!)
-- **Green**: machining is in progress (router on, cover closed)
-
-With **a single bit**, you go straight from machining to "No", then to the end. With **two bits** (for example a big bit to remove material, then a thin one to engrave), you go once through the "Yes" loop: bit change, measurement of the new bit, speed setting, then machining resumes.
+The whole machining process with the BitSetter is summed up in a diagram at the start of section 4: [The process at a glance](#the-process-at-a-glance).
 
 ### When does the machine move on its own?
 
@@ -303,7 +261,49 @@ Thanks to the BitSetter, each toolpath can use **a different bit**:
 
 ## 4. Using Carbide Motion software
 
-For an overview, see the [The process at a glance](#the-process-at-a-glance) diagram.
+### The process at a glance
+
+The diagram below shows the whole machining process with the BitSetter. Each step follows in detail, from 4.1 to 4.10; changing bits is explained in [appendix A](#a-changing-bits-during-a-job).
+
+```mermaid
+flowchart LR
+  subgraph prep ["1. Prepare and set the zero"]
+    direction TB
+    A["Install the 1st bit<br/>(router off)"] --> B["Initialize machine,<br/>then board and fixing blocks"]
+    B --> C["JOG: move the bit<br/>to the starting point,<br/>then Set Zero → Zero All"]
+    C --> D["The machine measures the bit<br/>on the BitSetter,<br/>then comes back"]:::risk
+  end
+  subgraph run ["2. Start the job"]
+    direction TB
+    E["Load New File → Done,<br/>then START JOB → START"] --> F["The machine moves<br/>next to the BitSetter"]:::risk
+    F --> G["Please insert tool:<br/>check the bit → OK"]:::queue
+    G --> H["The machine measures the bit"]:::risk
+    H --> I["Speed message:<br/>set the dial,<br/>switch the router on → OK"]:::queue
+    I --> J["Machining with this bit"]:::new
+  end
+  subgraph change ["3. Change the bit"]
+    direction TB
+    L["The machine stops<br/>and moves next to the BitSetter"]:::risk --> M["Please insert tool:<br/>switch the router off,<br/>change the bit → OK"]:::queue
+    M --> N["The machine measures<br/>the new bit"]:::risk
+  end
+  subgraph fin ["4. End"]
+    direction TB
+    O["Please turn spindle off:<br/>switch the router off → OK"]:::queue --> P["The machine goes back<br/>to the back right corner<br/>on its own"]:::risk
+  end
+  prep --> run
+  run --> K{"Does the file need<br/>another bit?"}
+  K -- "Yes (e.g. 2nd bit)" --> change
+  change -- "back to the speed message" --> run
+  K -- "No" --> fin
+```
+
+The colours of the diagram:
+- **Blue**: what you do
+- **Orange**: Carbide Motion shows a message and waits for you
+- **Red**: the machine moves on its own (hands out of the machine!)
+- **Green**: machining is in progress (router on, cover closed)
+
+With **a single bit**, you go straight from machining to "No", then to the end. With **two bits** (for example a big bit to remove material, then a thin one to engrave), you go once through the "Yes" loop: bit change, measurement of the new bit, speed setting, then machining resumes.
 
 ### 4.1 Preparing the machine
 
@@ -372,7 +372,10 @@ Once the machine is in its initial position and is stopped, **position your cutt
 :::
 
 - The fixing blocks will hold the board so that it does not move during machining
-    - Do not place **any block or object in front of or next to the BitSetter** (front right of the machine): the router must be able to reach it freely
+
+:::danger[Attention]
+Do not place **any block or object in front of or next to the BitSetter** (front right of the machine): the router must be able to reach it freely.
+:::
 
 ![Illustration](../../../../assets/img/guide-cnc/cnc_32.webp)
 
