@@ -10,7 +10,8 @@
 //                                                 guide pages (only) have the page actions menu and
 //                                                 a .md version; the docs
 //                                                 version is in the footer; homepage level badges;
-//                                                 every picture has a srcset (several widths)
+//                                                 every picture has a srcset (several widths);
+//                                                 the theme switch is one icon button
 import { readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, relative, extname, sep, dirname } from 'node:path';
 
@@ -88,6 +89,10 @@ function checkLinks(dist) {
     // Every built raster picture comes in several widths (image.layout in astro.config.mjs)
     for (const [img] of html.matchAll(/<img\s[^>]*src="[^"]*\/_astro\/[^"]+\.(?:webp|png|jpe?g|avif)"[^>]*>/g)) {
       if (!img.includes('srcset=')) problems.push(`${relative(dist, file)}: picture without srcset: ${img.slice(0, 120)}`);
+    }
+    // Light / dark: one icon button (src/components/ThemeSelect.astro), not Starlight's drop-down
+    if (LANGS.includes(lang) && (!html.includes('<site-theme-toggle') || html.includes('<starlight-theme-select'))) {
+      problems.push(`${relative(dist, file)}: the light / dark switch should be the icon button`);
     }
     // Every page's footer has the copyright line
     if (LANGS.includes(lang) && !/© \d{4} Place à l’emploi\.|© \d{4} Place à l'emploi\./.test(html)) {
