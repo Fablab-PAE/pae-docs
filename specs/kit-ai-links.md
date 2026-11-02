@@ -1,6 +1,6 @@
 # Docs website: Claude / ChatGPT in the page actions on every page (agent kit update)
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
