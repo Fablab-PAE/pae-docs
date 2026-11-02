@@ -46,7 +46,7 @@ This guide takes you step by step through the use of the Shapeoko 3 CNC machine.
 - Plastic
     - **Non-machinable** (We do not have a ventilation system to expel the fumes given off by the plastic)
 - Metal
-    - **Non-machinable**
+    - **Non-machinable**: we do not mix wood and metal machining on this machine, to avoid fire risks (hot metal chips can set wood dust on fire).
 - Copper plates
     - Copper plates (FR1 type) for creating printed circuits
 

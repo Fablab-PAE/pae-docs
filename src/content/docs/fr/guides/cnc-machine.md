@@ -47,7 +47,7 @@ Ce guide vous accompagne pas à pas dans l'utilisation de la machine CNC Shapeok
 - Plastique
     - **Non usinable** (Nous n'avons pas de système d'aération pour expulser les fumées dégagées par le plastique)
 - Métal
-    - **Non usinable**
+    - **Non usinable** : nous ne mélangeons pas l'usinage du bois et du métal sur cette machine, pour éviter les risques d'incendie (des copeaux de métal chauds peuvent enflammer la sciure de bois).
 - Plaques de cuivre
     - Plaques de cuivre (de type FR1) pour la création des circuits imprimés
 
