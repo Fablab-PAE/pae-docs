@@ -305,11 +305,15 @@ Thanks to the BitSetter, each toolpath can use **a different bit**:
 
 For an overview, see the [The process at a glance](#the-process-at-a-glance) diagram.
 
+### 4.1 Preparing the machine
+
 - Before opening the software, first check that the **work surface of the CNC machine does not contain any objects or obstacles** on the work surface
 
     ![Illustration](../../../../assets/img/guide-cnc/cnc_26.webp)
 
 - Also check that the **BitSetter (front right of the machine) is clear** and that its **button is clean** (no chips)
+
+### 4.2 Installing the bit
 
 - Installing the bit on the router (**router switched off**)
     - Select the appropriate bit for your project. If your file uses several bits, install **the first bit** of the file
@@ -332,6 +336,8 @@ For an overview, see the [The process at a glance](#the-process-at-a-glance) dia
 After releasing the yellow lock button, gently rotate the bit by hand to ensure it is **properly centered and does not wobble** in the collar. The bit is now correctly installed in the router!
 :::
 
+### 4.3 Setting the router speed
+
 - On the compact router, select the rotation speed at which the bit should rotate depending on your project (**rotation speed between 1 and 6**)
     - Carbide Motion will remind you of the speed to use when the job starts and at each bit change
 
@@ -340,6 +346,8 @@ After releasing the yellow lock button, gently rotate the bit by hand to ensure 
 - Check out the below **correspondence table** between the setting of the selection wheel and the rotation speed of the router
 
   ![Illustration](../../../../assets/img/guide-cnc/cnc_28.png)
+
+### 4.4 Connecting and initialising the machine
 
 - Open Carbide Motion software now
 
@@ -357,6 +365,8 @@ After releasing the yellow lock button, gently rotate the bit by hand to ensure 
 When you click on “Initialize machine”, the machine will **automatically move to initial position**, first going **to the back of the machine**, then moving **to the front**. So it must not encounter any objects or obstacles on its way!
 :::
 
+### 4.5 Clamping the board
+
 :::note[Note]
 Once the machine is in its initial position and is stopped, **position your cutting board on the work area using the fixing blocks**.
 :::
@@ -365,6 +375,8 @@ Once the machine is in its initial position and is stopped, **position your cutt
     - Do not place **any block or object in front of or next to the BitSetter** (front right of the machine): the router must be able to reach it freely
 
 ![Illustration](../../../../assets/img/guide-cnc/cnc_32.webp)
+
+### 4.6 Setting the zero point
 
 - Then click on the **“JOG”** tab
     - This tab allows you to manually control the router's movements on all axes (X, Y and Z) and is used to **set the starting point (zero point) of the CNC machine**
@@ -414,10 +426,14 @@ Once the machine is in its initial position and is stopped, **position your cutt
 
 - Click on **"Done"** to confirm the positioning of the CNC machine in its starting position
 
+### 4.7 Loading the file
+
 - Then click on **"RUN"**
   - Click on **"LOAD NEW FILE"**
   - Open the file created in the previous step with Carbide Create (**.c2d** file, e.g. ma_decoupe_cnc.c2d, or **.nc** G-code file)
   - Click on **"Done"**
+
+### 4.8 Vacuum, ventilation and cover
 
 - Place the vacuum cleaner on the router
 
@@ -442,6 +458,8 @@ Never start the CNC machine with the protective cover open
 :::danger[Do not switch the router on now!]
 With the BitSetter, the router must stay **off** when the job starts: the machine will first measure the bit. You will switch the router on **only when Carbide Motion asks you to** (steps below).
 :::
+
+### 4.9 Starting the job
 
 - Start the machine now
     - Click on **"START JOB"**
@@ -491,22 +509,9 @@ The CNC machine will now **carry out the machining of your part following the in
 - In the event of an abnormality or danger, immediately use the **emergency stop button “Interrupteur Principal”** on the left of the machine or via the interface by clicking on the button **"STOP"** in the Carbide Motion software.
 :::
 
-### Changing bits during a job
+If your file uses **several bits**, the machine stops at each bit change: follow [appendix A. Changing bits during a job](#a-changing-bits-during-a-job).
 
-If your file uses several bits, the machine stops at each bit change:
-
-1. The machine stops cutting, **raises the router and moves next to the BitSetter**. The **"Please insert tool"** message appears with the requested bit.
-2. **Switch off the router** (**Toupie** switch) and **wait for the bit to stop completely**.
-
-    :::danger[Warning]
-    Carbide Motion **does not switch off the router**: you must do it **before opening the cover**. Never touch a bit that is still spinning. The bit can also be **very hot** after cutting.
-    :::
-
-3. Open the cover and **replace the bit** with the requested one (same method as at the start: yellow lock button and wrench). The new bit must stick out of the collet by at least 12.7 mm.
-4. Close the cover, then click on **"OK"**: the machine **goes down to measure the new bit** on the BitSetter (router still off, hands out of the machine).
-5. At the speed message: set the router dial to choose the speed of the new bit, **switch the router on**, then click on **"OK"**. Machining resumes with the new bit.
-
-### End of the job
+### 4.10 End of the job
 
 :::danger[Warning: the machine moves on its own at the end]
 As soon as the job is finished, a **`Please turn spindle off`** message shows: you can then **switch off the router switch**. When you click on **"OK"**, the machine **automatically goes back to the back right corner**: so **nothing (blocks, objects, hands) must be in the router's path**!
@@ -514,23 +519,7 @@ As soon as the job is finished, a **`Please turn spindle off`** message shows: y
 
 ![Carbide Motion end-of-job message: Please turn spindle off, with the Ok button](../../../../assets/img/guide-cnc/cnc_spindle_off.png)
 
-### Running the same job again
-
-To run the same file again (for example on a new board placed at the same spot):
-
-1. Click on **"Quick Actions"**
-2. Click on **"Move cutter above current XY zero"**
-3. A confirmation message appears: click on **"YES"**
-
-    :::caution
-    The machine moves as soon as you click **"YES"**: check that the path is clear.
-    :::
-
-4. Start the job again with **"START JOB"** then **"START"**, and follow the same steps as above ("Please insert tool" message, bit measurement, rotation speed).
-
-:::note[Note]
-The zero point is kept as long as the board has not moved. If you change the board (or the board thickness) or its position, **set the zero again** (**"Set Zero"** then **"Zero All"**).
-:::
+To run the same file again (for example on a new board), see [appendix B. Running the same job again](#b-running-the-same-job-again).
 
 ## 5. Cleaning after use
 
@@ -551,6 +540,41 @@ Make sure the machine has finished its work and is **stopped and turned off** be
    - Once cleaning is complete, switch off the ventilation system
 4. Switch off the computer:
    - Deactivate the **"PC et CNC"** switch
+
+## Appendices
+
+### A. Changing bits during a job
+
+If your file uses several bits, the machine stops at each bit change:
+
+1. The machine stops cutting, **raises the router and moves next to the BitSetter**. The **"Please insert tool"** message appears with the requested bit.
+2. **Switch off the router** (**Toupie** switch) and **wait for the bit to stop completely**.
+
+    :::danger[Warning]
+    Carbide Motion **does not switch off the router**: you must do it **before opening the cover**. Never touch a bit that is still spinning. The bit can also be **very hot** after cutting.
+    :::
+
+3. Open the cover and **replace the bit** with the requested one (same method as at the start: yellow lock button and wrench). The new bit must stick out of the collet by at least 12.7 mm.
+4. Close the cover, then click on **"OK"**: the machine **goes down to measure the new bit** on the BitSetter (router still off, hands out of the machine).
+5. At the speed message: set the router dial to choose the speed of the new bit, **switch the router on**, then click on **"OK"**. Machining resumes with the new bit.
+
+### B. Running the same job again
+
+To run the same file again (for example on a new board placed at the same spot):
+
+1. Click on **"Quick Actions"**
+2. Click on **"Move cutter above current XY zero"**
+3. A confirmation message appears: click on **"YES"**
+
+    :::caution
+    The machine moves as soon as you click **"YES"**: check that the path is clear.
+    :::
+
+4. Start the job again with **"START JOB"** then **"START"**, and follow the same steps as in [4.9 Starting the job](#49-starting-the-job) ("Please insert tool" message, bit measurement, rotation speed).
+
+:::note[Note]
+The zero point is kept as long as the board has not moved. If you change the board (or the board thickness) or its position, **set the zero again** (**"Set Zero"** then **"Zero All"**).
+:::
 
 ## To go further
 

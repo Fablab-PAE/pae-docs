@@ -1,6 +1,6 @@
 # CNC guide: sub-headings in section 4, appendices for bit change and re-run
 
-Status: planning
+Status: building
 Size: small
 Database change: no
 New settings (.env keys): none

@@ -133,11 +133,11 @@ function checkLinks(dist) {
     if (isGuide && !exists(join(dirname(file)) + '.md')) {
       problems.push(`${relative(dist, file)}: no Markdown version (${relative(dist, dirname(file))}.md)`);
     }
-    // Homepages: the links to a section of the page (hero button) point to a real heading
-    if (LANGS.some((l) => relative(dist, file) === join(l, 'index.html'))) {
-      for (const [, id] of html.matchAll(/href="#([^"]+)"/g)) {
-        if (id !== '_top' && !html.includes(`id="${id}"`)) problems.push(`${relative(dist, file)}: no section #${id}`);
-      }
+    // Links to a section of the same page (hero button, "voir l'annexe A"...) point to a real heading
+    for (const [, raw] of html.matchAll(/href="#([^"]+)"/g)) {
+      let id;
+      try { id = decodeURIComponent(raw); } catch { id = raw; }
+      if (id !== '_top' && !html.includes(`id="${id}"`)) problems.push(`${relative(dist, file)}: no section #${id}`);
     }
     for (const [, raw] of html.matchAll(attr)) {
       if (!raw.startsWith(BASE + '/') && raw !== BASE) continue; // outside links are not checked
