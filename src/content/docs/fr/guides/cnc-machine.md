@@ -337,7 +337,7 @@ Ne placez **aucune cale ni aucun objet devant ou à côté du BitSetter** (avant
   - Ajustement sur l'axe Z : Utilisez les commandes de l'axe Z pour **abaisser délicatement la toupie jusqu'à ce que la mèche effleure la surface de la planche**.
 
     :::caution
-    Faites attention lors de l'abaissement de la tête avec la mèche. Un contact trop brusque pourrait endommager la mèche ou la planche.
+    Faites attention lors de l'abaissement de la tête avec la mèche sur l'axe des Z. Un contact trop brusque pourrait endommager la mèche ou la planche.
     :::
 
     :::note[Note]
