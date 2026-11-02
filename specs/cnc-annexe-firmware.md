@@ -1,6 +1,6 @@
 # CNC guide: firmware update moved to the appendices (C)
 
-Status: planning
+Status: building
 Size: small
 Database change: no
 New settings (.env keys): none

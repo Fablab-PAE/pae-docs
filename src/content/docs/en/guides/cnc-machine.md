@@ -33,9 +33,6 @@ This guide takes you step by step through the use of the Shapeoko 3 CNC machine.
 
 - **BitSetter** module: a sensor that automatically measures the length of the bit, so that you can **use several bits in a single job** (see the [BitSetter module](#bitsetter-module-changing-bits) section)
 
-- **Advanced users**: Update the firmware of the CNC machine periodically by connecting the CNC machine to your computer using a USB cable and using the Arduino IDE to upload the program
-    - Firmware update: GRBL 1.1h (updated from version 1.1f) <a href="https://github.com/gnea/grbl/releases/tag/v1.1h.20190825" target="_blank" rel="noopener noreferrer">Firmware link</a>
-
 ## Work area
 
 - The work surface is **about 30" (width) x 27" (length) (i.e. 76.20 cm x 68.58 cm)**
@@ -578,6 +575,12 @@ To run the same file again (for example on a new board placed at the same spot):
 :::note[Note]
 The zero point is kept as long as the board has not moved. If you change the board (or the board thickness) or its position, **set the zero again** (**"Set Zero"** then **"Zero All"**).
 :::
+
+### C. Updating the firmware (advanced users)
+
+**Advanced users**: update the firmware of the CNC machine periodically by connecting the CNC machine to your computer using a USB cable and using the Arduino IDE to upload the program.
+
+- Firmware update: GRBL 1.1h (updated from version 1.1f) <a href="https://github.com/gnea/grbl/releases/tag/v1.1h.20190825" target="_blank" rel="noopener noreferrer">Firmware link</a>
 
 ## To go further
 
