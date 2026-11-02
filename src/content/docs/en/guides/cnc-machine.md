@@ -338,7 +338,7 @@ Do not place **any block or object in front of or next to the BitSetter** (front
   - Z-axis adjustment: Use the Z-axis controls to adjust **gently lower the router until the bit touches the surface of the board**.
 
     :::caution
-    Be careful when lowering the head with the bit. Too rough contact could damage the bit or the board.
+    Be careful when lowering the head with the bit on the Z axis. Too abrupt a contact could damage the bit or the board.
     :::
 
     :::note[Note]
