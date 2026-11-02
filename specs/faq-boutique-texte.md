@@ -1,6 +1,6 @@
 # FAQ: shop answer wording
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -16,5 +16,5 @@ will get a 25% discount on the displayed price."
 - `src/content/docs/{fr,en}/index.mdx`: that sentence only (link and bold kept).
 
 ## Acceptance checks
-- [ ] New wording, fr + en
-- [ ] `scripts/test.sh` passes
+- [x] New wording, fr + en
+- [x] `scripts/test.sh` passes
