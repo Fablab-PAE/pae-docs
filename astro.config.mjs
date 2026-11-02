@@ -20,10 +20,11 @@ export default defineConfig({
           Footer: './src/components/Footer.astro',
           // Title of every page: adds the "Imprimer" button on the right of the guides' titles
           PageTitle: './src/components/PageTitle.astro',
+          // Light / dark: one icon button (like shopify.dev) instead of the drop-down
+          ThemeSelect: './src/components/ThemeSelect.astro',
         },
-        // Site styles (external-link icon in the menu), then the TEST Tailwind look (only
-        // applied when the "Style" switch of public/skin.js is on)
-        customCss: ['./src/styles/custom.css', './src/styles/skin-tailwind.css'],
+        // Site styles (external-link icon in the menu)
+        customCss: ['./src/styles/custom.css'],
         logo: {
             // src: './src/assets/logo_robotic_light.svg',
             light: './src/assets/logo_robotic_light.svg',
@@ -47,14 +48,6 @@ export default defineConfig({
               tag: 'script',
               attrs: {
                 src: '/pae-docs/redirect.js',
-              },
-            },
-            {
-              // TEST "Style" switch, Astro / Tailwind look (local preview only); early, so
-              // the saved look shows without a flash
-              tag: 'script',
-              attrs: {
-                src: '/pae-docs/skin.js',
               },
             },
             {
