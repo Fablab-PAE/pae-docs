@@ -1,6 +1,6 @@
 # CNC safety sheet: extraction system "recommended"
 
-Status: approved
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -19,5 +19,5 @@ en: "**Chip/dust extraction system: RECOMMENDED** before and during the whole jo
   fume extraction stays mandatory).
 
 ## Acceptance checks
-- [ ] fr + en: new wording in the CNC safety sheet
-- [ ] `scripts/test.sh` passes
+- [x] fr + en: new wording in the CNC safety sheet
+- [x] `scripts/test.sh` passes
