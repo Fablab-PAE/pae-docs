@@ -1,6 +1,6 @@
 # CNC guide: machine initialisation path and end-of-job steps (owner's text)
 
-Status: planning
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -30,5 +30,5 @@ The CNC guide (fr + en) describes what the machine does now (owner's text):
   - English: faithful translation of the same changes.
 
 ## Acceptance checks
-- [ ] fr + en: the 3 changes, and the diagram in the same order
-- [ ] `scripts/test.sh` passes (the diagram builds)
+- [x] fr + en: the 3 changes, and the diagram in the same order
+- [x] `scripts/test.sh` passes (the diagram builds)
