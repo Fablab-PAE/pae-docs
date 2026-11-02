@@ -625,7 +625,7 @@ Cette machine à commande numérique utilise une fraise (mèche) rotative à tr�
 
 #### Équipements de protection individuelle (EPI)
 
-- **Système d'aspiration des copeaux/poussières : ACTIVATION OBLIGATOIRE** avant et pendant toute la durée de l'usinage.
+- **Système d'aspiration des copeaux/poussières : RECOMMANDÉ** avant et pendant toute la durée de l'usinage.
 - **Capot de protection (si équipé) : UTILISATION FERMÉE OBLIGATOIRE**.
 - **Lunettes de sécurité : PORT OBLIGATOIRE** en tout temps à proximité de la machine en fonctionnement.
 - **Protecteurs auditifs (bouchons ou casque) : PORT OBLIGATOIRE** pendant le fonctionnement de la machine.

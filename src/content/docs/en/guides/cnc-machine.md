@@ -626,7 +626,7 @@ This computer-controlled machine spins a cutting bit at very high speed to remov
 
 #### Personal protective equipment (PPE)
 
-- **Chip/dust extraction system: MUST BE ON** before and during the whole job.
+- **Chip/dust extraction system: RECOMMENDED** before and during the whole job.
 - **Protective cover (if fitted): MUST BE KEPT CLOSED**.
 - **Safety glasses: MUST BE WORN** at all times near the machine while it runs.
 - **Hearing protection (earplugs or earmuffs): MUST BE WORN** while the machine runs.
