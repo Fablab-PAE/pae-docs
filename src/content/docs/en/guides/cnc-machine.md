@@ -39,7 +39,7 @@ This guide takes you step by step through the use of the Shapeoko 3 CNC machine.
 |---|---|
 | Machine | Shapeoko 3 XXL, belt-drive Z axis |
 | Controller board | Carbide Motion **v2.4e** |
-| Firmware | GRBL **1.1** |
+| Firmware | GRBL **1.1h** |
 | Carbide Motion | **V6**, build **667** (updated on 2 November 2026) |
 | Carbide Create | **V7**, build **778** |
 
