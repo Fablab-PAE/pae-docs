@@ -1,6 +1,6 @@
 # CNC guide: no more "mains hors de la machine" mentions
 
-Status: planning
+Status: building
 Size: small
 Database change: no
 New settings (.env keys): none

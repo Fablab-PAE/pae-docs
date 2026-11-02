@@ -234,7 +234,7 @@ flowchart LR
 Les couleurs du schéma :
 - **Bleu** : ce que vous faites
 - **Orange** : Carbide Motion affiche un message et attend votre action
-- **Rouge** : la machine bouge toute seule (mains hors de la machine !)
+- **Rouge** : la machine bouge toute seule
 - **Vert** : l'usinage est en cours (toupie allumée, capot fermé)
 
 Avec **une seule mèche**, on passe directement de l'usinage à « Non », puis à la fin. Avec **deux mèches** (par exemple une grosse mèche pour enlever la matière, puis une fine pour graver), on fait une fois la boucle « Oui » : changement de mèche, mesure de la nouvelle mèche, réglage de la vitesse, puis l'usinage reprend.
@@ -356,7 +356,7 @@ Ne placez **aucune cale ni aucun objet devant ou à côté du BitSetter** (avant
 - Cliquer ensuite sur **"Zero All"** pour enregistrer le point zéro sur les 3 axes (X, Y et Z)
 
     :::danger[Attention : la machine bouge dès que vous cliquez sur « Zero All »]
-    Dès que vous cliquez sur **"Zero All"**, la machine **part toute seule vers le BitSetter** pour mesurer la mèche, puis revient au-dessus de votre point de départ, **toupie relevée**. Gardez les mains hors de la machine et la toupie éteinte.
+    Dès que vous cliquez sur **"Zero All"**, la machine **part toute seule vers le BitSetter** pour mesurer la mèche, puis revient au-dessus de votre point de départ, **toupie relevée**. Gardez la toupie éteinte.
 
     Après la mesure, le **Z affiché n'est plus 0** (par exemple **+30**) : c'est normal, la toupie est simplement relevée. **Ne refaites pas le zéro.**
     :::
@@ -416,7 +416,7 @@ Avec le BitSetter, la toupie doit rester **éteinte** au lancement de l'usinage 
     - Cliquer sur **"OK"** (ou **"Resume"**)
 
     :::danger[Attention]
-    Dès que vous cliquez sur **"OK"**, la machine **descend mesurer la mèche sur le BitSetter**. Mains hors de la machine, toupie éteinte !
+    Dès que vous cliquez sur **"OK"**, la machine **descend mesurer la mèche sur le BitSetter**. Toupie éteinte !
     :::
 
 - Un message s'affiche ensuite avec la **vitesse de rotation** à utiliser pour cette mèche
@@ -492,7 +492,7 @@ Si votre fichier utilise plusieurs mèches, la machine s'arrête à chaque chang
     :::
 
 3. Ouvrir le capot et **remplacer la mèche** par celle demandée (même méthode qu'au début : bouton de verrouillage jaune et clé). La nouvelle mèche doit dépasser du collet d'au moins 12,7 mm.
-4. Refermer le capot, puis cliquer sur **"OK"** : la machine **descend mesurer la nouvelle mèche** sur le BitSetter (toupie toujours éteinte, mains hors de la machine).
+4. Refermer le capot, puis cliquer sur **"OK"** : la machine **descend mesurer la nouvelle mèche** sur le BitSetter (toupie toujours éteinte).
 5. Au message de vitesse : régler la molette de la toupie pour choisir la vitesse de la nouvelle mèche, **allumer la toupie**, puis cliquer sur **"OK"**. L'usinage reprend avec la nouvelle mèche.
 
 ### B. Refaire le même usinage
@@ -559,7 +559,6 @@ Avec le BitSetter, la machine **se déplace toute seule vers le BitSetter** à p
 
 :::danger[Attention : soyez vigilant aux déplacements de la machine]
 Carbide 3D le résume ainsi : **lorsque vous touchez au zéro Z, considérez que la machine pourrait se mettre en mouvement**. Avant chacune de ces actions :
-- retirez vos mains de la machine ;
 - vérifiez que **rien** (cales, outils, câbles, tuyau d'aspirateur) ne se trouve sur le chemin de la toupie ni autour du BitSetter ;
 - vérifiez que la **toupie est éteinte**.
 :::
