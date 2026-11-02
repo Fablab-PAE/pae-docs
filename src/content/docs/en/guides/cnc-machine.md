@@ -172,11 +172,11 @@ Carbide 3D puts it this way: **when you touch the Z zero, assume the machine cou
 | Machine | Shapeoko 3 XXL, belt-drive Z axis |
 | Controller board | Carbide Motion **v2.4e** |
 | Firmware | GRBL **1.1** |
-| Carbide Motion | **V6**, build **653** |
+| Carbide Motion | **V6**, build **667** (updated on 2 November 2026) |
 | Carbide Create | **V7**, build **778** |
 
 :::note[Note]
-Carbide 3D changed the way the BitSetter is used **starting with Carbide Motion build 623** (2024): the bit is now measured when you set the Z zero and when you start the job. This guide describes that workflow (build 653). After a Carbide Motion update, check that the steps are still the same.
+Carbide 3D changed the way the BitSetter is used **starting with Carbide Motion build 623** (2024): the bit is now measured when you set the Z zero and when you start the job. This guide describes that workflow (build 667). After a Carbide Motion update, check that the steps are still the same.
 :::
 
 ### Documentation
