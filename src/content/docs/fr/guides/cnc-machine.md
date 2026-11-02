@@ -124,7 +124,7 @@ flowchart LR
   end
   subgraph fin ["4. Fin"]
     direction TB
-    O["La machine retourne seule<br/>au fond à droite"]:::risk --> P["Éteindre la toupie"]
+    O["Please turn spindle off :<br/>éteindre la toupie → OK"]:::queue --> P["La machine retourne seule<br/>au fond à droite"]:::risk
   end
   prep --> run
   run --> K{"Le fichier demande<br/>une autre mèche ?"}
@@ -353,7 +353,7 @@ Après avoir relâché le bouton de verrouillage jaune, faire tourner doucement 
   ![Illustration](../../../../assets/img/guide-cnc/cnc_33.png)
 
 :::caution
-Lorsque vous cliquez sur “Initialize machine”, la machine va se **déplacer automatiquement en position initiale**, il ne faut donc pas qu'elle rencontre des objets ou obstacles sur son chemin !
+Lorsque vous cliquez sur “Initialize machine”, la machine va se **déplacer automatiquement en position initiale** en allant d'abord **au fond de la machine**, puis en se positionnant **devant**. Il ne faut donc pas qu'elle rencontre des objets ou obstacles sur son chemin !
 :::
 
 :::note[Note]
@@ -505,10 +505,8 @@ Si votre fichier utilise plusieurs mèches, la machine s'arrête à chaque chang
 ### Fin de l'usinage
 
 :::danger[Attention : la machine se déplace toute seule à la fin]
-Dès que l'usinage est terminé, la machine **se replace automatiquement au fond à droite**, et la toupie peut encore tourner : **rien (cales, objets, mains) ne doit se trouver sur le chemin de la toupie** !
+Dès que l'usinage est terminé, un message s'affiche **`Please turn spindle off`** : vous pouvez alors **éteindre l'interrupteur de la toupie**. En cliquant sur **"OK"**, la machine va alors **se replacer automatiquement au fond à droite** : **rien (cales, objets, mains) ne doit donc se trouver sur le chemin de la toupie** !
 :::
-
-- Une fois la machine arrêtée, **éteindre la toupie** (interrupteur **Toupie**) et attendre l'arrêt complet de la mèche.
 
 ### Refaire le même usinage
 

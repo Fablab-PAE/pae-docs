@@ -123,7 +123,7 @@ flowchart LR
   end
   subgraph fin ["4. End"]
     direction TB
-    O["The machine goes back<br/>to the back right corner<br/>on its own"]:::risk --> P["Switch the router off"]
+    O["Please turn spindle off:<br/>switch the router off → OK"]:::queue --> P["The machine goes back<br/>to the back right corner<br/>on its own"]:::risk
   end
   prep --> run
   run --> K{"Does the file need<br/>another bit?"}
@@ -354,7 +354,7 @@ After releasing the yellow lock button, gently rotate the bit by hand to ensure 
   ![Illustration](../../../../assets/img/guide-cnc/cnc_33.png)
 
 :::caution
-When you click on “Initialize machine”, the machine will **automatically move to initial position**, so she must not encounter any objects or obstacles on her way!
+When you click on “Initialize machine”, the machine will **automatically move to initial position**, first going **to the back of the machine**, then moving **to the front**. So it must not encounter any objects or obstacles on its way!
 :::
 
 :::note[Note]
@@ -506,10 +506,8 @@ If your file uses several bits, the machine stops at each bit change:
 ### End of the job
 
 :::danger[Warning: the machine moves on its own at the end]
-As soon as the job is finished, the machine **automatically goes back to the back right corner**, and the router may still be spinning: **nothing (blocks, objects, hands) must be in the router's path**!
+As soon as the job is finished, a **`Please turn spindle off`** message shows: you can then **switch off the router switch**. When you click on **"OK"**, the machine **automatically goes back to the back right corner**: so **nothing (blocks, objects, hands) must be in the router's path**!
 :::
-
-- Once the machine has stopped, **switch off the router** (**Toupie** switch) and wait for the bit to stop completely.
 
 ### Running the same job again
 
