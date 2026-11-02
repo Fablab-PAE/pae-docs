@@ -235,7 +235,7 @@ flowchart LR
 The colours of the diagram:
 - **Blue**: what you do
 - **Orange**: Carbide Motion shows a message and waits for you
-- **Red**: the machine moves on its own (hands out of the machine!)
+- **Red**: the machine moves on its own
 - **Green**: machining is in progress (router on, cover closed)
 
 With **a single bit**, you go straight from machining to "No", then to the end. With **two bits** (for example a big bit to remove material, then a thin one to engrave), you go once through the "Yes" loop: bit change, measurement of the new bit, speed setting, then machining resumes.
@@ -357,7 +357,7 @@ Do not place **any block or object in front of or next to the BitSetter** (front
 - Then click on **"Zero All"** to save the zero point on all 3 axes (X, Y and Z)
 
     :::danger[Warning: the machine moves as soon as you click "Zero All"]
-    As soon as you click **"Zero All"**, the machine **moves on its own to the BitSetter** to measure the bit, then comes back above your starting point, **router raised**. Keep your hands out of the machine and the router switched off.
+    As soon as you click **"Zero All"**, the machine **moves on its own to the BitSetter** to measure the bit, then comes back above your starting point, **router raised**. Keep the router switched off.
 
     After the measurement, the **Z shown is no longer 0** (for example **+30**): this is normal, the router is simply raised. **Do not set the zero again.**
     :::
@@ -417,7 +417,7 @@ With the BitSetter, the router must stay **off** when the job starts: the machin
     - Click on **"OK"** (or **"Resume"**)
 
     :::danger[Warning]
-    As soon as you click **"OK"**, the machine **goes down to measure the bit on the BitSetter**. Hands out of the machine, router off!
+    As soon as you click **"OK"**, the machine **goes down to measure the bit on the BitSetter**. Router off!
     :::
 
 - A message then shows the **rotation speed** to use for this bit
@@ -493,7 +493,7 @@ If your file uses several bits, the machine stops at each bit change:
     :::
 
 3. Open the cover and **replace the bit** with the requested one (same method as at the start: yellow lock button and wrench). The new bit must stick out of the collet by at least 12.7 mm.
-4. Close the cover, then click on **"OK"**: the machine **goes down to measure the new bit** on the BitSetter (router still off, hands out of the machine).
+4. Close the cover, then click on **"OK"**: the machine **goes down to measure the new bit** on the BitSetter (router still off).
 5. At the speed message: set the router dial to choose the speed of the new bit, **switch the router on**, then click on **"OK"**. Machining resumes with the new bit.
 
 ### B. Running the same job again
@@ -560,7 +560,6 @@ With the BitSetter, the machine **moves on its own to the BitSetter** at several
 
 :::danger[Warning: watch out for the machine's movements]
 Carbide 3D puts it this way: **when you touch the Z zero, assume the machine could start moving**. Before each of these actions:
-- take your hands out of the machine;
 - check that **nothing** (clamps, tools, cables, vacuum hose) is in the router's path or around the BitSetter;
 - check that the **router is switched off**.
 :::
