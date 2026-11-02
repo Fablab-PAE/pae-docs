@@ -1,6 +1,6 @@
 # Homepage FAQ: the owner's questions and answers
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -20,5 +20,5 @@ sécurité ?" go. English: faithful translation.
   Section title stays "Questions fréquentes" (a `##` section like the others).
 
 ## Acceptance checks
-- [ ] fr: the 8 questions and answers exactly as given; en: same 8, translated
-- [ ] `scripts/test.sh` passes (FAQ last, same count fr / en)
+- [x] fr: the 8 questions and answers exactly as given; en: same 8, translated
+- [x] `scripts/test.sh` passes (FAQ last, same count fr / en)
