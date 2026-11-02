@@ -1,6 +1,6 @@
 # Homepage FAQ: the owner's questions and answers
 
-Status: planning
+Status: building
 Size: small
 Database change: no
 New settings (.env keys): none
