@@ -1,6 +1,6 @@
 # CNC guide: BitSetter section moved to the appendices (D)
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -32,7 +32,7 @@ with the rest.
   same-page link.
 
 ## Acceptance checks
-- [ ] fr + en: no BitSetter section before step 1; appendix D after C; mention + link in
+- [x] fr + en: no BitSetter section before step 1; appendix D after C; mention + link in
       "Référence matérielle"
-- [ ] `scripts/test.sh` passes (links, diagram)
+- [x] `scripts/test.sh` passes (links, diagram)
 - [ ] Not pushed to GitHub
