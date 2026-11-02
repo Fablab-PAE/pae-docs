@@ -1,6 +1,6 @@
 # CNC guide: BitSetter section moved to the appendices (D)
 
-Status: planning
+Status: building
 Size: small
 Database change: no
 New settings (.env keys): none
