@@ -396,7 +396,7 @@ Never start the CNC machine with the protective cover open
 :::
 
 :::danger[Do not switch the router on now!]
-With the BitSetter, the router must stay **off** when the job starts: the machine will first measure the bit. You will switch the router on **only when Carbide Motion asks you to** (steps below).
+With the BitSetter, the router must stay **off** until the job starts: the machine will first measure the bit. You will switch the router on **only when Carbide Motion asks you to** (see the steps below).
 :::
 
 - Start the machine now

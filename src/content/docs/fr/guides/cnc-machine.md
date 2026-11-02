@@ -395,7 +395,7 @@ Ne jamais démarrer la machine CNC avec le capot de protection ouvert
 :::
 
 :::danger[Ne pas allumer la toupie maintenant !]
-Avec le BitSetter, la toupie doit rester **éteinte** au lancement de l'usinage : la machine va d'abord mesurer la mèche. Vous allumerez la toupie **seulement quand Carbide Motion vous le demandera** (étapes ci-dessous).
+Avec le BitSetter, la toupie doit rester **éteinte** jusqu'au lancement de l'usinage : la machine va d'abord mesurer la mèche. Vous allumerez la toupie **seulement lorsque Carbide Motion vous le demandera** (voir étapes ci-dessous).
 :::
 
 - Démarrer maintenant la machine
