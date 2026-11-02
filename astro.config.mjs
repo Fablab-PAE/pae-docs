@@ -20,6 +20,8 @@ export default defineConfig({
           Footer: './src/components/Footer.astro',
           // Title of every page: adds the "Imprimer" button on the right of the guides' titles
           PageTitle: './src/components/PageTitle.astro',
+          // Light / dark: one icon button (like shopify.dev) instead of the drop-down
+          ThemeSelect: './src/components/ThemeSelect.astro',
         },
         // Site styles (external-link icon in the menu)
         customCss: ['./src/styles/custom.css'],
