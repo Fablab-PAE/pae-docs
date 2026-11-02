@@ -464,6 +464,9 @@ Avec le BitSetter, la toupie doit rester **éteinte** au lancement de l'usinage 
     :::
 
 - Un message s'affiche ensuite avec la **vitesse de rotation** à utiliser pour cette mèche
+
+    ![Message « RPM Change » de Carbide Motion : Please set RPM to 16000 (Set speed dial to 3)](../../../../assets/img/guide-cnc/cnc_rpm_change.png)
+
     - Régler **manuellement** la molette de la toupie (1 à 6) selon la vitesse demandée (voir le tableau de correspondance plus haut)
     - Vérifier que le capot de protection est fermé
     - **Allumer la toupie** : activer l'interrupteur **Toupie** sur le côté gauche de la machine CNC
@@ -507,6 +510,8 @@ Si votre fichier utilise plusieurs mèches, la machine s'arrête à chaque chang
 :::danger[Attention : la machine se déplace toute seule à la fin]
 Dès que l'usinage est terminé, un message s'affiche **`Please turn spindle off`** : vous pouvez alors **éteindre l'interrupteur de la toupie**. En cliquant sur **"OK"**, la machine va alors **se replacer automatiquement au fond à droite** : **rien (cales, objets, mains) ne doit donc se trouver sur le chemin de la toupie** !
 :::
+
+![Message de fin d'usinage de Carbide Motion : Please turn spindle off, avec le bouton Ok](../../../../assets/img/guide-cnc/cnc_spindle_off.png)
 
 ### Refaire le même usinage
 
