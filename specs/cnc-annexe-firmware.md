@@ -1,6 +1,6 @@
 # CNC guide: firmware update moved to the appendices (C)
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -19,5 +19,5 @@ appendix C, after A and B (fr + en). Same text and link; small typography fixes 
     (mise à jour depuis la version 1.1f)" line and its "Lien Firmware" link (new tab).
 
 ## Acceptance checks
-- [ ] fr + en: no firmware bullet left in "Référence matérielle"; appendix C with the text and link
-- [ ] `scripts/test.sh` passes
+- [x] fr + en: no firmware bullet left in "Référence matérielle"; appendix C with the text and link
+- [x] `scripts/test.sh` passes
