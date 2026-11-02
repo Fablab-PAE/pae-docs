@@ -126,7 +126,11 @@ const menuId = `page-actions-menu`;
 		const load = () => (markdown ??= fetch(box.dataset.md!).then((r) => (r.ok ? r.text() : Promise.reject())));
 
 		function open(focusFirst: boolean) {
+			// Aligned on the button's right edge; if that goes past the left edge of the screen
+			// (phones: the button sits under the title, on the left), align on its left edge
+			delete box.dataset.align;
 			menu.hidden = false;
+			if (menu.getBoundingClientRect().left < 8) box.dataset.align = 'start';
 			toggle.setAttribute('aria-expanded', 'true');
 			if (focusFirst) items()[0]?.focus();
 		}
@@ -202,6 +206,14 @@ const menuId = `page-actions-menu`;
 		});
 		document.addEventListener('click', (event) => {
 			if (!box.contains(event.target as Node)) close();
+		});
+		// Window narrowed / widened or phone turned: close, the menu is placed again on the next
+		// opening. Width only: phones also "resize" when their address bar hides while scrolling.
+		let width = window.innerWidth;
+		window.addEventListener('resize', () => {
+			if (window.innerWidth === width) return;
+			width = window.innerWidth;
+			close();
 		});
 	}
 </script>
@@ -299,6 +311,11 @@ const menuId = `page-actions-menu`;
 	}
 	.pa-menu[hidden] {
 		display: none;
+	}
+	/* Not enough room on the left (phones): aligned on the button's left edge, grows rightward */
+	[data-align='start'] .pa-menu {
+		inset-inline-start: 0;
+		inset-inline-end: auto;
 	}
 	.pa-item {
 		display: flex;
