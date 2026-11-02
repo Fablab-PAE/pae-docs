@@ -3,9 +3,6 @@ title: CNC Machine
 description: FabLab Shapeoko 3 CNC machine user guide.
 ---
 
-<!-- ![This is a description](../../../../assets/img/guide-cnc/giphy.gif)
-<img src="../../../../src/assets/img/guide-cnc/giphy.gif" alt="Description" style="width: 720px;" /> -->
-
 This guide takes you step by step through the use of the Shapeoko 3 CNC machine. It is mainly used for milling, a manufacturing process where the machine **removes material from a block (such as wood, metal or plastic) by rotating a cutting bit very quickly**. This makes it possible to create precise engravings and cuts in the material.
 
 ## Personal security
@@ -28,11 +25,11 @@ This guide takes you step by step through the use of the Shapeoko 3 CNC machine.
 
     - See below an example of the different bits available to insert into the collar
 
-    ![Illustration](../../../../assets/img/guide-cnc/cnc_01.png)
+    ![Illustration](../../../../assets/img/guide-cnc/cnc_01.webp)
 
     - See below the **process of installing a bit into the collar**
 
-    ![Illustration](../../../../assets/img/guide-cnc/cnc_02.png)
+    ![Illustration](../../../../assets/img/guide-cnc/cnc_02.webp)
 
 - **BitSetter** module: a sensor that automatically measures the length of the bit, so that you can **use several bits in a single job** (see the [BitSetter module](#bitsetter-module-changing-bits) section)
 
@@ -43,7 +40,7 @@ This guide takes you step by step through the use of the Shapeoko 3 CNC machine.
 
 - The work surface is **about 30" (width) x 27" (length) (i.e. 76.20 cm x 68.58 cm)**
 
-    ![Illustration](../../../../assets/img/guide-cnc/cnc_03.png)
+    ![Illustration](../../../../assets/img/guide-cnc/cnc_03.webp)
 
 ## Machinable materials
 
@@ -193,7 +190,7 @@ Carbide 3D changed the way the BitSetter is used **starting with Carbide Motion 
 
 Switches and buttons to start the machine are available on the left side:
 
-![Illustration](../../../../assets/img/guide-cnc/cnc_05.png)
+![Illustration](../../../../assets/img/guide-cnc/cnc_05.webp)
 
 1. Activate the switch **Interrupteur Principal**
 2. Activate the switch **PC et CNC**
@@ -201,7 +198,7 @@ Switches and buttons to start the machine are available on the left side:
 4. Activate the switch **Lumières**
 5. **Do not touch** at the switch **Toupie** For now
 
-![Illustration](../../../../assets/img/guide-cnc/cnc_06.png)
+![Illustration](../../../../assets/img/guide-cnc/cnc_06.webp)
 
 ## 2. Preparing the cutting board
 - Measure the cutting board (width, length and thickness) using a tape measure **WITHOUT placing it on the work area for the moment**. This step will take place later.
@@ -244,7 +241,6 @@ Switches and buttons to start the machine are available on the left side:
 - Now, configure the machining to be done on the chosen drawing
   - Select the different element(s) of the drawing. The drawing is displayed in orange when selected
 
-    <!-- ![Illustration](../../../../assets/img/guide-cnc/cnc_14.png) -->
 
     ![Illustration](../../../../assets/img/guide-cnc/cnc_15.png)
 
@@ -272,7 +268,7 @@ Switches and buttons to start the machine are available on the left side:
 
         - See below the **correspondence table** between the bits in the Carbide Create software selection module and the bits available in the workshop (shown in dotted lines below)
 
-        ![Illustration](../../../../assets/img/guide-cnc/cnc_20.png)
+        ![Illustration](../../../../assets/img/guide-cnc/cnc_20.webp)
 
     - Then define the depth of the cut to be made in the section **« Cutting Depth »**. Make sure that the **bit that you are going to install in the router is sufficiently long** to make the cut at the entered depth.
 
@@ -311,7 +307,7 @@ For an overview, see the [The process at a glance](#the-process-at-a-glance) dia
 
 - Before opening the software, first check that the **work surface of the CNC machine does not contain any objects or obstacles** on the work surface
 
-    ![Illustration](../../../../assets/img/guide-cnc/cnc_26.png)
+    ![Illustration](../../../../assets/img/guide-cnc/cnc_26.webp)
 
 - Also check that the **BitSetter (front right of the machine) is clear** and that its **button is clean** (no chips)
 
@@ -321,7 +317,7 @@ For an overview, see the [The process at a glance](#the-process-at-a-glance) dia
         - The bit must stick out of the collet by **at least 12.7 mm (0.5 inch)** so that the BitSetter can measure it
     - Gently insert the tail of the bit into the corresponding collar of the router
 
-        ![Illustration](../../../../assets/img/guide-cnc/cnc_29.png)
+        ![Illustration](../../../../assets/img/guide-cnc/cnc_29.webp)
 
     - Bit tightening
         - **Screw the collar with the drill bit** in the spinning top shaft
@@ -330,7 +326,7 @@ For an overview, see the [The process at a glance](#the-process-at-a-glance) dia
         - Use a wrench to firmly tighten the collar nut into the **counterclockwise** (do not overtighten, to avoid damaging the collar or bit)
         - **Release** the yellow lock button
 
-![Illustration](../../../../assets/img/guide-cnc/cnc_30.png)
+![Illustration](../../../../assets/img/guide-cnc/cnc_30.webp)
 
 :::note[Note]
 After releasing the yellow lock button, gently rotate the bit by hand to ensure it is **properly centered and does not wobble** in the collar. The bit is now correctly installed in the router!
@@ -339,7 +335,7 @@ After releasing the yellow lock button, gently rotate the bit by hand to ensure 
 - On the compact router, select the rotation speed at which the bit should rotate depending on your project (**rotation speed between 1 and 6**)
     - Carbide Motion will remind you of the speed to use when the job starts and at each bit change
 
-  ![Illustration](../../../../assets/img/guide-cnc/cnc_27.png)
+  ![Illustration](../../../../assets/img/guide-cnc/cnc_27.webp)
 
 - Check out the below **correspondence table** between the setting of the selection wheel and the rotation speed of the router
 
@@ -368,7 +364,7 @@ Once the machine is in its initial position and is stopped, **position your cutt
 - The fixing blocks will hold the board so that it does not move during machining
     - Do not place **any block or object in front of or next to the BitSetter** (front right of the machine): the router must be able to reach it freely
 
-![Illustration](../../../../assets/img/guide-cnc/cnc_32.png)
+![Illustration](../../../../assets/img/guide-cnc/cnc_32.webp)
 
 - Then click on the **“JOG”** tab
     - This tab allows you to manually control the router's movements on all axes (X, Y and Z) and is used to **set the starting point (zero point) of the CNC machine**
@@ -387,7 +383,7 @@ Once the machine is in its initial position and is stopped, **position your cutt
 
   - The router is placed in its starting position:
 
-    ![Illustration](../../../../assets/img/guide-cnc/cnc_35.png)
+    ![Illustration](../../../../assets/img/guide-cnc/cnc_35.webp)
 
   - Z-axis adjustment: Use the Z-axis controls to adjust **gently lower the router until the bit touches the surface of the board**.
 
@@ -399,7 +395,7 @@ Once the machine is in its initial position and is stopped, **position your cutt
     Use a standard sheet of paper as a thickness gauge. The bit should just pinch the paper without tearing it.
     :::
 
-    ![Illustration](../../../../assets/img/guide-cnc/cnc_36.png)
+    ![Illustration](../../../../assets/img/guide-cnc/cnc_36.webp)
 
 - Final check: Visually confirm that the starting position of the bit is correct on all axes.
 
@@ -425,7 +421,7 @@ Once the machine is in its initial position and is stopped, **position your cutt
 
 - Place the vacuum cleaner on the router
 
-![Illustration](../../../../assets/img/guide-cnc/cnc_38.png)
+![Illustration](../../../../assets/img/guide-cnc/cnc_38.webp)
 
 - Check that the ventilation hatch on the back of the CNC machine is **completely open**
 
@@ -433,11 +429,11 @@ Once the machine is in its initial position and is stopped, **position your cutt
 
 - Turn on the ventilation system inside the metal cabin
 
-![Illustration](../../../../assets/img/guide-cnc/cnc_39.png)
+![Illustration](../../../../assets/img/guide-cnc/cnc_39.webp)
 
 - Close the protective cover of the CNC machine
 
-![Illustration](../../../../assets/img/guide-cnc/cnc_41.png)
+![Illustration](../../../../assets/img/guide-cnc/cnc_41.webp)
 
 :::danger[Attention]
 Never start the CNC machine with the protective cover open
@@ -473,7 +469,7 @@ With the BitSetter, the router must stay **off** when the job starts: the machin
     - Check that the protective cover is closed
     - **Switch the router on**: activate the **Toupie** switch on the left-hand side of the CNC machine
 
-    ![Illustration](../../../../assets/img/guide-cnc/cnc_42.png)
+    ![Illustration](../../../../assets/img/guide-cnc/cnc_42.webp)
 
     - Click on **"OK"**
 

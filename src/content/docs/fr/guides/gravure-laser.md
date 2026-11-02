@@ -14,9 +14,9 @@ Ce guide vous accompagne pas à pas dans l'utilisation de la machine de gravure 
   - S'assurer que le système de ventilation fonctionne avant de commencer tout travail.
   - **Ne laissez JAMAIS la machine sans surveillance** pendant qu'elle fonctionne, car un incendie pourrait se déclarer et se propager rapidement.
   - Avant d'utiliser la machine de gravure laser, repérez à proximité notre **extincteur**, la **couverture ignifuge** et le bac de **lunettes de protection**.       
-    ![Illustration](../../../../assets/img/laser/laser_02.png)
-    ![Illustration](../../../../assets/img/laser/laser_01.png)
-    ![Illustration](../../../../assets/img/laser/laser_02_2.png)
+    ![Illustration](../../../../assets/img/laser/laser_02.webp)
+    ![Illustration](../../../../assets/img/laser/laser_01.webp)
+    ![Illustration](../../../../assets/img/laser/laser_02_2.webp)
 
 ## Référence matérielle
 
@@ -39,7 +39,7 @@ Ce guide vous accompagne pas à pas dans l'utilisation de la machine de gravure 
 ## Surface de travail
 - La surface de travail, indiquée par des marques de ruban adhésif à chaque coin, est de 29,5 pouces  (largeur) × 26 pouces (longueur) (soit 74,93 cm × 66,04 cm). La taille du matériau qui peut s'adapter à l'enceinte peut aller jusqu'à 36 × 36 pouces.
 
-    ![Illustration](../../../../assets/img/laser/laser_03_2.png)
+    ![Illustration](../../../../assets/img/laser/laser_03_2.webp)
 
 - Le module laser peut être réglé sur l'axe Z en utilisant la plage suivante : 0-30mm
 
@@ -78,15 +78,15 @@ Le processus de travail de la gravure laser suit les étapes suivantes :
 Le graveur laser est équipé de **multiples interrupteurs de commande situés sur les différentes parties de la machine**.
 
 - Commandes sur le panneau avant:
-  ![Illustration](../../../../assets/img/laser/laser_04.png)
+  ![Illustration](../../../../assets/img/laser/laser_04.webp)
   - **Interrupteur d'alimentation principal** : cet interrupteur permet de mettre l'ordinateur sous tension.
   - **Interrupteur du serveur laser** : Cet interrupteur active le serveur de contrôle de la machine laser. Ne l'utilisez qu'une fois l'ordinateur entièrement démarré.
 - Commandes montées sur le dessus de la machine :
-  ![Illustration](../../../../assets/img/laser/laser_05.png)
+  ![Illustration](../../../../assets/img/laser/laser_05.webp)
   - Un compresseur d'air est situé en haut à droite de la machine et sert à fournir un courant d'air ciblé pour refroidir le matériau pendant la gravure.
     - Ne l'activez pas encore - nous le mettrons en marche avant de commencer le travail.
 - Intérieur de l'habitacle
-  ![Illustration](../../../../assets/img/laser/laser_06.png)
+  ![Illustration](../../../../assets/img/laser/laser_06.webp)
   - L'interrupteur d'activation du laser est situé sur la paroi intérieure droite du boîtier et alimente le module de la diode laser.
     - Ne l'activez pas encore - nous le mettrons en marche avant de commencer le travail.
 
@@ -149,7 +149,7 @@ Le graveur laser est équipé de **multiples interrupteurs de commande situés s
   - Aligner le matériau parallèlement aux axes de la machine si possible
   - Réglage de la hauteur (axe Z) :  
     - Si nécessaire, utilisez des blocs d'espacement pour surélever la surface du matériau. Réglez la hauteur de manière à ce que la surface supérieure du matériau se trouve à environ 1 à 2 pouces de l'extrémité de la tête du laser.
-  ![Illustration](../../../../assets/img/laser/laser_16.png)
+  ![Illustration](../../../../assets/img/laser/laser_16.webp)
 
 ## 4. Positionnement de la tête du laser
 
@@ -161,7 +161,7 @@ Le graveur laser est équipé de **multiples interrupteurs de commande situés s
     - Cliquez sur l'icône **home all** pour déplacer le laser vers l'origine de la machine (en bas à gauche) et **attendez que le mouvement soit terminé** avant d'activer l'interrupteur du laser.
     ![Illustration](../../../../assets/img/laser/laser_18.png)
     - **Activer l'interrupteur laser** à l'intérieur de l'habitacle
-        ![Illustration](../../../../assets/img/laser/laser_19.png)
+        ![Illustration](../../../../assets/img/laser/laser_06.webp)
         :::danger
         Portez toujours des lunettes de sécurité avant d'activer le laser.
         :::
@@ -171,12 +171,12 @@ Le graveur laser est équipé de **multiples interrupteurs de commande situés s
     ![Illustration](../../../../assets/img/laser/laser_20.png)
     - Positionner la tête du laser sur les axes X et Y
       - Utilisez l'onglet de contrôle pour déplacer le laser sur les axes X et Y afin de **positionner le laser à la position de départ souhaitée sur le matériau**.
-    ![Illustration](../../../../assets/img/laser/laser_21.png)
+    ![Illustration](../../../../assets/img/laser/laser_21.webp)
     - Positionner la tête du laser sur l'axe Z
       - Les boutons **jog by** contrôlent la distance à laquelle le laser se déplace à chaque pression des boutons directionnels sur les axes X, Y et Z.
       ![Illustration](../../../../assets/img/laser/laser_22.png)
       - Utilisez les commandes pour abaisser doucement le laser jusqu'à ce qu'il y ait **exactement 1 pouce** entre la pointe du laser et le matériau à graver.
-      ![Illustration](../../../../assets/img/laser/laser_23.png)
+      ![Illustration](../../../../assets/img/laser/laser_23.webp)
 
 - Configuration finale
     - Une fois la tête laser correctement positionnée sur les trois axes, cliquez sur le bouton **Set Zero** pour enregistrer la position du laser.
@@ -191,15 +191,15 @@ Le graveur laser est équipé de **multiples interrupteurs de commande situés s
 
 - Activez le compresseur d'assistance à l'air situé en haut à droite de la machine.
 
-![Illustration](../../../../assets/img/laser/laser_26.png)
+![Illustration](../../../../assets/img/laser/laser_05.webp)
 
 - Vérifiez que la trappe d'aération située à l'arrière de la machine laser est **complètement ouverte**.
 
-![Illustration](../../../../assets/img/laser/laser_27.png)
+![Illustration](../../../../assets/img/laser/laser_27.webp)
 
 - Activez le système de ventilation à l'intérieur de la cabine métallique
 
-![Illustration](../../../../assets/img/guide-cnc/cnc_39.png)
+![Illustration](../../../../assets/img/guide-cnc/cnc_39.webp)
 
 - Fermez le capot de la machine laser
 
@@ -217,7 +217,7 @@ Le graveur laser est équipé de **multiples interrupteurs de commande situés s
 
 - Vous pouvez toujours surveiller le processus de gravure à travers la fenêtre située en haut du boîtier (encore une fois, utilisez toujours vos lunettes de protection lorsque vous regardez le module laser).
 
-![Illustration](../../../../assets/img/laser/laser_29.png)
+![Illustration](../../../../assets/img/laser/laser_29.webp)
 
 :::danger[Attention]
 - **Ne laissez JAMAIS la machine sans surveillance** pendant son fonctionnement
@@ -230,8 +230,8 @@ Le graveur laser est équipé de **multiples interrupteurs de commande situés s
 Assurez-vous que la machine a terminé son travail et qu'elle est **arrêtée** complètement et attendez que la ventilation élimine **les fumées** avant d'ouvrir le boîtier et de retirer votre matériel gravé.
 :::
 
-![Illustration](../../../../assets/img/laser/laser_30.png)
-![Illustration](../../../../assets/img/laser/laser_31.png)
+![Illustration](../../../../assets/img/laser/laser_30.webp)
+![Illustration](../../../../assets/img/laser/laser_31.webp)
 
 - Laisser refroidir le matériel avant de le retirer ou de le manipuler
 - Éteindre les systèmes dans l'ordre inverse :

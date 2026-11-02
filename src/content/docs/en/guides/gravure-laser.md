@@ -14,9 +14,9 @@ This guide takes you step by step through the use of the laser engraver. It is m
   - Ensure the ventilation system is running before starting any job
   - **NEVER leave the machine unattended** while operating as a fire could start and spread quickly
 - Before using the laser engraver, locate the nearby **fire extinguisher**, **fire-retardant blanket** and **protective glasses**.    
-    ![Illustration](../../../../assets/img/laser/laser_02.png)
-    ![Illustration](../../../../assets/img/laser/laser_01.png)
-    ![Illustration](../../../../assets/img/laser/laser_02_2.png)
+    ![Illustration](../../../../assets/img/laser/laser_02.webp)
+    ![Illustration](../../../../assets/img/laser/laser_01.webp)
+    ![Illustration](../../../../assets/img/laser/laser_02_2.webp)
 
 ## Hardware reference
 
@@ -39,7 +39,7 @@ This guide takes you step by step through the use of the laser engraver. It is m
 ## Work area
 - The work surface, indicated by tape markings on each corner, is 29.5" (width) × 26" (length) (i.e., 74.93 cm × 66.04 cm). The material size that can fit the enclosure can be up to 36" × 36".
 
-    ![Illustration](../../../../assets/img/laser/laser_03_2.png)
+    ![Illustration](../../../../assets/img/laser/laser_03_2.webp)
 
 - The laser module can be adjusted on the Z-axis using the following range: 0-30mm
 
@@ -78,15 +78,15 @@ The laser engraving workflow consists of:
 The laser engraver has **multiple control switches located on different parts of the machine**.
 
 - Front Panel Controls:
-  ![Illustration](../../../../assets/img/laser/laser_04.png)
+  ![Illustration](../../../../assets/img/laser/laser_04.webp)
   - **Main power switch** : this switch turn on the computer.
   - **Laser server switch** : This switch activate the laser machine control server. Use it only once the computer has fully booted.
 - Top-Mounted Controls:
-  ![Illustration](../../../../assets/img/laser/laser_05.png)
+  ![Illustration](../../../../assets/img/laser/laser_05.webp)
   - An air assist compressor is located on the top right of the machine and used to provide a focused air stream to cool the material during engraving
     - Do not activate yet - we will turned it on before starting the job
 - Inside enclosure
-  ![Illustration](../../../../assets/img/laser/laser_06.png)
+  ![Illustration](../../../../assets/img/laser/laser_06.webp)
   - The Laser enable switch is Located on the right inner wall of the enclosure and provides power to the laser diode module
     - Do not activate yet - we will turned it on before starting the job
 
@@ -149,7 +149,7 @@ The laser engraver has **multiple control switches located on different parts of
   - Align material parallel to machine axes when possible
   - Height adjustment (Z-axis): 
     - If necessary, use spacer blocks to raise the material’s surface. Adjust the height so the material’s top surface is approximately 1 to 2 inches from the laser head tip.
-  ![Illustration](../../../../assets/img/laser/laser_16.png)
+  ![Illustration](../../../../assets/img/laser/laser_16.webp)
 
 ## 4. Laser Head Positioning
 
@@ -161,7 +161,7 @@ The laser engraver has **multiple control switches located on different parts of
     - Click on the **home all** icon to move the laser to the machine origin (bottom left) and **wait for the movement to complete** before activating the laser switch.
     ![Illustration](../../../../assets/img/laser/laser_18.png)
     - **Activate the laser switch** inside the enclosure
-        ![Illustration](../../../../assets/img/laser/laser_19.png)
+        ![Illustration](../../../../assets/img/laser/laser_06.webp)
         :::danger
         Always wear safety glasses before activating the laser.
         :::
@@ -171,12 +171,12 @@ The laser engraver has **multiple control switches located on different parts of
     ![Illustration](../../../../assets/img/laser/laser_20.png)
     - Position the laser head on the X and Y axes
       - Use the control tab to move the laser on the X and Y axes in order to **position the laser at the desired starting position on the material**.
-    ![Illustration](../../../../assets/img/laser/laser_21.png)
+    ![Illustration](../../../../assets/img/laser/laser_21.webp)
     - Position the laser head on the Z-axis
       - The **jog by** buttons controls how far the laser moves with each press of the directional buttons on the X, Y and Z axis.
       ![Illustration](../../../../assets/img/laser/laser_22.png)
       - Use the controls to gently lower the laser until there is **exactly 1 inch** between the laser tip and the material to engrave.
-      ![Illustration](../../../../assets/img/laser/laser_23.png)
+      ![Illustration](../../../../assets/img/laser/laser_23.webp)
 
 - Final setup
     - Once the laser head is properly positioned on the three axes, click on the **Set Zero** button to save the laser position
@@ -191,15 +191,15 @@ The laser engraver has **multiple control switches located on different parts of
 
 - Activate the air assist compressor located on the top right of the machine
 
-![Illustration](../../../../assets/img/laser/laser_26.png)
+![Illustration](../../../../assets/img/laser/laser_05.webp)
 
 - Check that the ventilation hatch on the back of the Laser machine is **completely open**
 
-![Illustration](../../../../assets/img/laser/laser_27.png)
+![Illustration](../../../../assets/img/laser/laser_27.webp)
 
 - Turn on the ventilation system inside the metal cabin
 
-![Illustration](../../../../assets/img/guide-cnc/cnc_39.png)
+![Illustration](../../../../assets/img/guide-cnc/cnc_39.webp)
 
 - Close the enclosure of the laser machine
 
@@ -217,7 +217,7 @@ The laser engraver has **multiple control switches located on different parts of
 
 - You can always monitor the engraving process through the window located at the top of the enclosure (again, always use your safety glasses whenever you look at the laser module)
 
-![Illustration](../../../../assets/img/laser/laser_29.png)
+![Illustration](../../../../assets/img/laser/laser_29.webp)
 
 :::danger[Attention]
 - **NEVER leave the machine unattended** during its operation
@@ -230,8 +230,8 @@ The laser engraver has **multiple control switches located on different parts of
 Make sure the machine has finished its work and is **stopped** fully and wait for ventilation to **clear smoke/fumes** before opening the enclosure and removing your engraved material
 :::
 
-![Illustration](../../../../assets/img/laser/laser_30.png)
-![Illustration](../../../../assets/img/laser/laser_31.png)
+![Illustration](../../../../assets/img/laser/laser_30.webp)
+![Illustration](../../../../assets/img/laser/laser_31.webp)
 
 - Allow material to cool before removing or handling them
 - Turn off systems in reverse order:

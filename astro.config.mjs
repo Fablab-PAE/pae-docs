@@ -160,6 +160,13 @@ export default defineConfig({
         ],
       }),
     ],
+    // Pictures: each one is built in a few widths (srcset), never wider than its original,
+    // so every screen downloads the size it needs (WebP, lazy loading: Astro's defaults).
+    // Originals follow the rules of scripts/images.mjs (`npm run images` fixes them).
+    image: {
+        layout: 'constrained',
+        breakpoints: [400, 800, 1200, 1600, 2000],
+    },
     devToolbar: {
         enabled: false,
     },
