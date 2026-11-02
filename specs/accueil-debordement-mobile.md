@@ -1,6 +1,6 @@
 # Homepage: no sideways scrolling on phones
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -25,5 +25,5 @@ make a page wider). Same look on screen.
 
 ## Acceptance checks
 - [ ] Homepage on a phone: no sideways scroll; band and line look the same
-- [ ] `scripts/test.sh` passes
+- [x] `scripts/test.sh` passes
 - [ ] Not pushed to GitHub until the owner says so
