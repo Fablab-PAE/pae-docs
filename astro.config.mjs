@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import diagrams from './src/diagrams/diagrams.mjs';
+import images from './src/image-tools/images.mjs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -9,11 +10,14 @@ export default defineConfig({
     base: '/pae-docs',
     integrations: [
       diagrams(), // ```mermaid blocks drawn by pele (src/diagrams/); before starlight
+      images(), // pictures: a few widths each; a too-big original stops the build (npm run images fixes it)
       starlight({
         title: '',
-        // Kit docs features (kit docs upgrade): the docs version next to the title, and a
-        // full-screen viewer: click a diagram or a picture to zoom and move it
+        // Kit docs features (kit docs upgrade): the docs version next to the title, a full-screen
+        // viewer (click a diagram or a picture to zoom and move it), page actions next to the page
+        // title (copy as Markdown, print), the "On this page" style and a light / dark button
         components: {
+          TableOfContents: './src/components/TableOfContents.astro',
           SiteTitle: './src/components/SiteTitle.astro',
           MarkdownContent: './src/components/MarkdownContent.astro',
           // Footer of every page: adds the "Crédits photos" link (the page is not in the menu)
