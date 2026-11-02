@@ -1,6 +1,6 @@
 # CNC guide: sub-headings in section 4, appendices for bit change and re-run
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -48,6 +48,6 @@ B. Running the same job again).
   checked on every page, not only the homepages (catches a broken "voir l'annexe" link).
 
 ## Acceptance checks
-- [ ] fr + en: 4.1-4.10 and Annexes A / B in the "Sur cette page" list; content unchanged
-- [ ] "voir l'annexe" links jump to the right place
-- [ ] `scripts/test.sh` passes
+- [x] fr + en: 4.1-4.10 and Annexes A / B in the "Sur cette page" list; content unchanged
+- [x] "voir l'annexe" links jump to the right place
+- [x] `scripts/test.sh` passes
