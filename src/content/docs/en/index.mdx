@@ -16,6 +16,7 @@ hero:
 
 import { CardGrid } from '@astrojs/starlight/components';
 import MachineCard from '../../../components/MachineCard.astro';
+import Faq from '../../../components/Faq.astro';
 import cnc from '../../../assets/img/accueil/shapeoko-3.jpg';
 import laser from '../../../assets/img/laser/laser_03_2.webp';
 import vinyl from '../../../assets/img/accueil/graphtec-ce6000.jpg';
@@ -92,3 +93,65 @@ import mila from '../../../assets/img/projets/mila.png';
 		external
 	/>
 </CardGrid>
+
+## Frequently asked questions
+
+<Faq>
+<details>
+<summary>Who can use the machines in the workshop?</summary>
+
+Every use needs the agreement of the RoboTic workshop trainer. Always check with them before starting a machine, even one you have used before.
+
+</details>
+<details>
+<summary>Which machine should I start with?</summary>
+
+3D printing, laser engraving and vinyl cutting are **Beginner** level; the CNC machine is **Advanced** level. Start with a Beginner machine and read its whole guide before using it for the first time.
+
+</details>
+<details>
+<summary>Which machine fits my project?</summary>
+
+- A plastic object: [3D Printing](/pae-docs/en/guides/impression-3d/).
+- Engraving wood, cardboard, leather or fabric, or cutting 3 mm wood: [Laser Engraver](/pae-docs/en/guides/gravure-laser/).
+- Stickers, lettering or heat-transfer vinyl: [Vinyl Cutter](/pae-docs/en/guides/decoupe-vinyle/).
+- Milling or cutting wood, or making printed circuit boards: [CNC Machine](/pae-docs/en/guides/cnc-machine/).
+
+</details>
+<details>
+<summary>Can I bring my own materials?</summary>
+
+Only compatible materials approved by the person in charge of the room. If in doubt, ask before you start. Never engrave PVC or vinyl with the laser: their fumes are toxic.
+
+</details>
+<details>
+<summary>Can I leave a machine running on its own?</summary>
+
+No. Stay next to the machine for the whole job. A 3D print that lasts longer than your time in the room must be approved by the person in charge.
+
+</details>
+<details>
+<summary>What should I do if something goes wrong?</summary>
+
+Stop the machine (emergency stop button or switch off the power) and tell the person in charge. If a fire gets out of control: evacuate, set off the fire alarm and call emergency services (911). Each machine's instructions are in its **safety sheet**, at the end of its guide.
+
+</details>
+<details>
+<summary>How do I print a guide or its safety sheet?</summary>
+
+In a guide, open the menu on the right of the title and choose **Print page**: the guide prints without the menus. The safety sheet, at the end of the guide, has its own **Print** button: it fits on one A4 page, to post next to the machine.
+
+</details>
+<details>
+<summary>Can I ask an AI questions about a guide?</summary>
+
+Yes. The **Copy page** button, on the right of a guide's title, copies the guide so you can paste it into an AI tool. The menu next to it also offers **Open in Claude** and **Open in ChatGPT**.
+
+</details>
+<details>
+<summary>How can I buy the items made in the workshop?</summary>
+
+On our <a href="https://online.forms.app/boutique-chouette-et-cie/formulaire-de-commerce?formsRef=qrcode" target="_blank" rel="noopener noreferrer">Vert l'emploi online shop</a>.
+
+</details>
+</Faq>
