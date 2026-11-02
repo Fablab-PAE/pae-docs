@@ -1,6 +1,6 @@
 # Printing: every picture loaded before the print window opens
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -33,4 +33,4 @@ Causes:
 ## Acceptance checks
 - [ ] Printing a guide from the menu without scrolling shows all its pictures
 - [ ] The safety sheet print still works
-- [ ] `scripts/test.sh` passes
+- [x] `scripts/test.sh` passes
