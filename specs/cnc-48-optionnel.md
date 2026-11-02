@@ -1,6 +1,6 @@
 # CNC guide: 4.8 vacuum and ventilation optional; closing the cover moves to 4.9
 
-Status: approved
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -22,6 +22,6 @@ wording; flagged in the report.
   4.8 anchor.
 
 ## Acceptance checks
-- [ ] fr + en: 4.8 "(optionnel)" with vacuum and ventilation only; cover + two red boxes at
+- [x] fr + en: 4.8 "(optionnel)" with vacuum and ventilation only; cover + two red boxes at
       the start of 4.9
-- [ ] `scripts/test.sh` passes
+- [x] `scripts/test.sh` passes
