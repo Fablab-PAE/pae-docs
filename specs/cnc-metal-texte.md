@@ -1,6 +1,6 @@
 # CNC guide: why metal is not machined
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -18,5 +18,5 @@ fire risks (hot metal chips can set wood dust on fire)."
 - `src/content/docs/{fr,en}/guides/cnc-machine.md`: the Métal / Metal sub-bullet only.
 
 ## Acceptance checks
-- [ ] fr + en: new wording
-- [ ] `scripts/test.sh` passes
+- [x] fr + en: new wording
+- [x] `scripts/test.sh` passes
