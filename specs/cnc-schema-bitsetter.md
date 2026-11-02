@@ -1,6 +1,6 @@
 # CNC guide: BitSetter warning as a danger box; job diagram at the start of section 4
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -27,7 +27,7 @@ Restart needed after merge: no
     d'œil](#...)". The anchor stays the same.
 
 ## Acceptance checks
-- [ ] Danger box in 4.5, fr + en
-- [ ] (move) diagram at the start of section 4; link from the BitSetter part works
-- [ ] `scripts/test.sh` passes (diagram builds, same-page links checked)
-- [ ] Not pushed to GitHub
+- [x] Danger box in 4.5, fr + en
+- [x] (move) diagram at the start of section 4; link from the BitSetter part works
+- [x] `scripts/test.sh` passes (diagram builds, same-page links checked)
+- [x] Not pushed to GitHub
