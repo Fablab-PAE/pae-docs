@@ -1,6 +1,6 @@
 # Homepage FAQ (fal.ai-style accordion); info boxes print like on screen
 
-Status: planning
+Status: building
 Size: normal
 Database change: no
 New settings (.env keys): none
