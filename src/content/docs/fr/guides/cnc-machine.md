@@ -33,9 +33,6 @@ Ce guide vous accompagne pas à pas dans l'utilisation de la machine CNC Shapeok
 
 - Module **BitSetter** : capteur qui mesure automatiquement la longueur de la mèche, pour pouvoir **utiliser plusieurs mèches dans un même usinage** (voir la section [Module BitSetter](#module-bitsetter-changement-de-mèches))
 
-- **Utilisateurs avancés**: Mettre à jour le firmware de la machine CNC périodiquement en connectant la machine CNC à votre ordinateur en utilisant un câble USB et en  utilisant l'IDE Arduino pour téléverser le programme
-    - Mise à jour Firmware : GRBL 1.1h (mise à jour depuis la version 1.1f) <a href="https://github.com/gnea/grbl/releases/tag/v1.1h.20190825" target="_blank" rel="noopener noreferrer">Lien Firmware</a>
-
 ## Zone de travail
 
 - La surface de travail est d'**environ 30" (largeur) x 27" (longueur) (soit 76,20 cm x 68,58 cm)**
@@ -577,6 +574,12 @@ Pour relancer le même fichier (par exemple sur une nouvelle planche placée au 
 :::note[Note]
 Le point zéro est conservé tant que la planche n'a pas bougé. Si vous changez de planche (ou d'épaisseur de planche) ou de position, **refaites le zéro** (**"Set Zero"** puis **"Zero All"**).
 :::
+
+### C. Mettre à jour le firmware (utilisateurs avancés)
+
+**Utilisateurs avancés** : mettre à jour le firmware de la machine CNC périodiquement en connectant la machine CNC à votre ordinateur en utilisant un câble USB et en utilisant l'IDE Arduino pour téléverser le programme.
+
+- Mise à jour Firmware : GRBL 1.1h (mise à jour depuis la version 1.1f) <a href="https://github.com/gnea/grbl/releases/tag/v1.1h.20190825" target="_blank" rel="noopener noreferrer">Lien Firmware</a>
 
 ## Pour aller plus loin
 
