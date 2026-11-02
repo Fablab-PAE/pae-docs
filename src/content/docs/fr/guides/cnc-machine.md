@@ -304,11 +304,15 @@ Grâce au BitSetter, chaque parcours d'usinage (*toolpath*) peut utiliser **une 
 
 Pour une vue d'ensemble, voir le schéma [Le déroulement en un coup d'œil](#le-déroulement-en-un-coup-dœil).
 
+### 4.1 Préparer la machine
+
 - Avant d'ouvrir le logiciel, vérifier tout d'abord que le **plan de travail de la machine CNC ne comporte aucun objet ou obstacle** sur la surface de travail
 
     ![Illustration](../../../../assets/img/guide-cnc/cnc_26.webp)
 
 - Vérifier aussi que le **BitSetter (à l'avant droit de la machine) est dégagé** et que son **bouton est propre** (sans copeaux)
+
+### 4.2 Installer la mèche
 
 - Installation de la mèche sur la toupie (**toupie éteinte**)
     - Sélectionner la mèche appropriée pour votre projet. Si votre fichier utilise plusieurs mèches, installez **la première mèche** du fichier
@@ -331,6 +335,8 @@ Pour une vue d'ensemble, voir le schéma [Le déroulement en un coup d'œil](#le
 Après avoir relâché le bouton de verrouillage jaune, faire tourner doucement la mèche à la main pour vous assurer qu'elle est **correctement centrée et ne vacille pas** dans le collet. La mèche est maintenant correctement installée dans la toupie !
 :::
 
+### 4.3 Régler la vitesse de la toupie
+
 - Sur la toupie compacte, sélectionner la vitesse de rotation à laquelle la mèche devra tourner en fonction de votre projet (**vitesse de rotation entre 1 et 6**)
     - Carbide Motion vous rappellera la vitesse à utiliser au lancement de l'usinage et à chaque changement de mèche
 
@@ -339,6 +345,8 @@ Après avoir relâché le bouton de verrouillage jaune, faire tourner doucement 
 - Consultez ci-dessous le **tableau de correspondance** entre le réglage de la molette de sélection et la vitesse de rotation de la toupie
 
   ![Illustration](../../../../assets/img/guide-cnc/cnc_28.png)
+
+### 4.4 Connecter et initialiser la machine
 
 - Ouvrir maintenant le logiciel Carbide Motion
 
@@ -356,6 +364,8 @@ Après avoir relâché le bouton de verrouillage jaune, faire tourner doucement 
 Lorsque vous cliquez sur “Initialize machine”, la machine va se **déplacer automatiquement en position initiale** en allant d'abord **au fond de la machine**, puis en se positionnant **devant**. Il ne faut donc pas qu'elle rencontre des objets ou obstacles sur son chemin !
 :::
 
+### 4.5 Fixer la planche
+
 :::note[Note]
 Une fois que la machine s'est placée en position initiale et est à l'arrêt, **positionnez votre planche à découper sur la zone de travail en utilisant les cales de fixation**.
 :::
@@ -364,6 +374,8 @@ Une fois que la machine s'est placée en position initiale et est à l'arrêt, *
     - Ne placez **aucune cale ni aucun objet devant ou à côté du BitSetter** (avant droit de la machine) : la toupie doit pouvoir y aller librement
 
 ![Illustration](../../../../assets/img/guide-cnc/cnc_32.webp)
+
+### 4.6 Définir le point zéro
 
 - Cliquer ensuite sur l'onglet **"JOG"**
     - Cet onglet vous permet de contrôler manuellement les mouvements de la toupie sur tous les axes (X, Y et Z) et sert à **définir le point de démarrage (point zéro) de la machine CNC**
@@ -380,7 +392,7 @@ Une fois que la machine s'est placée en position initiale et est à l'arrêt, *
 
   - Ajustement sur les axes X et Y : Utilisez les commandes de l'onglet **"JOG"** pour déplacer la toupie sur les axes X et Y afin de **positionner la mèche à la position de départ souhaitée sur la planche**.
 
-  - La toupie est maintenance placée dans sa position de départ :
+  - La toupie est maintenant placée dans sa position de départ :
 
     ![Illustration](../../../../assets/img/guide-cnc/cnc_35.webp)
 
@@ -413,10 +425,14 @@ Une fois que la machine s'est placée en position initiale et est à l'arrêt, *
 
 - Cliquer sur **"Done"** pour confirmer le positionnement de la machine CNC dans sa position de départ
 
+### 4.7 Charger le fichier
+
 - Cliquer ensuite sur **"RUN"**
   - Cliquer sur **"LOAD NEW FILE"**
   - Ouvrir le fichier créé à l'étape précédente avec Carbide Create (fichier **.c2d**, e.g. ma_decoupe_cnc.c2d, ou fichier G-code **.nc**)
   - Cliquer sur **"Done"**
+
+### 4.8 Aspiration, ventilation et capot
 
 - Mettre l'aspirateur en place sur la toupie
 
@@ -441,6 +457,8 @@ Ne jamais démarrer la machine CNC avec le capot de protection ouvert
 :::danger[Ne pas allumer la toupie maintenant !]
 Avec le BitSetter, la toupie doit rester **éteinte** au lancement de l'usinage : la machine va d'abord mesurer la mèche. Vous allumerez la toupie **seulement quand Carbide Motion vous le demandera** (étapes ci-dessous).
 :::
+
+### 4.9 Lancer l'usinage
 
 - Démarrer maintenant la machine
     - Cliquer sur **"START JOB"**
@@ -490,22 +508,9 @@ La machine CNC va maintenant **effectuer l'usinage de votre pièce en suivant le
 - En cas d'anomalie ou de danger, utilisez immédiatement le **bouton d'arrêt d'urgence "Interrupteur Principal"** sur la gauche de la machine ou via l'interface en cliquant sur le bouton **"STOP"** dans le logiciel Carbide Motion.
 :::
 
-### Changement de mèche pendant l'usinage
+Si votre fichier utilise **plusieurs mèches**, la machine s'arrête à chaque changement de mèche : suivez l'[annexe A. Changement de mèche pendant l'usinage](#a-changement-de-mèche-pendant-lusinage).
 
-Si votre fichier utilise plusieurs mèches, la machine s'arrête à chaque changement de mèche :
-
-1. La machine arrête d'usiner, **relève la toupie et se place à côté du BitSetter**. Le message **"Please insert tool"** s'affiche avec la mèche demandée.
-2. **Éteindre la toupie** (interrupteur **Toupie**) et **attendre l'arrêt complet** de la mèche.
-
-    :::danger[Attention]
-    Carbide Motion **n'éteint pas la toupie** : c'est à vous de le faire **avant d'ouvrir le capot**. Ne touchez jamais une mèche qui tourne encore. La mèche peut aussi être **très chaude** après l'usinage.
-    :::
-
-3. Ouvrir le capot et **remplacer la mèche** par celle demandée (même méthode qu'au début : bouton de verrouillage jaune et clé). La nouvelle mèche doit dépasser du collet d'au moins 12,7 mm.
-4. Refermer le capot, puis cliquer sur **"OK"** : la machine **descend mesurer la nouvelle mèche** sur le BitSetter (toupie toujours éteinte, mains hors de la machine).
-5. Au message de vitesse : régler la molette de la toupie pour choisir la vitesse de la nouvelle mèche, **allumer la toupie**, puis cliquer sur **"OK"**. L'usinage reprend avec la nouvelle mèche.
-
-### Fin de l'usinage
+### 4.10 Fin de l'usinage
 
 :::danger[Attention : la machine se déplace toute seule à la fin]
 Dès que l'usinage est terminé, un message s'affiche **`Please turn spindle off`** : vous pouvez alors **éteindre l'interrupteur de la toupie**. En cliquant sur **"OK"**, la machine va alors **se replacer automatiquement au fond à droite** : **rien (cales, objets, mains) ne doit donc se trouver sur le chemin de la toupie** !
@@ -513,23 +518,7 @@ Dès que l'usinage est terminé, un message s'affiche **`Please turn spindle off
 
 ![Message de fin d'usinage de Carbide Motion : Please turn spindle off, avec le bouton Ok](../../../../assets/img/guide-cnc/cnc_spindle_off.png)
 
-### Refaire le même usinage
-
-Pour relancer le même fichier (par exemple sur une nouvelle planche placée au même endroit) :
-
-1. Cliquer sur **"Quick Actions"**
-2. Cliquer sur **"Move cutter above current XY zero"**
-3. Un message de confirmation s'affiche : cliquer sur **"YES"**
-
-    :::caution
-    La machine se déplace dès que vous cliquez sur **"YES"** : vérifiez que le chemin est libre.
-    :::
-
-4. Relancer l'usinage avec **"START JOB"** puis **"START"**, et suivre les mêmes étapes que ci-dessus (message "Please insert tool", mesure de la mèche, vitesse de rotation).
-
-:::note[Note]
-Le point zéro est conservé tant que la planche n'a pas bougé. Si vous changez de planche (ou d'épaisseur de planche) ou de position, **refaites le zéro** (**"Set Zero"** puis **"Zero All"**).
-:::
+Pour relancer le même fichier (par exemple sur une nouvelle planche), voir l'[annexe B. Refaire le même usinage](#b-refaire-le-même-usinage).
 
 ## 5. Nettoyage après utilisation
 
@@ -550,6 +539,41 @@ Assurez-vous que la machine a terminé son travail et qu'elle est **arrêtée et
    - Une fois le nettoyage complet, éteindre le système de ventilation
 4. Eteindre l'ordinateur :
   - Désactiver l'interrupteur **"PC et CNC"**
+
+## Annexes
+
+### A. Changement de mèche pendant l'usinage
+
+Si votre fichier utilise plusieurs mèches, la machine s'arrête à chaque changement de mèche :
+
+1. La machine arrête d'usiner, **relève la toupie et se place à côté du BitSetter**. Le message **"Please insert tool"** s'affiche avec la mèche demandée.
+2. **Éteindre la toupie** (interrupteur **Toupie**) et **attendre l'arrêt complet** de la mèche.
+
+    :::danger[Attention]
+    Carbide Motion **n'éteint pas la toupie** : c'est à vous de le faire **avant d'ouvrir le capot**. Ne touchez jamais une mèche qui tourne encore. La mèche peut aussi être **très chaude** après l'usinage.
+    :::
+
+3. Ouvrir le capot et **remplacer la mèche** par celle demandée (même méthode qu'au début : bouton de verrouillage jaune et clé). La nouvelle mèche doit dépasser du collet d'au moins 12,7 mm.
+4. Refermer le capot, puis cliquer sur **"OK"** : la machine **descend mesurer la nouvelle mèche** sur le BitSetter (toupie toujours éteinte, mains hors de la machine).
+5. Au message de vitesse : régler la molette de la toupie pour choisir la vitesse de la nouvelle mèche, **allumer la toupie**, puis cliquer sur **"OK"**. L'usinage reprend avec la nouvelle mèche.
+
+### B. Refaire le même usinage
+
+Pour relancer le même fichier (par exemple sur une nouvelle planche placée au même endroit) :
+
+1. Cliquer sur **"Quick Actions"**
+2. Cliquer sur **"Move cutter above current XY zero"**
+3. Un message de confirmation s'affiche : cliquer sur **"YES"**
+
+    :::caution
+    La machine se déplace dès que vous cliquez sur **"YES"** : vérifiez que le chemin est libre.
+    :::
+
+4. Relancer l'usinage avec **"START JOB"** puis **"START"**, et suivre les mêmes étapes qu'en [4.9 Lancer l'usinage](#49-lancer-lusinage) (message "Please insert tool", mesure de la mèche, vitesse de rotation).
+
+:::note[Note]
+Le point zéro est conservé tant que la planche n'a pas bougé. Si vous changez de planche (ou d'épaisseur de planche) ou de position, **refaites le zéro** (**"Set Zero"** puis **"Zero All"**).
+:::
 
 ## Pour aller plus loin
 
