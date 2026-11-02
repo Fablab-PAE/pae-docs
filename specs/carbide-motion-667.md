@@ -1,6 +1,6 @@
 # CNC guide: Carbide Motion build 667 (updated 2 November 2026), then publish
 
-Status: planning
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -26,6 +26,6 @@ GitHub, which deploys https://fablab-pae.github.io/pae-docs/ (owner's request).
   the plan question). GitHub Actions (`deploy.yml`) then publishes the site in a few minutes.
 
 ## Acceptance checks
-- [ ] fr + en: build 667, date, note
-- [ ] `scripts/test.sh` passes
+- [x] fr + en: build 667, date, note
+- [x] `scripts/test.sh` passes
 - [ ] `main` pushed; GitHub has the same last save as the real project
