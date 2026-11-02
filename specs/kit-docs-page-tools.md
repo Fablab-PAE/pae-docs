@@ -1,6 +1,6 @@
 # Docs website: the agent kit's page actions, "On this page" style, theme button, picture checks
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
