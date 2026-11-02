@@ -371,7 +371,7 @@ Do not place **any block or object in front of or next to the BitSetter** (front
   - Open the file created in the previous step with Carbide Create (**.c2d** file, e.g. ma_decoupe_cnc.c2d, or **.nc** G-code file)
   - Click on **"Done"**
 
-### 4.8 Vacuum, ventilation and cover
+### 4.8 Vacuum and ventilation (optional)
 
 - Place the vacuum cleaner on the router
 
@@ -385,6 +385,8 @@ Do not place **any block or object in front of or next to the BitSetter** (front
 
 ![Illustration](../../../../assets/img/guide-cnc/cnc_39.webp)
 
+### 4.9 Starting the job
+
 - Close the protective cover of the CNC machine
 
 ![Illustration](../../../../assets/img/guide-cnc/cnc_41.webp)
@@ -396,8 +398,6 @@ Never start the CNC machine with the protective cover open
 :::danger[Do not switch the router on now!]
 With the BitSetter, the router must stay **off** when the job starts: the machine will first measure the bit. You will switch the router on **only when Carbide Motion asks you to** (steps below).
 :::
-
-### 4.9 Starting the job
 
 - Start the machine now
     - Click on **"START JOB"**

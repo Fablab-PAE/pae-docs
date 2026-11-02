@@ -370,7 +370,7 @@ Ne placez **aucune cale ni aucun objet devant ou à côté du BitSetter** (avant
   - Ouvrir le fichier créé à l'étape précédente avec Carbide Create (fichier **.c2d**, e.g. ma_decoupe_cnc.c2d, ou fichier G-code **.nc**)
   - Cliquer sur **"Done"**
 
-### 4.8 Aspiration, ventilation et capot
+### 4.8 Aspiration et ventilation (optionnel)
 
 - Mettre l'aspirateur en place sur la toupie
 
@@ -384,6 +384,8 @@ Ne placez **aucune cale ni aucun objet devant ou à côté du BitSetter** (avant
 
 ![Illustration](../../../../assets/img/guide-cnc/cnc_39.webp)
 
+### 4.9 Lancer l'usinage
+
 - Fermer le capot de protection de la machine CNC
 
 ![Illustration](../../../../assets/img/guide-cnc/cnc_41.webp)
@@ -395,8 +397,6 @@ Ne jamais démarrer la machine CNC avec le capot de protection ouvert
 :::danger[Ne pas allumer la toupie maintenant !]
 Avec le BitSetter, la toupie doit rester **éteinte** au lancement de l'usinage : la machine va d'abord mesurer la mèche. Vous allumerez la toupie **seulement quand Carbide Motion vous le demandera** (étapes ci-dessous).
 :::
-
-### 4.9 Lancer l'usinage
 
 - Démarrer maintenant la machine
     - Cliquer sur **"START JOB"**
