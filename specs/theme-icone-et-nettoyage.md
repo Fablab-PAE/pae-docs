@@ -1,6 +1,6 @@
 # Theme icon (Shopify style), print label, no style switch, plain rules section
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -34,7 +34,7 @@ Restart needed after merge: no
 
 ## Acceptance checks
 - [ ] Top bar: one icon, toggles light / dark, remembered after reload; no drop-down
-- [ ] Menu hint "Imprimer ce guide" / "Print this guide"
-- [ ] No "Style" button; no skin files left
-- [ ] Homepage rules: plain section, fr + en
-- [ ] `scripts/test.sh` passes
+- [x] Menu hint "Imprimer ce guide" / "Print this guide"
+- [x] No "Style" button; no skin files left
+- [x] Homepage rules: plain section, fr + en
+- [x] `scripts/test.sh` passes
