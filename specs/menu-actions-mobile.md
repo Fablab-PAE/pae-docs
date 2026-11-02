@@ -1,6 +1,6 @@
 # Page actions menu stays on screen on phones
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -25,5 +25,5 @@ right). Desktop is unchanged.
 
 ## Acceptance checks
 - [ ] Phone: the whole menu is visible under "Copier la page"; desktop: unchanged
-- [ ] `scripts/test.sh` passes
+- [x] `scripts/test.sh` passes
 - [ ] Not pushed to GitHub until the owner says so
