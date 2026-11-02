@@ -342,7 +342,7 @@ Do not place **any block or object in front of or next to the BitSetter** (front
     :::
 
     :::note[Note]
-    Use a standard sheet of paper as a thickness gauge. The bit should just pinch the paper without tearing it.
+    Use a standard sheet of paper as a thickness gauge. The bit should just pinch the paper without tearing it, and the paper should still be able to move slightly under the pressure of the bit.
     :::
 
     ![Illustration](../../../../assets/img/guide-cnc/cnc_36.webp)

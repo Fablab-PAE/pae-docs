@@ -1,6 +1,6 @@
 # CNC guide: paper gauge note (wording)
 
-Status: planning
+Status: building
 Size: small
 Database change: no
 New settings (.env keys): none
