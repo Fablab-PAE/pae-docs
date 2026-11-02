@@ -1,6 +1,6 @@
 # CNC guide: firmware version GRBL 1.1h in the versions table, then publish
 
-Status: approved
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -15,6 +15,6 @@ appendix C. Then publish everything waiting (owner's request): push `main` to Gi
 - After the merge: tests on `main`, `git push origin main`, check the public site.
 
 ## Acceptance checks
-- [ ] fr + en: GRBL 1.1h in the table
-- [ ] `scripts/test.sh` passes
+- [x] fr + en: GRBL 1.1h in the table
+- [x] `scripts/test.sh` passes
 - [ ] `main` pushed; public site shows the change
