@@ -173,11 +173,11 @@ Carbide 3D le résume ainsi : **lorsque vous touchez au zéro Z, considérez que
 | Machine | Shapeoko 3 XXL, axe Z à courroie (*belt-drive*) |
 | Carte de contrôle | Carbide Motion **v2.4e** |
 | Firmware | GRBL **1.1** |
-| Carbide Motion | **V6**, build **653** |
+| Carbide Motion | **V6**, build **667** (mis à jour le 2 novembre 2026) |
 | Carbide Create | **V7**, build **778** |
 
 :::note[Note]
-Carbide 3D a changé la façon d'utiliser le BitSetter **à partir du build 623 de Carbide Motion** (2024) : la mèche est maintenant mesurée au moment où l'on fait le zéro Z et au lancement de l'usinage. Ce guide décrit ce fonctionnement (build 653). Après une mise à jour de Carbide Motion, vérifiez que les étapes sont toujours les mêmes.
+Carbide 3D a changé la façon d'utiliser le BitSetter **à partir du build 623 de Carbide Motion** (2024) : la mèche est maintenant mesurée au moment où l'on fait le zéro Z et au lancement de l'usinage. Ce guide décrit ce fonctionnement (build 667). Après une mise à jour de Carbide Motion, vérifiez que les étapes sont toujours les mêmes.
 :::
 
 ### Documentation
