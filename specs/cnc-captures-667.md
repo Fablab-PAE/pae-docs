@@ -1,6 +1,6 @@
 # CNC guide: two Carbide Motion 667 screenshots (RPM change, spindle off)
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -22,6 +22,6 @@ Not published to GitHub until the owner says so.
 - Credits: covered by "Autres photos et captures d'écran : atelier RoboTic" (CNC row).
 
 ## Acceptance checks
-- [ ] Both pictures at the right places, fr + en
-- [ ] `scripts/test.sh` passes (picture rules, links)
+- [x] Both pictures at the right places, fr + en
+- [x] `scripts/test.sh` passes (picture rules, links)
 - [ ] Not pushed to GitHub
