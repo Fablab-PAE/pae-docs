@@ -465,6 +465,9 @@ With the BitSetter, the router must stay **off** when the job starts: the machin
     :::
 
 - A message then shows the **rotation speed** to use for this bit
+
+    ![Carbide Motion "RPM Change" message: Please set RPM to 16000 (Set speed dial to 3)](../../../../assets/img/guide-cnc/cnc_rpm_change.png)
+
     - Set the router dial (1 to 6) **manually** to the requested speed (see the correspondence table above)
     - Check that the protective cover is closed
     - **Switch the router on**: activate the **Toupie** switch on the left-hand side of the CNC machine
@@ -508,6 +511,8 @@ If your file uses several bits, the machine stops at each bit change:
 :::danger[Warning: the machine moves on its own at the end]
 As soon as the job is finished, a **`Please turn spindle off`** message shows: you can then **switch off the router switch**. When you click on **"OK"**, the machine **automatically goes back to the back right corner**: so **nothing (blocks, objects, hands) must be in the router's path**!
 :::
+
+![Carbide Motion end-of-job message: Please turn spindle off, with the Ok button](../../../../assets/img/guide-cnc/cnc_spindle_off.png)
 
 ### Running the same job again
 

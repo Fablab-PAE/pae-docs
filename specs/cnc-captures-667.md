@@ -1,6 +1,6 @@
 # CNC guide: two Carbide Motion 667 screenshots (RPM change, spindle off)
 
-Status: planning
+Status: building
 Size: small
 Database change: no
 New settings (.env keys): none
