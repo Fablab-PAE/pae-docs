@@ -1,6 +1,6 @@
 # Homepage FAQ (fal.ai-style accordion); info boxes print like on screen
 
-Status: building
+Status: ready to merge
 Size: normal
 Database change: no
 New settings (.env keys): none
@@ -55,4 +55,4 @@ Restart needed after merge: no
 ## Acceptance checks
 - [ ] Homepages: FAQ at the end, 9 questions, fr + en, opens / closes, keyboard works
 - [ ] Info / caution / danger boxes print with their background
-- [ ] `scripts/test.sh` passes
+- [x] `scripts/test.sh` passes
