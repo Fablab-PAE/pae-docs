@@ -41,6 +41,15 @@ function checkPages() {
     if (a === b) continue;
     for (const p of pages[a]) if (!pages[b].has(p)) problems.push(`${a}/${p} has no ${b}/ version`);
   }
+  // No box pushed outside the screen with a negative screen-size offset (e.g. inset-inline:
+  // -100vmax): clipping hides it but the page still scrolls sideways on phones. Use a
+  // box-shadow for full-width bands instead.
+  const styleFiles = [...walk('src/styles'), ...walk('src/components')].filter((f) => /\.(css|astro)$/.test(f));
+  for (const f of styleFiles) {
+    const css = readFileSync(f, 'utf8').replace(/\/\*[\s\S]*?\*\//g, '');
+    const m = css.match(/(?:^|[\s;{])((?:inset(?:-inline|-block)?(?:-start|-end)?|left|right|margin-inline(?:-start|-end)?|margin-left|margin-right)\s*:[^;}]*-\s*\d+(?:\.\d+)?(?:vw|vmax))/m);
+    if (m) problems.push(`${f}: "${m[1].trim()}" pushes a box outside the screen (sideways scrolling on phones)`);
+  }
   // The site has no changelog page any more (the owner asked to remove it)
   for (const l of LANGS) if (pages[l].has('changelog')) problems.push(`${l}/changelog should not exist (the changelog was removed)`);
   // Photo credits live on their own page (linked from every page's footer), not on the homepage

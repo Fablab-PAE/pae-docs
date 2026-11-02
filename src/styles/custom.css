@@ -26,22 +26,17 @@
 }
 
 /* Homepage top (Starlight's hero: logo, tagline, button) on a grey band across the whole
-   width, with a thin line under it. The band is a wide box-shadow, clipped at the hero's
-   bottom edge: it reaches the screen edges without making the page scroll sideways. */
+   width, with a thin line under it. Both are wide box-shadows: the band, and under it the
+   same shadow 1px lower, which only shows as the 1px line. Shadows never make the page
+   wider; a box placed outside the screen would (clip-path only hides it, the page would
+   still scroll sideways on phones). The clip keeps the shadows from spilling below. */
 .hero {
-	position: relative;
 	margin-bottom: 2rem;
 	background: var(--sl-color-gray-6);
-	box-shadow: 0 0 0 100vmax var(--sl-color-gray-6);
-	clip-path: inset(-100vmax -100vmax 0 -100vmax);
-}
-.hero::after {
-	content: '';
-	position: absolute;
-	inset-inline: -100vmax;
-	bottom: 0;
-	height: 1px;
-	background: var(--sl-color-gray-5);
+	box-shadow:
+		0 0 0 100vmax var(--sl-color-gray-6),
+		0 1px 0 100vmax var(--sl-color-gray-5);
+	clip-path: inset(-100vmax -100vmax -1px -100vmax);
 }
 
 /* Safety sheets at the end of the guides ("Fiche de sécurité"): a framed sheet with a
