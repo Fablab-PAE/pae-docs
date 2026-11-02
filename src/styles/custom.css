@@ -201,7 +201,8 @@ starlight-toc a[aria-current='true']::before {
 
 /* Printing the whole guide (guide button or Ctrl+P): Starlight's print styles already leave
    out the side menu, the table of contents and the prev/next links, in light colours. Here:
-   no buttons or link icons, pictures kept whole, the safety sheet on a page of its own. */
+   no buttons or link icons, pictures kept whole, info boxes in colour, the safety sheet on
+   a page of its own. */
 @media print {
 	.safety-print,
 	.page-actions,
@@ -212,6 +213,12 @@ starlight-toc a[aria-current='true']::before {
 	}
 	.sl-markdown-content img {
 		break-inside: avoid;
+	}
+	/* Info / caution / danger boxes keep their background colour: browsers leave backgrounds
+	   out of prints by default ("Background graphics" off), which left only the left bar */
+	.starlight-aside {
+		print-color-adjust: exact;
+		-webkit-print-color-adjust: exact;
 	}
 	/* The "Fiche de sécurité" heading (then its intro sentence, then the sheet) */
 	html:not(.printing-sheet) .sl-markdown-content > :has(+ p + .safety-sheet) {

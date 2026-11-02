@@ -16,6 +16,7 @@ hero:
 
 import { CardGrid } from '@astrojs/starlight/components';
 import MachineCard from '../../../components/MachineCard.astro';
+import Faq from '../../../components/Faq.astro';
 import cnc from '../../../assets/img/accueil/shapeoko-3.jpg';
 import laser from '../../../assets/img/laser/laser_03_2.webp';
 import vinyle from '../../../assets/img/accueil/graphtec-ce6000.jpg';
@@ -92,3 +93,65 @@ import mila from '../../../assets/img/projets/mila.png';
 		external
 	/>
 </CardGrid>
+
+## Questions fréquentes
+
+<Faq>
+<details>
+<summary>Qui peut utiliser les machines du local ?</summary>
+
+Toute utilisation se fait avec l'accord du formateur de l'atelier RoboTic. Validez toujours avec lui avant de démarrer une machine, même si vous l'avez déjà utilisée.
+
+</details>
+<details>
+<summary>Par quelle machine commencer ?</summary>
+
+L'impression 3D, la gravure laser et la découpe vinyle sont de niveau **Débutant** ; la machine CNC est de niveau **Avancé**. Commencez par une machine de niveau Débutant et lisez son guide en entier avant votre première utilisation.
+
+</details>
+<details>
+<summary>Quelle machine choisir pour mon projet ?</summary>
+
+- Un objet en plastique : [Impression 3D](/pae-docs/fr/guides/impression-3d/).
+- Graver le bois, le carton, le cuir ou le tissu, ou découper du bois de 3 mm : [Gravure laser](/pae-docs/fr/guides/gravure-laser/).
+- Des autocollants, des lettrages ou du flex textile : [Découpe vinyle](/pae-docs/fr/guides/decoupe-vinyle/).
+- Fraiser ou découper le bois, ou créer des circuits imprimés : [Machine CNC](/pae-docs/fr/guides/cnc-machine/).
+
+</details>
+<details>
+<summary>Puis-je apporter mes propres matériaux ?</summary>
+
+Uniquement des matériaux compatibles et approuvés par le responsable du local. En cas de doute, demandez avant de commencer. Ne gravez jamais de PVC ni de vinyle au laser : leurs fumées sont toxiques.
+
+</details>
+<details>
+<summary>Puis-je laisser une machine fonctionner seule ?</summary>
+
+Non. Restez à côté de la machine pendant tout le travail. Une impression 3D plus longue que votre temps de présence doit être approuvée par le responsable.
+
+</details>
+<details>
+<summary>Que faire en cas de problème ou d'urgence ?</summary>
+
+Arrêtez la machine (bouton d'arrêt d'urgence ou coupure de l'alimentation) et prévenez le responsable. En cas d'incendie non maîtrisable : évacuez, déclenchez l'alarme incendie et appelez les secours (911). Les consignes de chaque machine sont dans la **fiche de sécurité**, à la fin de son guide.
+
+</details>
+<details>
+<summary>Comment imprimer un guide ou sa fiche de sécurité ?</summary>
+
+Dans un guide, ouvrez le menu à droite du titre et choisissez **Imprimer la page** : le guide s'imprime sans les menus. La fiche de sécurité, à la fin du guide, a son propre bouton **Imprimer** : elle tient sur une page A4, à afficher à côté de la machine.
+
+</details>
+<details>
+<summary>Puis-je poser des questions sur un guide à une IA ?</summary>
+
+Oui. Le bouton **Copier la page**, à droite du titre d'un guide, copie le guide pour le coller dans un outil d'IA. Le menu à côté propose aussi **Ouvrir dans Claude** et **Ouvrir dans ChatGPT**.
+
+</details>
+<details>
+<summary>Comment acheter les objets fabriqués à l'atelier ?</summary>
+
+Sur notre <a href="https://online.forms.app/boutique-chouette-et-cie/formulaire-de-commerce?formsRef=qrcode" target="_blank" rel="noopener noreferrer">boutique en ligne Vert l'emploi</a>.
+
+</details>
+</Faq>

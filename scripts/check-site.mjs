@@ -4,7 +4,8 @@
 //                                                 every page has a description; no unfinished guide;
 //                                                 every guide has its safety sheet; the photo
 //                                                 credits page exists (not on the homepage); the
-//                                                 homepage rules are a plain section
+//                                                 homepage rules are a plain section; the
+//                                                 homepage ends with its FAQ (fr = en)
 //   node scripts/check-site.mjs links <dist>   -> every internal link/image in the built site exists;
 //                                                 every page has the footer's photo credits link;
 //                                                 guide pages (only) have the page actions menu and
@@ -47,6 +48,14 @@ function checkPages() {
     if (!pages[l].has('credits-photos')) problems.push(`${l}/credits-photos (photo credits page) is missing`);
     if (/<small>(Crédits photos|Photo credits)/.test(readFileSync(join(DOCS, l, 'index.mdx'), 'utf8'))) {
       problems.push(`${l}/index.mdx still has the photo credits line (they are on credits-photos now)`);
+    }
+    // The homepage ends with its FAQ (src/components/Faq.astro); same questions count in fr and en
+    const faqCount = (text) => text.match(/<summary>/g)?.length ?? 0;
+    if (!/<Faq>[\s\S]*<\/Faq>\s*$/.test(readFileSync(join(DOCS, l, 'index.mdx'), 'utf8'))) {
+      problems.push(`${l}/index.mdx: the FAQ (<Faq>) should end the homepage`);
+    }
+    if (l !== 'fr' && faqCount(readFileSync(join(DOCS, l, 'index.mdx'), 'utf8')) !== faqCount(readFileSync(join(DOCS, 'fr', 'index.mdx'), 'utf8'))) {
+      problems.push(`${l}/index.mdx: the FAQ does not have the same number of questions as fr/index.mdx`);
     }
     // The homepage's "before using a machine" rules: a plain section, not in a box (owner's choice)
     const home = readFileSync(join(DOCS, l, 'index.mdx'), 'utf8');

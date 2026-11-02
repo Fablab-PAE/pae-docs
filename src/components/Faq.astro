@@ -1,0 +1,107 @@
+---
+/**
+ * FAQ accordion, like fal.ai's docs (https://fal.ai/docs/documentation/assets/faq): one
+ * rounded box, a thin line between questions, a small triangle that turns when a question
+ * opens, light grey on hover. Used at the end of src/content/docs/{fr,en}/index.mdx.
+ *
+ * The questions are native <details> / <summary> written in the MDX inside <Faq>, so they
+ * open with the mouse, the keyboard (Enter / Space) and work with screen readers. The
+ * answer is normal Markdown (leave a blank line after </summary> and before </details>).
+ * Printing shows every answer.
+ */
+---
+
+<div class="faq" data-faq>
+	<slot />
+</div>
+
+<script>
+	// Printing: open every answer, then close again the ones that were closed
+	let reopened: HTMLDetailsElement[] = [];
+	window.addEventListener('beforeprint', () => {
+		reopened = [...document.querySelectorAll<HTMLDetailsElement>('[data-faq] details:not([open])')];
+		for (const item of reopened) item.open = true;
+	});
+	window.addEventListener('afterprint', () => {
+		for (const item of reopened) item.open = false;
+		reopened = [];
+	});
+</script>
+
+<style>
+	.faq {
+		margin-top: 1rem;
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 1rem;
+		overflow: hidden;
+	}
+	/* Each question: replaces Starlight's default details look (left bar) */
+	.faq :global(details) {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		border-top: 1px solid var(--sl-color-gray-5);
+	}
+	.faq :global(details:first-child) {
+		border-top: 0;
+	}
+	.faq :global(summary) {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		margin: 0;
+		padding: 0.875rem 1.25rem;
+		color: var(--sl-color-white);
+		font-weight: 500;
+		line-height: 1.5;
+		list-style: none;
+		cursor: pointer;
+	}
+	.faq :global(summary::-webkit-details-marker),
+	.faq :global(summary::marker) {
+		display: none;
+		content: '';
+	}
+	/* The triangle: points right, turns down when the question is open */
+	.faq :global(summary::before) {
+		content: '';
+		flex: none;
+		width: 0.6rem;
+		height: 0.6rem;
+		margin: 0;
+		background-color: var(--sl-color-gray-3);
+		-webkit-mask: var(--faq-caret) no-repeat center / contain;
+		mask: var(--faq-caret) no-repeat center / contain;
+		--faq-caret: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M2 0.5 9 5 2 9.5Z'/%3E%3C/svg%3E");
+		transition: transform 0.2s ease-out;
+	}
+	.faq :global(details[open] > summary::before) {
+		transform: rotate(90deg);
+	}
+	.faq :global(summary:hover) {
+		background: var(--sl-color-gray-6);
+	}
+	.faq :global(summary:focus-visible) {
+		outline: 2px solid var(--sl-color-text-accent);
+		outline-offset: -2px;
+	}
+	/* The answer, lined up with the question text */
+	.faq :global(details > :not(summary)) {
+		margin: 0;
+		padding: 0 1.25rem 0 calc(1.25rem + 0.6rem + 0.75rem);
+	}
+	.faq :global(details > :not(summary):last-child) {
+		padding-bottom: 0.875rem;
+	}
+	.faq :global(details > :not(summary) + :not(summary)) {
+		padding-top: 0.5rem;
+	}
+	.faq :global(details > :is(ul, ol)) {
+		padding-inline-start: calc(1.25rem + 0.6rem + 0.75rem + 1.25rem);
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.faq :global(summary::before) {
+			transition: none;
+		}
+	}
+</style>

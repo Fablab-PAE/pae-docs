@@ -18,6 +18,8 @@ This project IS the docs website: there is no separate `docs/` folder.
 - `src/components/MachineCard.astro` - homepage card with a picture (machines, projects, shop);
   `level="beginner"` / `"advanced"` adds a Débutant / Avancé badge after the description, Flowbite pill style (3D, laser, vinyl: beginner; CNC: advanced)
 - Machine order everywhere (menu, homepage cards): 3D printing, laser, vinyl, CNC
+- Homepage FAQ: last section of `index.mdx`, `<Faq>` (`src/components/Faq.astro`) holding
+  `<details><summary>Question</summary>` + Markdown answer; same questions in fr and en
 - `src/content/docs/*/credits-photos.md` - photo credits, one table per page; not in the menu,
   linked from every page's footer (`src/components/Footer.astro`). New picture: add its credit there
 - `src/styles/custom.css` - site styles added to Starlight (external-link icon in the menu)
