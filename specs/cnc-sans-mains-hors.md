@@ -1,6 +1,6 @@
 # CNC guide: no more "mains hors de la machine" mentions
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -21,5 +21,5 @@ Kept: the "keep hands away from moving parts" rules (safety sheets, vinyl, 3D pr
      "retirez vos mains de la machine ;" / "take your hands out of the machine;" removed.
 
 ## Acceptance checks
-- [ ] fr + en: no "mains hors de la machine" / "hands out of the machine" left
-- [ ] `scripts/test.sh` passes
+- [x] fr + en: no "mains hors de la machine" / "hands out of the machine" left
+- [x] `scripts/test.sh` passes
