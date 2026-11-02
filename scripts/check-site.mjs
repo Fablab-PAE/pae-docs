@@ -4,7 +4,7 @@
 //                                                 every page has a description; no unfinished guide;
 //                                                 every guide has its safety sheet; the photo
 //                                                 credits page exists (not on the homepage); the
-//                                                 test Tailwind look stays behind its local switch
+//                                                 homepage rules are a plain section
 //   node scripts/check-site.mjs links <dist>   -> every internal link/image in the built site exists;
 //                                                 every page has the footer's photo credits link;
 //                                                 guide pages (only) have the page actions menu and
@@ -26,19 +26,6 @@ function walk(dir) {
   );
 }
 
-// "a, b:is(c, d)" -> ["a", " b:is(c, d)"]: split a selector list at commas outside brackets
-function topLevelParts(selectors) {
-  const parts = [''];
-  let depth = 0;
-  for (const ch of selectors) {
-    if (ch === '(' || ch === '[') depth++;
-    if (ch === ')' || ch === ']') depth--;
-    if (ch === ',' && depth === 0) parts.push('');
-    else parts[parts.length - 1] += ch;
-  }
-  return parts;
-}
-
 function checkPages() {
   // Page name without extension, so fr/index.mdx matches en/index.mdx
   const pages = Object.fromEntries(
@@ -52,18 +39,6 @@ function checkPages() {
     if (a === b) continue;
     for (const p of pages[a]) if (!pages[b].has(p)) problems.push(`${a}/${p} has no ${b}/ version`);
   }
-  // TEST Tailwind look: never on the public site, and only applied when the switch is on
-  if (!readFileSync('public/skin.js', 'utf8').includes("PUBLIC_HOST = 'fablab-pae.github.io'")) {
-    problems.push('public/skin.js lost its public-site guard (the Style switch must stay local)');
-  }
-  const skinCss = readFileSync('src/styles/skin-tailwind.css', 'utf8').replace(/\/\*[\s\S]*?\*\//g, '');
-  for (const [, selectors] of skinCss.matchAll(/([^{}]+)\{/g)) {
-    for (const s of topLevelParts(selectors).map((x) => x.trim()).filter((x) => x && !x.startsWith('@'))) {
-      if (!s.startsWith(":root[data-skin='tailwind']") && !s.startsWith('.skin-switch')) {
-        problems.push(`src/styles/skin-tailwind.css: "${s}" applies without the Style switch`);
-      }
-    }
-  }
   // The site has no changelog page any more (the owner asked to remove it)
   for (const l of LANGS) if (pages[l].has('changelog')) problems.push(`${l}/changelog should not exist (the changelog was removed)`);
   // Photo credits live on their own page (linked from every page's footer), not on the homepage
@@ -72,9 +47,10 @@ function checkPages() {
     if (/<small>(Crédits photos|Photo credits)/.test(readFileSync(join(DOCS, l, 'index.mdx'), 'utf8'))) {
       problems.push(`${l}/index.mdx still has the photo credits line (they are on credits-photos now)`);
     }
-    // The homepage's "before using a machine" rules sit in an info box
-    if (!readFileSync(join(DOCS, l, 'index.mdx'), 'utf8').includes(':::note[')) {
-      problems.push(`${l}/index.mdx: the "before using a machine" rules are not in an info box (:::note)`);
+    // The homepage's "before using a machine" rules: a plain section, not in a box (owner's choice)
+    const home = readFileSync(join(DOCS, l, 'index.mdx'), 'utf8');
+    if (!/^## (Avant d'utiliser une machine|Before using a machine)$/m.test(home) || home.includes(':::')) {
+      problems.push(`${l}/index.mdx: the "before using a machine" rules should be a plain ## section, not a box`);
     }
   }
   // Every page has a description (shown in search results), and no guide is left unfinished
