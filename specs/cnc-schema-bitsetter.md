@@ -1,6 +1,6 @@
 # CNC guide: BitSetter warning as a danger box; job diagram at the start of section 4
 
-Status: planning
+Status: building
 Size: small
 Database change: no
 New settings (.env keys): none
