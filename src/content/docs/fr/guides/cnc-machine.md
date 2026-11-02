@@ -341,7 +341,7 @@ Ne placez **aucune cale ni aucun objet devant ou à côté du BitSetter** (avant
     :::
 
     :::note[Note]
-    Utilisez une feuille de papier standard comme jauge d'épaisseur. La mèche doit tout juste pincer le papier sans le déchirer.
+    Utilisez une feuille de papier standard comme jauge d'épaisseur. La mèche doit tout juste pincer le papier sans le déchirer et le papier doit pouvoir bouger légèrement même sous la pression de la mèche.
     :::
 
     ![Illustration](../../../../assets/img/guide-cnc/cnc_36.webp)
