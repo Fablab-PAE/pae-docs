@@ -1,6 +1,6 @@
 # CNC guide: paper gauge note (wording)
 
-Status: building
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -18,5 +18,5 @@ the bit."
 - `src/content/docs/{fr,en}/guides/cnc-machine.md`: that note only.
 
 ## Acceptance checks
-- [ ] fr + en: new wording
-- [ ] `scripts/test.sh` passes
+- [x] fr + en: new wording
+- [x] `scripts/test.sh` passes
