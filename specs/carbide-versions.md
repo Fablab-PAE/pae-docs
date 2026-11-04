@@ -1,6 +1,6 @@
 # CNC guide: Carbide Motion and Carbide Create release dates, then publish
 
-Status: tests passed
+Status: ready to merge
 Size: small
 Database change: no
 New settings (.env keys): none
@@ -32,7 +32,7 @@ Dates from the owner: 8-1-2026 and 10-12-2026, month first. The official list
 - After the merge: `kit test` on `main`, then `git push origin main` (owner's OK in the request).
 
 ## Acceptance checks
-- [ ] fr + en: Carbide Motion release date, Carbide Create V8 build 876 and its release date
-- [ ] No mention of build 778 left in the guide pages
-- [ ] `scripts/test.sh` passes
+- [x] fr + en: Carbide Motion release date, Carbide Create V8 build 876 and its release date
+- [x] No mention of build 778 left in the guide pages
+- [x] `scripts/test.sh` passes
 - [ ] `main` pushed; the GitHub Pages build for that save succeeds
