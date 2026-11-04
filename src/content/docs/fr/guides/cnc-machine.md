@@ -40,8 +40,8 @@ Ce guide vous accompagne pas à pas dans l'utilisation de la machine CNC Shapeok
 | Machine | Shapeoko 3 XXL, axe Z à courroie (*belt-drive*) |
 | Carte de contrôle | Carbide Motion **v2.4e** |
 | Firmware | GRBL **1.1h** |
-| Carbide Motion | **V6**, build **667** (mis à jour le 2 novembre 2026) |
-| Carbide Create | **V7**, build **778** |
+| Carbide Motion | **V6**, build **667** (sorti le 1er août 2026, mis à jour à l'atelier le 2 novembre 2026) |
+| Carbide Create | **V8**, build **876** (sorti le 12 octobre 2026) |
 
 :::note[Note]
 Carbide 3D a changé la façon d'utiliser le BitSetter **à partir du build 623 de Carbide Motion** (2024) : la mèche est maintenant mesurée au moment où l'on fait le zéro Z et au lancement de l'usinage. Ce guide décrit ce fonctionnement (build 667). Après une mise à jour de Carbide Motion, vérifiez que les étapes sont toujours les mêmes.

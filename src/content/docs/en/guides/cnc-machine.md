@@ -40,8 +40,8 @@ This guide takes you step by step through the use of the Shapeoko 3 CNC machine.
 | Machine | Shapeoko 3 XXL, belt-drive Z axis |
 | Controller board | Carbide Motion **v2.4e** |
 | Firmware | GRBL **1.1h** |
-| Carbide Motion | **V6**, build **667** (updated on 2 November 2026) |
-| Carbide Create | **V7**, build **778** |
+| Carbide Motion | **V6**, build **667** (released on 1 August 2026, updated at the FabLab on 2 November 2026) |
+| Carbide Create | **V8**, build **876** (released on 12 October 2026) |
 
 :::note[Note]
 Carbide 3D changed the way the BitSetter is used **starting with Carbide Motion build 623** (2024): the bit is now measured when you set the Z zero and when you start the job. This guide describes that workflow (build 667). After a Carbide Motion update, check that the steps are still the same.
